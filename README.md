@@ -112,3 +112,8 @@ The command-line tool for this pipeline is named **`dnbc4tools`**.
 **Full Release History**: [Release Notes](./doc/release.md)
 
 ---
+
+## Related Projects
+
+- [**DNBCScope**](https://github.com/DNBelabCSeries/DNBCScope) — a desktop application for downstream visualization and analysis of single-cell results (**beta**).
+  - Available for macOS and Windows
