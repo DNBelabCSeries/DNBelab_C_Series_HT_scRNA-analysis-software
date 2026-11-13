@@ -1,0 +1,5 @@
+.DS_Store
+DESIGN.md
+Document/.build/
+Document/__pycache__/
+.venv-docs/

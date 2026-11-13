@@ -1,0 +1,2369 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation site generated from README and doc markdown files">
+      
+      
+      
+      
+        <link rel="prev" href="multi.html">
+      
+      
+        <link rel="next" href="../io.html">
+      
+      
+        
+          <link rel="alternate" href="c6.html" hreflang="zh">
+        
+          <link rel="alternate" href="../../en/doc/outs/c6.html" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>C6 多样本 - DNBelab C Series™ HT 单细胞分析软件</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#deliverables" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../index.html" title="DNBelab C Series™ HT 单细胞分析软件" class="md-header__button md-logo" aria-label="DNBelab C Series™ HT 单细胞分析软件" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h2v2c0 1.44.68 2.61 1.88 3.78.86.83 2.01 1.63 3.21 2.42l-1.83 1.19C8.27 10.72 7.31 10 6.5 9.21 5.07 7.82 4 6.1 4 4zm14 0h2v2c0 2.1-1.07 3.82-2.5 5.21-1.41 1.38-3.21 2.52-4.96 3.63-1.75 1.12-3.45 2.21-4.66 3.38C6.68 17.39 6 18.56 6 20v2H4v-2c0-2.1 1.07-3.82 2.5-5.21 1.41-1.38 3.21-2.52 4.96-3.63 1.75-1.12 3.45-2.21 4.66-3.38C17.32 6.61 18 5.44 18 4zm-3.26 10.61c.99.67 1.95 1.39 2.76 2.18C18.93 16.18 20 17.9 20 20v2h-2v-2c0-1.44-.68-2.61-1.88-3.78-.86-.83-2.01-1.63-3.21-2.42zM7 3h10v1l-.06.5H7.06L7 4zm.68 3h8.64c-.24.34-.52.69-.9 1.06l-.51.44H9.07l-.49-.44c-.38-.37-.66-.72-.9-1.06m1.41 10.5h5.84l.49.44c.38.37.66.72.9 1.06H7.68c.24-.34.52-.69.9-1.06zm-2.03 3h9.88l.06.5v1H7v-1z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DNBelab C Series™ HT 单细胞分析软件
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              C6 多样本
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="c6.html" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../en/doc/outs/c6.html" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="DNBelab C Series™ HT 单细胞分析软件" class="md-nav__button md-logo" aria-label="DNBelab C Series™ HT 单细胞分析软件" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h2v2c0 1.44.68 2.61 1.88 3.78.86.83 2.01 1.63 3.21 2.42l-1.83 1.19C8.27 10.72 7.31 10 6.5 9.21 5.07 7.82 4 6.1 4 4zm14 0h2v2c0 2.1-1.07 3.82-2.5 5.21-1.41 1.38-3.21 2.52-4.96 3.63-1.75 1.12-3.45 2.21-4.66 3.38C6.68 17.39 6 18.56 6 20v2H4v-2c0-2.1 1.07-3.82 2.5-5.21 1.41-1.38 3.21-2.52 4.96-3.63 1.75-1.12 3.45-2.21 4.66-3.38C17.32 6.61 18 5.44 18 4zm-3.26 10.61c.99.67 1.95 1.39 2.76 2.18C18.93 16.18 20 17.9 20 20v2h-2v-2c0-1.44-.68-2.61-1.88-3.78-.86-.83-2.01-1.63-3.21-2.42zM7 3h10v1l-.06.5H7.06L7 4zm.68 3h8.64c-.24.34-.52.69-.9 1.06l-.51.44H9.07l-.49-.44c-.38-.37-.66-.72-.9-1.06m1.41 10.5h5.84l.49.44c.38.37.66.72.9 1.06H7.68c.24-.34.52-.69.9-1.06zm-2.03 3h9.88l.06.5v1H7v-1z"/></svg>
+
+    </a>
+    DNBelab C Series™ HT 单细胞分析软件
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickstart.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速开始
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    流程
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    流程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/pipeline.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    多组学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6 多样本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参数
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    参数
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/parameter.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    多组学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6 多样本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/tools.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    输出
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    输出
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    多组学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6 多样本
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="c6.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6 多样本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deliverables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心交付物速览
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        输出目录结构
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心交付文件详解
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="核心交付文件详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 批次多样本汇总报告
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merged-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 全局合并表达矩阵
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#droplet-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 全局微珠/液滴明细表
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 各样本输出目录
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#report-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        网页报告释义
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="网页报告释义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#report-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        两级导航体系架构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-and-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary 与参数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cells：细胞质控
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library：文库质控
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Samples：样本结果
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metric-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心指标与统计口径说明
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    结果分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    运行与排错
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    版本说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataset.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    附加
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    附加
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    升级指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    术语表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../library_structure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文库结构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation_previous.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    旧版安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../json.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JSON 规范
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deliverables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心交付物速览
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        输出目录结构
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心交付文件详解
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="核心交付文件详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 批次多样本汇总报告
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merged-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 全局合并表达矩阵
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#droplet-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 全局微珠/液滴明细表
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 各样本输出目录
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#report-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        网页报告释义
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="网页报告释义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#report-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        两级导航体系架构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-and-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary 与参数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cells：细胞质控
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library：文库质控
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Samples：样本结果
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metric-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心指标与统计口径说明
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="c6-outputs">C6 多样本分析输出说明 <a id="c6"></a><a class="headerlink" href="#c6-outputs" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>输出范围</strong>：目录树描述常规完成运行的结果；可选文件取决于启用模块与阶段完成状态。下文质量参考区间是判读建议，不是软件内置的通过/失败规则，应以本次配置阈值和报告状态为准。</p>
+</blockquote>
+<p>C6 多样本 RNA 分析输出分为<strong>全局合并结果</strong>和<strong>各样本分析结果</strong>。全局结果用于比较样本质控指标；各样本结果包含表达矩阵、聚类结果和报告。下游读取方法参见<a href="../io.html">结果分析</a>。</p>
+<h3 id="deliverables">核心交付物速览 <a id="_1"></a><a class="headerlink" href="#deliverables" title="Permanent link">&para;</a></h3>
+<p>下表汇总了 C6 多样本单细胞 RNA 分析的主要交付产物、文件格式、核心用途以及推荐的下游生态对接：</p>
+<div class="doc-file-table">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">文件</th>
+<th style="text-align: left;">格式</th>
+<th style="text-align: left;">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>&lt;name&gt;_multi_report.html</code></td>
+<td style="text-align: left;">HTML</td>
+<td style="text-align: left;">批次汇总与样本间比较</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>filtered_feature_bc_matrix.*</code></td>
+<td style="text-align: left;">MEX / H5 / H5AD</td>
+<td style="text-align: left;">全局有效细胞原始计数</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>raw_feature_bc_matrix.*</code></td>
+<td style="text-align: left;">MEX / H5</td>
+<td style="text-align: left;">未过滤原始计数</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>singlecell.csv.gz</code></td>
+<td style="text-align: left;">CSV.GZ</td>
+<td style="text-align: left;">微珠/液滴明细与细胞识别标记</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>multi_sample/</code></td>
+<td style="text-align: left;">CSV / TSV / JSON</td>
+<td style="text-align: left;">样本分配及质控指标</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>per_sample_outs/&lt;sample&gt;/</code></td>
+<td style="text-align: left;">目录</td>
+<td style="text-align: left;">各样本矩阵、分析结果与报告</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>metrics_summary.xls</code></td>
+<td style="text-align: left;">TSV</td>
+<td style="text-align: left;">全局质控汇总</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>oligo.records.bam</code>、<code>unassigned_alignments.bam</code></td>
+<td style="text-align: left;">BAM</td>
+<td style="text-align: left;">共享 Oligo 与未分配读段比对</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>除批次报告位于 <code>outs/</code> 外，表中文件均相对于 <code>outs/rna/</code>；完整路径见下方目录树。</p>
+<p>MEX 矩阵为目录，H5 和 H5AD 为同级文件。全局计数不包含跨样本联合降维和聚类。读取 <code>singlecell.csv.gz</code> 时，通过 <code>is_cell_barcode == 1</code> 筛选有效细胞，大表建议分块读取。BAM 及其索引仅在 <code>[rna] no_bam</code> 为 <code>false</code>（默认）时生成。批次与样本 HTML 报告可在桌面浏览器中本地打开。文件字段、读取方法和报告模块见下方<a href="#detailed-files">文件详解</a>与<a href="#report-guide">报告释义</a>。</p>
+<hr />
+<p>全局与各样本的 <code>filtered_feature_bc_matrix.h5ad</code> 均保存下游分析前的原始计数。读取聚类或降维结果时，应使用各样本的 <code>analysis/QC_Cluster.h5ad</code>。空样本或在 <code>sample_failure_policy=skip</code> 下失败的样本可能没有分析文件或 HTML 报告；应结合报告状态与 <code>logs/run_manifest.json</code> 判读，不能将目录树视为每个样本都必有的文件清单。</p>
+<h2 id="output-directory">输出目录结构 <a id="输出目录结构"></a> <a id="_2"></a><a class="headerlink" href="#output-directory" title="Permanent link">&para;</a></h2>
+<p>流程运行完成后，全部分析结果统一归档在 <code>&lt;outdir&gt;/&lt;name&gt;/outs/</code> 目录下。下列目录树中的 BAM 及其索引仅在 <code>[rna] no_bam</code> 为 <code>false</code>（默认）时生成；设置 <code>no_bam,true</code> 会跳过全部 BAM 输出：</p>
+<div class="highlight"><pre><span></span><code>&lt;outdir&gt;/&lt;name&gt;/
+├── outs/
+│   ├── &lt;name&gt;_multi_report.html              # 批次多样本综合分析汇总报告 (四大交互模块)
+│   └── rna/
+│       ├── raw_feature_bc_matrix/            # 全局未过滤表达矩阵 (MEX 目录)
+│       ├── raw_feature_bc_matrix.h5          # 全局未过滤表达矩阵 (HDF5 格式)
+│       ├── filtered_feature_bc_matrix/       # 全局有效细胞表达矩阵 (MEX 目录)
+│       ├── filtered_feature_bc_matrix.h5     # 全局有效细胞表达矩阵 (HDF5 格式)
+│       ├── filtered_feature_bc_matrix.h5ad   # 全局有效细胞表达矩阵 (AnnData 格式，无跨样本聚类)
+│       ├── singlecell.csv.gz                 # 全局液滴明细表 (含全量微珠/液滴与真实细胞识别标记)
+│       ├── metrics_summary.xls               # 全局实验汇总指标 (制表符分隔 TSV)
+│       ├── oligo.records.bam                 # 共享 Oligo 比对记录 (启用 BAM 时输出)
+│       ├── unassigned_alignments.bam         # 未分配样本的读段比对 (启用 BAM 时输出)
+│       ├── multi_sample/                     # 样本拆分与质控指标目录
+│       │   ├── per_sample_metrics.csv        # 各样本核心生信指标横向对照表
+│       │   ├── sample_metrics_summary.xls    # 样本级质控汇总明细表
+│       │   ├── barcode_assignment_metrics.json # Sample Barcode 识别与拆分统计
+│       │   └── high_occupancy_metrics.json   # 高占用液滴过滤统计
+│       └── per_sample_outs/&lt;sample&gt;/         # 【逐样本输出目录】
+│           ├── raw_feature_bc_matrix/        # 该样本未过滤表达矩阵 (MEX)
+│           ├── raw_feature_bc_matrix.h5      # 该样本未过滤表达矩阵 (H5)
+│           ├── filtered_feature_bc_matrix/   # 该样本有效细胞表达矩阵 (MEX)
+│           ├── filtered_feature_bc_matrix.h5 # 该样本有效细胞表达矩阵 (H5)
+│           ├── filtered_feature_bc_matrix.h5ad # 该样本有效细胞原始计数 (不含降维聚类)
+│           ├── &lt;sample&gt;_scRNA_report.html    # 该样本单细胞 HTML 质控报告
+│           ├── metrics_summary.xls           # 该样本质控指标表
+│           ├── &lt;sample&gt;_alignments.bam       # 该样本比对 BAM (启用 BAM 时输出，附带 .bai / .csi)
+│           └── analysis/                     # 该样本聚类分析与 Marker 基因结果
+│               ├── cluster.csv               # 细胞聚类分配表与 UMAP 二维坐标
+│               ├── marker.csv                # 各聚类差异 Marker 基因长表
+│               ├── marker_table.csv          # 各聚类差异 Marker 基因宽表
+│               ├── QC_Cluster.h5ad           # 包含降维聚类与差异基因的完整 AnnData 对象
+│               ├── raw_qc.xls                # 样本单细胞质控指标原始明细表 (TSV 文本)
+│               ├── raw_QCplot.png            # 过滤前质控小提琴图
+│               ├── filter_QCplot.png         # 过滤后质控小提琴图
+│               ├── cluster_annotation.png    # 细胞类型注释散点图 (启用注释参考库时)
+│               └── cell_classification.csv   # 双物种细胞归属与多胞判定 (仅多物种时)
+└── logs/
+    └── run_manifest.json                      # 流程执行耗时与完成状态审计清单
+</code></pre></div>
+<hr />
+<h2 id="detailed-files">核心交付文件详解 <a id="核心交付文件详解"></a> <a id="_3"></a><a class="headerlink" href="#detailed-files" title="Permanent link">&para;</a></h2>
+<h3 id="summary-report">1. 批次多样本汇总报告 <a id="1-outsname_multi_reporthtml"></a><a class="headerlink" href="#summary-report" title="Permanent link">&para;</a></h3>
+<p>路径：<code>outs/&lt;name&gt;_multi_report.html</code>。
+* <strong>定位</strong>：C6 混合样本实验的质控汇总报告。
+* <strong>四大交互模块</strong>：
+  * <strong>Summary</strong>：批次统计卡片（细胞数、中位 UMI/基因数）、实验环境化学体系及各样本横向直方图/表格比对，附带完整的流程输入参数清单；
+  * <strong>Cells</strong>：样本级 RNA 质控全景表、单细胞小提琴图、各样本条形码排序曲线叠加图、液滴合并分布以及探针条形码拆分统计表；
+  * <strong>Library</strong>：共享 cDNA 与 Oligo 文库的物理测序质量（Q30、有效 Barcode/UMI）、全量与过滤细胞的双视角比对分布及测序饱和度分析；
+  * <strong>Samples</strong>：提供全部样本质量比较（All samples 模式）以及单样本详情（Single sample 模式，包含单样本的细胞分群图、UMI 梯度投射、自动细胞类型注释及各亚群 Top Marker 基因表）。
+* 报告详细指标与图表释义请参阅下方的 <a href="#网页报告释义">批次多样本网页报告释义</a>。</p>
+<h3 id="merged-matrix">2. 全局合并表达矩阵 <a id="2-filtered_feature_bc_matrix"></a><a class="headerlink" href="#merged-matrix" title="Permanent link">&para;</a></h3>
+<p>路径：<code>filtered_feature_bc_matrix.*</code>。
+* <strong>定位</strong>：汇集全部样本真实细胞的高置信度联合计数矩阵，同时提供 MEX 目录、H5 与 H5AD 格式。
+* <strong>特点与设计原则</strong>：保留原始计数，<strong>不提供跨样本联合降维和聚类</strong>。需要联合分析时，可根据实验设计评估批次效应，并选择相应的整合方法。
+* <strong>条形码防碰撞命名空间（Namespace Protection）</strong>：不同样本中的微珠条形码可能相同，样本间区分严格依赖 Sample Barcode。跨样本合并分析时，<strong>切勿随意截断细胞条形码后缀</strong>；导入 Seurat / Scanpy 时建议添加样本名前缀（如 <code>add.cell.ids = c("SampleA", "SampleB")</code>）。</p>
+<h3 id="droplet-metadata">3. 全局微珠/液滴明细表 <a id="3-singlecellcsvgz"></a><a class="headerlink" href="#droplet-metadata" title="Permanent link">&para;</a></h3>
+<p>路径：<code>singlecell.csv.gz</code>。
+采用流式 gzip 压缩格式存储全量微珠与液滴数据（含背景噪音液滴）。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">列名</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>cell</code></td>
+<td style="text-align: left;">聚合后的细胞标识符（缺失 Sample Barcode 的背景液滴可能为空）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>reads</code></td>
+<td style="text-align: left;">该微珠/液滴对应的转录组 Read 数</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>gene</code></td>
+<td style="text-align: left;">检测到的基因种类数（UMI ≥ 1）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>umi</code></td>
+<td style="text-align: left;">检测到的转录本分子（UMI）总数</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>is_cell_barcode</code></td>
+<td style="text-align: left;"><strong>真实细胞标记</strong>（<code>1</code> 或 <code>True</code> 表示判定为有效细胞；<code>0</code> 或 <code>False</code> 为背景；未匹配记录可为空）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>barcode</code></td>
+<td style="text-align: left;">原始细胞条形码（保留 Sample Barcode 标识后缀）</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">下游使用提示</p>
+<ul>
+<li><strong>真实细胞筛选</strong>：在 R 或 Python 中读取该表时，<strong>务必根据 <code>is_cell_barcode == 1</code> 筛选真实细胞</strong>，切不可将全表直接视作细胞集合。</li>
+<li><strong>百万级大表流式读取</strong>：该表包含全量液滴可能达到数百万行，Python 读取推荐使用分块加载（<code>pd.read_csv(..., chunksize=100_000)</code>）或 Polars 高效筛选。</li>
+</ul>
+</div>
+<h3 id="sample-outputs">4. 各样本输出目录 <a id="4-per_sample_outssample"></a><a class="headerlink" href="#sample-outputs" title="Permanent link">&para;</a></h3>
+<p>路径：<code>per_sample_outs/&lt;sample&gt;/</code>。</p>
+<p>各样本结果保存在此目录中，包含以下文件；可选文件的生成条件见相应说明：</p>
+<ul>
+<li><strong>样本 HTML 报告 (<code>&lt;sample&gt;_scRNA_report.html</code>)</strong>：该样本的细胞质控曲线（Barcode Rank Plot）、UMAP 细胞分群图、高表达 Marker 基因列表及文库饱和度；</li>
+<li><strong>样本表达矩阵</strong>：包含该样本独立的 MEX 目录、H5 与 AnnData 格式的 <code>filtered_feature_bc_matrix.h5ad</code>；</li>
+<li><strong>样本比对 BAM 文件 (<code>&lt;sample&gt;_alignments.bam</code>)</strong>：仅在 <code>[rna] no_bam</code> 为 <code>false</code> 时生成，包含该样本真实读段的比对文件（附带 <code>.bai</code> 或 <code>.csi</code> 索引），可直接载入 IGV 查阅特定基因转录本；</li>
+<li><strong>样本分析与聚类结果目录 (<code>analysis/</code>)</strong>：<code>dnbc4tools</code> 为每个样本独立运行的单细胞图聚类、差异基因分析与质控产物。</li>
+</ul>
+<p><code>marker.csv</code> 与普通 RNA 使用相同的正向 Marker 筛选：校正 P 值 &lt; 0.05、log fold change &gt; 0，每簇最多 50 个基因。<code>marker_table.csv</code> 的 <code>cluster{K}_pval</code> 列实际保存校正 P 值；额外的 <code>gene_symbols</code> 列仅在源元数据包含该字段时提供。</p>
+<h4 id="sample-analysis">样本分析与聚类结果明细 <a id="per_sample_outssampleanalysis"></a><a class="headerlink" href="#sample-analysis" title="Permanent link">&para;</a></h4>
+<p>路径：<code>per_sample_outs/&lt;sample&gt;/analysis/</code>。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">文件名</th>
+<th style="text-align: left;">格式</th>
+<th style="text-align: left;">核心用途与字段说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>cluster.csv</code></strong></td>
+<td style="text-align: left;"><code>CSV</code></td>
+<td style="text-align: left;">单细胞聚类明细与降维坐标表。包含每个细胞条形码（行名）对应的 <code>nGene</code>、<code>nUMI</code>、<code>leiden</code>（图聚类簇编号）、<code>UMAP_1</code>、<code>UMAP_2</code> 二维散点坐标、<code>Cluster</code>（带细胞数标签），以及启用细胞注释时的 <code>Predict_number</code> 与 <code>Predicted cell type</code>。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>marker.csv</code></strong></td>
+<td style="text-align: left;"><code>CSV</code></td>
+<td style="text-align: left;">各聚类簇差异高表达基因长表（Long-format），用于细胞亚群生物学功能富集与类型鉴定。包含 <code>cluster</code>、<code>gene</code>、<code>score</code>、<code>avg_log2FC</code>、<code>p_val</code>、<code>p_val_adj</code>（校正后显著性）、<code>pct.1</code>（簇内表达细胞比例）及 <code>pct.2</code>（簇外表达细胞比例）。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>marker_table.csv</code></strong></td>
+<td style="text-align: left;"><code>CSV</code></td>
+<td style="text-align: left;">各聚类簇差异高表达基因宽表（Wide-format），适合报表浏览与多聚类横向对比。包含 <code>gene_ids</code>、<code>gene_name</code> 以及各聚类簇对应的 <code>cluster{K}_lg2fc</code> 与 <code>cluster{K}_pval</code>。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>QC_Cluster.h5ad</code></strong></td>
+<td style="text-align: left;"><code>H5AD</code></td>
+<td style="text-align: left;">经过完整下游质控过滤、标准化、高变基因筛选、PCA 降维、Leiden 图聚类、UMAP 投影、<code>rank_genes_groups</code> 差异基因及细胞类型注释的完整 AnnData 核心对象。可使用 Scanpy 读取其中保存的聚类、降维坐标和 Marker 统计结果。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>raw_qc.xls</code></strong></td>
+<td style="text-align: left;"><code>TSV 文本</code></td>
+<td style="text-align: left;">单细胞水平质控原始指标表（注意：为制表符分隔 TSV 纯文本表，非二进制 Excel）。行名为细胞 Barcode，列包含 <code>n_genes_by_counts</code>、<code>total_counts</code> 及线粒体比例等详细质控字段。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>raw_QCplot.png</code></strong></td>
+<td style="text-align: left;"><code>PNG</code></td>
+<td style="text-align: left;">质控过滤前单细胞特征分布小提琴图（展示 UMI counts、gene counts 及线粒体比例分布）。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>filter_QCplot.png</code></strong></td>
+<td style="text-align: left;"><code>PNG</code></td>
+<td style="text-align: left;">质控过滤后单细胞特征分布小提琴图，直观展现质控阈值裁切效果。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>cluster_annotation.png</code></strong></td>
+<td style="text-align: left;"><code>PNG</code></td>
+<td style="text-align: left;">（可选）当配置了人类（HCL）或小鼠（MCA）注释参考数据库且成功完成注释时生成，展示投射了预测细胞类型谱系的二维 UMAP 散点图。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>cell_classification.csv</code></strong></td>
+<td style="text-align: left;"><code>CSV</code></td>
+<td style="text-align: left;">（可选）仅在双物种混合分析（如 <code>Human_and_Mouse</code>）时生成，记录该样本内每个细胞的物种来源判定（Species call）及双胞/多胞（Multiplet）鉴定结果。</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">全局分析目录交付说明</p>
+<ul>
+<li><strong>单物种 C6 运行</strong>：全局输出不生成 <code>outs/rna/analysis/</code> 目录；各样本的聚类分析结果统一存放在各自的 <code>per_sample_outs/&lt;sample&gt;/analysis/</code> 目录下。</li>
+<li><strong>双物种混合运行</strong>：全局根目录下的 <code>outs/rna/analysis/</code> 仅交付全局全库的 <code>cell_classification.csv</code> 物种鉴定结果。</li>
+<li><strong>表达矩阵 H5AD 位置</strong>：作为表达计数矩阵交付物的 <code>filtered_feature_bc_matrix.h5ad</code> 放置在各样本根目录 <code>per_sample_outs/&lt;sample&gt;/</code> 下，与 MEX 和 H5 并列。</li>
+</ul>
+</div>
+<hr />
+<h2 id="report-guide">网页报告释义 <a id="网页报告释义"></a> <a id="outsname_multi_reporthtml"></a><a class="headerlink" href="#report-guide" title="Permanent link">&para;</a></h2>
+<p>路径：<code>outs/&lt;name&gt;_multi_report.html</code>。</p>
+<p><strong>概述</strong>：HTML 网页报告为 C6 多样本实验提供一站式交互分析仪表盘。报告采用现代两级导航架构，解耦全局文库质控与逐样本单细胞生信特征。</p>
+<div class="admonition info">
+<p class="admonition-title">C6 批次多样本质量评估原则与阅读建议</p>
+<ul>
+<li><strong>双层评估策略</strong>：C6 实验兼具“共享文库构建”与“样本标记拆分”的双重属性。评估时应遵循<strong>全库质控 → 样本间均一性评估 → 单样本细胞生物学复核</strong>的三步法。</li>
+<li><strong>文库级指标先行</strong>：先在 <code>Library</code> 标签页核查共享 cDNA 与 Oligo 的测序通量、Q30 碱基质量、Valid Barcodes 与基因组比对率，排除共性测序实验风险。</li>
+<li><strong>样本间均一性横向排查</strong>：在 <code>Summary</code> 与 <code>Cells</code> 标签页，对比各样本分配读段（Assigned reads）、细胞回收数及中位基因/UMI 数，排查由于样本细胞活性差异或标记引物结合效率不均导致的产出偏倚。</li>
+<li><strong>单样本结果核验</strong>：在 <code>Samples</code> 标签页或各样本报告中，核验目标样本的 UMAP 分群拓扑结构、自动细胞类型注释与已知 Marker 基因表达。</li>
+</ul>
+</div>
+<h3 id="report-navigation">两级导航体系架构 <a id="_4"></a><a class="headerlink" href="#report-navigation" title="Permanent link">&para;</a></h3>
+<p>多组学/多样本交互报告包含顶部组学导航和左侧功能导航：</p>
+<ul>
+<li><strong>顶部组学导航栏（一级选项卡）</strong>：当前组学展示为 <code>RNA</code> 模块；</li>
+<li><strong>左侧功能导航栏（二级选项卡）</strong>：</li>
+<li><code>Summary</code>：当前批次的核心概览指标卡片、多样本全景汇总及流程运行参数；</li>
+<li><code>Cells</code>：单细胞层面的质控指标表、小提琴图、条形码排序曲线、微珠合并分布及探针条形码拆分表；</li>
+<li><code>Library</code>：物理测序文库质量（Q30、有效条形码/UMI）、基因组比对构成及测序饱和度分析；</li>
+<li><code>Samples</code>：全样本质量横向对比（All samples）与单样本详情（Single sample 聚类与 Marker）。</li>
+</ul>
+<hr />
+<h3 id="summary-and-parameters">Summary 与参数 <a id="tab-1-summary-summary-parameters"></a><a class="headerlink" href="#summary-and-parameters" title="Permanent link">&para;</a></h3>
+<h4 id="summary">Summary 页面 (Assay overview) <a id="summary-assay-overview"></a><a class="headerlink" href="#summary" title="Permanent link">&para;</a></h4>
+<p><code>Summary</code> 页面提供批次指标汇总及多样本核心表现的横向对比，帮助研究人员快速定位异常离群样本：</p>
+<div style="text-align: center; margin: 1.5rem 0;">
+<p><img src="../images/html_c6_multi_summary.png" alt="C6 多样本网页报告 - Summary 概览" style="max-width: 560px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);"></p>
+</div>
+<h5 id="overview-metrics">1. 批次全局指标卡片 (Global Summary Cards) <a id="1-global-summary-cards"></a><a class="headerlink" href="#overview-metrics" title="Permanent link">&para;</a></h5>
+<p>页面顶部以高亮卡片直观呈现全批次的核心汇总数据：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">统计卡片指标</th>
+<th style="text-align: left;">算法计算与统计口径</th>
+<th style="text-align: left;">判读指导与排查建议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Estimated number of cells</strong><br><em>(批次估计细胞总数)</em></td>
+<td style="text-align: left;">本次运行中所有被鉴定为有效细胞的条形码总数（各样本合并求和，下游质控过滤前）。</td>
+<td style="text-align: left;">结合各样本预期上样细胞总量评估回收率；若总回收率显著低于预期，提示微流控包裹或细胞解离活性偏低。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Median UMIs per cell</strong><br><em>(各样本中位 UMI 的中位数)</em></td>
+<td style="text-align: left;">统计各样本的中位 UMI 分子数，并取各样本中位数的中位数（跨样本中位数，非全细胞混合中位数）。</td>
+<td style="text-align: left;">反映批次整体的转录本分子捕获深度基准。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Median genes per cell</strong><br><em>(各样本中位基因数的中位数)</em></td>
+<td style="text-align: left;">各样本中位基因检出数的中位数（单个细胞中 UMI ≥ 1 的基因数）。</td>
+<td style="text-align: left;">反映批次整体的文库丰度与基因组覆盖广度。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mean reads per cell</strong><br><em>(每细胞平均读段数)</em></td>
+<td style="text-align: left;">分配给该样本的 RNA 读段对数 / 该样本识别细胞数，包含分配到该样本但不属于识别细胞的读段。</td>
+<td style="text-align: left;">评估全批次平均测序深度。实际测序深度需求取决于细胞类型、文库复杂度和分析目标。</td>
+</tr>
+</tbody>
+</table>
+<h5 id="pipeline-info">2. 运行环境与化学体系信息 (Information) <a id="2-information"></a><a class="headerlink" href="#pipeline-info" title="Permanent link">&para;</a></h5>
+<p>记录流程执行的核心参数：
+* <strong>Chemistry</strong>：建库化学试剂体系（显示为 <code>SCRNAC6</code>）；
+* <strong>Include Introns</strong>：是否将比对至内含子区域的读段计入基因表达定量（通常推荐启用 <code>Yes</code>，将内含子读段纳入定量，常用于单核转录组 snRNA-seq）；
+* <strong>Reference</strong>：比对所采用的参考基因组版本信息。</p>
+<h5 id="sample-comparison">3. 多样本横向对比与分布 (Sample overview) <a id="3-sample-overview"></a><a class="headerlink" href="#sample-comparison" title="Permanent link">&para;</a></h5>
+<p>提供 <strong>Chart（直方对比图）</strong> 与 <strong>Table（交互式表格）</strong> 两种切换视图：
+* <strong>Chart 视图</strong>：以柱状图排列各样本在所选指标上的表现，并以<strong>虚线标出跨样本中位数（Across-sample median）</strong>；支持按样本名（<code>Sample ID</code>）或指标数值（<code>Value</code>）正逆序排列，一眼识破分配读段过少或基因数异常的离群样本。
+* <strong>Table 视图</strong>：支持全量展示或分页滚动，包含各样本的 <code>Sample ID</code>、分配读段数及占比（<code>Assigned reads</code>）、鉴定细胞数（<code>Called cells</code>）、中位基因数（<code>Median genes</code>）及中位 UMI 数（<code>Median UMIs</code>）；点击任意一列的 <code>View cells →</code> 按钮可跳转至该样本在 <code>Samples</code> 标签页的详情页面。</p>
+<hr />
+<h4 id="configuration">参数配置 (Configuration Parameters) <a id="configuration-parameters"></a><a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h4>
+<p>点击报告顶部的参数信息按钮可展开本次运行的完整配置清单：</p>
+<div style="text-align: center; margin: 1.5rem 0;">
+<p><img src="../images/html_c6_multi_parameter.png" alt="C6 多样本网页报告 - 参数配置页面" style="max-width: 560px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);"></p>
+</div>
+<ul>
+<li><strong>输入配置清单 (Input CSV)</strong>：完整记录多样本运行配置文件（CSV）的内容，包括文库定义（<code>[libraries]</code>）、多样本拆分标签与预期细胞数（<code>[samples]</code>）以及 RNA 比对参数块（<code>[rna]</code>：参考基因组路径、<code>no_bam</code> 开关等）；</li>
+<li><strong>原始测序数据清单 (Input FASTQs)</strong>：清晰记录 cDNA 与 Oligo 文库的原始 FASTQ 物理路径，为后续分析复现与实验审计提供完整凭据。</li>
+</ul>
+<hr />
+<h3 id="cell-metrics">Cells：细胞质控 <a id="tab-2-cells"></a><a class="headerlink" href="#cell-metrics" title="Permanent link">&para;</a></h3>
+<p><code>Cells</code> 页面专注于单细胞维度的精细化质量评估，通过全景表格、小提琴图、条形码排序曲线及探针拆分表，对比各样本细胞内信号特异性与均一性：</p>
+<div style="text-align: center; margin: 1.5rem 0;">
+<p><img src="../images/html_c6_multi_cells.png" alt="C6 多样本网页报告 - Cells 细胞质控" style="max-width: 560px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);"></p>
+</div>
+<h4 id="rna-quality">1. 样本级 RNA 质控全景表 (RNA Quality Metrics) <a id="1-rna-rna-quality-metrics"></a><a class="headerlink" href="#rna-quality" title="Permanent link">&para;</a></h4>
+<p>汇总各样本在单细胞水平的核心质控指标：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">指标名称 (Metric)</th>
+<th style="text-align: left;">统计口径与算法计算</th>
+<th style="text-align: left;">判读指导与排查要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Estimated number of cells</strong></td>
+<td style="text-align: left;">被判定为有效真实细胞的条形码数量。</td>
+<td style="text-align: left;">评估各样本独立的细胞得率是否符合实验设计预期。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mean reads per cell</strong></td>
+<td style="text-align: left;">分配给该样本的 RNA 读段对数 / 该样本识别细胞数，包含分配到该样本但不属于识别细胞的读段。</td>
+<td style="text-align: left;">评估平均物理测序深度。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mean cell-associated reads per cell</strong></td>
+<td style="text-align: left;">关联到有效细胞条形码的 cDNA 读段总数 / 细胞总数。</td>
+<td style="text-align: left;">反映有效落在真实细胞内的测序深度（排除背景液滴损耗）。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mean UMI counts per cell</strong></td>
+<td style="text-align: left;">真实细胞内转录本分子 UMI 的平均值。</td>
+<td style="text-align: left;">衡量平均分子捕获水平。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Median UMI counts per cell</strong></td>
+<td style="text-align: left;">真实细胞内转录本分子 UMI 的中位数。</td>
+<td style="text-align: left;">单细胞表达定量的物理分子丰度基准。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mean genes per cell</strong></td>
+<td style="text-align: left;">真实细胞内检出基因数（UMI ≥ 1）的平均值。</td>
+<td style="text-align: left;">评估转录组检出丰富度均值。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Median genes per cell</strong></td>
+<td style="text-align: left;">真实细胞内检出基因数的中位数。</td>
+<td style="text-align: left;">反映样本细胞转录活性与文库多样性核心基准。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Total genes detected</strong></td>
+<td style="text-align: left;">在至少一个细胞中检测到的所有基因总数。</td>
+<td style="text-align: left;">评估样本整体转录组覆盖度，哺乳动物组织通常在 15,000–35,000 左右。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fraction reads in cells</strong></td>
+<td style="text-align: left;">细胞内高置信度转录组 Reads 占该样本全部有效条形码 Reads 的比例。</td>
+<td style="text-align: left;">用于评估细胞内读段占比；比例偏低时，结合细胞活率、条形码分配和其他质控指标排查游离 RNA 或细胞损伤。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="bead-merging">2. 条形码排序与微珠合并分布 (RNA Beads to Cells) <a id="2-rna-beads-to-cells"></a><a class="headerlink" href="#bead-merging" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>RNA Barcode Rank Plot（左图）</strong>：将所有配置样本的细胞条形码排序曲线叠加在同一双对数坐标系中展示。高质量样本表现为左侧平台期长、在拐点处陡峭下折；若某条曲线明显塌陷或斜率平缓，说明该样本细胞捕获质量较差。</li>
+<li><strong>RNA Violin Plot（中图）</strong>：展示线粒体比例分布小提琴图（Mito percent），监控细胞群体在制样与微流控包裹中的破损情况（通常建议中位数 &lt; 10%–15%）。</li>
+<li><strong>Bead Count Distribution（右图）</strong>：展示每个判定为真实细胞的液滴中合并的微珠条形码（Beads）数量分布直方图，绝大多数液滴应包裹 1 个微珠，反映微流控液滴反应中微珠共包裹与合并算法的稳健性。</li>
+</ul>
+<h4 id="barcode-metrics">3. 探针条形码拆分统计表 (Metrics per probe barcode) <a id="3-metrics-per-probe-barcode"></a><a class="headerlink" href="#barcode-metrics" title="Permanent link">&para;</a></h4>
+<p>展示每个 Sample Barcode 探针的拆分效率与产出明细：
+* <strong>Probe barcode ID</strong>：探针条形码编号（如 <code>BC09</code>、<code>BC11</code>、<code>BC12</code> 等）；
+* <strong>Sample ID</strong>：绑定的样本名称（如 <code>demo_1</code>、<code>demo_3</code> 等）；
+* <strong>UMIs per probe barcode</strong>：分配到该探针的 UMI 总数及在全库中的百分比；
+* <strong>Cells per probe barcode</strong>：归属于该探针的细胞总数及在全批次中的百分比。</p>
+<hr />
+<h3 id="library-metrics">Library：文库质控 <a id="tab-3-library"></a><a class="headerlink" href="#library-metrics" title="Permanent link">&para;</a></h3>
+<p><code>Library</code> 页面展示全库共享物理文库（cDNA 与 Oligo）的测序准确性、全基因组比对质量及测序深度饱和度：</p>
+<div style="text-align: center; margin: 1.5rem 0;">
+<p><img src="../images/html_c6_multi_library.png" alt="C6 多样本网页报告 - Library 文库与比对" style="max-width: 560px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);"></p>
+</div>
+<h4 id="sequencing-metrics">1. 测序文库质量指标 (Sequencing Metrics) <a id="1-sequencing-metrics"></a><a class="headerlink" href="#sequencing-metrics" title="Permanent link">&para;</a></h4>
+<p>分别统计共建的转录组 cDNA 文库与样本标记 Oligo 文库：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">文库类型</th>
+<th style="text-align: left;">核心指标项</th>
+<th style="text-align: left;">判读指导与排查要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>cDNA 文库</strong></td>
+<td style="text-align: left;">• <code>Number of reads</code>: 输入的原始测序读段总数<br>• <code>Valid cell barcodes</code>: 细胞条形码匹配至白名单比例（推荐 ≥ 80%）<br>• <code>Valid probe barcodes</code>: 探针条形码有效匹配比例（若适用）<br>• <code>Corrected barcodes</code>: 容错 1bp 校正的条形码比例（通常 5%–10%）<br>• <code>Valid UMIs</code>: 有效无 N 且非均聚物的分子标签比例（通常 &gt; 99%）<br>• <code>Q30 bases in barcode / UMI / RNA read</code>: 碱基测序质量（推荐 &gt; 85%）</td>
+<td style="text-align: left;">评估测序仪物理运行状态与转录组建库完整性。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Oligo 文库</strong></td>
+<td style="text-align: left;">• <code>Number of reads</code>: Oligo 测序读段总量<br>• <code>Valid barcodes in Read1 / Read2</code>: 双端条形码匹配白名单比例（推荐 ≥ 85%）<br>• <code>Corrected barcodes in Read1 / Read2</code>: 容错校正比例<br>• <code>Q30 bases in barcode / index read</code>: 条形码与样本标签的 Q30 质量</td>
+<td style="text-align: left;">评估多样本标记引物（Sample Tag）的物理测序保真度，直接决定多样本拆分的准确性。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="mapping-metrics">2. 全基因组比对指标 (Mapping Metrics) <a id="2-mapping-metrics"></a><a class="headerlink" href="#mapping-metrics" title="Permanent link">&para;</a></h4>
+<p>提供 <strong>All Reads（全量读段）</strong> 与 <strong>Filtered Cells（真实细胞读段）</strong> 两种视角切换：
+* <strong>Reads mapped to genome</strong>：成功比对至参考基因组的读段比例（推荐 ≥ 85%–90%）；
+* <strong>Reads mapped confidently to genome</strong>：高置信度唯一比对至基因组的比例（推荐 ≥ 65%–80%）；
+* <strong>Reads mapped confidently to transcriptome</strong>：高置信度比对至注释转录本的比例（推荐 ≥ 50%）；
+* <strong>Reads mapped to mitochondrial genome</strong>：线粒体序列比对率；
+* <strong>Confidently mapped to Exonic / Intronic / Intergenic</strong>：分别统计落入外显子（Exonic）、内含子（Intronic）和基因间区（Intergenic）的比例（当启用 <code>Include Introns</code> 时，外显子与内含子读段均会有效计入转录定量）；
+* <strong>Mapped antisense to gene</strong>：反义链比对比例。</p>
+<h4 id="saturation">3. 饱和度分析曲线 (Saturation Analysis) <a id="3-saturation-analysis"></a><a class="headerlink" href="#saturation" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Sequencing Saturation Curve（测序饱和度曲线）</strong>：基于抽样模拟（Downsampling）绘制测序饱和度随每细胞平均读段数的变化曲线。饱和度越高表示更多读段来源于已识别的分子；实践中达到 50%–70% 饱和度通常即可满足大部分常规转录组分群需求。</li>
+<li><strong>Median Genes per Cell Curve（基因检出饱和度曲线）</strong>：中位检出基因数随测序深度的渐近曲线。当曲线趋于平缓平台期时，表明继续追加测序量对发现新基因的边际增益递减。</li>
+</ul>
+<hr />
+<h3 id="samples">Samples：样本结果 <a id="tab-4-samples"></a><a class="headerlink" href="#samples" title="Permanent link">&para;</a></h3>
+<p>3.2 的 C6 报告在 <code>Samples</code> 页面提供全部样本概览和单样本详情两种视图：</p>
+<h4 id="all-samples">1. 全部样本概览 (All samples 视图) <a id="1-all-samples"></a><a class="headerlink" href="#all-samples" title="Permanent link">&para;</a></h4>
+<p>当下拉菜单选择 <code>All samples (15)</code> 时，集中展示全部样本的横向生信指标与质控曲线：</p>
+<div style="text-align: center; margin: 1.5rem 0;">
+<p><img src="../images/html_c6_multi_samples_all.png" alt="C6 多样本网页报告 - Samples 全样本横向质控" style="max-width: 560px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);"></p>
+</div>
+<ul>
+<li><strong>Cell Calling Quality 全样本横向表</strong>：汇总全部样本的 <code>Cells</code>、<code>Fraction reads in cells</code>、<code>Median Genes per Cell</code>、<code>Median UMI Counts per Cell</code>、<code>Mitochondrial %</code>、<code>Total Genes Detected</code>、<code>Assigned Reads</code> 及 <code>Mean Reads per Cell</code>；</li>
+<li><strong>Mapping Quality - All Reads 全样本横向表</strong>：汇总全部样本的基因组比对率、置信基因组比对率、转录组比对率、外显子/内含子/基因间区分布及反义比对率；</li>
+<li><strong>全样本 Barcode Rank 曲线、Violin Plots 与饱和度曲线预览</strong>：支持跨样本横向对比曲线形态与饱和度斜率。</li>
+</ul>
+<hr />
+<h4 id="sample-details">2. 单样本详情 (Single sample 视图) <a id="2-single-sample"></a><a class="headerlink" href="#sample-details" title="Permanent link">&para;</a></h4>
+<p>在下拉菜单中切换任意特定生物学样本（如 <code>demo_17</code>），即可查看该样本独立的生物学聚类分群与 Marker 表达：</p>
+<div style="text-align: center; margin: 1.5rem 0;">
+<p><img src="../images/html_c6_multi_samples.png" alt="C6 多样本网页报告 - Samples 单样本详情" style="max-width: 560px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);"></p>
+</div>
+<h5 id="sample-qc">样本质控卡片 (Cell Calling &amp; Mapping Quality) <a id="cell-calling-mapping-quality"></a><a class="headerlink" href="#sample-qc" title="Permanent link">&para;</a></h5>
+<p>切换样本后，页面顶部直接呈现该样本特异性的两组数据卡片：
+* <strong>Cell Calling Quality</strong>：该样本的细胞数、Fraction reads in cells、中位基因/UMI 数及 Assigned Reads；
+* <strong>Mapping Quality — All Reads</strong>：该样本的基因组比对率、转录组比对率、线粒体比例及外显子/内含子分布。</p>
+<h5 id="barcode-rank">独立细胞排序与小提琴图 (Barcode Rank &amp; Violin Plots) <a id="barcode-rank-violin-plots"></a><a class="headerlink" href="#barcode-rank" title="Permanent link">&para;</a></h5>
+<ul>
+<li>呈现该样本独立的 Barcode Rank 曲线，清晰核查该样本自身的真实细胞拐点；</li>
+<li>呈现该样本独立的单细胞 Genes、UMIs 与线粒体比例小提琴分布。</li>
+</ul>
+<h5 id="clusters">独立降维聚类与 UMI 渐变投射 (Cluster Assignment &amp; UMI Overlay) <a id="umi-cluster-assignment-umi-overlay"></a><a class="headerlink" href="#clusters" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>左图（RNA Cluster Assignment）</strong>：基于该样本自身的表达谱进行高变基因筛选、PCA 降维与 UMAP 投影，并以无监督图聚类（Graph-based Clustering）赋予不同颜色；用于查看聚类分布（注：网页展示随机均匀抽样最多 10,000 个细胞以减少浏览器绘图负担，但实际分析及文件导出保留全量细胞）；</li>
+<li><strong>右图（UMI Count Overlay）</strong>：在相同 UMAP 空间中以连续颜色渐变投射每个细胞的 UMI 总量，快速辅助验证聚类分群是否受到测序深度偏差的技术影响。</li>
+</ul>
+<h5 id="annotations">自动细胞类型注释 (Cell Annotation) <a id="cell-annotation"></a><a class="headerlink" href="#annotations" title="Permanent link">&para;</a></h5>
+<p>若配置了受支持的物种参考数据库并启用了注释模块，此处将在 UMAP 散点图上展示预测的细胞类型谱系分群（如 B cells, T cells, NK cells, Monocytes 等），为研究人员提供第一手生物学细胞身份参考。</p>
+<h5 id="markers">差异高表达 Marker 基因列表 (Top Features by Cluster) <a id="marker-top-features-by-cluster"></a><a class="headerlink" href="#markers" title="Permanent link">&para;</a></h5>
+<p>提供交互式 Marker 基因数据表，将每个聚类簇（Cluster）与其对照细胞群体进行差异表达检验：
+* <strong>Cluster</strong>：聚类簇编号；
+* <strong>Gene</strong>：特征高表达 Marker 基因名称；
+* <strong>p_val_adj</strong>：Scanpy <code>rank_genes_groups</code> 返回的多重检验校正 P 值；
+* <strong>avg_log2FC</strong>：基因在该亚群中的平均表达差异对数倍数；
+* <strong>pct.1 / pct.2</strong>：分别代表该基因在目标聚类簇内与簇外细胞中的表达比例；支持快速搜索与表格排序。</p>
+<h5 id="sample-saturation">样本饱和度分析 (Saturation Analysis) <a id="saturation-analysis"></a><a class="headerlink" href="#sample-saturation" title="Permanent link">&para;</a></h5>
+<p>展示该样本独立的测序饱和度与中位基因检出曲线。</p>
+<hr />
+<h2 id="metric-definitions">核心指标与统计口径说明 <a id="核心指标说明"></a> <a id="_5"></a><a class="headerlink" href="#metric-definitions" title="Permanent link">&para;</a></h2>
+<p>为避免在多样本混合分析中产生误解，C6 的指标分母定义如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">指标项</th>
+<th style="text-align: left;">统计范围与口径说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Assigned Reads</strong></td>
+<td style="text-align: left;">分配到该样本的实际 Read Pairs 数（以 Sample Barcode 识别为准，非全库原始 Reads）。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mean Reads per Cell</strong></td>
+<td style="text-align: left;">样本内平均细胞读段数 = <code>Assigned Reads</code> / <code>Cells</code>（细胞数为 0 时显示为 N/A）。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mean cell-associated reads per cell</strong></td>
+<td style="text-align: left;">关联到有效细胞条形码的 cDNA 读段总数 / 细胞总数，代表真实细胞内的有效测序深度。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fraction Reads in Cells</strong></td>
+<td style="text-align: left;">该样本细胞内可信转录组 Reads 占该样本全部有效条形码转录组 Reads 的比例。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mapping Quality</strong></td>
+<td style="text-align: left;">计算分母为该样本的 All Reads，绝不混入全局或非细胞读段的比例。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>cDNA Valid Barcodes</strong></td>
+<td style="text-align: left;">当 Assigned Reads &gt; 0 时稳定显示为 100%（描述已分配入该样本的集合）。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>文库级指标 (Q30 / Valid UMI)</strong></td>
+<td style="text-align: left;">反映全库共享测序质量，不能解释为样本独立 QC；指标表中统一标注为 <code>cDNA QC scope</code>。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sample Barcode 有效率</strong></td>
+<td style="text-align: left;">统计 Oligo 中成功匹配至设计 Sample Barcode 白名单的比例，由真实统计得出。</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 MGI Tech Bioinformatics.<br>Documentation 3.2 · Updated 2026-10-23
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["search.suggest", "search.highlight", "content.code.copy", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/doc-controls.js"></script>
+      
+    
+  </body>
+</html>

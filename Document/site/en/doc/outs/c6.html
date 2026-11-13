@@ -1,0 +1,2369 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation site generated from README and doc markdown files">
+      
+      
+      
+      
+        <link rel="prev" href="multi.html">
+      
+      
+        <link rel="next" href="../io.html">
+      
+      
+        
+          <link rel="alternate" href="../../../doc/outs/c6.html" hreflang="zh">
+        
+          <link rel="alternate" href="c6.html" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>C6 - DNBelab C Series™ HT Single-Cell Analysis Software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#deliverables" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="DNBelab C Series™ HT Single-Cell Analysis Software" class="md-header__button md-logo" aria-label="DNBelab C Series™ HT Single-Cell Analysis Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h2v2c0 1.44.68 2.61 1.88 3.78.86.83 2.01 1.63 3.21 2.42l-1.83 1.19C8.27 10.72 7.31 10 6.5 9.21 5.07 7.82 4 6.1 4 4zm14 0h2v2c0 2.1-1.07 3.82-2.5 5.21-1.41 1.38-3.21 2.52-4.96 3.63-1.75 1.12-3.45 2.21-4.66 3.38C6.68 17.39 6 18.56 6 20v2H4v-2c0-2.1 1.07-3.82 2.5-5.21 1.41-1.38 3.21-2.52 4.96-3.63 1.75-1.12 3.45-2.21 4.66-3.38C17.32 6.61 18 5.44 18 4zm-3.26 10.61c.99.67 1.95 1.39 2.76 2.18C18.93 16.18 20 17.9 20 20v2h-2v-2c0-1.44-.68-2.61-1.88-3.78-.86-.83-2.01-1.63-3.21-2.42zM7 3h10v1l-.06.5H7.06L7 4zm.68 3h8.64c-.24.34-.52.69-.9 1.06l-.51.44H9.07l-.49-.44c-.38-.37-.66-.72-.9-1.06m1.41 10.5h5.84l.49.44c.38.37.66.72.9 1.06H7.68c.24-.34.52-.69.9-1.06zm-2.03 3h9.88l.06.5v1H7v-1z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DNBelab C Series™ HT Single-Cell Analysis Software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              C6
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../doc/outs/c6.html" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="c6.html" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="DNBelab C Series™ HT Single-Cell Analysis Software" class="md-nav__button md-logo" aria-label="DNBelab C Series™ HT Single-Cell Analysis Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h2v2c0 1.44.68 2.61 1.88 3.78.86.83 2.01 1.63 3.21 2.42l-1.83 1.19C8.27 10.72 7.31 10 6.5 9.21 5.07 7.82 4 6.1 4 4zm14 0h2v2c0 2.1-1.07 3.82-2.5 5.21-1.41 1.38-3.21 2.52-4.96 3.63-1.75 1.12-3.45 2.21-4.66 3.38C6.68 17.39 6 18.56 6 20v2H4v-2c0-2.1 1.07-3.82 2.5-5.21 1.41-1.38 3.21-2.52 4.96-3.63 1.75-1.12 3.45-2.21 4.66-3.38C17.32 6.61 18 5.44 18 4zm-3.26 10.61c.99.67 1.95 1.39 2.76 2.18C18.93 16.18 20 17.9 20 20v2h-2v-2c0-1.44-.68-2.61-1.88-3.78-.86-.83-2.01-1.63-3.21-2.42zM7 3h10v1l-.06.5H7.06L7 4zm.68 3h8.64c-.24.34-.52.69-.9 1.06l-.51.44H9.07l-.49-.44c-.38-.37-.66-.72-.9-1.06m1.41 10.5h5.84l.49.44c.38.37.66.72.9 1.06H7.68c.24-.34.52-.69.9-1.06zm-2.03 3h9.88l.06.5v1H7v-1z"/></svg>
+
+    </a>
+    DNBelab C Series™ HT Single-Cell Analysis Software
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickstart.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pipeline
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/pipeline.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parameters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Parameters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/parameter.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/tools.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Outputs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Outputs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="c6.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deliverables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deliverables at a Glance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Directory Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detailed File Description
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Detailed File Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Multi-Sample Summary Report
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merged-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Globally Merged Expression Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#droplet-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Global Droplet Metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Per-Sample Output Directories
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#report-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web Report Guide
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Web Report Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#report-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two-Level Navigation Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-and-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary &amp; Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cells: Cell QC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library: Library QC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Samples: Sample Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metric-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Metrics &amp; Denominator Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Downstream Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Running & Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataset.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Additional Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Additional Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Upgrade Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../library_structure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation_previous.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Previous Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../json.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JSON Spec
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deliverables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deliverables at a Glance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Directory Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detailed File Description
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Detailed File Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Multi-Sample Summary Report
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merged-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Globally Merged Expression Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#droplet-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Global Droplet Metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Per-Sample Output Directories
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#report-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web Report Guide
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Web Report Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#report-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two-Level Navigation Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-and-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary &amp; Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cells: Cell QC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#library-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library: Library QC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Samples: Sample Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metric-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Metrics &amp; Denominator Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="c6-outputs">C6 Multi-Sample Analysis Output Guide <a id="c6-multi-sample-analysis-output-guide"></a><a class="headerlink" href="#c6-outputs" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Output scope</strong>: Directory trees describe a typical completed run. Optional outputs depend on enabled modules and successful stages. Quality ranges below are interpretation guidance, not software pass/fail rules; use the configured thresholds and report status for this run.</p>
+</blockquote>
+<p>C6 multi-sample RNA outputs are organized into <strong>pooled results</strong> and <strong>per-sample results</strong>. Pooled results support comparisons of sample QC metrics; per-sample results contain expression matrices, clustering results, and reports. See <a href="../io.html">Downstream Analysis</a> for loading examples.</p>
+<h3 id="deliverables">Deliverables at a Glance <a id="deliverables-at-a-glance"></a><a class="headerlink" href="#deliverables" title="Permanent link">&para;</a></h3>
+<p>The table below summarizes the key deliverables of C6 multi-sample single-cell RNA analysis, file formats, primary use cases, and recommended downstream ecosystem integrations:</p>
+<div class="doc-file-table">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">File</th>
+<th style="text-align: left;">Format</th>
+<th style="text-align: left;">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>&lt;name&gt;_multi_report.html</code></td>
+<td style="text-align: left;">HTML</td>
+<td style="text-align: left;">Batch summary and sample comparisons</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>filtered_feature_bc_matrix.*</code></td>
+<td style="text-align: left;">MEX / H5 / H5AD</td>
+<td style="text-align: left;">Pooled called-cell counts</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>raw_feature_bc_matrix.*</code></td>
+<td style="text-align: left;">MEX / H5</td>
+<td style="text-align: left;">Unfiltered counts</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>singlecell.csv.gz</code></td>
+<td style="text-align: left;">CSV.GZ</td>
+<td style="text-align: left;">Bead/droplet metadata and cell calls</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>multi_sample/</code></td>
+<td style="text-align: left;">CSV / TSV / JSON</td>
+<td style="text-align: left;">Sample assignment and QC metrics</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>per_sample_outs/&lt;sample&gt;/</code></td>
+<td style="text-align: left;">Directory</td>
+<td style="text-align: left;">Per-sample matrices, analysis, and reports</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>metrics_summary.xls</code></td>
+<td style="text-align: left;">TSV</td>
+<td style="text-align: left;">Global QC summary</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>oligo.records.bam</code>, <code>unassigned_alignments.bam</code></td>
+<td style="text-align: left;">BAM</td>
+<td style="text-align: left;">Shared oligo and unassigned alignments</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>File names above are relative to <code>outs/rna/</code>, except the batch report, which is under <code>outs/</code>. Exact paths appear in the directory tree below.</p>
+<p>MEX matrices are directories; H5 and H5AD matrices are sibling files. Pooled counts do not include joint dimensionality reduction or clustering. Filter <code>singlecell.csv.gz</code> with <code>is_cell_barcode == 1</code> for called cells; read large tables in chunks. BAM files and their indexes are generated only when <code>[rna] no_bam</code> is <code>false</code> (the default). The summary and per-sample HTML reports can be opened locally in a desktop browser. See <a href="#detailed-files">detailed files</a> and <a href="#report-guide">report interpretation</a> below for fields, loading guidance, and report tabs.</p>
+<hr />
+<p>The pooled and per-sample <code>filtered_feature_bc_matrix.h5ad</code> files contain raw counts before downstream analysis. Load each sample's <code>analysis/QC_Cluster.h5ad</code> for saved clustering/embeddings. Samples that are empty or fail under <code>sample_failure_policy=skip</code> may lack analysis files or HTML reports; inspect report status and <code>logs/run_manifest.json</code> instead of treating the directory tree as a mandatory bundle.</p>
+<h2 id="output-directory">Output Directory Structure <a id="output-directory-structure"></a><a id="directory-structure"></a><a class="headerlink" href="#output-directory" title="Permanent link">&para;</a></h2>
+<p>Upon completion, results are archived under <code>&lt;outdir&gt;/&lt;name&gt;/outs/</code>. BAM files and their indexes in the tree below are generated only when <code>[rna] no_bam</code> is <code>false</code> (the default); <code>no_bam,true</code> skips all BAM outputs:</p>
+<div class="highlight"><pre><span></span><code>&lt;outdir&gt;/&lt;name&gt;/
+├── outs/
+│   ├── &lt;name&gt;_multi_report.html              # Batch multi-sample summary report (4 interactive tabs)
+│   └── rna/
+│       ├── raw_feature_bc_matrix/            # Global unfiltered expression matrix (MEX format)
+│       ├── raw_feature_bc_matrix.h5          # Global unfiltered expression matrix (HDF5 format)
+│       ├── filtered_feature_bc_matrix/       # Global real-cell expression matrix (MEX format)
+│       ├── filtered_feature_bc_matrix.h5     # Global real-cell expression matrix (HDF5 format)
+│       ├── filtered_feature_bc_matrix.h5ad   # Global real-cell expression matrix (AnnData format, no joint clustering)
+│       ├── singlecell.csv.gz                 # Global droplet metadata table (with is_cell_barcode flag)
+│       ├── metrics_summary.xls               # Global analysis metrics summary (tab-delimited TSV)
+│       ├── oligo.records.bam                 # Shared Oligo alignment records (output when BAM enabled)
+│       ├── unassigned_alignments.bam         # Alignments for unassigned reads (output when BAM enabled)
+│       ├── multi_sample/                     # Sample demultiplexing and QC metrics
+│       │   ├── per_sample_metrics.csv        # Cross-sample comparative metrics table
+│       │   ├── sample_metrics_summary.xls    # Sample-level QC summary table
+│       │   ├── barcode_assignment_metrics.json # Sample barcode identification and splitting statistics
+│       │   └── high_occupancy_metrics.json   # High-occupancy droplet filtering statistics
+│       └── per_sample_outs/&lt;sample&gt;/         # 【Per-Sample Output Directory】
+│           ├── raw_feature_bc_matrix/        # Sample-specific unfiltered expression matrix (MEX)
+│           ├── raw_feature_bc_matrix.h5      # Sample-specific unfiltered expression matrix (H5)
+│           ├── filtered_feature_bc_matrix/   # Sample-specific real-cell expression matrix (MEX)
+│           ├── filtered_feature_bc_matrix.h5 # Sample-specific real-cell expression matrix (H5)
+│           ├── filtered_feature_bc_matrix.h5ad # Sample-specific real-cell expression matrix (AnnData format)
+│           ├── &lt;sample&gt;_scRNA_report.html    # Sample-specific interactive HTML report
+│           ├── metrics_summary.xls           # Sample-specific quality metrics table
+│           ├── &lt;sample&gt;_alignments.bam       # Sample-specific BAM (when enabled; with .bai / .csi)
+│           └── analysis/                     # Sample-specific clustering and marker gene analysis
+│               ├── cluster.csv               # Cell clustering assignments &amp; UMAP 2D coordinates
+│               ├── marker.csv                # Long-format cluster marker gene differential analysis
+│               ├── marker_table.csv          # Wide-format cluster marker summary table
+│               ├── QC_Cluster.h5ad           # Complete AnnData object with clustering and embeddings
+│               ├── raw_qc.xls                # Per-cell raw quality metrics table (TSV text)
+│               ├── raw_QCplot.png            # Pre-filtering single-cell QC violin plot
+│               ├── filter_QCplot.png         # Post-filtering single-cell QC violin plot
+│               ├── cluster_annotation.png    # Cell type annotation scatter plot (when reference configured)
+│               └── cell_classification.csv   # Species classification &amp; multiplet calls (mixed-species only)
+└── logs/
+    └── run_manifest.json                      # Pipeline step status and runtime audit manifest
+</code></pre></div>
+<hr />
+<h2 id="detailed-files">Detailed File Description <a id="detailed-deliverables"></a><a id="detailed-file-description"></a><a class="headerlink" href="#detailed-files" title="Permanent link">&para;</a></h2>
+<h3 id="summary-report">1. Multi-Sample Summary Report <a id="1-multi-sample-summary-report-outsname_multi_reporthtml"></a><a class="headerlink" href="#summary-report" title="Permanent link">&para;</a></h3>
+<p>Path: <code>outs/&lt;name&gt;_multi_report.html</code>.
+* <strong>Role</strong>: Central quality control dashboard and overview for the entire C6 multiplexed experiment.
+* <strong>Four Core Interactive Tabs</strong>:
+  * <strong>Summary</strong>: Batch-level summary cards (cells, median UMIs/genes), chemistry and runtime configuration, cross-sample bar chart/table comparisons, and expanded parameter manifests;
+  * <strong>Cells</strong>: Sample-level RNA QC table, single-cell violin distributions, overlaid barcode rank curves, bead merging distributions, and probe barcode demultiplexing statistics;
+  * <strong>Library</strong>: Shared cDNA and Oligo library sequencing fidelity (Q30, valid barcodes/UMIs), mapping breakdowns for All Reads vs. Filtered Cells, and saturation curves;
+  * <strong>Samples</strong>: Decoupled support for all-sample comparative QC summaries (All samples mode) as well as per-sample details (Single sample mode, featuring sample-specific UMAP clustering, UMI overlays, cell type annotation, and cluster marker tables).
+* For detailed metric and chart interpretations, refer to <a href="#web-report-interpretation">Multi-Sample Web Report Interpretation</a> below.</p>
+<h3 id="merged-matrix">2. Globally Merged Expression Matrix <a id="2-globally-merged-expression-matrix-filtered_feature_bc_matrix"></a><a class="headerlink" href="#merged-matrix" title="Permanent link">&para;</a></h3>
+<p>Path: <code>filtered_feature_bc_matrix.*</code>.
+* <strong>Role</strong>: Pooled high-confidence count matrix for real cells across all multiplexed samples, provided in MEX, H5, and H5AD formats.
+* <strong>Feature &amp; Design Rationale</strong>: Preserves raw counts <strong>without joint dimensionality reduction or clustering across samples</strong>. For joint analysis, assess batch effects in the context of the experimental design and select an appropriate integration method.
+* <strong>Namespace Protection</strong>: Cells in different samples may carry identical bead barcodes. Distinction relies strictly on sample barcode tags. When performing cross-sample pooling, <strong>do not truncate barcode suffixes</strong>; we recommend prefixing sample IDs during import into Seurat / Scanpy (e.g., <code>add.cell.ids = c("SampleA", "SampleB")</code>).</p>
+<h3 id="droplet-metadata">3. Global Droplet Metadata <a id="3-global-droplet-metadata-singlecellcsvgz"></a><a class="headerlink" href="#droplet-metadata" title="Permanent link">&para;</a></h3>
+<p>Path: <code>singlecell.csv.gz</code>.
+Compressed in streaming gzip format, recording metrics across all beads and droplets (including ambient noise).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Column</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>cell</code></td>
+<td style="text-align: left;">Aggregated cell identifier (may be blank for unassigned background droplets)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>reads</code></td>
+<td style="text-align: left;">Number of transcriptomic reads associated with this bead/droplet</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>gene</code></td>
+<td style="text-align: left;">Number of distinct genes detected (UMI ≥ 1)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>umi</code></td>
+<td style="text-align: left;">Total number of transcript molecules (UMIs) detected</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>is_cell_barcode</code></td>
+<td style="text-align: left;"><strong>Real cell call flag</strong> (<code>1</code> or <code>True</code> indicates high-confidence real cell; <code>0</code> or <code>False</code> indicates background; unmatched records may be blank)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>barcode</code></td>
+<td style="text-align: left;">Raw cell barcode sequence (retaining sample tag suffix)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Downstream Usage Tips</p>
+<ul>
+<li><strong>Filter Real Cells</strong>: When reading this table into R or Python, <strong>always filter rows where <code>is_cell_barcode == 1</code></strong>; do not treat all rows as cells.</li>
+<li><strong>Streaming Large Tables</strong>: With millions of candidate droplets, reading into Python should use chunking (<code>pd.read_csv(..., chunksize=100_000)</code>) or Polars for high performance.</li>
+</ul>
+</div>
+<h3 id="sample-outputs">4. Per-Sample Output Directories <a id="4-per-sample-dedicated-directories-per_sample_outssample"></a><a class="headerlink" href="#sample-outputs" title="Permanent link">&para;</a></h3>
+<p>Path: <code>per_sample_outs/&lt;sample&gt;/</code>.</p>
+<p>Each sample output directory contains the files below. Optional files are generated under the conditions described for each file:</p>
+<ul>
+<li><strong>Sample HTML Report (<code>&lt;sample&gt;_scRNA_report.html</code>)</strong>: Sample-specific Barcode Rank Plot, UMAP cell clusters, marker gene heatmaps, and sequencing saturation curves;</li>
+<li><strong>Sample Matrices</strong>: Independent MEX directory, H5 format, and AnnData <code>filtered_feature_bc_matrix.h5ad</code>;</li>
+<li><strong>Sample BAM File (<code>&lt;sample&gt;_alignments.bam</code>)</strong>: Generated only when <code>[rna] no_bam</code> is <code>false</code>; contains only reads assigned to this sample (with <code>.bai</code> or <code>.csi</code> index) for locus inspection in IGV;</li>
+<li><strong>Sample Analysis Directory (<code>analysis/</code>)</strong>: <code>dnbc4tools</code> independent graph clustering, differential marker analysis, and QC figures.</li>
+</ul>
+<p><code>marker.csv</code> uses the same positive-marker selection as ordinary RNA: adjusted P &lt; 0.05, positive log fold change, and at most 50 genes per cluster. <code>cluster{K}_pval</code> in <code>marker_table.csv</code> stores an adjusted P-value despite its shorter column name. Optional <code>gene_symbols</code> is present only if available in the source metadata.</p>
+<h4 id="sample-analysis">Per-Sample Analysis Directory Detail <a id="per-sample-analysis-directory-detail-per_sample_outssampleanalysis"></a><a class="headerlink" href="#sample-analysis" title="Permanent link">&para;</a></h4>
+<p>Path: <code>per_sample_outs/&lt;sample&gt;/analysis/</code>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">File Name</th>
+<th style="text-align: left;">Format</th>
+<th style="text-align: left;">Primary Purpose &amp; Field Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>cluster.csv</code></strong></td>
+<td style="text-align: left;"><code>CSV</code></td>
+<td style="text-align: left;">Single-cell cluster assignments and coordinates. Records cell barcodes (row index), <code>nGene</code>, <code>nUMI</code>, <code>leiden</code> (cluster ID), <code>UMAP_1</code>, <code>UMAP_2</code> coordinates, <code>Cluster</code> (with cell count label), and optional <code>Predict_number</code> and <code>Predicted cell type</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>marker.csv</code></strong></td>
+<td style="text-align: left;"><code>CSV</code></td>
+<td style="text-align: left;">Long-format differential marker gene table for cell type identification and functional enrichment. Includes <code>cluster</code>, <code>gene</code>, <code>score</code>, <code>avg_log2FC</code>, <code>p_val</code>, <code>p_val_adj</code>, <code>pct.1</code> (in-cluster fraction), and <code>pct.2</code> (out-of-cluster fraction).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>marker_table.csv</code></strong></td>
+<td style="text-align: left;"><code>CSV</code></td>
+<td style="text-align: left;">Wide-format marker table suitable for cross-cluster comparison. Includes <code>gene_ids</code>, <code>gene_name</code>, and corresponding <code>cluster{K}_lg2fc</code> and <code>cluster{K}_pval</code> for each cluster.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>QC_Cluster.h5ad</code></strong></td>
+<td style="text-align: left;"><code>H5AD</code></td>
+<td style="text-align: left;">Full AnnData object encompassing downstream filtering, normalization, highly variable genes, PCA, Leiden graph clustering, UMAP coordinates, <code>rank_genes_groups</code> marker statistics, and cell annotations. Use Scanpy to read the saved clustering assignments, embeddings, and marker statistics.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>raw_qc.xls</code></strong></td>
+<td style="text-align: left;"><code>TSV Text</code></td>
+<td style="text-align: left;">Per-cell quality metrics table (note: tab-delimited plain text TSV, not a binary Excel spreadsheet). Rows represent cell barcodes; columns include <code>n_genes_by_counts</code>, <code>total_counts</code>, and mitochondrial percentages.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>raw_QCplot.png</code></strong></td>
+<td style="text-align: left;"><code>PNG</code></td>
+<td style="text-align: left;">Pre-filtering violin distribution of cellular features (UMI counts, gene counts, and mitochondrial percentages).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>filter_QCplot.png</code></strong></td>
+<td style="text-align: left;"><code>PNG</code></td>
+<td style="text-align: left;">Post-filtering violin distribution displaying the effect of QC cutoff filtering.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>cluster_annotation.png</code></strong></td>
+<td style="text-align: left;"><code>PNG</code></td>
+<td style="text-align: left;">(Optional) Generated when reference annotations (HCL for human, MCA for mouse) are enabled, displaying the UMAP scatter plot projected with predicted cell types.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>cell_classification.csv</code></strong></td>
+<td style="text-align: left;"><code>CSV</code></td>
+<td style="text-align: left;">(Optional) Generated in mixed-species experiments (e.g. <code>Human_and_Mouse</code>), recording species calls and multiplet calls for each cell in this sample.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Global Analysis Directory Scope</p>
+<ul>
+<li><strong>Single-Species C6 Runs</strong>: The global output does not include an <code>outs/rna/analysis/</code> directory; independent clustering outputs are located exclusively in each sample's <code>per_sample_outs/&lt;sample&gt;/analysis/</code>.</li>
+<li><strong>Mixed-Species Runs</strong>: The global <code>outs/rna/analysis/</code> delivers only the global <code>cell_classification.csv</code> species assignment table.</li>
+<li><strong>Count Matrix H5AD Location</strong>: <code>filtered_feature_bc_matrix.h5ad</code>, serving as the count matrix deliverable, is located in the sample root <code>per_sample_outs/&lt;sample&gt;/</code> alongside the MEX and H5 formats.</li>
+</ul>
+</div>
+<hr />
+<h2 id="report-guide">Web Report Guide <a id="web-report-interpretation"></a> <a id="multi-sample-web-report-interpretation-outsname_multi_reporthtml"></a><a class="headerlink" href="#report-guide" title="Permanent link">&para;</a></h2>
+<p>Path: <code>outs/&lt;name&gt;_multi_report.html</code>.</p>
+<p><strong>Overview</strong>: The HTML report provides shared library metrics, sample QC comparisons, and per-sample analysis results. Use the top modality navigation and left functional navigation to select a view.</p>
+<div class="admonition info">
+<p class="admonition-title">C6 Multi-Sample Quality Assessment Principles &amp; Review Guide</p>
+<ul>
+<li><strong>Tiered Evaluation Strategy</strong>: C6 multiplexing combines shared library construction with sample tagging. Review should proceed in three stages: <strong>Global Library QC → Cross-Sample Uniformity → Individual Cell Biology</strong>.</li>
+<li><strong>Library Metrics First</strong>: Inspect the <code>Library</code> tab first for shared cDNA and Oligo throughput, Q30 base quality, valid barcodes, and genomic mapping rates to rule out global sequencing risks.</li>
+<li><strong>Cross-Sample Uniformity Check</strong>: In the <code>Summary</code> and <code>Cells</code> tabs, evaluate assigned reads, cell counts, and median genes/UMIs across samples to identify outliers caused by viability differences or tagging efficiency variations.</li>
+<li><strong>Individual Sample Biological Validation</strong>: In the <code>Samples</code> tab or sample reports, verify UMAP cluster topology, automated cell annotations, and canonical marker gene expression for biological consistency.</li>
+</ul>
+</div>
+<h3 id="report-navigation">Two-Level Navigation Architecture <a id="two-level-navigation-architecture"></a><a class="headerlink" href="#report-navigation" title="Permanent link">&para;</a></h3>
+<p>The interactive report decouples content through primary top and secondary left navigation bars:</p>
+<ul>
+<li><strong>Top Modality Bar (Primary Tab)</strong>: Displays active modality as <code>RNA</code>;</li>
+<li><strong>Left Navigation Bar (Secondary Tabs)</strong>:</li>
+<li><code>Summary</code>: Global batch overview cards, cross-sample comparative charts, and runtime configuration;</li>
+<li><code>Cells</code>: Single-cell level QC metrics, violin distributions, barcode rank curves, bead merging, and probe demultiplexing;</li>
+<li><code>Library</code>: Physical sequencing library metrics (Q30, valid barcodes/UMIs), mapping distributions, and sequencing saturation;</li>
+<li><code>Samples</code>: Decoupled views for all-sample comparative summaries (All samples) and per-sample details (Single sample clustering and markers).</li>
+</ul>
+<hr />
+<h3 id="summary-and-parameters">Summary &amp; Parameters <a id="tab-1-summary-parameters"></a><a class="headerlink" href="#summary-and-parameters" title="Permanent link">&para;</a></h3>
+<h4 id="summary">Summary Page (Assay overview) <a id="summary-page-assay-overview"></a><a class="headerlink" href="#summary" title="Permanent link">&para;</a></h4>
+<p>The <code>Summary</code> tab provides global batch statistics and cross-sample metric comparisons to rapidly spot outlier samples:</p>
+<div style="text-align: center; margin: 1.5rem 0;">
+<p><img src="../images/html_c6_multi_summary.png" alt="C6 Web Report - Summary Overview" style="max-width: 560px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);"></p>
+</div>
+<h5 id="overview-metrics">1. Global Summary Cards <a id="1-global-summary-cards"></a><a class="headerlink" href="#overview-metrics" title="Permanent link">&para;</a></h5>
+<p>Prominent metric cards at the top highlight overall batch performance:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Metric Card</th>
+<th style="text-align: left;">Calculation &amp; Statistical Scope</th>
+<th style="text-align: left;">Interpretation &amp; Guidance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Estimated number of cells</strong></td>
+<td style="text-align: left;">Total number of barcodes identified as real cells across all samples (sum of called cells before downstream QC).</td>
+<td style="text-align: left;">Compare against total targeted cell input. If recovery is below expectations, review cell viability and microfluidic encapsulation alongside other QC metrics.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Median UMIs per cell</strong></td>
+<td style="text-align: left;">Median of per-sample median UMI counts (cross-sample median, not a pooled cell median).</td>
+<td style="text-align: left;">Reflects the batch-wide transcript capture baseline.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Median genes per cell</strong></td>
+<td style="text-align: left;">Median of per-sample median detected genes (genes with UMI ≥ 1).</td>
+<td style="text-align: left;">Reflects overall library complexity and transcriptome coverage.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mean reads per cell</strong></td>
+<td style="text-align: left;">Assigned RNA read pairs / called cells in this sample, including assigned reads outside called-cell barcodes.</td>
+<td style="text-align: left;">Measures average raw sequencing depth. Sequencing depth requirements depend on cell type, library complexity, and analysis goals.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="pipeline-info">2. Pipeline Information &amp; Chemistry <a id="2-pipeline-information-chemistry"></a><a class="headerlink" href="#pipeline-info" title="Permanent link">&para;</a></h5>
+<p>Displays core execution parameters:
+* <strong>Chemistry</strong>: Library protocol (displayed as <code>SCRNAC6</code>);
+* <strong>Include Introns</strong>: Indicates whether intronic alignments contribute to gene expression quantification (<code>Yes</code> recommended, particularly for single-nuclei RNA-seq snRNA-seq);
+* <strong>Reference</strong>: Reference genome and annotation build.</p>
+<h5 id="sample-comparison">3. Cross-Sample Comparison (Sample overview) <a id="3-cross-sample-comparison-sample-overview"></a><a class="headerlink" href="#sample-comparison" title="Permanent link">&para;</a></h5>
+<p>Provides toggles between <strong>Chart</strong> and <strong>Table</strong> views:
+* <strong>Chart View</strong>: Bar charts ranking samples on the selected metric with a <strong>dashed line marking the across-sample median</strong>; supports sorting by <code>Sample ID</code> or <code>Value</code> to identify demultiplexing imbalances.
+* <strong>Table View</strong>: Interactive table listing <code>Sample ID</code>, <code>Assigned reads</code> (count and percentage), <code>Called cells</code>, <code>Median genes</code>, and <code>Median UMIs</code>; click <code>View cells →</code> on any row to open details for that sample in the <code>Samples</code> tab.</p>
+<hr />
+<h4 id="configuration">Configuration Parameters <a id="configuration-parameters"></a><a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h4>
+<p>Clicking the parameters toggle in the header expands the complete execution manifest:</p>
+<div style="text-align: center; margin: 1.5rem 0;">
+<p><img src="../images/html_c6_multi_parameter.png" alt="C6 Web Report - Parameters" style="max-width: 560px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);"></p>
+</div>
+<ul>
+<li><strong>Input Configuration (Input CSV)</strong>: Fully documents the run configuration table, including library blocks (<code>[libraries]</code>), sample demultiplexing mappings and expected cell numbers (<code>[samples]</code>), and RNA alignment parameters (<code>[rna]</code>: reference genome path, <code>no_bam</code> flag, etc.);</li>
+<li><strong>Raw Sequencing Inputs (Input FASTQs)</strong>: Records absolute physical FASTQ paths for cDNA and Oligo libraries, providing complete traceability for reproducible bioinformatics audits.</li>
+</ul>
+<hr />
+<h3 id="cell-metrics">Cells: Cell QC <a id="tab-2-cells-cell-quality-metrics-feature-distributions"></a><a class="headerlink" href="#cell-metrics" title="Permanent link">&para;</a></h3>
+<p>The <code>Cells</code> tab focuses on single-cell level QC, comparing signal specificity and cellular uniformity across samples:</p>
+<div style="text-align: center; margin: 1.5rem 0;">
+<p><img src="../images/html_c6_multi_cells.png" alt="C6 Web Report - Cells Quality" style="max-width: 560px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);"></p>
+</div>
+<h4 id="rna-quality">1. RNA Quality Metrics Table <a id="1-rna-quality-metrics-table"></a><a class="headerlink" href="#rna-quality" title="Permanent link">&para;</a></h4>
+<p>Comprehensive per-sample single-cell QC table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Metric</th>
+<th style="text-align: left;">Calculation &amp; Definition</th>
+<th style="text-align: left;">Interpretation &amp; Guidance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Estimated number of cells</strong></td>
+<td style="text-align: left;">Number of called real cells in this sample before downstream QC.</td>
+<td style="text-align: left;">Evaluates whether sample-specific cell recovery meets expectations.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mean reads per cell</strong></td>
+<td style="text-align: left;">Assigned RNA read pairs / called cells in this sample, including assigned reads outside called-cell barcodes.</td>
+<td style="text-align: left;">Measures raw physical sequencing depth allocated per cell.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mean cell-associated reads per cell</strong></td>
+<td style="text-align: left;">cDNA reads associated with called-cell barcodes / Total called cells.</td>
+<td style="text-align: left;">Measures effective sequencing depth within real cells (excluding ambient loss).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mean UMI counts per cell</strong></td>
+<td style="text-align: left;">Mean UMI counts detected per called cell.</td>
+<td style="text-align: left;">Measures average transcript capture levels.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Median UMI counts per cell</strong></td>
+<td style="text-align: left;">Median deduplicated UMI counts per called cell.</td>
+<td style="text-align: left;">Physical molecular capture baseline per cell.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mean genes per cell</strong></td>
+<td style="text-align: left;">Mean genes detected (UMI ≥ 1) per called cell.</td>
+<td style="text-align: left;">Evaluates average transcriptional richness.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Median genes per cell</strong></td>
+<td style="text-align: left;">Median genes detected (UMI ≥ 1) per called cell.</td>
+<td style="text-align: left;">Measures cell transcriptional activity and library diversity.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Total genes detected</strong></td>
+<td style="text-align: left;">Total distinct genes detected in at least one cell in this sample.</td>
+<td style="text-align: left;">Typically 15,000–35,000 for mammalian tissues.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fraction reads in cells</strong></td>
+<td style="text-align: left;">Fraction of confidently mapped transcriptomic reads with valid barcodes that fall within called cells.</td>
+<td style="text-align: left;">Assesses the fraction of reads in called cells. For low values, review cell viability, barcode assignment, and other QC metrics when investigating ambient RNA or cell damage.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="bead-merging">2. Barcode Ranking &amp; Bead Merging (RNA Beads to Cells) <a id="2-barcode-ranking-bead-merging-rna-beads-to-cells"></a><a class="headerlink" href="#bead-merging" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>RNA Barcode Rank Plot (Left)</strong>: Overlays barcode rank curves for all samples on logarithmic axes. High-quality samples show a wide plateau followed by a steep drop-off at the inflection point.</li>
+<li><strong>RNA Violin Plot (Middle)</strong>: Mitochondrial percentage violin distribution (Mito percent), monitoring cellular integrity during sample preparation and microfluidic encapsulation (typically recommended median &lt; 10%–15%).</li>
+<li><strong>Bead Count Distribution (Right)</strong>: Histogram showing the number of bead barcodes merged into each called cell barcode, confirming that the vast majority of droplets encapsulate a single bead.</li>
+</ul>
+<h4 id="barcode-metrics">3. Probe Barcode Demultiplexing Table (Metrics per probe barcode) <a id="3-probe-barcode-demultiplexing-table-metrics-per-probe-barcode"></a><a class="headerlink" href="#barcode-metrics" title="Permanent link">&para;</a></h4>
+<p>Documents the demultiplexing efficiency and yield for each Sample Barcode probe:
+* <strong>Probe barcode ID</strong>: Probe barcode identifier (e.g., <code>BC09</code>, <code>BC11</code>, <code>BC12</code>);
+* <strong>Sample ID</strong>: Bound sample identifier (e.g., <code>demo_1</code>, <code>demo_3</code>);
+* <strong>UMIs per probe barcode</strong>: Total UMI counts assigned to this probe and percentage share of the run;
+* <strong>Cells per probe barcode</strong>: Total called cells assigned to this probe and percentage share of the batch.</p>
+<hr />
+<h3 id="library-metrics">Library: Library QC <a id="tab-3-library-shared-sequencing-mapping-metrics"></a><a class="headerlink" href="#library-metrics" title="Permanent link">&para;</a></h3>
+<p>The <code>Library</code> tab details physical sequencing fidelity for shared cDNA and Oligo libraries, genome mapping distributions, and sequencing saturation:</p>
+<div style="text-align: center; margin: 1.5rem 0;">
+<p><img src="../images/html_c6_multi_library.png" alt="C6 Web Report - Library & Mapping" style="max-width: 560px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);"></p>
+</div>
+<h4 id="sequencing-metrics">1. Sequencing Metrics <a id="1-sequencing-metrics"></a><a class="headerlink" href="#sequencing-metrics" title="Permanent link">&para;</a></h4>
+<p>Reports quality separately for the transcriptomic cDNA library and sample tagging Oligo library:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Library Type</th>
+<th style="text-align: left;">Core Metrics</th>
+<th style="text-align: left;">Interpretation &amp; Guidance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>cDNA Library</strong></td>
+<td style="text-align: left;">• <code>Number of reads</code>: Total input raw reads<br>• <code>Valid cell barcodes</code>: Barcode whitelist matching fraction (≥ 80%)<br>• <code>Valid probe barcodes</code>: Probe barcode validity (if applicable)<br>• <code>Corrected barcodes</code>: 1bp error-corrected barcodes (5%–10%)<br>• <code>Valid UMIs</code>: Valid non-N, non-homopolymer UMI fraction (&gt; 99%)<br>• <code>Q30 bases in barcode / UMI / RNA read</code>: Phred quality scores (&gt; 85%)</td>
+<td style="text-align: left;">Evaluates sequencing instrument performance and cDNA library integrity.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Oligo Library</strong></td>
+<td style="text-align: left;">• <code>Number of reads</code>: Total Oligo reads<br>• <code>Valid barcodes in Read1 / Read2</code>: Barcode match rate in paired reads (≥ 85%)<br>• <code>Corrected barcodes in Read1 / Read2</code>: 1bp correction rate<br>• <code>Q30 bases in barcode / index read</code>: Base quality for sample tags</td>
+<td style="text-align: left;">Evaluates sample tagging fidelity, directly determining demultiplexing accuracy.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="mapping-metrics">2. Mapping Metrics <a id="2-mapping-metrics"></a><a class="headerlink" href="#mapping-metrics" title="Permanent link">&para;</a></h4>
+<p>Provides views for <strong>All Reads</strong> (entire library) and <strong>Filtered Cells</strong> (real-cell reads):
+* <strong>Reads mapped to genome</strong>: Fraction of reads aligning to the reference genome (recommended ≥ 85%–90%);
+* <strong>Reads mapped confidently to genome</strong>: Uniquely aligned high-confidence fraction (recommended ≥ 65%–80%);
+* <strong>Reads mapped confidently to transcriptome</strong>: Fraction aligning confidently to annotated transcripts (recommended ≥ 50%);
+* <strong>Reads mapped to mitochondrial genome</strong>: Percentage assigned to mitochondrial genes;
+* <strong>Confidently mapped to Exonic / Intronic / Intergenic</strong>: Alignment distribution across genomic feature classes (when <code>Include Introns</code> is enabled, both exonic and intronic reads contribute to UMI quantification);
+* <strong>Mapped antisense to gene</strong>: Fraction aligning antisense to annotated transcripts.</p>
+<h4 id="saturation">3. Saturation Analysis <a id="3-saturation-analysis"></a><a class="headerlink" href="#saturation" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Sequencing Saturation Curve</strong>: Plots sequencing saturation as a function of mean cDNA reads per cell estimated via downsampling. Saturation levels around 50%–70% generally satisfy standard clustering and cell type identification needs.</li>
+<li><strong>Median Genes per Cell Curve</strong>: Illustrates gene discovery plateauing with sequencing depth, identifying points of diminishing returns.</li>
+</ul>
+<hr />
+<h3 id="samples">Samples: Sample Results <a id="tab-4-samples-per-sample-biological-deep-dive-cross-sample-comparative-summary"></a><a class="headerlink" href="#samples" title="Permanent link">&para;</a></h3>
+<p>The C6 report in version 3.2 provides two views in the <code>Samples</code> tab: an all-sample overview and individual sample details:</p>
+<h4 id="all-samples">1. All-Sample Overview (All samples View) <a id="1-all-sample-macro-overview-mode-all-samples-view"></a><a class="headerlink" href="#all-samples" title="Permanent link">&para;</a></h4>
+<p>When <code>All samples (15)</code> is selected from the dropdown menu, comprehensive comparative tables and curve previews are displayed across all multiplexed samples:</p>
+<div style="text-align: center; margin: 1.5rem 0;">
+<p><img src="../images/html_c6_multi_samples_all.png" alt="C6 Web Report - Samples All-Sample Overview" style="max-width: 560px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);"></p>
+</div>
+<ul>
+<li><strong>Cell Calling Quality Table</strong>: Horizontally compares <code>Cells</code>, <code>Fraction reads in cells</code>, <code>Median Genes per Cell</code>, <code>Median UMI Counts per Cell</code>, <code>Mitochondrial %</code>, <code>Total Genes Detected</code>, <code>Assigned Reads</code>, and <code>Mean Reads per Cell</code> across all samples;</li>
+<li><strong>Mapping Quality - All Reads Table</strong>: Horizontally compares genomic mapping rate, confident genomic rate, transcriptomic rate, exonic/intronic/intergenic breakdown, and antisense rate;</li>
+<li><strong>Cross-Sample Curve Previews</strong>: Barcode rank curves, violin plots, and saturation curves overlaid across all samples.</li>
+</ul>
+<hr />
+<h4 id="sample-details">2. Sample Details (Single sample View) <a id="2-individual-sample-deep-dive-mode-single-sample-view"></a><a class="headerlink" href="#sample-details" title="Permanent link">&para;</a></h4>
+<p>Selecting an individual sample from the dropdown (e.g., <code>demo_17</code>) reveals its independent biological clustering and marker expression:</p>
+<div style="text-align: center; margin: 1.5rem 0;">
+<p><img src="../images/html_c6_multi_samples.png" alt="C6 Web Report - Samples Sample Details" style="max-width: 560px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);"></p>
+</div>
+<h5 id="sample-qc">Sample-Specific Quick QC Cards (Cell Calling &amp; Mapping Quality) <a id="sample-specific-quick-qc-cards-cell-calling-mapping-quality"></a><a class="headerlink" href="#sample-qc" title="Permanent link">&para;</a></h5>
+<p>Selecting a sample immediately updates two key metric card sets:
+* <strong>Cell Calling Quality</strong>: Cells, Fraction reads in cells, Median Genes/UMIs, and Assigned Reads for this sample;
+* <strong>Mapping Quality — All Reads</strong>: Genomic mapping rate, transcriptomic rate, mitochondrial ratio, and exonic/intronic proportions.</p>
+<h5 id="barcode-rank">Independent Barcode Rank &amp; Violin Plots <a id="independent-barcode-rank-violin-plots"></a><a class="headerlink" href="#barcode-rank" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Displays the independent Barcode Rank curve and inflection point for this sample;</li>
+<li>Displays independent single-cell violin plots for Genes, UMIs, and mitochondrial percentage.</li>
+</ul>
+<h5 id="clusters">Independent UMAP Clustering &amp; UMI Overlay <a id="independent-umap-clustering-umi-overlay"></a><a class="headerlink" href="#clusters" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Left Plot (RNA Cluster Assignment)</strong>: 2D UMAP projection colored by unsupervised graph-based clusters (subsampled up to 10,000 cells for browser responsiveness; full cell sets are retained in output files);</li>
+<li><strong>Right Plot (UMI Count Overlay)</strong>: UMAP colored by total UMI counts per cell, confirming whether clusters are driven by biological expression or sequencing depth variations.</li>
+</ul>
+<h5 id="annotations">Automated Cell Annotation <a id="automated-cell-annotation"></a><a class="headerlink" href="#annotations" title="Permanent link">&para;</a></h5>
+<p>When supported reference annotations are enabled, predicted cell identities (such as B cells, T cells, NK cells, Monocytes) are projected onto the UMAP scatter plot.</p>
+<h5 id="markers">Differential Marker Gene Analysis (Top Features by Cluster) <a id="differential-marker-gene-analysis-top-features-by-cluster"></a><a class="headerlink" href="#markers" title="Permanent link">&para;</a></h5>
+<p>Interactive marker gene table comparing each cluster against remaining cells:
+* <strong>Cluster</strong>: Cluster number;
+* <strong>Gene</strong>: Marker gene symbol;
+* <strong>p_val_adj</strong>: Adjusted p-value returned by Scanpy <code>rank_genes_groups</code>;
+* <strong>avg_log2FC</strong>: Log2 fold change of gene expression in this cluster;
+* <strong>pct.1 / pct.2</strong>: Percentage of cells expressing the gene within vs. outside the cluster.</p>
+<h5 id="sample-saturation">Sample Saturation Analysis <a id="sample-saturation-analysis"></a><a class="headerlink" href="#sample-saturation" title="Permanent link">&para;</a></h5>
+<p>Displays independent sequencing saturation and median genes per cell curves for this sample.</p>
+<hr />
+<h2 id="metric-definitions">Core Metrics &amp; Denominator Scope <a id="core-metrics-scope"></a><a id="core-metrics-definitions"></a> <a id="core-metrics-denominator-scope"></a><a class="headerlink" href="#metric-definitions" title="Permanent link">&para;</a></h2>
+<p>The denominators used for C6 metrics are defined below:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Metric</th>
+<th style="text-align: left;">Scope &amp; Calculation Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Assigned Reads</strong></td>
+<td style="text-align: left;">Actual read pairs assigned to this sample based on Sample Barcode recognition (not total raw reads).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mean Reads per Cell</strong></td>
+<td style="text-align: left;"><code>Assigned Reads / Cells</code> within the sample (shows N/A if cell count is 0).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mean cell-associated reads per cell</strong></td>
+<td style="text-align: left;">cDNA reads associated with called-cell barcodes / Total called cells, representing effective sequencing depth within real cells.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fraction Reads in Cells</strong></td>
+<td style="text-align: left;">Confidently mapped transcriptomic reads from called cells divided by total valid-barcode reads in this sample.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mapping Quality</strong></td>
+<td style="text-align: left;">Calculated using evaluated reads assigned to this sample; does not pool cross-sample reads.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>cDNA Valid Barcodes</strong></td>
+<td style="text-align: left;">Stably reported as 100% when Assigned Reads &gt; 0 (describes the subset already assigned).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Library-Level Metrics (Q30 / Valid UMI)</strong></td>
+<td style="text-align: left;">Measures shared sequencing quality; annotated as <code>cDNA QC scope</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sample Barcode Validity</strong></td>
+<td style="text-align: left;">Fraction of Oligo reads matching the expected sample barcode whitelist.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 MGI Tech Bioinformatics.<br>Documentation 3.2 · Updated 2026-10-23
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["search.suggest", "search.highlight", "content.code.copy", "navigation.top"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/doc-controls.js"></script>
+      
+    
+  </body>
+</html>

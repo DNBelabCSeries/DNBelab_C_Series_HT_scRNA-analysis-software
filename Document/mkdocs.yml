@@ -1,0 +1,135 @@
+site_name: DNBelab C Series™ HT Single-Cell Analysis Software
+site_description: Documentation site generated from README and doc markdown files
+site_dir: site
+docs_dir: docs
+use_directory_urls: false
+
+repo_name: MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software
+repo_url: https://github.com/MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software
+edit_uri: ""
+copyright: |
+  Copyright &copy; 2026 MGI Tech Bioinformatics. All rights reserved.<br>
+  Documentation Version 3.2 · Updated October 23, 2026
+
+exclude_docs: |
+  **/*.html
+
+theme:
+  name: material
+  language: zh
+  favicon: assets/images/favicon.svg
+  icon:
+    logo: material/dna
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: blue
+  features:
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - navigation.top
+
+plugins:
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      languages:
+        - locale: zh
+          default: true
+          name: 中文
+          build: true
+          site_name: DNBelab C Series™ HT 单细胞分析软件
+          link: /
+        - locale: en
+          name: English
+          build: true
+          site_name: DNBelab C Series™ HT Single-Cell Analysis Software
+          link: /en/
+          nav_translations:
+            首页: Home
+            安装: Installation
+            快速开始: Quick Start
+            流程: Pipeline
+            参数: Parameters
+            输出: Outputs
+            结果分析: Downstream Analysis
+            版本说明: Release Notes
+            升级指南: Upgrade Guide
+            运行与排错: Running & Troubleshooting
+            数据集: Dataset
+            附加: Additional Resources
+            总览: Overview
+            scRNA: scRNA
+            scATAC: scATAC
+            scVDJ: scVDJ
+            多组学: Multi
+            C6 多样本: C6
+            工具: Tools
+            旧版安装: Previous Installation
+            JSON 规范: JSON Spec
+            术语表: Glossary
+            文库结构: Library Structure
+  - search
+
+extra:
+  generator: false
+
+markdown_extensions:
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 2-3
+
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - javascripts/doc-controls.js
+
+nav:
+  - 首页: index.md
+  - 安装: doc/installation.md
+  - 快速开始: doc/quickstart.md
+  - 流程:
+      - 总览: doc/pipeline/pipeline.md
+      - scRNA: doc/pipeline/scRNA.md
+      - scATAC: doc/pipeline/scATAC.md
+      - scVDJ: doc/pipeline/scVDJ.md
+      - 多组学: doc/pipeline/multi.md
+      - C6 多样本: doc/pipeline/c6.md
+  - 参数:
+      - 总览: doc/parameter/parameter.md
+      - scRNA: doc/parameter/scRNA.md
+      - scATAC: doc/parameter/scATAC.md
+      - scVDJ: doc/parameter/scVDJ.md
+      - 多组学: doc/parameter/multi.md
+      - C6 多样本: doc/parameter/c6.md
+      - 工具: doc/parameter/tools.md
+  - 输出:
+      - 总览: doc/outs/outs.md
+      - scRNA: doc/outs/scRNA.md
+      - scATAC: doc/outs/scATAC.md
+      - scVDJ: doc/outs/scVDJ.md
+      - 多组学: doc/outs/multi.md
+      - C6 多样本: doc/outs/c6.md
+  - 结果分析: doc/io.md
+  - 运行与排错: doc/troubleshooting.md
+  - 版本说明: doc/release.md
+  - 数据集: doc/dataset.md
+  - 附加:
+      - 升级指南: doc/migration.md
+      - 术语表: doc/glossary.md
+      - 文库结构: doc/library_structure.md
+      - 旧版安装: doc/installation_previous.md
+      - JSON 规范: doc/json.md

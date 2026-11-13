@@ -1,65 +1,97 @@
-# Software Installation
+# DNBelab C Series™ 软件安装指南
 
-## 1. System Requirements
+本指南介绍 DNBelab C Series™ HT 单细胞分析软件（dnbc4tools）的系统环境要求、安装包获取、解压部署与功能验证方法。
 
-To run the *dnbc4tools* package on a Linux-based system, the following minimum requirements are necessary:
+## 环境要求 <a id="system-requirements"></a>
 
-- **x86-64 compatible processor**
-- **50 GB RAM** and **4 CPUs**
-- **CentOS 7.x** 64-bit operating system (Linux kernel 3.10.0) or a compatible newer version
+运行 dnbc4tools 需要满足以下基础运行环境：
 
-</br>
-</br>
+| 配置项 | 最低要求 | 推荐配置 | 说明 |
+| :--- | :--- | :--- | :--- |
+| **操作系统** | 64 位 Linux | CentOS 7.x+ / Ubuntu 20.04+ | 兼容主流 64 位 Linux 发行版 |
+| **CPU / 架构** | 8 核（x86-64） | 16 核及以上 | 需支持 x86-64 架构处理器 |
+| **内存 (RAM)** | 50 GB | 128 GB 及以上 | 实际资源消耗依据分析样本数与数据量而定 |
+| **磁盘存储** | 保证项目数据空间 | 高速 NVMe / SSD | 用于存放 FASTQ、参考基因组与分析中间结果 |
 
-## 2. Software Download
+---
 
-### dnbc4tools 2.1.3 (Released: October 9, 2024)
+## 软件下载 <a id="software-download"></a>
 
-**Download for Linux 64-bit**: Please use the cloud drive link below
+### dnbc4tools 3.2
 
-### Package Details Information
+!!! note "开发版文档：安装包尚不可下载"
+    3.2 尚未正式发布，目前未提供可下载的安装包；正式发布日期、下载地址、软件包名称和校验值待确认。下文中的安装路径与命令为示例，待取得正式发布包后使用。
 
-| Item | Details |
-|------|----------|
-| **File Name** | dnbc4tools2.1.3.tar.gz |
-| **File Size** | 494M |
-| **MD5 Checksum** | dac23475b79cb07cc5b7d4f092aa67fa |
+<div style="margin-top: 15px;">
+  <strong>需要历史版本？</strong><br>
+  3.1 完整文档可通过顶部版本菜单切换查阅；更早版本下载和安装说明请参考 <a href="./installation_previous.md">历史版本安装指南</a>。
+</div>
 
-**Download Options:**
-- **BGI CloudDrive link**: [dnbc4tools2.1.3.tar.gz](https://bgipan.genomics.cn/#/link/eCSNwpwnrlc2Mdqtjy6A) (Access Code: CABq)
+---
 
-> [!Note]
-> **Update (January 15, 2026):** This package has been re-uploaded to fix an issue where HTML reports failed to open.
+## 安装流程 <a id="installation-process"></a>
 
-**New Features in dnbc4tools 2.1.3**
+### 第一步：解压安装包
 
-- Available as a tar.gz compressed file, requiring no additional configuration.
-- **New Modules**: Single-cell RNA 5' Transcriptome Analysis and Single-cell VDJ Analysis.
+将安装包解压到您的目标安装目录（示例为 `/opt/software`）：
 
-</br>
-</br>
+```bash
+# 进入目标安装目录
+cd /opt/software
 
-## 3. Software Installation
+# 解压安装包
+tar -xzvf dnbc4tools-3.2.tar.gz
+```
 
-*dnbc4tools* is distributed as a tar.gz package that can be directly extracted and run without any additional setup. All necessary dependencies are precompiled, making the software compatible with most Linux environments.
+### 第二步：确认目录结构
 
-1. **Download and extract the dnbc4tools package** to a suitable directory. In this example, it will be extracted to `/opt/software`.
+解压完成后，软件包目录结构如下：
 
-   ```shell
-   cd /opt/software
-   # Extract the dnbc4tools package
-   tar -xzvf dnbc4tools2.1.3.tar.gz
-   ```
+```text
+dnbc4tools3.2/
+├── dnbc4tools          # 主程序可执行入口
+├── external/           # 内置第三方工具依赖
+├── lib/                # 动态链接库文件
+├── misc/               # 配置文件与辅助资源
+└── sourceC4.bash       # 环境变量配置脚本
+```
 
-2. During extraction, numerous files will be listed in the terminal. Once extraction is complete, the directory should contain the following items, with `dnbc4tools2.1.3/dnbc4tools` being the executable:
+---
 
-   ```shell
-   dnbc4tools2.1.3/
-   dnbc4tools2.1.3/dnbc4tools
-   dnbc4tools2.1.3/external
-   dnbc4tools2.1.3/lib
-   dnbc4tools2.1.3/misc
-   dnbc4tools2.1.3/sourceC4.bash
-   ```
+## 安装验证 <a id="verification--testing"></a>
 
-This completes the installation. *dnbc4tools* is now ready for use.
+### 基础功能测试
+
+进入解压目录，直接执行主程序验证安装状态：
+
+```bash
+# 进入程序目录
+cd /opt/software/dnbc4tools3.2
+
+# 运行主程序查看帮助信息
+./dnbc4tools
+```
+
+命令成功输出如下版本与帮助信息即代表安装就绪：
+
+```text
+dnbc4tools 3.2
+
+Single-cell analysis toolkit for RNA, ATAC, V(D)J, and multi-omics workflows
+
+Usage: dnbc4tools <COMMAND>
+
+Commands:
+  
+    rna          Single-cell RNA-seq analysis
+    atac         Single-cell ATAC-seq analysis
+    vdj          Single-cell V(D)J immune profiling
+    tools        Utility commands and file processing
+    multi        Integrated multi-omics analysis
+
+Options:
+  -h, --help     show this help message and exit
+  -v, --version  show program's version number and exit
+```
+
+安装验证完成后，即可参考[快速开始](./quickstart.md)开始您的第一个单细胞分析任务。

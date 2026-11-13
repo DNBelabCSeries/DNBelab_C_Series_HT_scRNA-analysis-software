@@ -1,0 +1,2075 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation site generated from README and doc markdown files">
+      
+      
+      
+      
+        <link rel="prev" href="scVDJ.html">
+      
+      
+        <link rel="next" href="c6.html">
+      
+      
+        
+          <link rel="alternate" href="multi.html" hreflang="zh">
+        
+          <link rel="alternate" href="../../en/doc/outs/multi.html" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>多组学 - DNBelab C Series™ HT 单细胞分析软件</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_2" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../index.html" title="DNBelab C Series™ HT 单细胞分析软件" class="md-header__button md-logo" aria-label="DNBelab C Series™ HT 单细胞分析软件" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h2v2c0 1.44.68 2.61 1.88 3.78.86.83 2.01 1.63 3.21 2.42l-1.83 1.19C8.27 10.72 7.31 10 6.5 9.21 5.07 7.82 4 6.1 4 4zm14 0h2v2c0 2.1-1.07 3.82-2.5 5.21-1.41 1.38-3.21 2.52-4.96 3.63-1.75 1.12-3.45 2.21-4.66 3.38C6.68 17.39 6 18.56 6 20v2H4v-2c0-2.1 1.07-3.82 2.5-5.21 1.41-1.38 3.21-2.52 4.96-3.63 1.75-1.12 3.45-2.21 4.66-3.38C17.32 6.61 18 5.44 18 4zm-3.26 10.61c.99.67 1.95 1.39 2.76 2.18C18.93 16.18 20 17.9 20 20v2h-2v-2c0-1.44-.68-2.61-1.88-3.78-.86-.83-2.01-1.63-3.21-2.42zM7 3h10v1l-.06.5H7.06L7 4zm.68 3h8.64c-.24.34-.52.69-.9 1.06l-.51.44H9.07l-.49-.44c-.38-.37-.66-.72-.9-1.06m1.41 10.5h5.84l.49.44c.38.37.66.72.9 1.06H7.68c.24-.34.52-.69.9-1.06zm-2.03 3h9.88l.06.5v1H7v-1z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DNBelab C Series™ HT 单细胞分析软件
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              多组学
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="multi.html" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../en/doc/outs/multi.html" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="DNBelab C Series™ HT 单细胞分析软件" class="md-nav__button md-logo" aria-label="DNBelab C Series™ HT 单细胞分析软件" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h2v2c0 1.44.68 2.61 1.88 3.78.86.83 2.01 1.63 3.21 2.42l-1.83 1.19C8.27 10.72 7.31 10 6.5 9.21 5.07 7.82 4 6.1 4 4zm14 0h2v2c0 2.1-1.07 3.82-2.5 5.21-1.41 1.38-3.21 2.52-4.96 3.63-1.75 1.12-3.45 2.21-4.66 3.38C6.68 17.39 6 18.56 6 20v2H4v-2c0-2.1 1.07-3.82 2.5-5.21 1.41-1.38 3.21-2.52 4.96-3.63 1.75-1.12 3.45-2.21 4.66-3.38C17.32 6.61 18 5.44 18 4zm-3.26 10.61c.99.67 1.95 1.39 2.76 2.18C18.93 16.18 20 17.9 20 20v2h-2v-2c0-1.44-.68-2.61-1.88-3.78-.86-.83-2.01-1.63-3.21-2.42zM7 3h10v1l-.06.5H7.06L7 4zm.68 3h8.64c-.24.34-.52.69-.9 1.06l-.51.44H9.07l-.49-.44c-.38-.37-.66-.72-.9-1.06m1.41 10.5h5.84l.49.44c.38.37.66.72.9 1.06H7.68c.24-.34.52-.69.9-1.06zm-2.03 3h9.88l.06.5v1H7v-1z"/></svg>
+
+    </a>
+    DNBelab C Series™ HT 单细胞分析软件
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickstart.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速开始
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    流程
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    流程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/pipeline.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    多组学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6 多样本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参数
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    参数
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/parameter.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    多组学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6 多样本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/tools.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    输出
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    输出
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    多组学
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="multi.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    多组学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概述
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心交付物速览
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        输出目录结构
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        详细文件说明
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="详细文件说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-outssample_multi_reporthtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 多组学组合报告 (outs/&lt;sample&gt;_multi_report.html)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-outsrna-outsatac-outsvdj-t-outsvdj-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 各单组学独立输出子目录 (outs/rna, outs/atac, outs/vdj-t, outs/vdj-b)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-logsrun_manifestjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 运行清单审计日志 (logs/run_manifest.json)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        网页报告释义
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="网页报告释义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        两级导航体系架构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-summary-summary-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Summary 与参数配置 (Summary &amp; Parameters)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-rna-rna-modality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. RNA 页面 (RNA Modality)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-atac-atac-modality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. ATAC 页面 (ATAC Modality)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-vdj-vdj-modality-tcr-bcr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. VDJ 页面 (VDJ Modality - TCR &amp; BCR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6 多样本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    结果分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    运行与排错
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    版本说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataset.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    附加
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    附加
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    升级指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    术语表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../library_structure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文库结构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation_previous.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    旧版安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../json.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JSON 规范
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概述
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心交付物速览
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        输出目录结构
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        详细文件说明
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="详细文件说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-outssample_multi_reporthtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 多组学组合报告 (outs/&lt;sample&gt;_multi_report.html)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-outsrna-outsatac-outsvdj-t-outsvdj-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 各单组学独立输出子目录 (outs/rna, outs/atac, outs/vdj-t, outs/vdj-b)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-logsrun_manifestjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 运行清单审计日志 (logs/run_manifest.json)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        网页报告释义
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="网页报告释义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        两级导航体系架构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-summary-summary-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Summary 与参数配置 (Summary &amp; Parameters)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-rna-rna-modality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. RNA 页面 (RNA Modality)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-atac-atac-modality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. ATAC 页面 (ATAC Modality)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-vdj-vdj-modality-tcr-bcr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. VDJ 页面 (VDJ Modality - TCR &amp; BCR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">多组学分析输出<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>输出范围</strong>：目录树描述常规完成运行的结果；可选文件取决于启用模块与阶段完成状态。下文质量参考区间是判读建议，不是软件内置的通过/失败规则，应以本次配置阈值和报告状态为准。</p>
+</blockquote>
+<p>多组学整合分析输出文件说明</p>
+<h2 id="_2">概述 <a id="概述"></a><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>多组学流程通过一份配置文件调度 RNA、ATAC 和 V(D)J 分析，并按组学组织输出。组合 HTML 报告集中展示已启用组学的质控指标和分析结果。ATAC 独立分析后汇总，RNA 与 V(D)J 支持细胞关联分析；组合报告本身不执行跨组学联合降维或聚类。</p>
+<h3 id="_3">核心交付物速览<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>下表汇总了多组学分析的主要交付物、文件格式、核心用途以及推荐的下游生态对接：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">交付产物与核心文件</th>
+<th style="text-align: left;">格式</th>
+<th style="text-align: left;">主要用途与下游生态对接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>多组学综合网页报告</strong><br>• <code>outs/&lt;sample&gt;_multi_report.html</code></td>
+<td style="text-align: left;"><code>HTML</code></td>
+<td style="text-align: left;">一站式集中展示 RNA、ATAC、VDJ-T、VDJ-B 各模态的核心指标卡片、条形码排序曲线、聚类分群图、细胞注释及测序比对质量。<br>• <strong>打开方式</strong>: 无需网络，双击直接在任意现代桌面浏览器中打开。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>单细胞转录组产物</strong><br>• <code>outs/rna/</code></td>
+<td style="text-align: left;"><code>目录结构</code></td>
+<td style="text-align: left;">完整的 scRNA 输出目录，包含过滤与未过滤表达矩阵（MEX / H5 / H5AD）、降维聚类与 Marker 差异分析（<code>analysis/</code>）、单细胞质控明细表（<code>singlecell.csv</code>）及坐标排序比对 BAM 文件（仅在 <code>[rna] no_bam</code> 为 <code>false</code> 时生成）。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>染色质可及性产物</strong><br>• <code>outs/atac/</code></td>
+<td style="text-align: left;"><code>目录结构</code></td>
+<td style="text-align: left;">完整的 scATAC 输出目录，包含过滤与未过滤的峰定量矩阵（MEX / H5）、高质量细胞片段文件（<code>filtered.fragments.tsv.gz</code> 及 Tabix 索引）、TSS 富集统计与元数据。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>T 细胞受体库产物</strong><br>• <code>outs/vdj-t/</code></td>
+<td style="text-align: left;"><code>目录结构</code></td>
+<td style="text-align: left;">完整的 TCR 免疫组库输出，包含高置信度重叠群注释（<code>filtered_contig_annotations.csv</code>）、FASTA 序列、克隆型丰度统计（<code>clonotypes.csv</code>）及国际 AIRR 标准注释文件（<code>airr_annotations.tsv</code>）。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>B 细胞受体库产物</strong><br>• <code>outs/vdj-b/</code></td>
+<td style="text-align: left;"><code>目录结构</code></td>
+<td style="text-align: left;">完整的 BCR 免疫组库输出，包含重链/轻链配对重叠群注释、共识序列（<code>consensus.fasta</code>）、克隆型统计及 AIRR 标准格式文件。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>流水线运行清单</strong><br>• <code>logs/run_manifest.json</code></td>
+<td style="text-align: left;"><code>JSON</code></td>
+<td style="text-align: left;">记录各模态的执行耗时与完成状态（<code>success</code>、<code>success_existing</code> 缓存复用或 <code>failed</code>），便于自动化生产运维与审计溯源。</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_4">输出目录结构 <a id="输出目录结构"></a><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>运行完成后，结果统一归档在 <code>&lt;outdir&gt;/&lt;sample&gt;/outs/</code> 目录下：</p>
+<div class="highlight"><pre><span></span><code>&lt;outdir&gt;/&lt;sample&gt;/
+├── outs/
+│   ├── &lt;sample&gt;_multi_report.html             # 多组学综合交互式网页报告
+│   ├── rna/                                   # RNA 模块完整输出目录 (若启用)
+│   │   ├── filtered_feature_bc_matrix/        # 过滤后的高置信度表达矩阵 (MEX)
+│   │   ├── filtered_feature_bc_matrix.h5      # 表达矩阵 (HDF5 格式)
+│   │   ├── filtered_feature_bc_matrix.h5ad    # 表达矩阵 (AnnData 格式)
+│   │   ├── singlecell.csv                     # 单细胞质控元数据表
+│   │   ├── metrics_summary.xls                # RNA 实验质控指标汇总表
+│   │   └── analysis/                          # 聚类降维与 Marker 基因结果
+│   ├── atac/                                  # ATAC 模块完整输出目录 (若启用)
+│   │   ├── filtered.fragments.tsv.gz          # 高质量细胞片段文件及索引
+│   │   ├── filtered_peak_bc_matrix/           # 过滤后的峰定量矩阵 (MEX)
+│   │   ├── filtered_peak_bc_matrix.h5         # 峰定量矩阵 (HDF5 格式)
+│   │   ├── peak_annotation.tsv               # 峰注释（可选）
+│   │   ├── singlecell.csv                     # ATAC 细胞级质控元数据表
+│   │   └── metrics_summary.xls                # ATAC 实验指标汇总表
+│   ├── vdj-t/                                 # VDJ-T 模块完整输出目录 (若启用)
+│   │   ├── filtered_contig_annotations.csv    # 过滤后高质量重叠群注释表
+│   │   ├── clonotypes.csv                     # TCR 克隆型统计分析表
+│   │   ├── airr_annotations.tsv               # 国际 AIRR 标准注释文件
+│   │   └── metrics_summary.xls                # VDJ-T 实验指标汇总表
+│   └── vdj-b/                                 # VDJ-B 模块完整输出目录 (若启用)
+│       ├── filtered_contig_annotations.csv    # 过滤后高质量重叠群注释表
+│       ├── clonotypes.csv                     # BCR 克隆型统计分析表
+│       ├── airr_annotations.tsv               # 国际 AIRR 标准注释文件
+│       └── metrics_summary.xls                # VDJ-B 实验指标汇总表
+└── logs/
+    └── run_manifest.json                      # 各模态执行状态清单与审计日志
+</code></pre></div>
+<hr />
+<h2 id="_5">详细文件说明 <a id="详细文件说明"></a><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="1-outssample_multi_reporthtml">1. 多组学组合报告 (<code>outs/&lt;sample&gt;_multi_report.html</code>)<a class="headerlink" href="#1-outssample_multi_reporthtml" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>内容</strong>：整合呈现 RNA、ATAC、VDJ-T、VDJ-B 各模态的核心指标卡片、条形码排序曲线、聚类分群图、细胞注释及测序比对质量。</li>
+<li><strong>用途</strong>：单文件离线网页，可在同一个界面内完成跨模态实验质量排查、指标互验与生物学发现。</li>
+</ul>
+<h3 id="2-outsrna-outsatac-outsvdj-t-outsvdj-b">2. 各单组学独立输出子目录 (<code>outs/rna</code>, <code>outs/atac</code>, <code>outs/vdj-t</code>, <code>outs/vdj-b</code>)<a class="headerlink" href="#2-outsrna-outsatac-outsvdj-t-outsvdj-b" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>内容与规范</strong>：每个启用的组学均拥有独立的标准化输出子目录，其文件构成、命名与数据格式与独立单组学完全等价（如转录组的 MEX/H5/H5AD、ATAC 的 fragments 与 peak 矩阵、VDJ 的 AIRR 注释表等）。</li>
+<li><strong>跨组学联合分析</strong>：在多组学实验中，同一细胞的跨模态条形码具备严格的对应与对齐关系，方便直接载入 Seurat（WNN 多模态整合分析）、Signac 或 Muon 进行多组学联合聚类与基因调控网络推断。</li>
+<li><strong>单组学详细文档链接</strong>：</li>
+<li><a href="scRNA.html">scRNA 分析输出说明</a></li>
+<li><a href="scATAC.html">scATAC 分析输出说明</a></li>
+<li><a href="scVDJ.html">scVDJ 分析输出说明</a></li>
+</ul>
+<h3 id="3-logsrun_manifestjson">3. 运行清单审计日志 (<code>logs/run_manifest.json</code>)<a class="headerlink" href="#3-logsrun_manifestjson" title="Permanent link">&para;</a></h3>
+<p>记录每个组学模态的执行耗时与完成状态：
+* <code>success</code>：全新分析运行顺利完成；
+* <code>success_existing</code>：命中流程缓存，复用前序断点结果（断点续跑）；
+* <code>failed</code>：该模态执行发生异常，记录失败节点便于快速定位排查。</p>
+<p><a id="c6-outputs"></a></p>
+<blockquote>
+<p>[!NOTE] 提示：C6 多样本输出结果
+基于 Sample Barcode 物理标记混合的 C6 多样本单细胞 RNA 分析输出结果与目录结构已独立成章，详情请参阅 <a href="c6.html">C6 多样本分析输出说明</a>。</p>
+</blockquote>
+<hr />
+<h2 id="_6">网页报告释义 <a id="网页报告释义"></a><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p><strong>概述</strong>：多组学综合交互报告采用现代两级导航架构，解耦全局总览与各模态的单细胞质控及物理文库指标。</p>
+<div class="admonition info">
+<p class="admonition-title">多组学质量评估原则与阅读建议</p>
+<ul>
+<li><strong>全景总览先行</strong>：在报告首页的 <code>Summary</code> 页面（<code>Assay overview</code>）核对各启用的组学核心卡片（细胞数、中位 UMI/片段数、VDJ 生产性配对数），确认所有模态均正常检出有效细胞。</li>
+<li><strong>单模态逐层质控</strong>：依次切换上方一级导航栏中的各个组学选项卡（<code>RNA</code>、<code>ATAC</code>、<code>VDJ-T</code>、<code>VDJ-B</code>），结合左侧的 <code>Cells</code>（细胞层）与 <code>Library</code>（文库层）核对各模态的基础测序保真度、条形码识别率与特征富集度。</li>
+<li><strong>跨模态生物学一致性互验</strong>：将 RNA 的基因表达谱聚类、ATAC 的染色质开放模式以及 V(D)J 的克隆扩增表型进行交叉比对，确认不同模态间细胞分群的生物学合理性。</li>
+</ul>
+</div>
+<h3 id="_7">两级导航体系架构<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>多组学交互报告通过顶部与左侧的两级导航栏实现清晰的内容解耦：</p>
+<ul>
+<li><strong>顶部组学导航栏（一级选项卡）</strong>：动态展示本次运行中启用的组学模态，包含 <code>RNA</code>、<code>VDJ-T</code>、<code>VDJ-B</code> 及 <code>ATAC</code>；</li>
+<li><strong>左侧功能导航栏（二级选项卡）</strong>：</li>
+<li><code>Summary</code>：当前组学的核心概览指标卡片、多模态全景汇总及流程运行参数；</li>
+<li><code>Cells</code>：单细胞层面的质控指标表、小提琴图、条形码排序曲线、降维聚类图、细胞注释及 Marker 基因；</li>
+<li><code>Library</code>：物理测序文库质量（Q30、有效条形码/UMI）、基因组比对构成及测序饱和度分析。</li>
+</ul>
+<hr />
+<h3 id="1-summary-summary-parameters">1. Summary 与参数配置 (Summary &amp; Parameters)<a class="headerlink" href="#1-summary-summary-parameters" title="Permanent link">&para;</a></h3>
+<h4 id="summary-assay-overview">Summary 页面 (Assay overview)<a class="headerlink" href="#summary-assay-overview" title="Permanent link">&para;</a></h4>
+<p><code>Summary</code> 页面提供本次运行全部启用模态的核心概览指标卡片：</p>
+<div style="text-align: center; margin: 1.5rem 0;">
+<p><img src="../images/html_multi_summary.png" alt="多组学 Summary 全景页面" style="max-width: 560px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);"></p>
+</div>
+<ul>
+<li><strong>Assay overview 核心卡片</strong>：</li>
+<li><strong>RNA 概览</strong>：展示 <code>Estimated number of cells</code>（估计细胞数）、<code>Median UMIs per cell</code>（中位 UMI 数）及 <code>Median genes per cell</code>（中位基因数）；</li>
+<li><strong>VDJ-T 概览</strong>：展示 <code>Estimated number of cells</code>、<code>Cells with productive V-J spanning pair</code>（具有功能性配对的细胞数）及主要链检出数；</li>
+<li><strong>VDJ-B 概览</strong>：展示 <code>Estimated number of cells</code> 及重轻链生产性配对统计；</li>
+<li><strong>ATAC 概览</strong>（若启用）：展示 <code>Estimated number of cells</code>、<code>Median fragments per cell</code>（中位片段数）及 <code>Fraction of fragments in cells</code>。</li>
+<li><strong>核心价值</strong>：单屏集中呈现所有组学的细胞回收与信号强度基准，快速识别不同组学间细胞捕获数量的平衡度。</li>
+</ul>
+<hr />
+<h4 id="configuration-parameters">参数配置 (Configuration Parameters)<a class="headerlink" href="#configuration-parameters" title="Permanent link">&para;</a></h4>
+<p>点击报告顶部的参数信息按钮可展开本次运行的完整配置清单：</p>
+<div style="text-align: center; margin: 1.5rem 0;">
+<p><img src="../images/html_multi_parameter.png" alt="多组学参数配置页面" style="max-width: 560px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);"></p>
+</div>
+<ul>
+<li><strong>输入配置清单 (Input CSV)</strong>：完整记录输入配置表的内容，包括各组学独立参数块（<code>[rna]</code>、<code>[atac]</code>、<code>[vdj-t]</code>、<code>[vdj-b]</code>）及参考基因组路径；</li>
+<li><strong>测序文库配置 (<code>[libraries]</code>)</strong>：清晰记录各文库的原始 FASTQ 文件路径与 <code>feature_types</code> 对应关系，为后续分析复现与实验审计提供完整凭证。</li>
+</ul>
+<hr />
+<h3 id="2-rna-rna-modality">2. RNA 页面 (RNA Modality)<a class="headerlink" href="#2-rna-rna-modality" title="Permanent link">&para;</a></h3>
+<h4 id="rna-cells">RNA &gt; Cells（单细胞质控与生物学分群）<a class="headerlink" href="#rna-cells" title="Permanent link">&para;</a></h4>
+<p>展示单细胞转录组维度的细胞质控、无监督聚类及差异 Marker 基因：</p>
+<div style="text-align: center; margin: 1.5rem 0;">
+<p><img src="../images/html_multi_scrna_cells.png" alt="多组学 RNA Cells 页面" style="max-width: 560px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);"></p>
+</div>
+<ul>
+<li><strong>RNA Quality Metrics</strong>：展示细胞数、<code>Fraction reads in cells</code>（细胞内转录组读段比例，衡量信噪比）、中位基因/UMI 数及平均测序深度；</li>
+<li><strong>RNA Beads to Cells</strong>：</li>
+<li><strong>RNA Barcode Rank Plot（左图）</strong>：双对数坐标系下的条形码排序曲线，呈现清晰的真实细胞拐点（Knee Point）与背景分界；</li>
+<li><strong>Bead Count Distribution（右图）</strong>：微流控反应中单个细胞液滴合并的微珠条形码分布；</li>
+<li><strong>RNA Cluster Analysis</strong>：</li>
+<li><strong>左图（RNA Cluster Assignment）</strong>：基于表达谱的二维 UMAP 聚类图，展现不同细胞亚群的拓扑分离；</li>
+<li><strong>右图（UMI Count Overlay）</strong>：在相同 UMAP 空间投射 UMI 分子计数渐变，辅助排查测序深度偏倚；</li>
+<li><strong>RNA Cell Annotation</strong>：基于参考数据库自动预测并标记的主要细胞类型；</li>
+<li><strong>Top Features by Cluster</strong>：交互式特征 Marker 基因表，包含每个聚类簇的代表性基因、校正后 P 值（<code>p_val_adj</code>）、表达变化倍数（<code>avg_log2FC</code>）及簇内外表达比例（<code>pct.1</code> / <code>pct.2</code>）。</li>
+</ul>
+<hr />
+<h4 id="rna-library">RNA &gt; Library（测序质量、比对与饱和度）<a class="headerlink" href="#rna-library" title="Permanent link">&para;</a></h4>
+<p>展示 RNA 转录组文库的物理测序保真度与全基因组比对表现：</p>
+<div style="text-align: center; margin: 1.5rem 0;">
+<p><img src="../images/html_multi_scrna_library.png" alt="多组学 RNA Library 页面" style="max-width: 560px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);"></p>
+</div>
+<ul>
+<li><strong>Sequencing Metrics</strong>：输入读段总数、有效条形码率（<code>Valid cell barcodes</code>）、有效 UMI 率（<code>Valid UMIs</code>）及条形码/UMI/转录本读段的 Q30 质量比例；</li>
+<li><strong>Mapping Metrics</strong>：提供 <strong>All Reads</strong> 与 <strong>Filtered Cells</strong> 两种视角，展示基因组比对率、转录组比对率、线粒体比例及外显子/内含子/基因间区分布；</li>
+<li><strong>Saturation</strong>：</li>
+<li><strong>Sequencing Saturation Curve</strong>：测序饱和度随每细胞平均 cDNA reads 的渐进曲线；</li>
+<li><strong>Median Genes per Cell Curve</strong>：中位基因检出数随测序深度的渐近饱和曲线。</li>
+</ul>
+<hr />
+<h3 id="3-atac-atac-modality">3. ATAC 页面 (ATAC Modality)<a class="headerlink" href="#3-atac-atac-modality" title="Permanent link">&para;</a></h3>
+<h4 id="atac-cells">ATAC &gt; Cells（染色质开放性细胞质控与聚类）<a class="headerlink" href="#atac-cells" title="Permanent link">&para;</a></h4>
+<p>展示单细胞 ATAC 维度的细胞开放信号、TSS 富集与降维聚类：</p>
+<div style="text-align: center; margin: 1.5rem 0;">
+<p><img src="../images/html_multi_scatac_cells.png" alt="多组学 ATAC Cells 页面" style="max-width: 560px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);"></p>
+</div>
+<ul>
+<li><strong>ATAC Quality Metrics</strong>：估计细胞数、中位片段数（<code>Median fragments per cell</code>）、峰内片段重叠比例（<code>Fraction overlapping peaks / FRIP</code>）及 TSS 区域片段重叠比例；</li>
+<li><strong>ATAC Beads to Cells</strong>：ATAC 片段条形码排序曲线与微珠合并分布；</li>
+<li><strong>ATAC Cluster Analysis</strong>：</li>
+<li><strong>左图（ATAC Cluster Assignment）</strong>：基于潜变量语义分析（LSI）降维与 UMAP 聚类，呈现表观基因组亚群结构；</li>
+<li><strong>右图（Fragment Count Overlay）</strong>：在 UMAP 坐标中投射每个细胞的片段深度；</li>
+<li><strong>Targeting</strong>：</li>
+<li><strong>TSS Enrichment Profile</strong>：转录起始位点附近（±1,000 bp）转座酶切割信号的归一化富集曲线，中心高耸尖峰直接反映信噪比；</li>
+<li><strong>TSS Targeting Plot</strong>：单细胞总片段数与 TSS 富集分数的双变量散点图，直观展现高质量细胞与背景液滴的分水岭。</li>
+</ul>
+<hr />
+<h4 id="atac-library">ATAC &gt; Library（片段长度周期性与测序指标）<a class="headerlink" href="#atac-library" title="Permanent link">&para;</a></h4>
+<p>展示 ATAC 转座文库的物理特征与染色质天然构象：</p>
+<div style="text-align: center; margin: 1.5rem 0;">
+<p><img src="../images/html_multi_scatac_library.png" alt="多组学 ATAC Library 页面" style="max-width: 560px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);"></p>
+</div>
+<ul>
+<li><strong>ATAC Metrics</strong>：原始读段对数、有效条形码率、基因组比对率、线粒体比例及无核小体/单核小体区域片段占比；</li>
+<li><strong>Insert Size Distribution</strong>：插入片段长度频率分布曲线，展现由无核小体区域（&lt; 147 bp）与约 200 bp 单核小体构成的经典梯状周期峰，验证细胞核结构的天然完整性；</li>
+<li><strong>Cell Quality Metrics</strong>：测序饱和度分析曲线与微珠 Jaccard 相似度阈值判定分布。</li>
+</ul>
+<hr />
+<h3 id="4-vdj-vdj-modality-tcr-bcr">4. VDJ 页面 (VDJ Modality - TCR &amp; BCR)<a class="headerlink" href="#4-vdj-vdj-modality-tcr-bcr" title="Permanent link">&para;</a></h3>
+<p>多组学流程对 TCR（VDJ-T）与 BCR（VDJ-B）进行独立解耦展示，全面呈现细胞免疫受体库特征：</p>
+<h4 id="vdj-t-vdj-b-cells">VDJ-T / VDJ-B &gt; Cells（受体全长配对与优势克隆型）<a class="headerlink" href="#vdj-t-vdj-b-cells" title="Permanent link">&para;</a></h4>
+<div style="text-align: center; margin: 1.5rem 0;">
+<p><img src="../images/html_multi_scvdjt_cells.png" alt="多组学 VDJ-T Cells 页面" style="max-width: 560px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);"></p>
+</div>
+<div style="text-align: center; margin: 1.5rem 0;">
+<p><img src="../images/html_multi_scvdjb_cells.png" alt="多组学 VDJ-B Cells 页面" style="max-width: 560px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);"></p>
+</div>
+<ul>
+<li><strong>VDJ Quality Metrics</strong>：</li>
+<li><strong>估计细胞数</strong>：表达目标受体转录本的高置信度真实细胞数；</li>
+<li><strong>生产性配对细胞数与比例</strong>：具有功能性全长配对（TRA/TRB 或 IGH/轻链）的细胞绝对数及在总细胞中的占比（推荐 ≥ 40%）；</li>
+<li><strong>平均读段数</strong>：每个细胞平均分配的 VDJ 测序读段数。</li>
+<li><strong>VDJ Barcode Rank Plot</strong>：各细胞条形码按生产性 UMI 降序排列的累计分布曲线。在 BCR 数据集中，常可观察到极高 UMI 计数的浆细胞特异性尖峰。</li>
+<li><strong>V(D)J Annotation</strong>：特异性链（TRA/TRB 或 IGH/IGK/IGL）的检出比例与 V-J 跨区配对统计。</li>
+<li><strong>VDJ Clonotypes</strong>：</li>
+<li><strong>Top 10 Clonotypes Plot</strong>：前 10 大优势克隆型的细胞频率柱状图，直观展现克隆扩增程度；</li>
+<li><strong>Top 10 Clonotypes Table</strong>：包含克隆型 ID、各链 CDR3 氨基酸与核苷酸序列、绝对细胞频数及相对占比。</li>
+<li><strong>VDJ Target</strong>：将鉴定的 TCR/BCR 生产性受体细胞投影至单细胞转录组的 UMAP 空间，直观呈现克隆扩增亚群与功能转录状态的对应关联。</li>
+</ul>
+<hr />
+<h4 id="vdj-t-vdj-b-library">VDJ-T / VDJ-B &gt; Library（靶向富集效率与测序质量）<a class="headerlink" href="#vdj-t-vdj-b-library" title="Permanent link">&para;</a></h4>
+<p>展示免疫受体靶向富集文库的物理测序指标：</p>
+<div style="text-align: center; margin: 1.5rem 0;">
+<p><img src="../images/html_multi_scvdj_library.png" alt="多组学 VDJ Library 页面" style="max-width: 560px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);"></p>
+</div>
+<ul>
+<li><strong>Sequencing</strong>：测序读段对总数、有效条形码比例、有效 UMI 比例以及条形码/UMI/Read1 的 Q30 碱基质量；</li>
+<li><strong>Enrichment</strong>：</li>
+<li><strong>Reads mapped to any V(D)J gene</strong>：成功比对至已知胚系 V(D)J 基因片段的读段占比（推荐 ≥ 50%）；</li>
+<li><strong>链特异性映射率</strong>：分别统计比对至各个特定链（如 TCR 的 TRA/TRB，BCR 的 IGH/IGK/IGL）的读段比例，评估各链间靶向捕获的平衡度。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 MGI Tech Bioinformatics.<br>Documentation 3.2 · Updated 2026-10-23
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["search.suggest", "search.highlight", "content.code.copy", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/doc-controls.js"></script>
+      
+    
+  </body>
+</html>

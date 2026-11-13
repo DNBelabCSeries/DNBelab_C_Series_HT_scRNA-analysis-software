@@ -1,0 +1,2877 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation site generated from README and doc markdown files">
+      
+      
+      
+      
+        <link rel="prev" href="installation.html">
+      
+      
+        <link rel="next" href="pipeline/pipeline.html">
+      
+      
+        
+          <link rel="alternate" href="quickstart.html" hreflang="zh">
+        
+          <link rel="alternate" href="../en/doc/quickstart.html" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>快速开始 - DNBelab C Series™ HT 单细胞分析软件</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_2" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../index.html" title="DNBelab C Series™ HT 单细胞分析软件" class="md-header__button md-logo" aria-label="DNBelab C Series™ HT 单细胞分析软件" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h2v2c0 1.44.68 2.61 1.88 3.78.86.83 2.01 1.63 3.21 2.42l-1.83 1.19C8.27 10.72 7.31 10 6.5 9.21 5.07 7.82 4 6.1 4 4zm14 0h2v2c0 2.1-1.07 3.82-2.5 5.21-1.41 1.38-3.21 2.52-4.96 3.63-1.75 1.12-3.45 2.21-4.66 3.38C6.68 17.39 6 18.56 6 20v2H4v-2c0-2.1 1.07-3.82 2.5-5.21 1.41-1.38 3.21-2.52 4.96-3.63 1.75-1.12 3.45-2.21 4.66-3.38C17.32 6.61 18 5.44 18 4zm-3.26 10.61c.99.67 1.95 1.39 2.76 2.18C18.93 16.18 20 17.9 20 20v2h-2v-2c0-1.44-.68-2.61-1.88-3.78-.86-.83-2.01-1.63-3.21-2.42zM7 3h10v1l-.06.5H7.06L7 4zm.68 3h8.64c-.24.34-.52.69-.9 1.06l-.51.44H9.07l-.49-.44c-.38-.37-.66-.72-.9-1.06m1.41 10.5h5.84l.49.44c.38.37.66.72.9 1.06H7.68c.24-.34.52-.69.9-1.06zm-2.03 3h9.88l.06.5v1H7v-1z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DNBelab C Series™ HT 单细胞分析软件
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              快速开始
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="quickstart.html" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../en/doc/quickstart.html" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="DNBelab C Series™ HT 单细胞分析软件" class="md-nav__button md-logo" aria-label="DNBelab C Series™ HT 单细胞分析软件" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h2v2c0 1.44.68 2.61 1.88 3.78.86.83 2.01 1.63 3.21 2.42l-1.83 1.19C8.27 10.72 7.31 10 6.5 9.21 5.07 7.82 4 6.1 4 4zm14 0h2v2c0 2.1-1.07 3.82-2.5 5.21-1.41 1.38-3.21 2.52-4.96 3.63-1.75 1.12-3.45 2.21-4.66 3.38C6.68 17.39 6 18.56 6 20v2H4v-2c0-2.1 1.07-3.82 2.5-5.21 1.41-1.38 3.21-2.52 4.96-3.63 1.75-1.12 3.45-2.21 4.66-3.38C17.32 6.61 18 5.44 18 4zm-3.26 10.61c.99.67 1.95 1.39 2.76 2.18C18.93 16.18 20 17.9 20 20v2h-2v-2c0-1.44-.68-2.61-1.88-3.78-.86-.83-2.01-1.63-3.21-2.42zM7 3h10v1l-.06.5H7.06L7 4zm.68 3h8.64c-.24.34-.52.69-.9 1.06l-.51.44H9.07l-.49-.44c-.38-.37-.66-.72-.9-1.06m1.41 10.5h5.84l.49.44c.38.37.66.72.9 1.06H7.68c.24-.34.52-.69.9-1.06zm-2.03 3h9.88l.06.5v1H7v-1z"/></svg>
+
+    </a>
+    DNBelab C Series™ HT 单细胞分析软件
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="installation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速开始
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="quickstart.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速开始
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        选择运行方式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用前准备
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用前准备">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-fastqs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --fastqs 目录自动识别命名规则
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单细胞 RNA 分析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="单细胞 RNA 分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rna-prepare-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一步：构建参考数据库
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rna-prepare-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二步：准备 RNA 测序数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rna-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三步：执行 RNA 分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rna-check-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四步：查看 RNA 结果
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单细胞 ATAC 分析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="单细胞 ATAC 分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atac-prepare-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一步：构建 ATAC 参考库
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atac-prepare-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二步：准备 ATAC 测序数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atac-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三步：执行 ATAC 分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atac-check-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四步：查看 ATAC 结果
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vdj" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单细胞 V(D)J 分析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="单细胞 V(D)J 分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vdj-prepare-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一步：准备 VDJ 数据与参考库
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vdj-prepare-rna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二步：准备 RNA 细胞表（仅 RNA 关联模式）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vdj-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三步：执行 VDJ 分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vdj-check-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四步：查看 VDJ 结果
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多组学联合分析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多组学联合分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multi-prepare-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一步：准备测序数据与参考库
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-prepare-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二步：编写多组学配置文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三步：执行多组学分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-check-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四步：查看运行结果
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c6-rna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C6 多样本单细胞 RNA 分析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C6 多样本单细胞 RNA 分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c6-prepare-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一步：准备共享测序数据、参考库与样本对应表
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c6-prepare-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二步：编写 C6 配置文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c6-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三步：执行 C6 分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c6-check-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四步：查看全局与各样本结果
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        批量分析脚本生成
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="批量分析脚本生成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一步：准备样本清单文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二步：生成分析脚本
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    流程
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    流程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/pipeline.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    多组学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6 多样本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参数
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    参数
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/parameter.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    多组学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6 多样本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/tools.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    输出
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    输出
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/outs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    多组学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6 多样本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="io.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    结果分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="troubleshooting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    运行与排错
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    版本说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dataset.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    附加
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    附加
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="migration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    升级指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="glossary.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    术语表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="library_structure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文库结构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="installation_previous.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    旧版安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="json.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JSON 规范
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        选择运行方式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用前准备
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用前准备">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-fastqs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --fastqs 目录自动识别命名规则
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单细胞 RNA 分析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="单细胞 RNA 分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rna-prepare-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一步：构建参考数据库
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rna-prepare-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二步：准备 RNA 测序数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rna-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三步：执行 RNA 分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rna-check-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四步：查看 RNA 结果
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单细胞 ATAC 分析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="单细胞 ATAC 分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atac-prepare-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一步：构建 ATAC 参考库
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atac-prepare-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二步：准备 ATAC 测序数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atac-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三步：执行 ATAC 分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atac-check-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四步：查看 ATAC 结果
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vdj" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单细胞 V(D)J 分析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="单细胞 V(D)J 分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vdj-prepare-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一步：准备 VDJ 数据与参考库
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vdj-prepare-rna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二步：准备 RNA 细胞表（仅 RNA 关联模式）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vdj-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三步：执行 VDJ 分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vdj-check-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四步：查看 VDJ 结果
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多组学联合分析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多组学联合分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multi-prepare-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一步：准备测序数据与参考库
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-prepare-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二步：编写多组学配置文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三步：执行多组学分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-check-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四步：查看运行结果
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c6-rna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C6 多样本单细胞 RNA 分析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C6 多样本单细胞 RNA 分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c6-prepare-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一步：准备共享测序数据、参考库与样本对应表
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c6-prepare-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二步：编写 C6 配置文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c6-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三步：执行 C6 分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c6-check-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四步：查看全局与各样本结果
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        批量分析脚本生成
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="批量分析脚本生成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一步：准备样本清单文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二步：生成分析脚本
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">快速开始指南<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>本指南提供 DNBelab C Series™ 单细胞分析套件（dnbc4tools）的端到端快速上手流程，涵盖环境准备、参考库构建、单组学分析、多组学统筹调度、C6 多样本单细胞 RNA 分析以及批量分析脚本生成。</p>
+<hr />
+<h2 id="_2">选择运行方式 <a id="choose-workflow"></a><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>根据您的实验设计与建库类型，选择对应的命令入口：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">分析类型</th>
+<th style="text-align: left;">命令入口</th>
+<th style="text-align: left;">适用场景与说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="#single-cell-rna-analysis"><strong>单细胞 RNA 分析</strong></a></td>
+<td style="text-align: left;"><code>dnbc4tools rna run</code></td>
+<td style="text-align: left;">单样本标准转录组定量、EmptyDrops 细胞识别与聚类</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#single-cell-atac-analysis"><strong>单细胞 ATAC 分析</strong></a></td>
+<td style="text-align: left;"><code>dnbc4tools atac run</code></td>
+<td style="text-align: left;">单样本染色质开放区分析、Peak Calling 与质控</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#single-cell-vdj-analysis"><strong>单细胞 V(D)J 分析</strong></a></td>
+<td style="text-align: left;"><code>dnbc4tools vdj run</code></td>
+<td style="text-align: left;">TCR / BCR 全长序列从头组装、注释与克隆型识别</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#integrated-multi-omics-analysis"><strong>多组学联合分析</strong></a></td>
+<td style="text-align: left;"><code>dnbc4tools multi run --csv multi.config.csv</code></td>
+<td style="text-align: left;">RNA + ATAC + VDJ 多组学统筹调度与跨组学交互报告</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#c6-multi-sample-analysis"><strong>C6 多样本 RNA 分析</strong></a></td>
+<td style="text-align: left;"><code>dnbc4tools multi run --csv sample.config.csv</code></td>
+<td style="text-align: left;">基于 Sample Barcode 混合建库解复用与各样本结果输出</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#batch-script-generation"><strong>批量分析脚本生成</strong></a></td>
+<td style="text-align: left;"><code>dnbc4tools &lt;rna/atac&gt; multi</code></td>
+<td style="text-align: left;">批量生成独立样本分析脚本，后续由调度系统排队执行</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_3">使用前准备 <a id="prerequisites"></a><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="doc-callout doc-callout-info">
+<p><strong>运行前请确认：</strong></p>
+<ul style="margin-bottom: 0;">
+<li><strong>环境与路径</strong>：已完成软件安装（详见 <a href="./installation.html">安装指南</a>）；示例中的 <code>$dnbc4tools</code>、<code>/test/data/...</code> 与 <code>/database/...</code> 请替换为实际路径。</li>
+<li><strong>输出目录</strong>：流程默认在当前目录下生成以 <code>--name</code> 命名的任务目录（结果保存在 <code>./&lt;name&gt;/outs/</code>）；亦可通过 <code>--outdir</code> 显式指定自定义输出根目录。</li>
+</ul>
+</div>
+<h3 id="-fastqs"><code>--fastqs</code> 目录自动识别命名规则 <a id="file-naming-conventions"></a><a class="headerlink" href="#-fastqs" title="Permanent link">&para;</a></h3>
+<p>当使用 <code>--fastqs &lt;dir&gt;</code> 目录输入方式时，流程会自动扫描目录下所有匹配文件并按命名模式自动配对双端测序数据：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">测序端</th>
+<th style="text-align: left;">识别模式（Pattern）</th>
+<th style="text-align: left;">匹配示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Read 1 (R1)</strong></td>
+<td style="text-align: left;">包含 <code>_R1_</code>、<code>_R1</code>、<code>_1</code> 或 <code>_read1</code></td>
+<td style="text-align: left;"><code>sample_R1.fastq.gz</code>、<code>sample_1.fq.gz</code>、<code>sample_R1_001.fastq.gz</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Read 2 (R2)</strong></td>
+<td style="text-align: left;">包含 <code>_R2_</code>、<code>_R2</code>、<code>_2</code> 或 <code>_read2</code></td>
+<td style="text-align: left;"><code>sample_R2.fastq.gz</code>、<code>sample_2.fq.gz</code>、<code>sample_R2_001.fastq.gz</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>支持扩展名</strong>：<code>.fastq.gz</code>、<code>.fq.gz</code>、<code>.fastq</code>、<code>.fq</code></li>
+<li><strong>逐项指定文件不受命名限制</strong>：若通过独立参数（如 <code>--fastq1/--fastq2</code>，或 RNA 的 <code>--cDNAfastq1/2</code>、<code>--oligofastq1/2</code>）逐项显式指定，文件名不受上述规则限制，但双端文件列表顺序须严格一一对应。</li>
+</ul>
+<hr />
+<h2 id="rna">单细胞 RNA 分析 <a id="single-cell-rna-analysis"></a><a class="headerlink" href="#rna" title="Permanent link">&para;</a></h2>
+<p>适用于常规单样本 3′ 或 5′ 单细胞转录组基因表达定量与聚类分析。</p>
+<h3 id="rna-prepare-reference">第一步：构建参考数据库<a class="headerlink" href="#rna-prepare-reference" title="Permanent link">&para;</a></h3>
+<p>已有兼容参考库时可跳过构建，直接在分析命令中填写完整参考目录。以下物种示例按需选择，并在各自独立的工作目录执行。<code>mkref --genomeDir /database/scRNA</code> 指定参考输出根目录，软件会追加物种子目录，生成 <code>/database/scRNA/Homo_sapiens</code>、<code>/database/scRNA/Mus_musculus</code> 或 <code>/database/scRNA/hg38_and_mm10</code>。后续 <code>run --genomeDir</code> 应填写该物种目录，而不是输出根目录或原始 FASTA/GTF 文件。混合物种示例中的 <code>hg38/</code>、<code>mm10/</code> 两份过滤后 GTF 需事先分别准备。</p>
+<p>以常用物种的人、小鼠及双物种混合为例：</p>
+<p><strong>人（Human, GRCh38）</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. 下载 GENCODE 注释文件与基因组 FASTA</span>
+wget<span class="w"> </span>http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/GRCh38.primary_assembly.genome.fa.gz
+wget<span class="w"> </span>http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/gencode.v32.primary_assembly.annotation.gtf.gz
+
+<span class="c1"># 2. 解压文件</span>
+gzip<span class="w"> </span>-d<span class="w"> </span>GRCh38.primary_assembly.genome.fa.gz
+gzip<span class="w"> </span>-d<span class="w"> </span>gencode.v32.primary_assembly.annotation.gtf.gz
+
+<span class="c1"># 3. 过滤 GTF 并构建 STAR 参考库</span>
+<span class="nv">$dnbc4tools</span><span class="w"> </span>tools<span class="w"> </span>mkgtf<span class="w"> </span>--ingtf<span class="w"> </span>gencode.v32.primary_assembly.annotation.gtf<span class="w"> </span>--output<span class="w"> </span>genes.filtered.gtf
+<span class="nv">$dnbc4tools</span><span class="w"> </span>rna<span class="w"> </span>mkref<span class="w"> </span>--genomeDir<span class="w"> </span>/database/scRNA<span class="w"> </span>--ingtf<span class="w"> </span>genes.filtered.gtf<span class="w"> </span>--fasta<span class="w"> </span>GRCh38.primary_assembly.genome.fa<span class="w"> </span>--threads<span class="w"> </span><span class="m">10</span><span class="w"> </span>--species<span class="w"> </span>Homo_sapiens
+</code></pre></div></p>
+<p><strong>小鼠（Mouse, GRCm38）</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. 下载注释与基因组 FASTA</span>
+wget<span class="w"> </span>http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M23/GRCm38.primary_assembly.genome.fa.gz
+wget<span class="w"> </span>http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M23/gencode.vM23.primary_assembly.annotation.gtf.gz
+
+<span class="c1"># 2. 解压文件</span>
+gzip<span class="w"> </span>-d<span class="w"> </span>GRCm38.primary_assembly.genome.fa.gz
+gzip<span class="w"> </span>-d<span class="w"> </span>gencode.vM23.primary_assembly.annotation.gtf.gz
+
+<span class="c1"># 3. 过滤 GTF 并构建 STAR 参考库</span>
+<span class="nv">$dnbc4tools</span><span class="w"> </span>tools<span class="w"> </span>mkgtf<span class="w"> </span>--ingtf<span class="w"> </span>gencode.vM23.primary_assembly.annotation.gtf<span class="w"> </span>--output<span class="w"> </span>genes.filtered.gtf
+<span class="nv">$dnbc4tools</span><span class="w"> </span>rna<span class="w"> </span>mkref<span class="w"> </span>--genomeDir<span class="w"> </span>/database/scRNA<span class="w"> </span>--ingtf<span class="w"> </span>genes.filtered.gtf<span class="w"> </span>--fasta<span class="w"> </span>GRCm38.primary_assembly.genome.fa<span class="w"> </span>--threads<span class="w"> </span><span class="m">10</span><span class="w"> </span>--species<span class="w"> </span>Mus_musculus
+</code></pre></div></p>
+<p><strong>人-鼠双物种参考库</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># 准备好两物种 FASTA 与 GTF 后联合构建</span>
+<span class="nv">$dnbc4tools</span><span class="w"> </span>rna<span class="w"> </span>mkref<span class="w"> </span>--genomeDir<span class="w"> </span>/database/scRNA<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fasta<span class="w"> </span>GRCh38.primary_assembly.genome.fa,GRCm38.primary_assembly.genome.fa<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ingtf<span class="w"> </span>hg38/genes.filtered.gtf,mm10/genes.filtered.gtf<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--species<span class="w"> </span>hg38,mm10<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">10</span>
+</code></pre></div></p>
+<h3 id="rna-prepare-inputs">第二步：准备 RNA 测序数据<a class="headerlink" href="#rna-prepare-inputs" title="Permanent link">&para;</a></h3>
+<p>推荐将测序文件规整放置于包含 <code>cDNA/</code> 与 <code>oligo/</code> 子目录的路径下，流程将自动识别并配对双端数据：</p>
+<div class="highlight"><pre><span></span><code>/test/data/rna_fastqs/          # --fastqs 所指定的根目录
+├── cDNA/                       # 存放转录组 cDNA 测序数据
+│   ├── sample_cDNA_R1.fastq.gz
+│   └── sample_cDNA_R2.fastq.gz
+└── oligo/                      # 存放微珠/条形码 Oligo 测序数据
+    ├── sample_oligo_R1.fastq.gz
+    └── sample_oligo_R2.fastq.gz
+</code></pre></div>
+<p><code>--fastqs</code> 指向同时包含 <code>cDNA/</code> 与 <code>oligo/</code> 的根目录；本标准示例需要这两类文库的 R1/R2 数据。目录中只放同一样本对应的文库；同一文库的多个测序文件可归入相应子目录，读段结构与暗反应设置须兼容，不要混入其他样本。文件配对规则见<a href="#file-naming-conventions">目录自动识别命名规则</a>。</p>
+<h3 id="rna-run">第三步：执行 RNA 分析<a class="headerlink" href="#rna-run" title="Permanent link">&para;</a></h3>
+<p><strong>方式一：目录输入方式（推荐）</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>rna<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastqs<span class="w"> </span>/test/data/rna_fastqs<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--genomeDir<span class="w"> </span>/database/scRNA/Homo_sapiens<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_rna<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">30</span>
+</code></pre></div>
+<p><strong>方式二：独立显式指定 FASTQ 文件</strong></p>
+<p>当测序文件未按 <code>cDNA/</code> 与 <code>oligo/</code> 归类归档，或跨多个存储路径时，可使用独立参数逐项指定输入文件（多个文件支持逗号 <code>,</code> 分隔）：</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>rna<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--cDNAfastq1<span class="w"> </span>/test/data/rna_fastqs/cDNA/sample_cDNA_R1.fastq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--cDNAfastq2<span class="w"> </span>/test/data/rna_fastqs/cDNA/sample_cDNA_R2.fastq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--oligofastq1<span class="w"> </span>/test/data/rna_fastqs/oligo/sample_oligo_R1.fastq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--oligofastq2<span class="w"> </span>/test/data/rna_fastqs/oligo/sample_oligo_R2.fastq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--genomeDir<span class="w"> </span>/database/scRNA/Homo_sapiens<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_rna<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">30</span>
+</code></pre></div>
+<p>两种输入方式任选一种，不要同时填写 <code>--fastqs</code> 和显式 FASTQ 参数。<code>--name test_rna</code> 用于任务及报告命名，结果将保存在 <code>./test_rna/outs/</code>（亦可使用 <code>--outdir</code> 指定其他根目录），<code>--threads</code> 设置 CPU 线程数；显式指定多个 R1/R2 文件时，列表顺序须一一对应。</p>
+<p>5′ RNA 在所选运行命令中添加 <code>--end5</code>，3′ RNA 示例不加该开关。RNA 默认输出 BAM；节省存储时可添加 <code>--no_bam</code>，跳过 BAM 及其索引。细胞识别、试剂和暗反应等更多设置见 <a href="parameter/scRNA.html">RNA 参数说明</a>。</p>
+<h3 id="rna-check-outputs">第四步：查看 RNA 结果<a class="headerlink" href="#rna-check-outputs" title="Permanent link">&para;</a></h3>
+<p>分析完成后，结果归档于 <code>./test_rna/outs/</code>：</p>
+<ul>
+<li><strong>交互式报告</strong>：直接用浏览器打开 <code>test_rna_scRNA_report.html</code> 查看细胞数、测序质控、基因表达与聚类图；</li>
+<li><strong>定量表达矩阵</strong>：包含 MEX 目录、<code>.h5</code> 以及 AnnData <code>.h5ad</code>（保存于 <code>filtered_feature_bc_matrix/</code> 与 <code>analysis/QC_Cluster.h5ad</code>）；</li>
+<li><strong>质控与单细胞表</strong>：<code>singlecell.csv</code>（微珠/液滴明细，筛选有效细胞使用 <code>is_cell_barcode == 1</code>）与 <code>metrics_summary.xls</code>。</li>
+</ul>
+<p>完整输出目录树、文件字段说明及下游加载代码请参阅 <a href="outs/scRNA.html">RNA 输出详解</a> 与 <a href="io.html#scrna-analysis">在 R / Python 中读取结果</a>。</p>
+<hr />
+<h2 id="atac">单细胞 ATAC 分析 <a id="single-cell-atac-analysis"></a><a class="headerlink" href="#atac" title="Permanent link">&para;</a></h2>
+<p>适用于单细胞染色质开放区分析、峰检测（Peak Calling）与质控评估。</p>
+<h3 id="atac-prepare-reference">第一步：构建 ATAC 参考库<a class="headerlink" href="#atac-prepare-reference" title="Permanent link">&para;</a></h3>
+<p>已有兼容参考库时可跳过构建，直接在分析命令中填写完整参考目录。以下物种示例按需选择，并在各自独立的工作目录执行。<code>mkref --genomeDir /database/scATAC</code> 指定参考输出根目录，软件会追加物种子目录，生成 <code>/database/scATAC/Homo_sapiens</code>、<code>/database/scATAC/Mus_musculus</code> 或 <code>/database/scATAC/hg38_and_mm10</code>。后续 <code>run --genomeDir</code> 应填写该物种目录，而不是输出根目录或原始 FASTA/GTF 文件。混合物种示例中的 <code>hg38/</code>、<code>mm10/</code> 两份过滤后 GTF 需事先分别准备。</p>
+<p><strong>人（Human, GRCh38）</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. 下载 GENCODE 注释文件与基因组 FASTA</span>
+wget<span class="w"> </span>http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/GRCh38.primary_assembly.genome.fa.gz
+wget<span class="w"> </span>http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/gencode.v32.primary_assembly.annotation.gtf.gz
+
+<span class="c1"># 2. 解压文件</span>
+gzip<span class="w"> </span>-d<span class="w"> </span>GRCh38.primary_assembly.genome.fa.gz
+gzip<span class="w"> </span>-d<span class="w"> </span>gencode.v32.primary_assembly.annotation.gtf.gz
+
+<span class="c1"># 3. 过滤 GTF 并构建 Chromap 参考库</span>
+<span class="nv">$dnbc4tools</span><span class="w"> </span>tools<span class="w"> </span>mkgtf<span class="w"> </span>--ingtf<span class="w"> </span>gencode.v32.primary_assembly.annotation.gtf<span class="w"> </span>--output<span class="w"> </span>genes.filtered.gtf
+<span class="nv">$dnbc4tools</span><span class="w"> </span>atac<span class="w"> </span>mkref<span class="w"> </span>--genomeDir<span class="w"> </span>/database/scATAC<span class="w"> </span>--fasta<span class="w"> </span>GRCh38.primary_assembly.genome.fa<span class="w"> </span>--ingtf<span class="w"> </span>genes.filtered.gtf<span class="w"> </span>--species<span class="w"> </span>Homo_sapiens<span class="w"> </span>--prefix<span class="w"> </span>chr
+</code></pre></div></p>
+<p><strong>小鼠（Mouse, GRCm38）</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. 下载注释与基因组 FASTA</span>
+wget<span class="w"> </span>http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M23/GRCm38.primary_assembly.genome.fa.gz
+wget<span class="w"> </span>http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M23/gencode.vM23.primary_assembly.annotation.gtf.gz
+
+<span class="c1"># 2. 解压文件</span>
+gzip<span class="w"> </span>-d<span class="w"> </span>GRCm38.primary_assembly.genome.fa.gz
+gzip<span class="w"> </span>-d<span class="w"> </span>gencode.vM23.primary_assembly.annotation.gtf.gz
+
+<span class="c1"># 3. 过滤 GTF 并构建 Chromap 参考库</span>
+<span class="nv">$dnbc4tools</span><span class="w"> </span>tools<span class="w"> </span>mkgtf<span class="w"> </span>--ingtf<span class="w"> </span>gencode.vM23.primary_assembly.annotation.gtf<span class="w"> </span>--output<span class="w"> </span>genes.filtered.gtf
+<span class="nv">$dnbc4tools</span><span class="w"> </span>atac<span class="w"> </span>mkref<span class="w"> </span>--genomeDir<span class="w"> </span>/database/scATAC<span class="w"> </span>--fasta<span class="w"> </span>GRCm38.primary_assembly.genome.fa<span class="w"> </span>--ingtf<span class="w"> </span>genes.filtered.gtf<span class="w"> </span>--species<span class="w"> </span>Mus_musculus<span class="w"> </span>--prefix<span class="w"> </span>chr
+</code></pre></div></p>
+<p><strong>人-鼠双物种参考库</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># 准备好两物种 FASTA 与过滤后的 GTF 后联合构建（双物种不支持 --prefix 参数）</span>
+<span class="nv">$dnbc4tools</span><span class="w"> </span>atac<span class="w"> </span>mkref<span class="w"> </span>--genomeDir<span class="w"> </span>/database/scATAC<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fasta<span class="w"> </span>GRCh38.primary_assembly.genome.fa,GRCm38.primary_assembly.genome.fa<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ingtf<span class="w"> </span>hg38/genes.filtered.gtf,mm10/genes.filtered.gtf<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--species<span class="w"> </span>hg38,mm10
+</code></pre></div></p>
+<h3 id="atac-prepare-inputs">第二步：准备 ATAC 测序数据<a class="headerlink" href="#atac-prepare-inputs" title="Permanent link">&para;</a></h3>
+<p>测序数据支持放置于指定目录或显式指定成对 FASTQ：</p>
+<div class="highlight"><pre><span></span><code>/test/data/atac_fastqs/          # --fastqs 所指定的根目录
+├── sample_R1.fastq.gz
+└── sample_R2.fastq.gz
+</code></pre></div>
+<p><code>--fastqs</code> 直接填写该 ATAC 文库的配对 FASTQ 所在目录，无需 <code>cDNA/</code> 或 <code>oligo/</code> 子目录。不同样本分开运行；同一文库的多个测序文件须保持配对命名、读段结构和暗反应设置兼容，见<a href="#file-naming-conventions">目录自动识别命名规则</a>。</p>
+<h3 id="atac-run">第三步：执行 ATAC 分析<a class="headerlink" href="#atac-run" title="Permanent link">&para;</a></h3>
+<p><strong>方式一：目录输入方式（推荐）</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>atac<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastqs<span class="w"> </span>/test/data/atac_fastqs<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--genomeDir<span class="w"> </span>/database/scATAC/Homo_sapiens<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_atac<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">10</span>
+</code></pre></div>
+<p><strong>方式二：独立显式指定 FASTQ 文件</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>atac<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastq1<span class="w"> </span>/test/data/atac_fastqs/sample_R1.fastq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastq2<span class="w"> </span>/test/data/atac_fastqs/sample_R2.fastq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--genomeDir<span class="w"> </span>/database/scATAC/Homo_sapiens<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_atac<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">10</span>
+</code></pre></div>
+<p>两种输入方式任选一种，不要同时填写 <code>--fastqs</code> 和显式 FASTQ 参数。<code>--name test_atac</code> 用于任务及报告命名，结果将保存在 <code>./test_atac/outs/</code>（亦可使用 <code>--outdir</code> 指定其他根目录），<code>--threads</code> 设置 CPU 线程数；显式指定多个 R1/R2 文件时，列表顺序须一一对应。</p>
+<p>参考库须由 <code>atac mkref</code> 构建，不能使用 RNA 的 STAR 参考目录替代。需要 BAM 时添加 <code>--need_bam</code>；细胞识别和峰检测的更多设置见 <a href="parameter/scATAC.html">ATAC 参数说明</a>。</p>
+<h3 id="atac-check-outputs">第四步：查看 ATAC 结果<a class="headerlink" href="#atac-check-outputs" title="Permanent link">&para;</a></h3>
+<p>分析完成后，结果归档于 <code>./test_atac/outs/</code>：</p>
+<ul>
+<li><strong>交互式报告</strong>：直接用浏览器打开 <code>test_atac_scATAC_report.html</code> 查看细胞召回数、TSS 富集曲线及 FRIP 质控指标；</li>
+<li><strong>Peak 计数矩阵</strong>：包含 <code>filtered_peak_bc_matrix/</code>（MEX 格式）与 <code>filtered_peak_bc_matrix.h5</code>（经 9-bp 偏移 cutsite 计数）；</li>
+<li><strong>片段文件</strong>：<code>fragments.tsv.gz</code> 与 <code>filtered.fragments.tsv.gz</code>（均附带 <code>.tbi</code> 索引，直通下游 ArchR / Signac / SnapATAC2）。</li>
+</ul>
+<p>完整输出目录树、文件字段说明及下游加载代码请参阅 <a href="outs/scATAC.html">ATAC 输出详解</a> 与 <a href="io.html#scatac-analysis">在 R / Python 中读取结果</a>。</p>
+<hr />
+<h2 id="vdj">单细胞 V(D)J 分析 <a id="single-cell-vdj-analysis"></a><a class="headerlink" href="#vdj" title="Permanent link">&para;</a></h2>
+<p>适用于 TCR / BCR 免疫受体全长序列从头组装、注释与克隆型识别。</p>
+<div class="doc-callout doc-callout-warn">
+<p><strong>VDJ 运行模式：</strong> 支持两种模式：提供 <code>--beadstrans</code> 时，使用 RNA 细胞表进行微珠映射及基于 RNA 的细胞过滤；省略时，可在没有 RNA 细胞表的情况下运行 VDJ。省略该参数会自动启用 <code>keep_all_cells</code>，不按 RNA 细胞识别结果过滤组装条形码，因此不能将这些条形码视为 RNA 已确认的细胞集合。</p>
+</div>
+<p>以下步骤演示<strong>RNA 关联模式</strong>。若已有对应细胞表，可直接复用，无需为了此示例重新运行 RNA。</p>
+<h3 id="vdj-prepare-inputs">第一步：准备 VDJ 数据与参考库<a class="headerlink" href="#vdj-prepare-inputs" title="Permanent link">&para;</a></h3>
+<p>TCR 和 BCR 文库分别放在独立目录中，以下目录与后面的命令对应：</p>
+<div class="highlight"><pre><span></span><code>/test/data/
+├── tcr_fastqs/
+│   ├── sample_TCR_R1.fastq.gz
+│   └── sample_TCR_R2.fastq.gz
+└── bcr_fastqs/
+    ├── sample_BCR_R1.fastq.gz
+    └── sample_BCR_R2.fastq.gz
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数或输入</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>--fastqs</code></td>
+<td style="text-align: left;">填对应 TCR 或 BCR 文库的配对 FASTQ 目录，不混放两类文库。也可改用 <code>--fastq1</code> 与 <code>--fastq2</code> 显式指定，双端列表顺序须对应。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--ref</code></td>
+<td style="text-align: left;">人填写 <code>human</code>，小鼠填写 <code>mouse</code>；这两个值为软件参考库标识，不是路径。自建参考填写包含 <code>reference.json</code> 的 VDJ 参考目录，不能直接填写 FASTA 或 RNA / ATAC 参考目录。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--chain</code></td>
+<td style="text-align: left;">TCR 使用 <code>TR</code>，BCR 使用 <code>IG</code>；须与输入文库对应。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--beadstrans</code></td>
+<td style="text-align: left;">RNA 关联模式使用同一实验对应的 RNA <code>outs/singlecell.csv</code>，不是表达矩阵、<code>barcodes.tsv.gz</code> 或其他样本的细胞表。无 RNA 模式省略此参数。</td>
+</tr>
+</tbody>
+</table>
+<p><code>/test/data/...</code> 是待替换的示例路径。目录命名与配对规则见<a href="#file-naming-conventions">输入命名规则</a>，自建参考要求见 <a href="parameter/scVDJ.html">VDJ 参数说明</a>。</p>
+<h3 id="vdj-prepare-rna">第二步：准备 RNA 细胞表（仅 RNA 关联模式）<a class="headerlink" href="#vdj-prepare-rna" title="Permanent link">&para;</a></h3>
+<p>已有对应 RNA <code>singlecell.csv</code> 时直接复用，跳过以下命令。否则先按 <a href="#rna-prepare-inputs">RNA 输入目录结构</a>准备 <code>/test/data/rna_5p_fastqs</code>，再运行对应的 5′ RNA 数据；选择<a href="#vdj-without-rna">无 RNA 模式</a>时直接跳过本步。</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>rna<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastqs<span class="w"> </span>/test/data/rna_5p_fastqs<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--genomeDir<span class="w"> </span>/database/scRNA/Homo_sapiens<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_rna_5p<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--end5
+</code></pre></div>
+<h3 id="vdj-run">第三步：执行 VDJ 分析<a class="headerlink" href="#vdj-run" title="Permanent link">&para;</a></h3>
+<p>RNA 关联模式使用上一步生成的 <code>./test_rna_5p/outs/singlecell.csv</code>，或将 <code>--beadstrans</code> 替换为已有的对应细胞表路径。目录输入与显式指定文件任选一种，不要混用。</p>
+<p><strong>方式一：目录输入方式（推荐）</strong></p>
+<p><em>人 TCR 分析（Human TCR）</em>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>vdj<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastqs<span class="w"> </span>/test/data/tcr_fastqs<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--beadstrans<span class="w"> </span>./test_rna_5p/outs/singlecell.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ref<span class="w"> </span>human<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_human_tcr<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--chain<span class="w"> </span>TR
+</code></pre></div></p>
+<p><em>人 BCR 分析（Human BCR）</em>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>vdj<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastqs<span class="w"> </span>/test/data/bcr_fastqs<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--beadstrans<span class="w"> </span>./test_rna_5p/outs/singlecell.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ref<span class="w"> </span>human<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_human_bcr<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--chain<span class="w"> </span>IG
+</code></pre></div></p>
+<p><strong>方式二：独立显式指定 FASTQ 文件</strong></p>
+<p>当测序文件不在同一目录或有特殊路径时，可通过 <code>--fastq1</code> 与 <code>--fastq2</code> 逐项显式输入：</p>
+<p><em>人 TCR 分析（独立文件输入）</em>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>vdj<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastq1<span class="w"> </span>/test/data/tcr_fastqs/sample_TCR_R1.fastq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastq2<span class="w"> </span>/test/data/tcr_fastqs/sample_TCR_R2.fastq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--beadstrans<span class="w"> </span>./test_rna_5p/outs/singlecell.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ref<span class="w"> </span>human<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_human_tcr<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--chain<span class="w"> </span>TR
+</code></pre></div></p>
+<p><em>人 BCR 分析（独立文件输入）</em>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>vdj<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastq1<span class="w"> </span>/test/data/bcr_fastqs/sample_BCR_R1.fastq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastq2<span class="w"> </span>/test/data/bcr_fastqs/sample_BCR_R2.fastq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--beadstrans<span class="w"> </span>./test_rna_5p/outs/singlecell.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ref<span class="w"> </span>human<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_human_bcr<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--chain<span class="w"> </span>IG
+</code></pre></div></p>
+<details>
+<summary>点击展开：小鼠（Mouse）TCR 与 BCR 分析示例</summary>
+<p>以下示例假设已有 <code>./test_mouse_rna_5p/outs/singlecell.csv</code>。请替换为实际路径，并确保输入 FASTQ、参考库与 RNA 细胞表均对应小鼠实验。</p>
+<p><strong>小鼠 TCR 分析</strong>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>vdj<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastqs<span class="w"> </span>/test/data/mouse_tcr_fastqs<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--beadstrans<span class="w"> </span>./test_mouse_rna_5p/outs/singlecell.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ref<span class="w"> </span>mouse<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_mouse_tcr<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--chain<span class="w"> </span>TR
+</code></pre></div></p>
+<p><strong>小鼠 BCR 分析</strong>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>vdj<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastqs<span class="w"> </span>/test/data/mouse_bcr_fastqs<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--beadstrans<span class="w"> </span>./test_mouse_rna_5p/outs/singlecell.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ref<span class="w"> </span>mouse<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_mouse_bcr<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--chain<span class="w"> </span>IG
+</code></pre></div></p>
+</details>
+<h4 id="vdj-without-rna">无 RNA 细胞表的 VDJ 分析<a class="headerlink" href="#vdj-without-rna" title="Permanent link">&para;</a></h4>
+<p>省略 <code>--beadstrans</code> 即可使用此模式，无需先运行 RNA；仍需准备 VDJ 测序文件与对应参考库。</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>vdj<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastqs<span class="w"> </span>/test/data/tcr_fastqs<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ref<span class="w"> </span>human<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_vdj_without_rna<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--chain<span class="w"> </span>TR
+</code></pre></div>
+<p>软件会自动启用 <code>keep_all_cells</code>。统计细胞数或与 RNA 结果比较前，应结合 VDJ 注释标记进行筛选与核验。</p>
+<h3 id="vdj-check-outputs">第四步：查看 VDJ 结果<a class="headerlink" href="#vdj-check-outputs" title="Permanent link">&para;</a></h3>
+<p>分析完成后，结果归档于 <code>./&lt;name&gt;/outs/</code>（如 <code>./test_human_tcr/outs/</code>）：</p>
+<ul>
+<li><strong>交互式报告</strong>：浏览器打开 <code>*_report.html</code> 查看组装率、生产性（Productive）重叠群比例与免疫克隆型丰度分布；</li>
+<li><strong>组装与注释</strong>：核心注释文件为 <code>filtered_contig_annotations.csv</code>，组装序列为 <code>filtered_contig.fasta</code>；</li>
+<li><strong>免疫生态兼容</strong>：提供标准 <code>clonotypes.csv</code> 与 <code>airr_annotations.tsv</code>（可直接导入 <code>scRepertoire</code> 或 <code>immunarch</code>）。</li>
+</ul>
+<p>完整文件清单与注释字段解读请参阅 <a href="outs/scVDJ.html">VDJ 输出详解</a> 与 <a href="io.html#scvdj-analysis">在 R / Python 中读取结果</a>。</p>
+<hr />
+<h2 id="_4">多组学联合分析 <a id="integrated-multi-omics-analysis"></a><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>通过一份配置文件调度 RNA、ATAC、TCR 和 BCR 文库分析，并生成组合报告。下面以<strong>同一生物学样本的 5′ RNA + ATAC + TCR + BCR</strong> 为例；按实际实验保留需要的组学，无需准备全部四类文库。多个独立样本应分别配置、运行；基于 Sample Barcode 混合的 C6 RNA 数据请使用下方的 <a href="#c6-multi-sample-analysis">C6 多样本分析</a>。</p>
+<div class="admonition note">
+<p class="admonition-title">联合分析范围</p>
+<p>RNA 与 V(D)J 可关联细胞信息；ATAC 当前独立分析后汇总到组合报告。该命令不执行 RNA + ATAC 联合降维或聚类。</p>
+</div>
+<h3 id="multi-prepare-inputs">第一步：准备测序数据与参考库<a class="headerlink" href="#multi-prepare-inputs" title="Permanent link">&para;</a></h3>
+<p>将同一样本的各类文库分别放在独立目录中，示例如下：</p>
+<div class="highlight"><pre><span></span><code>/test/data/
+├── rna/
+│   ├── cDNA/
+│   │   ├── sample_cDNA_R1.fastq.gz
+│   │   └── sample_cDNA_R2.fastq.gz
+│   └── oligo/
+│       ├── sample_oligo_R1.fastq.gz
+│       └── sample_oligo_R2.fastq.gz
+├── atac/
+│   ├── sample_ATAC_R1.fastq.gz
+│   └── sample_ATAC_R2.fastq.gz
+├── vdj-t/
+│   ├── sample_TCR_R1.fastq.gz
+│   └── sample_TCR_R2.fastq.gz
+└── vdj-b/
+    ├── sample_BCR_R1.fastq.gz
+    └── sample_BCR_R2.fastq.gz
+</code></pre></div>
+<ul>
+<li><strong>RNA</strong>：<code>fastqs</code> 填 <code>/test/data/rna</code>，即包含 <code>cDNA/</code> 与 <code>oligo/</code> 的根目录，不要填到 <code>cDNA/</code> 或单个 FASTQ 文件。</li>
+<li><strong>ATAC、TCR、BCR</strong>：分别填写存放对应文库配对 FASTQ 的目录。TCR 和 BCR 分开存放；文件命名与配对规则见<a href="#file-naming-conventions">目录自动识别命名规则</a>。</li>
+<li><strong>每种组学仅支持一个 FASTQ 根目录</strong>，且在 <code>[libraries]</code> 中只能出现一次。同一文库有多个测序文件时，将匹配的 R1/R2 文件归入对应目录，并保持读段结构及暗反应设置兼容；不要混入其他样本或无关文库的数据。</li>
+<li><strong>RNA / ATAC 参考库</strong>：分别使用已由 <code>rna mkref</code>、<code>atac mkref</code> 构建好的参考目录，不能直接填写 FASTA、GTF 或其所在的原始文件目录。构建方法见上文 <a href="#single-cell-rna-analysis">RNA</a> 和 <a href="#single-cell-atac-analysis">ATAC</a>。</li>
+<li><strong>VDJ 参考库</strong>：人、小鼠可分别填写 <code>human</code>、<code>mouse</code>；自建参考填写包含 <code>reference.json</code> 的 VDJ 参考目录，参见 <a href="parameter/scVDJ.html">VDJ 参数说明</a>。</li>
+</ul>
+<p>以上 <code>/test/data/...</code> 和下方 <code>/database/...</code> 均为示例路径，运行前须替换为本机实际存在的数据和参考目录。</p>
+<h3 id="multi-prepare-config">第二步：编写多组学配置文件<a class="headerlink" href="#multi-prepare-config" title="Permanent link">&para;</a></h3>
+<p>将以下内容保存为纯文本文件 <code>multi.config.csv</code>。配置采用 <code>[分段]</code> 加逗号分隔内容：<code>[libraries]</code> 保留表头，其余组学分段按 <code>参数名,值</code> 填写。</p>
+<div class="highlight"><pre><span></span><code>[libraries]
+fastqs,feature_types
+/test/data/rna,rna
+/test/data/atac,atac
+/test/data/vdj-t,vdj-t
+/test/data/vdj-b,vdj-b
+
+[rna]
+genomeDir,/database/scRNA/Homo_sapiens
+end5,true
+
+[atac]
+genomeDir,/database/scATAC/Homo_sapiens
+
+[vdj-t]
+ref,human
+
+[vdj-b]
+ref,human
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">配置项</th>
+<th style="text-align: left;">含义与填写方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>[libraries] fastqs</code></td>
+<td style="text-align: left;">对应文库的 FASTQ 根目录，目录结构见上方示例。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[libraries] feature_types</code></td>
+<td style="text-align: left;"><code>rna</code>、<code>atac</code>、<code>vdj-t</code>（TCR）或 <code>vdj-b</code>（BCR）；须与对应组学分段一致。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[rna] genomeDir</code> / <code>[atac] genomeDir</code></td>
+<td style="text-align: left;">各自已经构建完成的参考库目录；RNA 与 ATAC 参考目录分别填写。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[rna] end5,true</code></td>
+<td style="text-align: left;">表示本例使用 5′ RNA 数据。3′ RNA 不应照抄此设置，可删除该行。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[vdj-t] ref</code> / <code>[vdj-b] ref</code></td>
+<td style="text-align: left;">VDJ 参考物种标识或自建参考库目录；本例 <code>human</code> 是物种标识，不是文件路径。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>按实际文库删减配置</strong>：例如仅做 RNA + TCR 时，删除 <code>[libraries]</code> 中 <code>atac</code>、<code>vdj-b</code> 两行，以及整个 <code>[atac]</code>、<code>[vdj-b]</code> 分段。仅声明实际提供的文库，不要保留空路径。启用 5′ RNA 且其细胞表正常生成时，VDJ 默认使用本次 RNA 细胞表，无需提前单独运行 RNA 或手动填写 <code>beadstrans</code>。</p>
+<p><strong>路径解析规则</strong>：配置文件内的相对路径，以 <code>multi.config.csv</code> 所在目录为基准；建议初次运行使用绝对路径。例如 CSV 位于 <code>/project/config/multi.config.csv</code>，其中的 <code>../fastqs/rna</code> 会解析为 <code>/project/fastqs/rna</code>。命令行中的 <code>--csv</code>、<code>--outdir</code> 相对路径则以执行命令时的当前目录为基准。</p>
+<p>其他组学参数、布尔值与含逗号的值如何填写，参见 <a href="parameter/multi.html">Multi 参数说明</a>。</p>
+<h3 id="multi-run">第三步：执行多组学分析<a class="headerlink" href="#multi-run" title="Permanent link">&para;</a></h3>
+<p>在保存 <code>multi.config.csv</code> 的目录下运行：</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>multi<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_multi<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--csv<span class="w"> </span>./multi.config.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">20</span>
+</code></pre></div>
+<p>这里 <code>--name test_multi</code> 为任务名，默认在当前目录生成 <code>./test_multi/outs/</code>（亦可添加 <code>--outdir</code> 指定其他根目录）；<code>--threads 20</code> 设置使用的 CPU 线程数。</p>
+<h3 id="multi-check-outputs">第四步：查看运行结果<a class="headerlink" href="#multi-check-outputs" title="Permanent link">&para;</a></h3>
+<p>分析完成后，结果统一归档于 <code>./test_multi/outs/</code>：</p>
+<ul>
+<li><strong>组合交互式报告</strong>：直接用浏览器打开 <code>test_multi_multi_report.html</code>，集中查看 RNA、ATAC、TCR 与 BCR 的跨组学联合质控；</li>
+<li><strong>独立模态目录</strong>：各组学结果完全解耦归档于独立子目录（<code>rna/</code>、<code>atac/</code>、<code>vdj-t/</code>、<code>vdj-b/</code>），结构与单组学输出完全一致，可独立使用；</li>
+<li><strong>执行清单审计</strong>：<code>logs/run_manifest.json</code> 记录了各模态的执行耗时与状态。</li>
+</ul>
+<p>完整子目录结构与文件说明请参阅 <a href="outs/multi.html">多组学输出详解</a>。</p>
+<hr />
+<h2 id="c6-rna">C6 多样本单细胞 RNA 分析 <a id="c6-multi-sample-analysis"></a><a class="headerlink" href="#c6-rna" title="Permanent link">&para;</a></h2>
+<p>适用于实验端使用 Sample Barcode 标记并混合建库的 C6 RNA 数据：多个生物学样本共用一套 cDNA 与 Oligo 测序数据，软件根据配置中的条形码归属拆分样本，再分别进行细胞识别、计数和下游分析。若各样本本来就是独立文库、独立 FASTQ，请使用<a href="#single-cell-rna-analysis">单样本 RNA 分析</a>或<a href="#batch-script-generation">批量分析脚本生成</a>。</p>
+<h3 id="c6-prepare-inputs">第一步：准备共享测序数据、参考库与样本对应表<a class="headerlink" href="#c6-prepare-inputs" title="Permanent link">&para;</a></h3>
+<p>将<strong>同一套 C6 混合文库</strong>的 cDNA 与 Oligo 双端数据分别放入以下目录：</p>
+<div class="highlight"><pre><span></span><code>/test/data/c6_pooled_data/
+├── cDNA/
+│   ├── pooled_cDNA_R1.fastq.gz
+│   └── pooled_cDNA_R2.fastq.gz
+└── oligo/
+    ├── pooled_oligo_R1.fastq.gz
+    └── pooled_oligo_R2.fastq.gz
+</code></pre></div>
+<ul>
+<li><strong>共享 FASTQ 根目录</strong>：<code>[libraries] fastqs</code> 填 <code>/test/data/c6_pooled_data</code>，不要填到 <code>cDNA/</code>、<code>oligo/</code> 或单个 FASTQ 文件。所有样本共用这一行输入，不需要按样本建立 FASTQ 目录或重复填写 <code>rna</code> 行。</li>
+<li><strong>多文件输入</strong>：同一混合文库有多个测序文件时，将配对文件归入对应的 <code>cDNA/</code>、<code>oligo/</code> 目录。读段结构和暗反应设置须兼容，文件命名见<a href="#file-naming-conventions">目录自动识别命名规则</a>。不同混合文库应分别配置、运行。</li>
+<li><strong>参考库</strong>：准备已由 <code>rna mkref</code> 构建完成的参考目录。<code>genomeDir</code> 填参考库目录，不是 FASTA、GTF 文件；构建方法见上文 <a href="#single-cell-rna-analysis">RNA 参考库构建</a>。</li>
+<li><strong>样本对应表</strong>：从实验记录确认每个生物学样本使用的 Sample Barcode。下方 <code>Sample_01 → BC01</code>、<code>Sample_02 → BC02;BC03</code> 仅为示例，必须改为实际归属，不能根据样本顺序推定条形码。</li>
+</ul>
+<p><code>/test/data/c6_pooled_data</code> 和 <code>/database/scRNA/Homo_sapiens</code> 均为示例路径，运行前须替换为本机实际存在的数据和参考目录。</p>
+<h3 id="c6-prepare-config">第二步：编写 C6 配置文件<a class="headerlink" href="#c6-prepare-config" title="Permanent link">&para;</a></h3>
+<p>将以下内容保存为纯文本文件 <code>sample.config.csv</code>，保留三个分段及两个表头：</p>
+<div class="highlight"><pre><span></span><code>[rna]
+genomeDir,/database/scRNA/Homo_sapiens
+chemistry,scRNAC6
+darkreaction,auto
+no_bam,false
+
+[libraries]
+fastqs,feature_types
+/test/data/c6_pooled_data,rna
+
+[samples]
+sample_id,probe_barcode_ids
+Sample_01,BC01
+Sample_02,BC02;BC03
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">配置项</th>
+<th style="text-align: left;">含义与填写方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>[rna] genomeDir</code></td>
+<td style="text-align: left;">RNA 参考库目录。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[rna] chemistry,scRNAC6</code></td>
+<td style="text-align: left;">C6 试剂读段结构；有 <code>[samples]</code> 时固定使用 <code>scRNAC6</code>，省略也会归一化为此值。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[rna] darkreaction,auto</code></td>
+<td style="text-align: left;">自动检测 cDNA 与 Oligo 暗反应；不用于选择试剂版本。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[rna] no_bam,false</code></td>
+<td style="text-align: left;">保留默认 BAM 输出。节省存储时改为 <code>true</code>，将跳过逐样本、未分配及 Oligo BAM 和相应索引。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[libraries] fastqs</code> / <code>feature_types</code></td>
+<td style="text-align: left;">共享 FASTQ 根目录与文库类型；本例只填一行，类型为 <code>rna</code>。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[samples] sample_id</code></td>
+<td style="text-align: left;">生物学样本名，用于各样本输出目录和报告命名，不要求与 FASTQ 文件名一致。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[samples] probe_barcode_ids</code></td>
+<td style="text-align: left;">该样本实际使用的 Sample Barcode ID；同一样本的多个 ID 用英文分号 <code>;</code> 分隔。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>样本表填写规则</strong>：每个生物学样本一行；例如本例将 <code>BC02</code>、<code>BC03</code> 的数据合并归入 <code>Sample_02</code>，不会生成两个独立样本。样本名须唯一（不区分大小写），以字母或数字开头，其余仅用字母、数字、<code>.</code>、<code>_</code>、<code>-</code>；不能使用保留名 <code>unassigned</code> 或 <code>non_multiplexed</code>。同一条形码不能重复填写，也不能分配给多个样本。可用内置 ID 或自定义 DNA 序列，详细规则见 <a href="parameter/c6.html#samples-specification">C6 样本表说明</a>。</p>
+<p><strong>路径解析规则</strong>：配置内的相对路径按 <code>sample.config.csv</code> 所在目录解析；命令行中的 <code>--csv</code>、<code>--outdir</code> 相对路径按执行命令时的当前目录解析。初次运行建议在配置中使用绝对路径。</p>
+<p><strong>可选细胞识别设置</strong>：需要按样本设置预期细胞数等参数时，可在 <code>[samples]</code> 表头增加 <code>expectcells</code>、<code>forcecells</code>、<code>minumi</code>，填写对应正整数；留空继承全局设置，不要将全批次预期细胞数复制给每个样本。<code>high_occupancy_filter</code> 是实验级开关，默认开启，只能写在 <code>[rna]</code> 中。完整示例见 <a href="parameter/c6.html#sample-overrides">C6 参数说明</a>。</p>
+<h3 id="c6-run">第三步：执行 C6 分析<a class="headerlink" href="#c6-run" title="Permanent link">&para;</a></h3>
+<p>在保存 <code>sample.config.csv</code> 的目录下运行：</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>multi<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_c6<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--csv<span class="w"> </span>./sample.config.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">40</span>
+</code></pre></div>
+<p><code>--name test_c6</code> 是整次混合文库任务的名称，与 <code>[samples]</code> 中的 <code>Sample_01</code>、<code>Sample_02</code> 不同。上述命令将结果写入当前目录下的 <code>./test_c6/outs/</code>（亦可添加 <code>--outdir</code> 指定其他输出根目录），使用 40 个 CPU 线程。</p>
+<h3 id="c6-check-outputs">第四步：查看全局与各样本结果<a class="headerlink" href="#c6-check-outputs" title="Permanent link">&para;</a></h3>
+<p>分析完成后，结果归档于 <code>./test_c6/outs/</code>：</p>
+<ul>
+<li><strong>批次汇总报告</strong>：浏览器打开 <code>test_c6_multi_report.html</code> 查看混合文库整体质控、Sample Barcode 拆分分配率及各样本细胞数对比；</li>
+<li><strong>逐样本独立交付</strong>：每个样本在 <code>rna/per_sample_outs/&lt;sample&gt;/</code> 拥有专属结果，包含独立交互式报告（<code>&lt;sample&gt;_scRNA_report.html</code>）、定量矩阵（MEX / <code>.h5</code> / <code>.h5ad</code>）及比对 BAM（若启用）；</li>
+<li><strong>物理文库总矩阵</strong>：<code>rna/filtered_feature_bc_matrix/</code>（及同名 <code>.h5</code> / <code>.h5ad</code>）保留物理文库合并原始计数。</li>
+</ul>
+<p>完整多样本层级目录树与下游分析注意事项请参阅 <a href="outs/c6.html">C6 输出详解</a> 与 <a href="io.html#c6-analysis">在 R / Python 中读取结果</a>。</p>
+<hr />
+<h2 id="_5">批量分析脚本生成 <a id="batch-script-generation"></a><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>适用于需要批量处理大量独立单样本的场景。通过提供样本清单 TSV 文件，自动为每个样本生成独立的 Shell 执行脚本，后续可在终端或计算集群调度系统（如 Slurm、SGE）中排队运行。</p>
+<h3 id="_6">第一步：准备样本清单文件<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p><strong>RNA 样本清单 (<code>rna_samples.tsv</code>)</strong></p>
+<p>制表符 <code>\t</code> 分隔 3 列：<code>样本名</code>、<code>cDNA_R1;cDNA_R2</code>、<code>oligo_R1;oligo_R2</code>（同端多个 FASTQ 文件用逗号 <code>,</code> 分隔）：</p>
+<div class="highlight"><pre><span></span><code>Sample1 sample1_cDNA_R1.fq.gz;sample1_cDNA_R2.fq.gz sample1_oligo_R1.fq.gz;sample1_oligo_R2.fq.gz
+Sample2 sample2_cDNA_R1.fq.gz;sample2_cDNA_R2.fq.gz sample2_oligo_R1.fq.gz;sample2_oligo_R2.fq.gz
+</code></pre></div>
+<p><strong>ATAC 样本清单 (<code>atac_samples.tsv</code>)</strong></p>
+<p>制表符 <code>\t</code> 分隔 2 列：<code>样本名</code>、<code>FASTQ_R1;FASTQ_R2</code>（同端多个 FASTQ 文件用逗号 <code>,</code> 分隔）：</p>
+<div class="highlight"><pre><span></span><code>Sample1 sample1_R1.fq.gz;sample1_R2.fq.gz
+Sample2 sample2_R1.fq.gz;sample2_R2.fq.gz
+</code></pre></div>
+<h3 id="_7">第二步：生成分析脚本<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># 批量生成 RNA 样本执行脚本</span>
+<span class="nv">$dnbc4tools</span><span class="w"> </span>rna<span class="w"> </span>multi<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--list<span class="w"> </span>./rna_samples.tsv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--genomeDir<span class="w"> </span>/database/scRNA/Homo_sapiens<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">20</span>
+
+<span class="c1"># 批量生成 ATAC 样本执行脚本</span>
+<span class="nv">$dnbc4tools</span><span class="w"> </span>atac<span class="w"> </span>multi<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--list<span class="w"> </span>./atac_samples.tsv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--genomeDir<span class="w"> </span>/database/scATAC/Homo_sapiens<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">20</span>
+</code></pre></div>
+<blockquote>
+<p><strong>执行机制说明：</strong>
+<code>multi</code> 命令仅在当前工作目录下为清单中的每个样本生成独立的 <code>.sh</code> 脚本（如 <code>run_Sample1.sh</code>），不自动启动计算。生成完毕后，可按需执行脚本（如 <code>sh run_Sample1.sh</code>）或批量提交至集群作业队列。</p>
+</blockquote>
+<hr />
+<p>快速入门完成后，您可以根据分析需求查阅更深入的模块文档：</p>
+<ul>
+<li>查阅各模块完整运行机制：<a href="pipeline/pipeline.html">分析流程总览</a></li>
+<li>探索高级参数与资源调优：<a href="parameter/parameter.html">参数配置总览</a></li>
+<li>查看各模块详细交付物结构：<a href="outs/outs.html">输出结果总览</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 MGI Tech Bioinformatics.<br>Documentation 3.2 · Updated 2026-10-23
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["search.suggest", "search.highlight", "content.code.copy", "navigation.top"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/doc-controls.js"></script>
+      
+    
+  </body>
+</html>
