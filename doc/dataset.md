@@ -1,53 +1,41 @@
-<div align="right">
-  <a href="../README.md">Home</a>
-</div>
+# DNBelab C 系列示例数据集
 
-# DNBelab C Series Demo Datasets
+示例数据托管在 CNGB（中国国家基因库）。当前提供小鼠样本数据。
 
-Demo datasets are hosted on CNGB (China National GeneBank). Due to human genetic resource regulations, only mouse sample data is provided.
-
----
-
-<table style="width:100%; border-collapse: collapse; margin: 1.5em 0;">
-  <thead style="background-color: #f2f2f2; border-bottom: 2px solid #ddd;">
+<table>
+  <thead>
     <tr>
-      <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">Analysis Type</th>
-      <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">Sample Information</th>
-      <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">Project Link</th>
+      <th>分析类型</th>
+      <th>样本说明</th>
+      <th>项目链接</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;"><b>scRNA-seq v3</b></td>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;">Mouse sample with separate cDNA (large) and Oligo (small) libraries.</td>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;"><a href="https://db.cngb.org/data_resources/project/CNP0005575/" target="_blank">CNP0005575</a></td>
+      <td><b>scRNA-seq v3</b></td>
+      <td>小鼠样本，包含分离的 cDNA 和 Oligo 文库。</td>
+      <td><a href="https://db.cngb.org/data_resources/project/CNP0005575/" target="_blank">CNP0005575</a></td>
     </tr>
     <tr>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;"><b>scVDJ-seq</b></td>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;">Mouse spleen tissue, including 5' RNA, TCR, and BCR data.</td>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;"><a href="https://db.cngb.org/data_resources/project/CNP0006116/" target="_blank">CNP0006116</a></td>
+      <td><b>scVDJ-seq</b></td>
+      <td>小鼠脾脏组织，包含 5' RNA、TCR、BCR 数据。</td>
+      <td><a href="https://db.cngb.org/data_resources/project/CNP0006116/" target="_blank">CNP0006116</a></td>
     </tr>
     <tr>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;"><b>scATAC-seq</b></td>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;">Mouse brain tissue.</td>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;"><a href="https://db.cngb.org/data_resources/project/CNP0004369" target="_blank">CNP0004369</a></td>
+      <td><b>scATAC-seq</b></td>
+      <td>小鼠脑组织样本。</td>
+      <td><a href="https://db.cngb.org/data_resources/project/CNP0004369" target="_blank">CNP0004369</a></td>
     </tr>
   </tbody>
 </table>
 
----
+## 数据使用说明
 
-## Notes on Data Usage
+<strong>scVDJ 使用说明</strong>：如果不需要分析 5' RNA 数据，可直接从对应 FTP 目录下载 `singlecell.csv` 作为 VDJ 流程输入。
 
-<div style="background-color: #e7f3fe; border-left: 6px solid #2196F3; padding: 15px; margin: 1.5em 0; border-radius: 4px;">
-💡 **scVDJ-seq Tip**: If you don't need to analyze the 5' RNA data, you can directly download the `singlecell.csv` file from the 5' RNA data directory on the FTP server to use as input for the VDJ pipeline.
-</div>
+<strong>通用说明</strong>：访问项目链接后，在 “Sample” 或 “Experiment” 页面中可找到原始数据 FTP 下载地址。
 
-<div style="background-color: #e7f3fe; border-left: 6px solid #2196F3; padding: 15px; margin: 1.5em 0; border-radius: 4px;">
-💡 **General Tip**: For all datasets, you can click the project link, navigate to the "Sample" or "Experiment" tabs, and find the FTP link to download the raw data for analysis.
-</div>
+  <img src="./images/scrna_v3_datasets.jpg" alt="scRNA-seq v3 样本详情" width="800">
 
-<div align="center">
-  <img src="./images/scrna_v3_datasets2.jpg" alt="scRNA-seq v3 Sample Details" width="800">
-  <p><i>Example: Finding the FTP download link in the CNGB project page.</i></p>
-</div>
+
+*示例：在 CNGB 项目页面中定位 FTP 下载链接。*

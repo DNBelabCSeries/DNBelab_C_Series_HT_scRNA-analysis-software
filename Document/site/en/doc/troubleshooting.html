@@ -1,0 +1,1971 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation site generated from README and doc markdown files">
+      
+      
+      
+      
+        <link rel="prev" href="io.html">
+      
+      
+        <link rel="next" href="release.html">
+      
+      
+        
+          <link rel="alternate" href="../../doc/troubleshooting.html" hreflang="zh">
+        
+          <link rel="alternate" href="troubleshooting.html" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Running & Troubleshooting - DNBelab C Series™ HT Single-Cell Analysis Software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pre-run-verification-preflight-checks" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="DNBelab C Series™ HT Single-Cell Analysis Software" class="md-header__button md-logo" aria-label="DNBelab C Series™ HT Single-Cell Analysis Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h2v2c0 1.44.68 2.61 1.88 3.78.86.83 2.01 1.63 3.21 2.42l-1.83 1.19C8.27 10.72 7.31 10 6.5 9.21 5.07 7.82 4 6.1 4 4zm14 0h2v2c0 2.1-1.07 3.82-2.5 5.21-1.41 1.38-3.21 2.52-4.96 3.63-1.75 1.12-3.45 2.21-4.66 3.38C6.68 17.39 6 18.56 6 20v2H4v-2c0-2.1 1.07-3.82 2.5-5.21 1.41-1.38 3.21-2.52 4.96-3.63 1.75-1.12 3.45-2.21 4.66-3.38C17.32 6.61 18 5.44 18 4zm-3.26 10.61c.99.67 1.95 1.39 2.76 2.18C18.93 16.18 20 17.9 20 20v2h-2v-2c0-1.44-.68-2.61-1.88-3.78-.86-.83-2.01-1.63-3.21-2.42zM7 3h10v1l-.06.5H7.06L7 4zm.68 3h8.64c-.24.34-.52.69-.9 1.06l-.51.44H9.07l-.49-.44c-.38-.37-.66-.72-.9-1.06m1.41 10.5h5.84l.49.44c.38.37.66.72.9 1.06H7.68c.24-.34.52-.69.9-1.06zm-2.03 3h9.88l.06.5v1H7v-1z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DNBelab C Series™ HT Single-Cell Analysis Software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Running & Troubleshooting
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../doc/troubleshooting.html" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="troubleshooting.html" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="DNBelab C Series™ HT Single-Cell Analysis Software" class="md-nav__button md-logo" aria-label="DNBelab C Series™ HT Single-Cell Analysis Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h2v2c0 1.44.68 2.61 1.88 3.78.86.83 2.01 1.63 3.21 2.42l-1.83 1.19C8.27 10.72 7.31 10 6.5 9.21 5.07 7.82 4 6.1 4 4zm14 0h2v2c0 2.1-1.07 3.82-2.5 5.21-1.41 1.38-3.21 2.52-4.96 3.63-1.75 1.12-3.45 2.21-4.66 3.38C6.68 17.39 6 18.56 6 20v2H4v-2c0-2.1 1.07-3.82 2.5-5.21 1.41-1.38 3.21-2.52 4.96-3.63 1.75-1.12 3.45-2.21 4.66-3.38C17.32 6.61 18 5.44 18 4zm-3.26 10.61c.99.67 1.95 1.39 2.76 2.18C18.93 16.18 20 17.9 20 20v2h-2v-2c0-1.44-.68-2.61-1.88-3.78-.86-.83-2.01-1.63-3.21-2.42zM7 3h10v1l-.06.5H7.06L7 4zm.68 3h8.64c-.24.34-.52.69-.9 1.06l-.51.44H9.07l-.49-.44c-.38-.37-.66-.72-.9-1.06m1.41 10.5h5.84l.49.44c.38.37.66.72.9 1.06H7.68c.24-.34.52-.69.9-1.06zm-2.03 3h9.88l.06.5v1H7v-1z"/></svg>
+
+    </a>
+    DNBelab C Series™ HT Single-Cell Analysis Software
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="installation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quickstart.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pipeline
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/pipeline.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parameters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Parameters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/parameter.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/tools.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Outputs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Outputs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/outs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="io.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Downstream Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Running & Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="troubleshooting.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Running & Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-run-verification-preflight-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-Run Verification &amp; Preflight Checks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pre-Run Verification &amp; Preflight Checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-basic-environment-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Basic Environment Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-preflight-snapshot-run-locking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Preflight Snapshot &amp; Run Locking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-system-logs-directory-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging System &amp; logs Directory Structure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging System &amp; logs Directory Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directory-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Directory Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-log-files-detailed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Log Files Detailed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-classification-troubleshooting-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Classification &amp; Troubleshooting Guide
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-troubleshooting-walkthroughs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Troubleshooting Walkthroughs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Troubleshooting Walkthroughs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-non-zero-exit-code-with-tool-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 1: Non-Zero Exit Code with TOOL Error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-resuming-an-interrupted-or-cancelled-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 2: Resuming an Interrupted or Cancelled Run
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artifact-validation-advanced-diagnostics-validate-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Artifact Validation &amp; Advanced Diagnostics (validate-artifacts)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dataset.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Additional Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Additional Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="migration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Upgrade Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="glossary.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="library_structure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="installation_previous.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Previous Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="json.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JSON Spec
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-run-verification-preflight-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-Run Verification &amp; Preflight Checks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pre-Run Verification &amp; Preflight Checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-basic-environment-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Basic Environment Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-preflight-snapshot-run-locking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Preflight Snapshot &amp; Run Locking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-system-logs-directory-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging System &amp; logs Directory Structure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging System &amp; logs Directory Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directory-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Directory Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-log-files-detailed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Log Files Detailed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-classification-troubleshooting-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Classification &amp; Troubleshooting Guide
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-troubleshooting-walkthroughs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Troubleshooting Walkthroughs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Troubleshooting Walkthroughs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-non-zero-exit-code-with-tool-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 1: Non-Zero Exit Code with TOOL Error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-resuming-an-interrupted-or-cancelled-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 2: Resuming an Interrupted or Cancelled Run
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artifact-validation-advanced-diagnostics-validate-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Artifact Validation &amp; Advanced Diagnostics (validate-artifacts)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="running-troubleshooting">Running &amp; Troubleshooting<a class="headerlink" href="#running-troubleshooting" title="Permanent link">&para;</a></h1>
+<p>This guide provides comprehensive information on execution workflows, log auditing, troubleshooting diagnostics, and checkpoint recovery for the DNBelab C Series™ single-cell analysis software (<code>dnbc4tools</code>).</p>
+<hr />
+<h2 id="pre-run-verification-preflight-checks">Pre-Run Verification &amp; Preflight Checks <a id="pre-run-verification"></a><a class="headerlink" href="#pre-run-verification-preflight-checks" title="Permanent link">&para;</a></h2>
+<h3 id="1-basic-environment-verification">1. Basic Environment Verification<a class="headerlink" href="#1-basic-environment-verification" title="Permanent link">&para;</a></h3>
+<p>Before launching large-scale production analyses, verify the following prerequisites:
+* <strong>Software Version</strong>: Confirm your installation by running <code>dnbc4tools --version</code> (ensuring it matches <code>3.2</code> or higher);
+* <strong>Tool Dependencies</strong>: Ensure that native system dependencies (such as STAR, SAMtools, MACS2, etc.) are available in the system <code>$PATH</code>;
+* <strong>Input Integrity</strong>: Paired-end FASTQ files must be intact, uncorrupted, and properly paired (MD5 checksum validation is recommended);
+* <strong>Reference Compatibility</strong>: Ensure reference files (FASTA, GTF, and aligner indexes) match the experimental organism and library chemistry version.</p>
+<h3 id="2-preflight-snapshot-run-locking">2. Preflight Snapshot &amp; Run Locking<a class="headerlink" href="#2-preflight-snapshot-run-locking" title="Permanent link">&para;</a></h3>
+<p>At startup, the pipeline executes strict preflight checks before any heavy computation:
+* <strong>Preflight Snapshot (<code>logs/preflight.json</code>)</strong>: Records resolved execution parameters including thread count (<code>Threads</code>), requested execution steps (<code>Steps</code>), reference genome directory (<code>Reference</code>), library chemistry protocol (<code>Chemistry</code>), and the memory budget (<code>resource_budget</code>, detailing available system RAM and configured ceilings);
+* <strong>Exclusive Run Lock (<code>logs/run.lock</code>)</strong>: An exclusive filesystem lock file is established under the log directory during execution to prevent concurrent write collisions on the same output directory. If a run is terminated abnormally by external signals (e.g. <code>kill -9</code>), confirm the previous process is dead before removing the lock or retrying.</p>
+<div class="admonition tip">
+<p class="admonition-title">Batch Script Generation vs. Execution</p>
+<ul>
+<li>Commands such as <code>dnbc4tools rna multi</code> and <code>atac multi</code> only generate <code>.sh</code> batch shell scripts in the working directory; <strong>they do not create analysis logs by themselves</strong>;</li>
+<li>Executing the generated <code>.sh</code> scripts (or invoking <code>multi run</code> directly) initializes the full output hierarchy, creates the <code>logs/</code> directory, and records comprehensive step logs.</li>
+<li>Batch sample lists should use plain-text TAB delimiters, with semicolons <code>;</code> separating R1/R2 pairs, and commas <code>,</code> separating multiple lane files of the same read.</li>
+</ul>
+</div>
+<hr />
+<h2 id="logging-system-logs-directory-structure">Logging System &amp; logs Directory Structure <a id="logging-system"></a><a class="headerlink" href="#logging-system-logs-directory-structure" title="Permanent link">&para;</a></h2>
+<p>Once a pipeline run starts, all terminal logs, subprocess command invocations, performance metrics, structured errors, and stage completion markers are stored under <code>&lt;outdir&gt;/&lt;name&gt;/logs/</code>.</p>
+<h3 id="directory-overview">Directory Overview<a class="headerlink" href="#directory-overview" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>&lt;outdir&gt;/&lt;name&gt;/logs/
+├── YYYYMMDD.txt                          # Main daily execution log (chronological record of all stages)
+├── run_manifest.json                     # Run audit manifest (records stage statuses, durations, and errors)
+├── preflight.json                        # Startup preflight snapshot (records runtime environment and budgets)
+├── errors.jsonl                          # Structured error tracking records (JSON Lines format)
+├── run.lock                              # Exclusive process file lock (prevents concurrent write conflicts)
+├── report_model.snapshot.json            # Complete web report data model snapshot
+├── runs/                                 # Historical invocation audit directory
+│   └── &lt;run_id&gt;/                         # Independent snapshots per invocation
+│       ├── run.json                      # Parameter and status backup for this invocation
+│       └── preflight.json                # Preflight configuration backup for this invocation
+├── stage_manifests/                      # Stage execution manifests &amp; fingerprints (checkpoint resume validation)
+│   └── &lt;pipeline&gt;.&lt;stage&gt;.json
+├── stage_completion/                     # Lightweight stage completion pointers
+│   └── &lt;pipeline&gt;.&lt;stage&gt;.json
+└── &lt;sample&gt;_upload.info                  # Compressed log &amp; diagnostic archive (can be provided to MGI support for troubleshooting)
+</code></pre></div>
+<hr />
+<h3 id="core-log-files-detailed">Core Log Files Detailed<a class="headerlink" href="#core-log-files-detailed" title="Permanent link">&para;</a></h3>
+<h4 id="1-main-daily-execution-log-logsyyyymmddtxt">1. Main Daily Execution Log (<code>logs/YYYYMMDD.txt</code>)<a class="headerlink" href="#1-main-daily-execution-log-logsyyyymmddtxt" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Role</strong>: The primary chronological log for pipeline execution, dynamically named by current date (e.g., <code>logs/20261106.txt</code>).</li>
+<li><strong>Standard Format</strong>: Follows the canonical format:
+  <div class="highlight"><pre><span></span><code>%(asctime)s - %(name)s - %(levelname)s - %(message)s
+</code></pre></div></li>
+<li><strong>Recorded Information</strong>:</li>
+<li>Initialization, input parameters, progress milestones, and completion status for every bioinformatics stage (<code>data/QC</code>, <code>alignment</code>, <code>count</code>, <code>similarity</code>, <code>analysis</code>, <code>report</code>, etc.);</li>
+<li>Exact shell invocations, working directories, and standard output streams for underlying algorithms and external tools (STAR, SAMtools, MACS2);</li>
+<li>Processed biological metrics including cell counts, feature dimensions, and matrix shapes;</li>
+<li><strong>Resource Profiling &amp; Timing</strong>: Stage elapsed durations (seconds) are always recorded. When <code>export DNBC4TOOLS_PROFILE_RESOURCES=1</code> is set, the main log also outputs detailed CPU and resident memory usage (e.g., <code>process CPU user=142.50s, system=18.20s; process lifetime peak RSS=12.45 GiB</code>).</li>
+</ul>
+<h4 id="2-structured-error-tracking-log-logserrorsjsonl">2. Structured Error Tracking Log (<code>logs/errors.jsonl</code>)<a class="headerlink" href="#2-structured-error-tracking-log-logserrorsjsonl" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Role</strong>: Machine-readable structured error tracking log in JSON Lines format (one JSON object per line). This is the definitive record for diagnosing pipeline crashes.</li>
+<li><strong>Schema &amp; Fields</strong>:
+  <div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-11-06T13:00:00.123+08:00"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"error_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"e4f1a23b9c0d"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"error_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TOOL"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"run_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20261106T130000-12345-a1b2c3d4"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"sample"</span><span class="p">:</span><span class="w"> </span><span class="s2">"demo_sample"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"pipeline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rna"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"stage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"align"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"fatal"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"error_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ToolExecutionError"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"STAR alignment failed with exit code 104"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"traceback"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Traceback (most recent call last):\n  File ...\nToolExecutionError: ..."</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"STAR --genomeDir /ref/STAR_index ..."</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"exit_code"</span><span class="p">:</span><span class="w"> </span><span class="mi">104</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"stderr_tail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EXITING because of FATAL ERROR: could not open genome file ..."</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li><strong>Diagnostic Value</strong>: Terminal crashes print a 12-character <code>Error ID: &lt;id&gt;</code>. Searching this ID in <code>errors.jsonl</code> immediately surfaces the full Python stack trace, the failed shell command, and captured standard error lines (<code>stderr_tail</code>).</li>
+</ul>
+<h4 id="3-run-audit-manifest-logsrun_manifestjson">3. Run Audit Manifest (<code>logs/run_manifest.json</code>)<a class="headerlink" href="#3-run-audit-manifest-logsrun_manifestjson" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Role</strong>: Top-level audit manifest summarizing execution status for the sample, consumed by cluster automation and downstream workflows.</li>
+<li><strong>Recorded Information</strong>:</li>
+<li>Execution status: <code>status</code> (<code>success</code>, <code>failed</code>, <code>aborted</code>, etc.) and boolean <code>success</code>;</li>
+<li>Invocation ID: Unique <code>run_id</code> (format: <code>YYYYMMDDTHHMMSS-&lt;pid&gt;-&lt;hash&gt;</code>);</li>
+<li>Timestamps and duration: <code>start_time</code>, <code>end_time</code>, and total runtime <code>duration_sec</code>;</li>
+<li>Terminal error detail: When execution fails, the <code>terminal_error</code> dictionary captures <code>error_id</code>, <code>error_type</code>, and <code>message</code>;</li>
+<li>Modality statuses: Separate completion records for active modalities (RNA, ATAC, VDJ-T, VDJ-B).</li>
+</ul>
+<h4 id="4-stage-checkpoints-stage_manifests-stage_completion">4. Stage Checkpoints (<code>stage_manifests/</code> &amp; <code>stage_completion/</code>)<a class="headerlink" href="#4-stage-checkpoints-stage_manifests-stage_completion" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>stage_manifests/&lt;pipeline&gt;.&lt;stage&gt;.json</code></strong>:</li>
+<li>Records detailed execution metadata, including the <code>stage_fingerprint</code> (binding the software version and contract schema) and the <code>input_fingerprint</code> (hash of inputs and arguments);</li>
+<li>When running with <code>--resume</code>, the pipeline verifies fingerprint consistency. Stage results are reused only when checks of inputs, parameters, tool versions, and output integrity pass.</li>
+<li><strong><code>stage_completion/&lt;pipeline&gt;.&lt;stage&gt;.json</code></strong>:</li>
+<li>Lightweight atomic completion pointer tracking generated output files (<code>outputs</code>), integrity hashes (<code>output_integrity</code>), and completion timestamps (<code>completed_at</code>).</li>
+</ul>
+<h4 id="5-compressed-log-diagnostic-archive-logssample_uploadinfo">5. Compressed Log &amp; Diagnostic Archive (<code>logs/&lt;sample&gt;_upload.info</code>)<a class="headerlink" href="#5-compressed-log-diagnostic-archive-logssample_uploadinfo" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Role</strong>: A binary streaming compressed archive automatically generated by internal pipeline tools upon web report creation;</li>
+<li><strong>Included Data</strong>: Securely packages and compresses the sample's execution log (<code>YYYYMMDD.txt</code>), stage run manifests, intermediate QC diagnostic tables, and execution context;</li>
+<li><strong>Submitting to MGI Support for Troubleshooting</strong>: When encountering intricate algorithmic abnormalities, unexpected runtime crashes, or when requesting assistance from MGI technical support, <strong>users do not need to manually gather scattered log files—simply provide the <code>&lt;sample&gt;_upload.info</code> file to MGI technical support</strong>. MGI support engineers can read the execution information and logs stored in the archive using diagnostic utilities (<code>c4_diagnose</code>) to assist troubleshooting.</li>
+</ul>
+<hr />
+<h2 id="error-classification-troubleshooting-guide">Error Classification &amp; Troubleshooting Guide <a id="error-classification"></a><a class="headerlink" href="#error-classification-troubleshooting-guide" title="Permanent link">&para;</a></h2>
+<p>When a run exits with an error, the terminal and logs report a standardized <code>Error code</code>. The table below outlines common error codes, typical root causes, and recommended investigation paths:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Error code</th>
+<th style="text-align: left;">Category &amp; Common Causes</th>
+<th style="text-align: left;">Investigation &amp; Resolution Paths</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>CLI-CONFIG</code></strong></td>
+<td style="text-align: left;"><strong>Option or syntax misconfiguration</strong><br>• Misspelled options or missing required parameters<br>• Missing section headers in multi-omics configs (e.g. missing <code>[libraries]</code>, <code>[rna]</code>, <code>[samples]</code>)</td>
+<td style="text-align: left;">• Inspect CLI syntax and option spellings;<br>• Check that configuration CSVs adhere to required section syntax.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>INPUT</code></strong></td>
+<td style="text-align: left;"><strong>Input files missing, unreadable, or truncated</strong><br>• FASTQ path does not exist or lacks read permission<br>• Paired FASTQ line counts do not match or file truncated<br>• Barcode whitelist file missing</td>
+<td style="text-align: left;">• Verify file paths and Linux read permissions;<br>• Test archive integrity using <code>gzip -t &lt;file.fq.gz&gt;</code>;<br>• Ensure paired R1 and R2 files contain identical numbers of reads.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>REFERENCE</code></strong></td>
+<td style="text-align: left;"><strong>Reference genome or annotation issue</strong><br>• Genome directory invalid or missing required index files<br>• STAR index version mismatch with installed STAR binary<br>• GTF missing <code>gene_id</code> or <code>transcript_id</code> attributes</td>
+<td style="text-align: left;">• Verify genome directory contains intact FASTA, GTF, and index files;<br>• Confirm species configuration (e.g. <code>Human</code> / <code>Mouse</code>) matches the experimental chemistry.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>TOOL</code></strong></td>
+<td style="text-align: left;"><strong>External tool or binary failure</strong><br>• STAR out of memory (OOM killed)<br>• MACS2 or SAMtools error or terminated by signal<br>• Shared dynamic library incompatibilities (<code>glibc</code>, <code>libz</code>)</td>
+<td style="text-align: left;">• Open <code>logs/errors.jsonl</code> to review the command and <code>context.stderr_tail</code>;<br>• Increase RAM allocation or reduce thread counts if out-of-memory occurs;<br>• Verify system shared libraries.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>OUTPUT</code></strong></td>
+<td style="text-align: left;"><strong>Output filesystem or disk errors</strong><br>• Output directory does not exist and cannot be created<br>• Disk storage capacity exhausted (No space left on device)<br>• Disk quota or inode quota exceeded</td>
+<td style="text-align: left;">• Check available space using <code>df -h</code>;<br>• Verify write permissions on <code>&lt;outdir&gt;</code>;<br>• Check cluster storage quota or inode limits.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>INTERRUPTED</code></strong></td>
+<td style="text-align: left;"><strong>Process terminated externally</strong><br>• Cluster schedulers (SLURM/SGE/PBS) sending SIGKILL/SIGTERM due to timeout or memory limits<br>• Manual <code>Ctrl+C</code> or <code>kill</code> termination</td>
+<td style="text-align: left;">• Inspect cluster job logs (e.g. <code>slurm-&lt;jobid&gt;.out</code>) for node eviction or timeout reasons;<br>• Confirm prior processes are terminated, then restart with resume options if desired.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>INTERNAL</code></strong></td>
+<td style="text-align: left;"><strong>Unexpected Python runtime exception</strong><br>• Unhandled corner case or internal logic exception</td>
+<td style="text-align: left;">• Note the 12-character <code>Error ID</code> from the console;<br>• Extract the complete <code>traceback</code> from <code>logs/errors.jsonl</code> for in-depth resolution.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="practical-troubleshooting-walkthroughs">Practical Troubleshooting Walkthroughs <a id="troubleshooting-walkthroughs"></a><a class="headerlink" href="#practical-troubleshooting-walkthroughs" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-1-non-zero-exit-code-with-tool-error">Scenario 1: Non-Zero Exit Code with <code>TOOL</code> Error<a class="headerlink" href="#scenario-1-non-zero-exit-code-with-tool-error" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Locate Error ID</strong>: Check the terminal output for the error footer, e.g., <code>Error ID: a7f8b91c2d3e (Error code: TOOL)</code>;</li>
+<li><strong>Search Error Record</strong>: Grep the error ID in the log directory:
+   <div class="highlight"><pre><span></span><code>grep<span class="w"> </span><span class="s2">"a7f8b91c2d3e"</span><span class="w"> </span>&lt;outdir&gt;/&lt;sample&gt;/logs/errors.jsonl
+</code></pre></div></li>
+<li><strong>Identify Root Cause</strong>: Inspect <code>context.command</code> and <code>context.stderr_tail</code>, and check the cluster job log for memory-limit or OOM-kill messages. Identify whether the failure occurred during alignment, matrix generation, or BAM output before changing resource settings;</li>
+<li><strong>Apply Resolution</strong>: For memory exhaustion, increase the job memory allocation or reduce <code>--threads</code> to lower concurrency. If BAM output is unnecessary, use <code>--no_bam</code> for RNA runs or <code>no_bam,true</code> in the <code>[rna]</code> section for multi/C6 runs. Version 3.2 uses embedded STAR alignment; STAR does not create or sort BAM files in this mode. Do not use <code>--limitBAMsortRAM</code> or pass <code>--limitBAM*</code> through <code>--star_parameters</code> to tune BAM output; these parameters are not applicable and are rejected by parameter validation.</li>
+</ol>
+<h3 id="scenario-2-resuming-an-interrupted-or-cancelled-run">Scenario 2: Resuming an Interrupted or Cancelled Run<a class="headerlink" href="#scenario-2-resuming-an-interrupted-or-cancelled-run" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Ensure Process Cleanup</strong>: Verify that no zombie processes from the previous run are active;</li>
+<li><strong>Clear Run Lock</strong>: If an interrupted run left a stale lock file, remove it cleanly:
+   <div class="highlight"><pre><span></span><code>rm<span class="w"> </span>-f<span class="w"> </span>&lt;outdir&gt;/&lt;sample&gt;/logs/run.lock
+</code></pre></div></li>
+<li><strong>Inspect Completed Stages</strong>: Review <code>logs/stage_completion/</code> to verify which stages completed successfully;</li>
+<li><strong>Execute Resume</strong>: Re-run the original command with the <code>--resume</code> flag appended. The runner will validate fingerprints and bypass previously verified stages, picking up directly from the point of interruption.</li>
+</ol>
+<hr />
+<h2 id="artifact-validation-advanced-diagnostics-validate-artifacts">Artifact Validation &amp; Advanced Diagnostics (<code>validate-artifacts</code>) <a id="artifact-validation"></a><a class="headerlink" href="#artifact-validation-advanced-diagnostics-validate-artifacts" title="Permanent link">&para;</a></h2>
+<p>To assist bioinformatics engineers and operations teams in validating deliverable integrity post-analysis, <code>dnbc4tools</code> includes an internal artifact validation utility:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Lightweight structural check (verifies required directories and files exist and are non-empty)</span>
+dnbc4tools<span class="w"> </span>validate-artifacts<span class="w"> </span>--sample-dir<span class="w"> </span>/path/to/sample<span class="w"> </span>--level<span class="w"> </span>shallow
+
+<span class="c1"># Deep content and consistency inspection (verifies HDF5 structures, MEX dimensions, BAM indexes)</span>
+dnbc4tools<span class="w"> </span>validate-artifacts<span class="w"> </span>--sample-dir<span class="w"> </span>/path/to/sample<span class="w"> </span>--level<span class="w"> </span>deep<span class="w"> </span>--json<span class="w"> </span>/path/to/sample/logs/artifact-validation.json
+</code></pre></div>
+<ul>
+<li><code>--level shallow</code>: Performs rapid checks, confirming required delivery files are present and non-empty;</li>
+<li><code>--level deep</code>: Scans H5/H5AD datasets, compares matrix row/column dimensions, and verifies BAM index headers, exporting diagnostics to a JSON manifest;</li>
+<li>Note: This command provides structural integrity validation and does not replace biological review of QC metrics.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 MGI Tech Bioinformatics.<br>Documentation 3.2 · Updated 2026-10-23
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["search.suggest", "search.highlight", "content.code.copy", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/doc-controls.js"></script>
+      
+    
+  </body>
+</html>

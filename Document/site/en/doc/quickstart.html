@@ -1,0 +1,2877 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation site generated from README and doc markdown files">
+      
+      
+      
+      
+        <link rel="prev" href="installation.html">
+      
+      
+        <link rel="next" href="pipeline/pipeline.html">
+      
+      
+        
+          <link rel="alternate" href="../../doc/quickstart.html" hreflang="zh">
+        
+          <link rel="alternate" href="quickstart.html" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Quick Start - DNBelab C Series™ HT Single-Cell Analysis Software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#choose-a-workflow" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="DNBelab C Series™ HT Single-Cell Analysis Software" class="md-header__button md-logo" aria-label="DNBelab C Series™ HT Single-Cell Analysis Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h2v2c0 1.44.68 2.61 1.88 3.78.86.83 2.01 1.63 3.21 2.42l-1.83 1.19C8.27 10.72 7.31 10 6.5 9.21 5.07 7.82 4 6.1 4 4zm14 0h2v2c0 2.1-1.07 3.82-2.5 5.21-1.41 1.38-3.21 2.52-4.96 3.63-1.75 1.12-3.45 2.21-4.66 3.38C6.68 17.39 6 18.56 6 20v2H4v-2c0-2.1 1.07-3.82 2.5-5.21 1.41-1.38 3.21-2.52 4.96-3.63 1.75-1.12 3.45-2.21 4.66-3.38C17.32 6.61 18 5.44 18 4zm-3.26 10.61c.99.67 1.95 1.39 2.76 2.18C18.93 16.18 20 17.9 20 20v2h-2v-2c0-1.44-.68-2.61-1.88-3.78-.86-.83-2.01-1.63-3.21-2.42zM7 3h10v1l-.06.5H7.06L7 4zm.68 3h8.64c-.24.34-.52.69-.9 1.06l-.51.44H9.07l-.49-.44c-.38-.37-.66-.72-.9-1.06m1.41 10.5h5.84l.49.44c.38.37.66.72.9 1.06H7.68c.24-.34.52-.69.9-1.06zm-2.03 3h9.88l.06.5v1H7v-1z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DNBelab C Series™ HT Single-Cell Analysis Software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quick Start
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../doc/quickstart.html" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="quickstart.html" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="DNBelab C Series™ HT Single-Cell Analysis Software" class="md-nav__button md-logo" aria-label="DNBelab C Series™ HT Single-Cell Analysis Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h2v2c0 1.44.68 2.61 1.88 3.78.86.83 2.01 1.63 3.21 2.42l-1.83 1.19C8.27 10.72 7.31 10 6.5 9.21 5.07 7.82 4 6.1 4 4zm14 0h2v2c0 2.1-1.07 3.82-2.5 5.21-1.41 1.38-3.21 2.52-4.96 3.63-1.75 1.12-3.45 2.21-4.66 3.38C6.68 17.39 6 18.56 6 20v2H4v-2c0-2.1 1.07-3.82 2.5-5.21 1.41-1.38 3.21-2.52 4.96-3.63 1.75-1.12 3.45-2.21 4.66-3.38C17.32 6.61 18 5.44 18 4zm-3.26 10.61c.99.67 1.95 1.39 2.76 2.18C18.93 16.18 20 17.9 20 20v2h-2v-2c0-1.44-.68-2.61-1.88-3.78-.86-.83-2.01-1.63-3.21-2.42zM7 3h10v1l-.06.5H7.06L7 4zm.68 3h8.64c-.24.34-.52.69-.9 1.06l-.51.44H9.07l-.49-.44c-.38-.37-.66-.72-.9-1.06m1.41 10.5h5.84l.49.44c.38.37.66.72.9 1.06H7.68c.24-.34.52-.69.9-1.06zm-2.03 3h9.88l.06.5v1H7v-1z"/></svg>
+
+    </a>
+    DNBelab C Series™ HT Single-Cell Analysis Software
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="installation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="quickstart.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#choose-a-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choose a Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-fastqs-directory-auto-detection-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --fastqs Directory Auto-Detection Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-cell-rna-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Single-Cell RNA Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Single-Cell RNA Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rna-prepare-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Build Reference Genome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rna-prepare-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Prepare RNA Sequencing Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rna-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Run RNA Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rna-check-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Inspect RNA Outputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-cell-atac-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Single-Cell ATAC Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Single-Cell ATAC Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atac-prepare-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Build ATAC Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atac-prepare-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Prepare ATAC Sequencing Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atac-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Run ATAC Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atac-check-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Inspect ATAC Outputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-cell-vdj-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Single-Cell V(D)J Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Single-Cell V(D)J Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vdj-prepare-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Prepare VDJ Data and Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vdj-prepare-rna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Prepare an RNA Cell Table (RNA-Associated Mode Only)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vdj-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Run VDJ Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vdj-check-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Inspect VDJ Outputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrated-multi-omics-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integrated Multi-Omics Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrated Multi-Omics Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multi-prepare-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Prepare Sequencing Data and References
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-prepare-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Write the Multi-Omics Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Run the Multi-Omics Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-check-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Inspect Multi-Omics Outputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c6-multiplexed-single-cell-rna-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C6 Multiplexed Single-Cell RNA Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C6 Multiplexed Single-Cell RNA Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c6-prepare-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Prepare Shared Data, Reference, and Sample Assignments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c6-prepare-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Write the C6 Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c6-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Run the C6 Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c6-check-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Inspect Global and Per-Sample Outputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-script-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch Script Generation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Batch Script Generation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-prepare-sample-manifest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Prepare Sample Manifest
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-generate-analysis-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Generate Analysis Scripts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pipeline
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/pipeline.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parameters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Parameters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/parameter.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/tools.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Outputs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Outputs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/outs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="io.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Downstream Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="troubleshooting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Running & Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dataset.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Additional Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Additional Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="migration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Upgrade Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="glossary.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="library_structure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="installation_previous.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Previous Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="json.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JSON Spec
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#choose-a-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choose a Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-fastqs-directory-auto-detection-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --fastqs Directory Auto-Detection Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-cell-rna-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Single-Cell RNA Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Single-Cell RNA Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rna-prepare-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Build Reference Genome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rna-prepare-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Prepare RNA Sequencing Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rna-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Run RNA Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rna-check-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Inspect RNA Outputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-cell-atac-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Single-Cell ATAC Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Single-Cell ATAC Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atac-prepare-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Build ATAC Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atac-prepare-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Prepare ATAC Sequencing Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atac-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Run ATAC Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atac-check-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Inspect ATAC Outputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-cell-vdj-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Single-Cell V(D)J Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Single-Cell V(D)J Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vdj-prepare-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Prepare VDJ Data and Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vdj-prepare-rna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Prepare an RNA Cell Table (RNA-Associated Mode Only)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vdj-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Run VDJ Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vdj-check-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Inspect VDJ Outputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrated-multi-omics-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integrated Multi-Omics Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrated Multi-Omics Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multi-prepare-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Prepare Sequencing Data and References
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-prepare-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Write the Multi-Omics Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Run the Multi-Omics Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-check-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Inspect Multi-Omics Outputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c6-multiplexed-single-cell-rna-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C6 Multiplexed Single-Cell RNA Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C6 Multiplexed Single-Cell RNA Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c6-prepare-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Prepare Shared Data, Reference, and Sample Assignments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c6-prepare-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Write the C6 Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c6-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Run the C6 Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c6-check-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Inspect Global and Per-Sample Outputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-script-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch Script Generation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Batch Script Generation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-prepare-sample-manifest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Prepare Sample Manifest
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-generate-analysis-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Generate Analysis Scripts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="quick-start-guide">Quick Start Guide<a class="headerlink" href="#quick-start-guide" title="Permanent link">&para;</a></h1>
+<p>This guide provides end-to-end operational walkthroughs for the DNBelab C Series™ single-cell analysis suite (dnbc4tools), covering system prerequisites, reference genome indexing, single-modality pipelines, integrated multi-omics orchestration, C6 multiplexed single-cell RNA analysis, and batch analysis script generation.</p>
+<hr />
+<h2 id="choose-a-workflow">Choose a Workflow <a id="choose-workflow"></a><a class="headerlink" href="#choose-a-workflow" title="Permanent link">&para;</a></h2>
+<p>Select the appropriate command entry point according to your experimental design and library preparation:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Workflow</th>
+<th style="text-align: left;">Command Entry Point</th>
+<th style="text-align: left;">Scope &amp; Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="#single-cell-rna-analysis"><strong>Single-Cell RNA Analysis</strong></a></td>
+<td style="text-align: left;"><code>dnbc4tools rna run</code></td>
+<td style="text-align: left;">Single-sample gene expression quantification, EmptyDrops cell calling, and clustering</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#single-cell-atac-analysis"><strong>Single-Cell ATAC Analysis</strong></a></td>
+<td style="text-align: left;"><code>dnbc4tools atac run</code></td>
+<td style="text-align: left;">Single-sample chromatin accessibility analysis, peak calling, and QC</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#single-cell-vdj-analysis"><strong>Single-Cell V(D)J Analysis</strong></a></td>
+<td style="text-align: left;"><code>dnbc4tools vdj run</code></td>
+<td style="text-align: left;">De novo assembly of full-length TCR / BCR sequences, annotation, and clonotype identification</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#integrated-multi-omics-analysis"><strong>Integrated Multi-Omics</strong></a></td>
+<td style="text-align: left;"><code>dnbc4tools multi run --csv multi.config.csv</code></td>
+<td style="text-align: left;">Unified orchestration and cross-modality reporting for RNA + ATAC + VDJ</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#c6-multi-sample-analysis"><strong>C6 Multiplexed RNA</strong></a></td>
+<td style="text-align: left;"><code>dnbc4tools multi run --csv sample.config.csv</code></td>
+<td style="text-align: left;">Sample Barcode pooled RNA-seq demultiplexing and per-sample dedicated delivery</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#batch-script-generation"><strong>Batch Script Generation</strong></a></td>
+<td style="text-align: left;"><code>dnbc4tools &lt;rna/atac&gt; multi</code></td>
+<td style="text-align: left;">Batch-generate standalone analysis scripts for queued HPC scheduling</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="prerequisites">Prerequisites <a id="prerequisites"></a><a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<div class="doc-callout doc-callout-info">
+<p><strong>Before you begin:</strong></p>
+<ul style="margin-bottom: 0;">
+<li><strong>Environment &amp; Paths</strong>: Ensure software installation is verified (see <a href="./installation.html">Installation Guide</a>). Replace placeholder paths like <code>$dnbc4tools</code>, <code>/test/data/...</code>, and <code>/database/...</code> with actual paths on your system.</li>
+<li><strong>Output Directory</strong>: By default, a task directory named after <code>--name</code> is created under the current working directory (results saved in <code>./&lt;name&gt;/outs/</code>). You can also explicitly specify a custom output root via <code>--outdir</code>.</li>
+</ul>
+</div>
+<h3 id="-fastqs-directory-auto-detection-rules"><code>--fastqs</code> Directory Auto-Detection Rules <a id="file-naming-conventions"></a><a class="headerlink" href="#-fastqs-directory-auto-detection-rules" title="Permanent link">&para;</a></h3>
+<p>When using directory-based input via <code>--fastqs &lt;dir&gt;</code>, the pipeline automatically scans the folder and pairs paired-end reads matching the following patterns:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Read End</th>
+<th style="text-align: left;">Match Pattern</th>
+<th style="text-align: left;">Example Filenames</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Read 1 (R1)</strong></td>
+<td style="text-align: left;">Contains <code>_R1_</code>, <code>_R1</code>, <code>_1</code>, or <code>_read1</code></td>
+<td style="text-align: left;"><code>sample_R1.fastq.gz</code>, <code>sample_1.fq.gz</code>, <code>sample_R1_001.fastq.gz</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Read 2 (R2)</strong></td>
+<td style="text-align: left;">Contains <code>_R2_</code>, <code>_R2</code>, <code>_2</code>, or <code>_read2</code></td>
+<td style="text-align: left;"><code>sample_R2.fastq.gz</code>, <code>sample_2.fq.gz</code>, <code>sample_R2_001.fastq.gz</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Supported Extensions</strong>: <code>.fastq.gz</code>, <code>.fq.gz</code>, <code>.fastq</code>, <code>.fq</code></li>
+<li><strong>Explicit File Arguments Bypass Naming Restrictions</strong>: If files are provided via explicit flags (e.g., <code>--fastq1/--fastq2</code> or RNA <code>--cDNAfastq1/2</code>, <code>--oligofastq1/2</code>), file names do not need to follow these patterns, but the list ordering between paired reads must match strictly.</li>
+</ul>
+<hr />
+<h2 id="single-cell-rna-analysis">Single-Cell RNA Analysis <a id="single-cell-rna-analysis"></a><a class="headerlink" href="#single-cell-rna-analysis" title="Permanent link">&para;</a></h2>
+<p>Designed for standard single-sample 3′ or 5′ single-cell transcriptomic profiling and clustering.</p>
+<h3 id="rna-prepare-reference">Step 1: Build Reference Genome<a class="headerlink" href="#rna-prepare-reference" title="Permanent link">&para;</a></h3>
+<p>If a compatible reference is already available, skip rebuilding and use its complete directory in the run command. Choose the appropriate species example below and run it in a separate working directory. <code>mkref --genomeDir /database/scRNA</code> specifies the reference output root; the software adds a species subdirectory, producing <code>/database/scRNA/Homo_sapiens</code>, <code>/database/scRNA/Mus_musculus</code>, or <code>/database/scRNA/hg38_and_mm10</code>. Pass that species directory to <code>run --genomeDir</code>, not the output root or an original FASTA/GTF file. For the mixed-species example, prepare the two filtered GTF files at the indicated <code>hg38/</code> and <code>mm10/</code> paths first.</p>
+<p>Using Human, Mouse, and Human-Mouse dual-species as common references:</p>
+<p><strong>Human (GRCh38)</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Download GENCODE annotation and genomic FASTA</span>
+wget<span class="w"> </span>http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/GRCh38.primary_assembly.genome.fa.gz
+wget<span class="w"> </span>http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/gencode.v32.primary_assembly.annotation.gtf.gz
+
+<span class="c1"># 2. Decompress files</span>
+gzip<span class="w"> </span>-d<span class="w"> </span>GRCh38.primary_assembly.genome.fa.gz
+gzip<span class="w"> </span>-d<span class="w"> </span>gencode.v32.primary_assembly.annotation.gtf.gz
+
+<span class="c1"># 3. Filter GTF and generate STAR genome index</span>
+<span class="nv">$dnbc4tools</span><span class="w"> </span>tools<span class="w"> </span>mkgtf<span class="w"> </span>--ingtf<span class="w"> </span>gencode.v32.primary_assembly.annotation.gtf<span class="w"> </span>--output<span class="w"> </span>genes.filtered.gtf
+<span class="nv">$dnbc4tools</span><span class="w"> </span>rna<span class="w"> </span>mkref<span class="w"> </span>--genomeDir<span class="w"> </span>/database/scRNA<span class="w"> </span>--ingtf<span class="w"> </span>genes.filtered.gtf<span class="w"> </span>--fasta<span class="w"> </span>GRCh38.primary_assembly.genome.fa<span class="w"> </span>--threads<span class="w"> </span><span class="m">10</span><span class="w"> </span>--species<span class="w"> </span>Homo_sapiens
+</code></pre></div></p>
+<p><strong>Mouse (Mus musculus, GRCm38)</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Download annotation and FASTA</span>
+wget<span class="w"> </span>http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M23/GRCm38.primary_assembly.genome.fa.gz
+wget<span class="w"> </span>http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M23/gencode.vM23.primary_assembly.annotation.gtf.gz
+
+<span class="c1"># 2. Decompress files</span>
+gzip<span class="w"> </span>-d<span class="w"> </span>GRCm38.primary_assembly.genome.fa.gz
+gzip<span class="w"> </span>-d<span class="w"> </span>gencode.vM23.primary_assembly.annotation.gtf.gz
+
+<span class="c1"># 3. Filter GTF and generate STAR genome index</span>
+<span class="nv">$dnbc4tools</span><span class="w"> </span>tools<span class="w"> </span>mkgtf<span class="w"> </span>--ingtf<span class="w"> </span>gencode.vM23.primary_assembly.annotation.gtf<span class="w"> </span>--output<span class="w"> </span>genes.filtered.gtf
+<span class="nv">$dnbc4tools</span><span class="w"> </span>rna<span class="w"> </span>mkref<span class="w"> </span>--genomeDir<span class="w"> </span>/database/scRNA<span class="w"> </span>--ingtf<span class="w"> </span>genes.filtered.gtf<span class="w"> </span>--fasta<span class="w"> </span>GRCm38.primary_assembly.genome.fa<span class="w"> </span>--threads<span class="w"> </span><span class="m">10</span><span class="w"> </span>--species<span class="w"> </span>Mus_musculus
+</code></pre></div></p>
+<p><strong>Human-Mouse Mixed-Species Reference</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Combine FASTA and GTF after preparing both species</span>
+<span class="nv">$dnbc4tools</span><span class="w"> </span>rna<span class="w"> </span>mkref<span class="w"> </span>--genomeDir<span class="w"> </span>/database/scRNA<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fasta<span class="w"> </span>GRCh38.primary_assembly.genome.fa,GRCm38.primary_assembly.genome.fa<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ingtf<span class="w"> </span>hg38/genes.filtered.gtf,mm10/genes.filtered.gtf<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--species<span class="w"> </span>hg38,mm10<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">10</span>
+</code></pre></div></p>
+<h3 id="rna-prepare-inputs">Step 2: Prepare RNA Sequencing Data<a class="headerlink" href="#rna-prepare-inputs" title="Permanent link">&para;</a></h3>
+<p>Organize your sequencing files under structured subdirectories containing <code>cDNA/</code> and <code>oligo/</code>. The pipeline will automatically identify and pair FASTQ files:</p>
+<div class="highlight"><pre><span></span><code>/test/data/rna_fastqs/          # Root directory passed to --fastqs
+├── cDNA/                       # Transcriptomic cDNA sequencing reads
+│   ├── sample_cDNA_R1.fastq.gz
+│   └── sample_cDNA_R2.fastq.gz
+└── oligo/                      # Bead/barcode Oligo sequencing reads
+    ├── sample_oligo_R1.fastq.gz
+    └── sample_oligo_R2.fastq.gz
+</code></pre></div>
+<p><code>--fastqs</code> points to the root containing both <code>cDNA/</code> and <code>oligo/</code>; all four paired input streams are required for this standard example. Keep data from one sample/library in the directory. Multiple files from the same library may be placed in the corresponding subdirectories, with compatible read structures and dark-cycle settings. Do not mix unrelated samples. See the <a href="#file-naming-conventions">filename pairing rules</a>.</p>
+<h3 id="rna-run">Step 3: Run RNA Analysis<a class="headerlink" href="#rna-run" title="Permanent link">&para;</a></h3>
+<p><strong>Method 1: Directory Input (Recommended)</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>rna<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastqs<span class="w"> </span>/test/data/rna_fastqs<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--genomeDir<span class="w"> </span>/database/scRNA/Homo_sapiens<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_rna<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">30</span>
+</code></pre></div>
+<p><strong>Method 2: Explicit Individual FASTQ Inputs</strong></p>
+<p>When sequencing files are not grouped into <code>cDNA/</code> and <code>oligo/</code> subdirectories, or are distributed across separate storage paths, specify each input file explicitly using dedicated arguments (comma-separated lists supported):</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>rna<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--cDNAfastq1<span class="w"> </span>/test/data/rna_fastqs/cDNA/sample_cDNA_R1.fastq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--cDNAfastq2<span class="w"> </span>/test/data/rna_fastqs/cDNA/sample_cDNA_R2.fastq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--oligofastq1<span class="w"> </span>/test/data/rna_fastqs/oligo/sample_oligo_R1.fastq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--oligofastq2<span class="w"> </span>/test/data/rna_fastqs/oligo/sample_oligo_R2.fastq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--genomeDir<span class="w"> </span>/database/scRNA/Homo_sapiens<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_rna<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">30</span>
+</code></pre></div>
+<p>Choose one input method; do not combine <code>--fastqs</code> with explicit FASTQ arguments. <code>--name test_rna</code> names the run and report, results are stored in <code>./test_rna/outs/</code> (use <code>--outdir</code> to customize the root), and <code>--threads</code> sets the CPU thread count. Explicit R1/R2 lists must match in order.</p>
+<p>For 5′ RNA, add <code>--end5</code> to the chosen run command; leave it off for the 3′ example. BAM output is enabled by default. Add the flag <code>--no_bam</code> to omit BAM files and their indexes when saving storage. Further cell-calling and library options are described in <a href="parameter/scRNA.html">RNA parameters</a>.</p>
+<h3 id="rna-check-outputs">Step 4: Inspect RNA Outputs<a class="headerlink" href="#rna-check-outputs" title="Permanent link">&para;</a></h3>
+<p>Upon completion, results are stored in <code>./test_rna/outs/</code>:</p>
+<ul>
+<li><strong>Interactive Report</strong>: Open <code>test_rna_scRNA_report.html</code> in a web browser to review cell counts, sequencing QC, gene expression, and clustering charts;</li>
+<li><strong>Quantification Matrices</strong>: Standard MEX directory, <code>.h5</code>, and AnnData <code>.h5ad</code> formats (located in <code>filtered_feature_bc_matrix/</code> and <code>analysis/QC_Cluster.h5ad</code>);</li>
+<li><strong>QC &amp; Single-Cell Metadata</strong>: <code>singlecell.csv</code> (bead/droplet metrics; filter cells via <code>is_cell_barcode == 1</code>) and <code>metrics_summary.xls</code>.</li>
+</ul>
+<p>For the complete directory structure, metric explanations, and programmatic loading examples, see <a href="outs/scRNA.html">scRNA Output Details</a> and <a href="io.html#scrna-analysis">Reading Results in R / Python</a>.</p>
+<hr />
+<h2 id="single-cell-atac-analysis">Single-Cell ATAC Analysis <a id="single-cell-atac-analysis"></a><a class="headerlink" href="#single-cell-atac-analysis" title="Permanent link">&para;</a></h2>
+<p>Designed for single-cell chromatin accessibility analysis, peak calling, and quality control.</p>
+<h3 id="atac-prepare-reference">Step 1: Build ATAC Reference<a class="headerlink" href="#atac-prepare-reference" title="Permanent link">&para;</a></h3>
+<p>If a compatible reference is already available, skip rebuilding and use its complete directory in the run command. Choose the appropriate species example below and run it in a separate working directory. <code>mkref --genomeDir /database/scATAC</code> specifies the reference output root; the software adds a species subdirectory, producing <code>/database/scATAC/Homo_sapiens</code>, <code>/database/scATAC/Mus_musculus</code>, or <code>/database/scATAC/hg38_and_mm10</code>. Pass that species directory to <code>run --genomeDir</code>, not the output root or an original FASTA/GTF file. For the mixed-species example, prepare the two filtered GTF files at the indicated <code>hg38/</code> and <code>mm10/</code> paths first.</p>
+<p><strong>Human (GRCh38)</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Download GENCODE annotation and genomic FASTA</span>
+wget<span class="w"> </span>http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/GRCh38.primary_assembly.genome.fa.gz
+wget<span class="w"> </span>http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/gencode.v32.primary_assembly.annotation.gtf.gz
+
+<span class="c1"># 2. Decompress files</span>
+gzip<span class="w"> </span>-d<span class="w"> </span>GRCh38.primary_assembly.genome.fa.gz
+gzip<span class="w"> </span>-d<span class="w"> </span>gencode.v32.primary_assembly.annotation.gtf.gz
+
+<span class="c1"># 3. Filter GTF and build Chromap reference index</span>
+<span class="nv">$dnbc4tools</span><span class="w"> </span>tools<span class="w"> </span>mkgtf<span class="w"> </span>--ingtf<span class="w"> </span>gencode.v32.primary_assembly.annotation.gtf<span class="w"> </span>--output<span class="w"> </span>genes.filtered.gtf
+<span class="nv">$dnbc4tools</span><span class="w"> </span>atac<span class="w"> </span>mkref<span class="w"> </span>--genomeDir<span class="w"> </span>/database/scATAC<span class="w"> </span>--fasta<span class="w"> </span>GRCh38.primary_assembly.genome.fa<span class="w"> </span>--ingtf<span class="w"> </span>genes.filtered.gtf<span class="w"> </span>--species<span class="w"> </span>Homo_sapiens<span class="w"> </span>--prefix<span class="w"> </span>chr
+</code></pre></div></p>
+<p><strong>Mouse (Mus musculus, GRCm38)</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Download annotation and FASTA</span>
+wget<span class="w"> </span>http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M23/GRCm38.primary_assembly.genome.fa.gz
+wget<span class="w"> </span>http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M23/gencode.vM23.primary_assembly.annotation.gtf.gz
+
+<span class="c1"># 2. Decompress files</span>
+gzip<span class="w"> </span>-d<span class="w"> </span>GRCm38.primary_assembly.genome.fa.gz
+gzip<span class="w"> </span>-d<span class="w"> </span>gencode.vM23.primary_assembly.annotation.gtf.gz
+
+<span class="c1"># 3. Filter GTF and build Chromap reference index</span>
+<span class="nv">$dnbc4tools</span><span class="w"> </span>tools<span class="w"> </span>mkgtf<span class="w"> </span>--ingtf<span class="w"> </span>gencode.vM23.primary_assembly.annotation.gtf<span class="w"> </span>--output<span class="w"> </span>genes.filtered.gtf
+<span class="nv">$dnbc4tools</span><span class="w"> </span>atac<span class="w"> </span>mkref<span class="w"> </span>--genomeDir<span class="w"> </span>/database/scATAC<span class="w"> </span>--fasta<span class="w"> </span>GRCm38.primary_assembly.genome.fa<span class="w"> </span>--ingtf<span class="w"> </span>genes.filtered.gtf<span class="w"> </span>--species<span class="w"> </span>Mus_musculus<span class="w"> </span>--prefix<span class="w"> </span>chr
+</code></pre></div></p>
+<p><strong>Human-Mouse Mixed-Species Reference</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Combine FASTA and filtered GTF after preparing both species (--prefix is not supported for mixed-species)</span>
+<span class="nv">$dnbc4tools</span><span class="w"> </span>atac<span class="w"> </span>mkref<span class="w"> </span>--genomeDir<span class="w"> </span>/database/scATAC<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fasta<span class="w"> </span>GRCh38.primary_assembly.genome.fa,GRCm38.primary_assembly.genome.fa<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ingtf<span class="w"> </span>hg38/genes.filtered.gtf,mm10/genes.filtered.gtf<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--species<span class="w"> </span>hg38,mm10
+</code></pre></div></p>
+<h3 id="atac-prepare-inputs">Step 2: Prepare ATAC Sequencing Data<a class="headerlink" href="#atac-prepare-inputs" title="Permanent link">&para;</a></h3>
+<p>Place sequencing files in a designated folder or provide paired-end files explicitly:</p>
+<div class="highlight"><pre><span></span><code>/test/data/atac_fastqs/          # Root directory passed to --fastqs
+├── sample_R1.fastq.gz
+└── sample_R2.fastq.gz
+</code></pre></div>
+<p><code>--fastqs</code> points directly to the directory containing this ATAC library's paired FASTQs; no <code>cDNA/</code> or <code>oligo/</code> layout is needed. Keep unrelated samples separate. Multiple files from one library must have matching paired-file names and compatible read structures and dark-cycle settings; see the <a href="#file-naming-conventions">filename pairing rules</a>.</p>
+<h3 id="atac-run">Step 3: Run ATAC Analysis<a class="headerlink" href="#atac-run" title="Permanent link">&para;</a></h3>
+<p><strong>Method 1: Directory Input (Recommended)</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>atac<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastqs<span class="w"> </span>/test/data/atac_fastqs<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--genomeDir<span class="w"> </span>/database/scATAC/Homo_sapiens<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_atac<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">10</span>
+</code></pre></div>
+<p><strong>Method 2: Explicit Individual FASTQ Inputs</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>atac<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastq1<span class="w"> </span>/test/data/atac_fastqs/sample_R1.fastq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastq2<span class="w"> </span>/test/data/atac_fastqs/sample_R2.fastq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--genomeDir<span class="w"> </span>/database/scATAC/Homo_sapiens<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_atac<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">10</span>
+</code></pre></div>
+<p>Choose one input method; do not combine <code>--fastqs</code> with explicit FASTQ arguments. <code>--name test_atac</code> names the run and report, results are stored in <code>./test_atac/outs/</code> (use <code>--outdir</code> to customize the root), and <code>--threads</code> sets the CPU thread count. Explicit R1/R2 lists must match in order.</p>
+<p>The reference must be an ATAC reference built with <code>atac mkref</code>; an RNA STAR reference is not interchangeable. BAM output requires <code>--need_bam</code>. See <a href="parameter/scATAC.html">ATAC parameters</a> for cell-calling and peak-calling settings.</p>
+<h3 id="atac-check-outputs">Step 4: Inspect ATAC Outputs<a class="headerlink" href="#atac-check-outputs" title="Permanent link">&para;</a></h3>
+<p>Upon completion, results are stored in <code>./test_atac/outs/</code>:</p>
+<ul>
+<li><strong>Interactive Report</strong>: Open <code>test_atac_scATAC_report.html</code> in a web browser to review cell calling counts, TSS enrichment curves, and FRIP QC metrics;</li>
+<li><strong>Peak Count Matrices</strong>: MEX directory (<code>filtered_peak_bc_matrix/</code>) and <code>.h5</code> file based on 9-bp shifted cutsite quantification;</li>
+<li><strong>Fragment Files</strong>: <code>fragments.tsv.gz</code> and <code>filtered.fragments.tsv.gz</code> (both indexed with <code>.tbi</code>, ready for ArchR / Signac / SnapATAC2).</li>
+</ul>
+<p>For the complete directory layout, field descriptions, and downstream analysis workflows, see <a href="outs/scATAC.html">scATAC Output Details</a> and <a href="io.html#scatac-analysis">Reading Results in R / Python</a>.</p>
+<hr />
+<h2 id="single-cell-vdj-analysis">Single-Cell V(D)J Analysis <a id="single-cell-vdj-analysis"></a><a class="headerlink" href="#single-cell-vdj-analysis" title="Permanent link">&para;</a></h2>
+<p>Designed for de novo assembly of full-length TCR / BCR immune receptor sequences, annotation, and clonotype identification.</p>
+<div class="doc-callout doc-callout-warn">
+<p><strong>VDJ modes:</strong> Two modes are supported: provide <code>--beadstrans</code> to use an RNA cell table for bead mapping and RNA-based cell filtering; or omit it to run VDJ without an RNA cell table. When omitted, <code>keep_all_cells</code> is enabled automatically, so assembled barcodes are not filtered by RNA cell calls and must not be treated as an RNA-confirmed cell set.</p>
+</div>
+<p>The following steps demonstrate <strong>RNA-associated VDJ analysis</strong>. An existing cell table can be reused, so RNA does not need to be rerun solely for this example.</p>
+<h3 id="vdj-prepare-inputs">Step 1: Prepare VDJ Data and Reference<a class="headerlink" href="#vdj-prepare-inputs" title="Permanent link">&para;</a></h3>
+<p>Keep TCR and BCR libraries in separate directories, matching the commands below:</p>
+<div class="highlight"><pre><span></span><code>/test/data/
+├── tcr_fastqs/
+│   ├── sample_TCR_R1.fastq.gz
+│   └── sample_TCR_R2.fastq.gz
+└── bcr_fastqs/
+    ├── sample_BCR_R1.fastq.gz
+    └── sample_BCR_R2.fastq.gz
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter or input</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>--fastqs</code></td>
+<td style="text-align: left;">Directory of paired FASTQs for the TCR or BCR library; keep the two library types separate. Alternatively, use <code>--fastq1</code> and <code>--fastq2</code> with matching paired-file order.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--ref</code></td>
+<td style="text-align: left;">Use <code>human</code> or <code>mouse</code> for these species. These are software reference identifiers, not paths. For a custom reference, supply a VDJ reference directory containing <code>reference.json</code>, not a FASTA file or RNA / ATAC reference directory.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--chain</code></td>
+<td style="text-align: left;">Use <code>TR</code> for TCR or <code>IG</code> for BCR, matching the input library.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--beadstrans</code></td>
+<td style="text-align: left;">For RNA-associated analysis, use the corresponding RNA <code>outs/singlecell.csv</code> from the same experiment, not an expression matrix, <code>barcodes.tsv.gz</code>, or another sample's cell table. Omit this option for analysis without RNA.</td>
+</tr>
+</tbody>
+</table>
+<p>Replace the <code>/test/data/...</code> placeholders with actual paths. See the <a href="#file-naming-conventions">input naming rules</a> and <a href="parameter/scVDJ.html">VDJ parameters</a> for custom reference requirements.</p>
+<h3 id="vdj-prepare-rna">Step 2: Prepare an RNA Cell Table (RNA-Associated Mode Only)<a class="headerlink" href="#vdj-prepare-rna" title="Permanent link">&para;</a></h3>
+<p>If the corresponding RNA <code>singlecell.csv</code> already exists, reuse it and skip this command. Otherwise, prepare the RNA FASTQs using the <a href="#rna-prepare-inputs">RNA input layout</a> at <code>/test/data/rna_5p_fastqs</code>, then run the corresponding 5′ RNA data. For the mode <a href="#vdj-without-rna">without an RNA table</a>, skip this step entirely.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>rna<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastqs<span class="w"> </span>/test/data/rna_5p_fastqs<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--genomeDir<span class="w"> </span>/database/scRNA/Homo_sapiens<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_rna_5p<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--end5
+</code></pre></div>
+<h3 id="vdj-run">Step 3: Run VDJ Analysis<a class="headerlink" href="#vdj-run" title="Permanent link">&para;</a></h3>
+<p>For RNA-associated mode, the command above produces <code>./test_rna_5p/outs/singlecell.csv</code>. Use this path with <code>--beadstrans</code>, or replace it with your existing corresponding cell table. Choose directory input or explicit files; do not combine them.</p>
+<p><strong>Method 1: Directory Input (Recommended)</strong></p>
+<p><em>Human TCR Analysis</em>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>vdj<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastqs<span class="w"> </span>/test/data/tcr_fastqs<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--beadstrans<span class="w"> </span>./test_rna_5p/outs/singlecell.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ref<span class="w"> </span>human<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_human_tcr<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--chain<span class="w"> </span>TR
+</code></pre></div></p>
+<p><em>Human BCR Analysis</em>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>vdj<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastqs<span class="w"> </span>/test/data/bcr_fastqs<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--beadstrans<span class="w"> </span>./test_rna_5p/outs/singlecell.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ref<span class="w"> </span>human<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_human_bcr<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--chain<span class="w"> </span>IG
+</code></pre></div></p>
+<p><strong>Method 2: Explicit Individual FASTQ Inputs</strong></p>
+<p>When files are located in separate storage paths, provide them via <code>--fastq1</code> and <code>--fastq2</code>:</p>
+<p><em>Human TCR Analysis (Explicit Files)</em>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>vdj<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastq1<span class="w"> </span>/test/data/tcr_fastqs/sample_TCR_R1.fastq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastq2<span class="w"> </span>/test/data/tcr_fastqs/sample_TCR_R2.fastq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--beadstrans<span class="w"> </span>./test_rna_5p/outs/singlecell.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ref<span class="w"> </span>human<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_human_tcr<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--chain<span class="w"> </span>TR
+</code></pre></div></p>
+<p><em>Human BCR Analysis (Explicit Files)</em>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>vdj<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastq1<span class="w"> </span>/test/data/bcr_fastqs/sample_BCR_R1.fastq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastq2<span class="w"> </span>/test/data/bcr_fastqs/sample_BCR_R2.fastq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--beadstrans<span class="w"> </span>./test_rna_5p/outs/singlecell.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ref<span class="w"> </span>human<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_human_bcr<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--chain<span class="w"> </span>IG
+</code></pre></div></p>
+<details>
+<summary>Click to expand: Mouse TCR and BCR Analysis Examples</summary>
+<p>These examples assume the corresponding mouse RNA cell table already exists at <code>./test_mouse_rna_5p/outs/singlecell.csv</code>. Replace it with your actual path; use mouse FASTQs, reference, and RNA cell table consistently.</p>
+<p><strong>Mouse TCR Analysis</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>vdj<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastqs<span class="w"> </span>/test/data/mouse_tcr_fastqs<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--beadstrans<span class="w"> </span>./test_mouse_rna_5p/outs/singlecell.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ref<span class="w"> </span>mouse<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_mouse_tcr<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--chain<span class="w"> </span>TR
+</code></pre></div>
+<p><strong>Mouse BCR Analysis</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>vdj<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastqs<span class="w"> </span>/test/data/mouse_bcr_fastqs<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--beadstrans<span class="w"> </span>./test_mouse_rna_5p/outs/singlecell.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ref<span class="w"> </span>mouse<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_mouse_bcr<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--chain<span class="w"> </span>IG
+</code></pre></div>
+</details>
+<h4 id="vdj-without-rna">VDJ Without an RNA Cell Table<a class="headerlink" href="#vdj-without-rna" title="Permanent link">&para;</a></h4>
+<p>Omit <code>--beadstrans</code>; a preceding RNA run is not required for this mode. Other input and reference requirements remain the same.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>vdj<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--fastqs<span class="w"> </span>/test/data/tcr_fastqs<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ref<span class="w"> </span>human<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_vdj_without_rna<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--chain<span class="w"> </span>TR
+</code></pre></div>
+<p>The software automatically enables <code>keep_all_cells</code>. Review the VDJ annotation flags before counting cells or comparing them with RNA results.</p>
+<h3 id="vdj-check-outputs">Step 4: Inspect VDJ Outputs<a class="headerlink" href="#vdj-check-outputs" title="Permanent link">&para;</a></h3>
+<p>Upon completion, results are stored in <code>./&lt;name&gt;/outs/</code> (e.g., <code>./test_human_tcr/outs/</code>):</p>
+<ul>
+<li><strong>Interactive Report</strong>: Open <code>*_report.html</code> in a web browser to review assembly rates, productive contig proportions, and clonotype diversity distributions;</li>
+<li><strong>Assembly &amp; Annotations</strong>: Primary filtered annotations in <code>filtered_contig_annotations.csv</code> and assembly sequences in <code>filtered_contig.fasta</code>;</li>
+<li><strong>Immune Repertoire Standards</strong>: Standard <code>clonotypes.csv</code> and <code>airr_annotations.tsv</code> (directly compatible with <code>scRepertoire</code> or <code>immunarch</code>).</li>
+</ul>
+<p>For complete output files and annotation definitions, see <a href="outs/scVDJ.html">scVDJ Output Details</a> and <a href="io.html#scvdj-analysis">Reading Results in R / Python</a>.</p>
+<hr />
+<h2 id="integrated-multi-omics-analysis">Integrated Multi-Omics Analysis <a id="integrated-multi-omics-analysis"></a><a class="headerlink" href="#integrated-multi-omics-analysis" title="Permanent link">&para;</a></h2>
+<p>Use one configuration file to run RNA, ATAC, TCR, and BCR libraries and generate a combined report. The example below uses <strong>5′ RNA + ATAC + TCR + BCR from one biological sample</strong>. Keep only the modalities available in your experiment; all four libraries are not required. Configure and run independent samples separately. For pooled C6 RNA libraries labeled with Sample Barcodes, use the <a href="#c6-multi-sample-analysis">C6 multiplexed workflow</a> below.</p>
+<div class="admonition note">
+<p class="admonition-title">Scope of integration</p>
+<p>RNA and V(D)J can share cell information. ATAC is currently analyzed independently and summarized in the combined report. This command does not perform joint RNA + ATAC dimensionality reduction or clustering.</p>
+</div>
+<h3 id="multi-prepare-inputs">Step 1: Prepare Sequencing Data and References<a class="headerlink" href="#multi-prepare-inputs" title="Permanent link">&para;</a></h3>
+<p>Place each library from the sample in its own directory, for example:</p>
+<div class="highlight"><pre><span></span><code>/test/data/
+├── rna/
+│   ├── cDNA/
+│   │   ├── sample_cDNA_R1.fastq.gz
+│   │   └── sample_cDNA_R2.fastq.gz
+│   └── oligo/
+│       ├── sample_oligo_R1.fastq.gz
+│       └── sample_oligo_R2.fastq.gz
+├── atac/
+│   ├── sample_ATAC_R1.fastq.gz
+│   └── sample_ATAC_R2.fastq.gz
+├── vdj-t/
+│   ├── sample_TCR_R1.fastq.gz
+│   └── sample_TCR_R2.fastq.gz
+└── vdj-b/
+    ├── sample_BCR_R1.fastq.gz
+    └── sample_BCR_R2.fastq.gz
+</code></pre></div>
+<ul>
+<li><strong>RNA</strong>: Set <code>fastqs</code> to <code>/test/data/rna</code>, the root containing both <code>cDNA/</code> and <code>oligo/</code>. Do not point it to <code>cDNA/</code> alone or to an individual FASTQ file.</li>
+<li><strong>ATAC, TCR, and BCR</strong>: Provide the directory containing the paired FASTQs for each library. Keep TCR and BCR separate. See the <a href="#file-naming-conventions">automatic filename pairing rules</a>.</li>
+<li><strong>Only one FASTQ root is supported per modality</strong>, and each modality may appear only once in <code>[libraries]</code>. If a library has multiple sequencing files, place matched R1/R2 files in the corresponding directory, with compatible read structures and dark-cycle settings. Do not include other samples or unrelated libraries.</li>
+<li><strong>RNA / ATAC references</strong>: Use reference directories already built with <code>rna mkref</code> and <code>atac mkref</code>, respectively. Do not supply a FASTA, GTF, or a directory containing only the original reference files. See the <a href="#single-cell-rna-analysis">RNA</a> and <a href="#single-cell-atac-analysis">ATAC</a> sections above for reference building.</li>
+<li><strong>VDJ reference</strong>: Use <code>human</code> or <code>mouse</code> for these species, or provide a custom VDJ reference directory containing <code>reference.json</code>. See the <a href="parameter/scVDJ.html">VDJ parameters</a>.</li>
+</ul>
+<p>The <code>/test/data/...</code> paths above and <code>/database/...</code> paths below are placeholders. Replace them with existing data and reference directories on your system before running.</p>
+<h3 id="multi-prepare-config">Step 2: Write the Multi-Omics Configuration<a class="headerlink" href="#multi-prepare-config" title="Permanent link">&para;</a></h3>
+<p>Save the following as a plain-text file named <code>multi.config.csv</code>. The configuration uses <code>[sections]</code> with comma-separated content: retain the header in <code>[libraries]</code>, and use <code>parameter,value</code> rows in each modality section.</p>
+<div class="highlight"><pre><span></span><code>[libraries]
+fastqs,feature_types
+/test/data/rna,rna
+/test/data/atac,atac
+/test/data/vdj-t,vdj-t
+/test/data/vdj-b,vdj-b
+
+[rna]
+genomeDir,/database/scRNA/Homo_sapiens
+end5,true
+
+[atac]
+genomeDir,/database/scATAC/Homo_sapiens
+
+[vdj-t]
+ref,human
+
+[vdj-b]
+ref,human
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Meaning and value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>[libraries] fastqs</code></td>
+<td style="text-align: left;">FASTQ root for the library, following the layout above.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[libraries] feature_types</code></td>
+<td style="text-align: left;"><code>rna</code>, <code>atac</code>, <code>vdj-t</code> (TCR), or <code>vdj-b</code> (BCR); must match the corresponding modality section.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[rna] genomeDir</code> / <code>[atac] genomeDir</code></td>
+<td style="text-align: left;">Previously built reference directory for each modality; provide the RNA and ATAC references separately.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[rna] end5,true</code></td>
+<td style="text-align: left;">Specifies 5′ RNA data in this example. For 3′ RNA, remove this line instead of copying the setting.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[vdj-t] ref</code> / <code>[vdj-b] ref</code></td>
+<td style="text-align: left;">VDJ species identifier or custom reference directory; <code>human</code> in this example is a species identifier, not a file path.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Remove modalities you do not have</strong>: For RNA + TCR only, delete the <code>atac</code> and <code>vdj-b</code> rows from <code>[libraries]</code> and remove the entire <code>[atac]</code> and <code>[vdj-b]</code> sections. Declare only available libraries; do not leave empty paths. When 5′ RNA is enabled and its cell table is generated successfully, VDJ uses that table by default. You do not need to run RNA separately first or set <code>beadstrans</code> manually.</p>
+<p><strong>Path resolution</strong>: Relative paths inside the configuration are resolved against the directory containing <code>multi.config.csv</code>. Absolute paths are recommended for your first run. For example, if the CSV is <code>/project/config/multi.config.csv</code>, <code>../fastqs/rna</code> resolves to <code>/project/fastqs/rna</code>. Relative <code>--csv</code> and <code>--outdir</code> command-line paths are resolved against the current working directory when you run the command.</p>
+<p>For other modality parameters, Boolean values, and values containing commas, see the <a href="parameter/multi.html">Multi parameters</a>.</p>
+<h3 id="multi-run">Step 3: Run the Multi-Omics Analysis<a class="headerlink" href="#multi-run" title="Permanent link">&para;</a></h3>
+<p>Run this command from the directory containing <code>multi.config.csv</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>multi<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_multi<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--csv<span class="w"> </span>./multi.config.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">20</span>
+</code></pre></div>
+<p>Here, <code>--name test_multi</code> sets the run name; by default, outputs are generated under <code>./test_multi/outs/</code> (use <code>--outdir</code> to specify another root directory); and <code>--threads 20</code> sets the CPU thread count.</p>
+<h3 id="multi-check-outputs">Step 4: Inspect Multi-Omics Outputs<a class="headerlink" href="#multi-check-outputs" title="Permanent link">&para;</a></h3>
+<p>Upon completion, results are consolidated in <code>./test_multi/outs/</code>:</p>
+<ul>
+<li><strong>Combined Interactive Report</strong>: Open <code>test_multi_multi_report.html</code> in a web browser to inspect cross-modality summary QC across RNA, ATAC, TCR, and BCR;</li>
+<li><strong>Decoupled Modality Subdirectories</strong>: Output directories (<code>rna/</code>, <code>atac/</code>, <code>vdj-t/</code>, <code>vdj-b/</code>) follow standard single-modality specifications and can be analyzed independently;</li>
+<li><strong>Execution Audit Manifest</strong>: <code>logs/run_manifest.json</code> tracks per-modality execution status and runtimes.</li>
+</ul>
+<p>For full multi-omics directory hierarchy and file specifications, see <a href="outs/multi.html">Multi-Omics Output Details</a>.</p>
+<hr />
+<h2 id="c6-multiplexed-single-cell-rna-analysis">C6 Multiplexed Single-Cell RNA Analysis <a id="c6-multi-sample-analysis"></a><a class="headerlink" href="#c6-multiplexed-single-cell-rna-analysis" title="Permanent link">&para;</a></h2>
+<p>Use this workflow for C6 RNA samples labeled with Sample Barcodes and pooled during library preparation. Multiple biological samples share one set of cDNA and Oligo sequencing data. The software uses the configured barcode assignments to demultiplex samples, then performs cell calling, counting, and downstream analysis separately for each sample. For samples with independent libraries and FASTQs, use <a href="#single-cell-rna-analysis">single-sample RNA analysis</a> or <a href="#batch-script-generation">batch script generation</a>.</p>
+<h3 id="c6-prepare-inputs">Step 1: Prepare Shared Data, Reference, and Sample Assignments<a class="headerlink" href="#c6-prepare-inputs" title="Permanent link">&para;</a></h3>
+<p>Place paired cDNA and Oligo reads from <strong>one pooled C6 library</strong> in the following directories:</p>
+<div class="highlight"><pre><span></span><code>/test/data/c6_pooled_data/
+├── cDNA/
+│   ├── pooled_cDNA_R1.fastq.gz
+│   └── pooled_cDNA_R2.fastq.gz
+└── oligo/
+    ├── pooled_oligo_R1.fastq.gz
+    └── pooled_oligo_R2.fastq.gz
+</code></pre></div>
+<ul>
+<li><strong>Shared FASTQ root</strong>: Set <code>[libraries] fastqs</code> to <code>/test/data/c6_pooled_data</code>, not to <code>cDNA/</code>, <code>oligo/</code>, or an individual FASTQ file. All samples share this single input row; do not create FASTQ directories per sample or repeat the <code>rna</code> row.</li>
+<li><strong>Multiple sequencing files</strong>: For multiple files from the same pooled library, place matched pairs in the corresponding <code>cDNA/</code> and <code>oligo/</code> directories. Read structures and dark-cycle settings must be compatible. See the <a href="#file-naming-conventions">automatic filename pairing rules</a>. Configure and run different pooled libraries separately.</li>
+<li><strong>Reference</strong>: Prepare a reference directory already built with <code>rna mkref</code>. Set <code>genomeDir</code> to that directory, not to a FASTA or GTF file. See <a href="#single-cell-rna-analysis">RNA reference building</a> above.</li>
+<li><strong>Sample assignments</strong>: Check your experimental records for the Sample Barcode assigned to each biological sample. The mappings <code>Sample_01 → BC01</code> and <code>Sample_02 → BC02;BC03</code> below are examples only. Replace them with the actual assignments; do not infer barcodes from sample order.</li>
+</ul>
+<p>Both <code>/test/data/c6_pooled_data</code> and <code>/database/scRNA/Homo_sapiens</code> are placeholders. Replace them with existing data and reference directories on your system.</p>
+<h3 id="c6-prepare-config">Step 2: Write the C6 Configuration<a class="headerlink" href="#c6-prepare-config" title="Permanent link">&para;</a></h3>
+<p>Save the following as a plain-text file named <code>sample.config.csv</code>, retaining all three sections and both table headers:</p>
+<div class="highlight"><pre><span></span><code>[rna]
+genomeDir,/database/scRNA/Homo_sapiens
+chemistry,scRNAC6
+darkreaction,auto
+no_bam,false
+
+[libraries]
+fastqs,feature_types
+/test/data/c6_pooled_data,rna
+
+[samples]
+sample_id,probe_barcode_ids
+Sample_01,BC01
+Sample_02,BC02;BC03
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Meaning and value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>[rna] genomeDir</code></td>
+<td style="text-align: left;">RNA reference directory.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[rna] chemistry,scRNAC6</code></td>
+<td style="text-align: left;">C6 read structure; fixed to <code>scRNAC6</code> when <code>[samples]</code> is present. An omitted value is also normalized to this name.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[rna] darkreaction,auto</code></td>
+<td style="text-align: left;">Automatically detect cDNA and Oligo dark cycles; this does not select the chemistry version.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[rna] no_bam,false</code></td>
+<td style="text-align: left;">Retain the default BAM output. Change to <code>true</code> to save storage by omitting per-sample, unassigned, and Oligo BAMs and their indexes.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[libraries] fastqs</code> / <code>feature_types</code></td>
+<td style="text-align: left;">Shared FASTQ root and library type; use one row with type <code>rna</code> in this example.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[samples] sample_id</code></td>
+<td style="text-align: left;">Biological sample name used for output directories and reports; it does not need to match a FASTQ filename.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[samples] probe_barcode_ids</code></td>
+<td style="text-align: left;">Sample Barcode IDs actually used for that sample; separate multiple IDs for the same sample with semicolons <code>;</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sample table rules</strong>: Use one row per biological sample. In this example, data labeled <code>BC02</code> and <code>BC03</code> are assigned together to <code>Sample_02</code>, rather than creating two separate samples. Sample names must be unique ignoring case, begin with a letter or digit, and contain only letters, digits, <code>.</code>, <code>_</code>, or <code>-</code>. Do not use the reserved names <code>unassigned</code> or <code>non_multiplexed</code>. Do not repeat a barcode within a row or assign it to multiple samples. Built-in IDs and custom DNA sequences are supported; see the <a href="parameter/c6.html#samples-specification">C6 sample table specification</a>.</p>
+<p><strong>Path resolution</strong>: Relative paths inside the configuration are resolved against the directory containing <code>sample.config.csv</code>. Relative <code>--csv</code> and <code>--outdir</code> command-line paths are resolved against the current working directory. Absolute paths in the configuration are recommended for your first run.</p>
+<p><strong>Optional cell-calling settings</strong>: Add <code>expectcells</code>, <code>forcecells</code>, or <code>minumi</code> columns to <code>[samples]</code> when per-sample settings are needed, using positive integers. Empty fields inherit global settings. Do not copy the pooled experiment's expected cell count into every sample row. <code>high_occupancy_filter</code> is an experiment-wide switch, enabled by default, and belongs only in <code>[rna]</code>. See the <a href="parameter/c6.html#sample-overrides">C6 parameter examples</a>.</p>
+<h3 id="c6-run">Step 3: Run the C6 Analysis<a class="headerlink" href="#c6-run" title="Permanent link">&para;</a></h3>
+<p>Run this command from the directory containing <code>sample.config.csv</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>multi<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--name<span class="w"> </span>test_c6<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--csv<span class="w"> </span>./sample.config.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">40</span>
+</code></pre></div>
+<p><code>--name test_c6</code> names the entire pooled-library run, separately from <code>Sample_01</code> and <code>Sample_02</code> in <code>[samples]</code>. This command writes results to <code>./test_c6/outs/</code> under the current working directory (use <code>--outdir</code> to specify another root directory) and uses 40 CPU threads.</p>
+<h3 id="c6-check-outputs">Step 4: Inspect Global and Per-Sample Outputs<a class="headerlink" href="#c6-check-outputs" title="Permanent link">&para;</a></h3>
+<p>Upon completion, results are stored in <code>./test_c6/outs/</code>:</p>
+<ul>
+<li><strong>Batch Summary Report</strong>: Open <code>test_c6_multi_report.html</code> in a web browser to inspect overall library QC, Sample Barcode demultiplexing yield, and per-sample cell count comparisons;</li>
+<li><strong>Per-Sample Dedicated Deliverables</strong>: Each sample has dedicated results in <code>rna/per_sample_outs/&lt;sample&gt;/</code>, including individual interactive reports (<code>&lt;sample&gt;_scRNA_report.html</code>), count matrices (MEX / <code>.h5</code> / <code>.h5ad</code>), and alignment BAMs (if enabled);</li>
+<li><strong>Physical Library Pooled Matrix</strong>: <code>rna/filtered_feature_bc_matrix/</code> (and <code>.h5</code> / <code>.h5ad</code>) retains the global unintegrated counts across the pooled library.</li>
+</ul>
+<p>For detailed C6 directory specifications and batch integration considerations, see <a href="outs/c6.html">C6 Output Details</a> and <a href="io.html#c6-analysis">Reading Results in R / Python</a>.</p>
+<hr />
+<h2 id="batch-script-generation">Batch Script Generation <a id="batch-script-generation"></a><a class="headerlink" href="#batch-script-generation" title="Permanent link">&para;</a></h2>
+<p>Designed for scaling up analysis across dozens of independent single-cell samples. By providing a tab-separated sample list, dnbc4tools automatically generates standalone shell scripts for each sample, ready to run directly or queue through workload managers such as Slurm or SGE.</p>
+<h3 id="step-1-prepare-sample-manifest">Step 1: Prepare Sample Manifest<a class="headerlink" href="#step-1-prepare-sample-manifest" title="Permanent link">&para;</a></h3>
+<p><strong>RNA Sample Manifest (<code>rna_samples.tsv</code>)</strong></p>
+<p>Tab-delimited with 3 columns: <code>sample_id</code>, <code>cDNA_R1;cDNA_R2</code>, <code>oligo_R1;oligo_R2</code> (comma-separated for multi-lane files per read):</p>
+<div class="highlight"><pre><span></span><code>Sample1 sample1_cDNA_R1.fq.gz;sample1_cDNA_R2.fq.gz sample1_oligo_R1.fq.gz;sample1_oligo_R2.fq.gz
+Sample2 sample2_cDNA_R1.fq.gz;sample2_cDNA_R2.fq.gz sample2_oligo_R1.fq.gz;sample2_oligo_R2.fq.gz
+</code></pre></div>
+<p><strong>ATAC Sample Manifest (<code>atac_samples.tsv</code>)</strong></p>
+<p>Tab-delimited with 2 columns: <code>sample_id</code>, <code>FASTQ_R1;FASTQ_R2</code> (comma-separated for multi-lane files per read):</p>
+<div class="highlight"><pre><span></span><code>Sample1 sample1_R1.fq.gz;sample1_R2.fq.gz
+Sample2 sample2_R1.fq.gz;sample2_R2.fq.gz
+</code></pre></div>
+<h3 id="step-2-generate-analysis-scripts">Step 2: Generate Analysis Scripts<a class="headerlink" href="#step-2-generate-analysis-scripts" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Batch generate RNA execution scripts</span>
+<span class="nv">$dnbc4tools</span><span class="w"> </span>rna<span class="w"> </span>multi<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--list<span class="w"> </span>./rna_samples.tsv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--genomeDir<span class="w"> </span>/database/scRNA/Homo_sapiens<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">20</span>
+
+<span class="c1"># Batch generate ATAC execution scripts</span>
+<span class="nv">$dnbc4tools</span><span class="w"> </span>atac<span class="w"> </span>multi<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--list<span class="w"> </span>./atac_samples.tsv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--genomeDir<span class="w"> </span>/database/scATAC/Homo_sapiens<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--threads<span class="w"> </span><span class="m">20</span>
+</code></pre></div>
+<blockquote>
+<p><strong>Execution Behavior:</strong>
+The <code>multi</code> command generates standalone <code>.sh</code> scripts (e.g., <code>run_Sample1.sh</code>) in the current working directory without automatically starting computational workloads. Execute generated scripts on demand (e.g., <code>sh run_Sample1.sh</code>) or submit them to your HPC cluster queue.</p>
+</blockquote>
+<hr />
+<p>After completing the quick start walkthroughs, consult detailed documentation for advanced options:</p>
+<ul>
+<li>Explore underlying pipeline workflows: <a href="pipeline/pipeline.html">Pipeline Overview</a></li>
+<li>Learn comprehensive parameters and CLI options: <a href="parameter/parameter.html">Parameters Overview</a></li>
+<li>Understand structured deliverable files: <a href="outs/outs.html">Output Deliverables Overview</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 MGI Tech Bioinformatics.<br>Documentation 3.2 · Updated 2026-10-23
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["search.suggest", "search.highlight", "content.code.copy", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/doc-controls.js"></script>
+      
+    
+  </body>
+</html>

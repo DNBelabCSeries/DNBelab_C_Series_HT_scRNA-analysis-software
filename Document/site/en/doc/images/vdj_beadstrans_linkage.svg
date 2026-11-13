@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 280" width="940" height="280" style="background:#ffffff; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;">
+  <defs>
+    <filter id="card-shadow" x="-3%" y="-4%" width="106%" height="112%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.04" />
+    </filter>
+    <marker id="arrow-indigo" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 1 2 L 7 5 L 1 8 z" fill="#6366f1" />
+    </marker>
+    <marker id="arrow-emerald" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 1 2 L 7 5 L 1 8 z" fill="#10b981" />
+    </marker>
+  </defs>
+
+  <!-- Title Header -->
+  <g transform="translate(40, 28)">
+    <rect x="0" y="0" width="4" height="20" rx="2" fill="#2563eb" />
+    <text x="12" y="15" font-size="16" font-weight="700" fill="#0f172a" letter-spacing="-0.01em">scVDJ 跨组学细胞条形码联动机制 (--beadstrans)</text>
+    <text x="12" y="32" font-size="11" fill="#64748b">全量执行 VDJ 从头重叠群组装，基于 5' scRNA 结果精准筛选真细胞并映射统一 Cell ID</text>
+  </g>
+
+  <!-- CARD 1: 5' scRNA Input -->
+  <g transform="translate(40, 75)">
+    <rect x="0" y="0" width="235" height="175" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#card-shadow)" />
+    <rect x="0" y="0" width="235" height="34" rx="8" fill="#eff6ff" />
+    <rect x="0" y="24" width="235" height="10" fill="#eff6ff" />
+    <text x="14" y="22" font-size="13" font-weight="700" fill="#1e40af">5' scRNA 分析结果</text>
+
+    <g transform="translate(14, 46)">
+      <text x="0" y="0" font-size="10" font-weight="600" fill="#64748b">基准输出文件：</text>
+      <rect x="0" y="5" width="207" height="22" rx="4" fill="#f8fafc" stroke="#e2e8f0" />
+      <text x="8" y="20" font-size="10.5" font-family="ui-monospace, monospace" font-weight="600" fill="#0f172a">outs/singlecell.csv</text>
+
+      <circle cx="4" cy="48" r="3" fill="#2563eb" />
+      <text x="14" y="52" font-size="11.5" font-weight="600" fill="#1e293b">真细胞白名单 (is_cell=True)</text>
+      <text x="14" y="68" font-size="10.5" fill="#64748b">界定高置信度真实细胞边界</text>
+
+      <circle cx="4" cy="92" r="3" fill="#2563eb" />
+      <text x="14" y="96" font-size="11.5" font-weight="600" fill="#1e293b">磁珠合并对应表</text>
+      <text x="14" y="112" font-size="10.5" fill="#64748b">记录多磁珠归一到统一 Cell ID 映射</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1 to 2 -->
+  <g transform="translate(275, 150)">
+    <rect x="18" y="-24" width="84" height="20" rx="10" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1" />
+    <text x="60" y="-10" font-size="10" font-family="ui-monospace, monospace" font-weight="700" fill="#4338ca" text-anchor="middle">--beadstrans</text>
+    <line x1="6" y1="5" x2="114" y2="5" stroke="#6366f1" stroke-width="2" marker-end="url(#arrow-indigo)" />
+    <text x="60" y="24" font-size="10" font-weight="600" fill="#6366f1" text-anchor="middle">基准文件传入</text>
+  </g>
+
+  <!-- CARD 2: VDJ Processing -->
+  <g transform="translate(395, 75)">
+    <rect x="0" y="0" width="260" height="175" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#card-shadow)" />
+    <rect x="0" y="0" width="260" height="34" rx="8" fill="#f5f3ff" />
+    <rect x="0" y="24" width="260" height="10" fill="#f5f3ff" />
+    <text x="14" y="22" font-size="13" font-weight="700" fill="#6b21a8">dnbc4tools vdj run</text>
+
+    <g transform="translate(14, 46)">
+      <circle cx="4" cy="14" r="3" fill="#7c3aed" />
+      <text x="14" y="18" font-size="11.5" font-weight="600" fill="#1e293b">TCR / BCR 全量从头组装</text>
+      <text x="14" y="34" font-size="10.5" fill="#64748b">对全量候选读段执行 De Novo 重叠群组装</text>
+
+      <circle cx="4" cy="56" r="3" fill="#7c3aed" />
+      <text x="14" y="60" font-size="11.5" font-weight="600" fill="#1e293b">基于 RNA 白名单细胞过滤</text>
+      <text x="14" y="76" font-size="10.5" fill="#64748b">依据 singlecell.csv 仅保留真实细胞 Contig</text>
+
+      <circle cx="4" cy="98" r="3" fill="#7c3aed" />
+      <text x="14" y="102" font-size="11.5" font-weight="600" fill="#1e293b">继承磁珠合并与 ID 转换</text>
+      <text x="14" y="118" font-size="10.5" fill="#64748b">将多磁珠对应还原为与 RNA 一致的 Cell ID</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2 to 3 -->
+  <g transform="translate(655, 150)">
+    <rect x="15" y="-24" width="70" height="20" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1" />
+    <text x="50" y="-10" font-size="10" font-weight="700" fill="#15803d" text-anchor="middle">单细胞配对</text>
+    <line x1="6" y1="5" x2="94" y2="5" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-emerald)" />
+    <text x="50" y="24" font-size="10" font-weight="600" fill="#10b981" text-anchor="middle">1-to-1 关联</text>
+  </g>
+
+  <!-- CARD 3: Matched Output -->
+  <g transform="translate(755, 75)">
+    <rect x="0" y="0" width="165" height="175" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.4" filter="url(#card-shadow)" />
+    <rect x="0" y="0" width="165" height="34" rx="8" fill="#dcfce7" />
+    <rect x="0" y="24" width="165" height="10" fill="#dcfce7" />
+    <text x="12" y="22" font-size="13" font-weight="700" fill="#166534">双组学精准配对</text>
+
+    <g transform="translate(10, 44)">
+      <rect x="0" y="0" width="145" height="32" rx="4" fill="#ffffff" stroke="#bbf7d0" />
+      <text x="6" y="13" font-size="9" font-weight="700" fill="#15803d">统一细胞维度</text>
+      <text x="6" y="26" font-size="9" font-family="ui-monospace, monospace" fill="#0f172a">Cell_001 ... N</text>
+
+      <rect x="0" y="38" width="145" height="38" rx="4" fill="#ffffff" stroke="#bbf7d0" />
+      <text x="6" y="52" font-size="9.5" font-weight="600" fill="#166534">5' 基因表达表型</text>
+      <text x="6" y="66" font-size="8.5" fill="#64748b">免疫细胞亚群聚类与分型</text>
+
+      <rect x="0" y="82" width="145" height="40" rx="4" fill="#ffffff" stroke="#bbf7d0" />
+      <text x="6" y="96" font-size="9.5" font-weight="700" fill="#047857">TCR/BCR 克隆型</text>
+      <text x="6" y="110" font-size="8.5" fill="#64748b">全长 CDR3 序列与克隆扩增</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,2225 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation site generated from README and doc markdown files">
+      
+      
+      
+      
+        <link rel="prev" href="multi.html">
+      
+      
+        <link rel="next" href="../parameter/parameter.html">
+      
+      
+        
+          <link rel="alternate" href="c6.html" hreflang="zh">
+        
+          <link rel="alternate" href="../../en/doc/pipeline/c6.html" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>C6 多样本 - DNBelab C Series™ HT 单细胞分析软件</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../index.html" title="DNBelab C Series™ HT 单细胞分析软件" class="md-header__button md-logo" aria-label="DNBelab C Series™ HT 单细胞分析软件" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h2v2c0 1.44.68 2.61 1.88 3.78.86.83 2.01 1.63 3.21 2.42l-1.83 1.19C8.27 10.72 7.31 10 6.5 9.21 5.07 7.82 4 6.1 4 4zm14 0h2v2c0 2.1-1.07 3.82-2.5 5.21-1.41 1.38-3.21 2.52-4.96 3.63-1.75 1.12-3.45 2.21-4.66 3.38C6.68 17.39 6 18.56 6 20v2H4v-2c0-2.1 1.07-3.82 2.5-5.21 1.41-1.38 3.21-2.52 4.96-3.63 1.75-1.12 3.45-2.21 4.66-3.38C17.32 6.61 18 5.44 18 4zm-3.26 10.61c.99.67 1.95 1.39 2.76 2.18C18.93 16.18 20 17.9 20 20v2h-2v-2c0-1.44-.68-2.61-1.88-3.78-.86-.83-2.01-1.63-3.21-2.42zM7 3h10v1l-.06.5H7.06L7 4zm.68 3h8.64c-.24.34-.52.69-.9 1.06l-.51.44H9.07l-.49-.44c-.38-.37-.66-.72-.9-1.06m1.41 10.5h5.84l.49.44c.38.37.66.72.9 1.06H7.68c.24-.34.52-.69.9-1.06zm-2.03 3h9.88l.06.5v1H7v-1z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DNBelab C Series™ HT 单细胞分析软件
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              C6 多样本
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="c6.html" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../en/doc/pipeline/c6.html" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="DNBelab C Series™ HT 单细胞分析软件" class="md-nav__button md-logo" aria-label="DNBelab C Series™ HT 单细胞分析软件" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h2v2c0 1.44.68 2.61 1.88 3.78.86.83 2.01 1.63 3.21 2.42l-1.83 1.19C8.27 10.72 7.31 10 6.5 9.21 5.07 7.82 4 6.1 4 4zm14 0h2v2c0 2.1-1.07 3.82-2.5 5.21-1.41 1.38-3.21 2.52-4.96 3.63-1.75 1.12-3.45 2.21-4.66 3.38C6.68 17.39 6 18.56 6 20v2H4v-2c0-2.1 1.07-3.82 2.5-5.21 1.41-1.38 3.21-2.52 4.96-3.63 1.75-1.12 3.45-2.21 4.66-3.38C17.32 6.61 18 5.44 18 4zm-3.26 10.61c.99.67 1.95 1.39 2.76 2.18C18.93 16.18 20 17.9 20 20v2h-2v-2c0-1.44-.68-2.61-1.88-3.78-.86-.83-2.01-1.63-3.21-2.42zM7 3h10v1l-.06.5H7.06L7 4zm.68 3h8.64c-.24.34-.52.69-.9 1.06l-.51.44H9.07l-.49-.44c-.38-.37-.66-.72-.9-1.06m1.41 10.5h5.84l.49.44c.38.37.66.72.9 1.06H7.68c.24-.34.52-.69.9-1.06zm-2.03 3h9.88l.06.5v1H7v-1z"/></svg>
+
+    </a>
+    DNBelab C Series™ HT 单细胞分析软件
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickstart.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速开始
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    流程
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    流程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    多组学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6 多样本
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="c6.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6 多样本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心步骤解析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="核心步骤解析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一步：数据准备与输入校验
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-barcode-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二步：条形码识别与样本分配 (Sample Barcode Assignment)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bead-aggregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三步：转录本比对与微珠聚合 (Bead Aggregation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#per-sample-cell-calling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四步：逐样本独立细胞识别 (Per-Sample Cell Calling)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第五步：结果归档与输出
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        输入配置
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="输入配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最小可用配置示例
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        主分析流程
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="主分析流程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运行命令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运行前检查清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运行过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        结果解析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="结果解析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        输出目录结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        重点输出文件说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参数
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    参数
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/parameter.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    多组学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6 多样本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameter/tools.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    输出
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    输出
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outs/outs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outs/scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outs/scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outs/scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outs/multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    多组学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outs/c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6 多样本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    结果分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    运行与排错
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    版本说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataset.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    附加
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    附加
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    升级指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    术语表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../library_structure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文库结构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation_previous.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    旧版安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../json.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JSON 规范
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心步骤解析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="核心步骤解析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一步：数据准备与输入校验
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-barcode-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二步：条形码识别与样本分配 (Sample Barcode Assignment)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bead-aggregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三步：转录本比对与微珠聚合 (Bead Aggregation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#per-sample-cell-calling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四步：逐样本独立细胞识别 (Per-Sample Cell Calling)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第五步：结果归档与输出
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        输入配置
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="输入配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最小可用配置示例
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        主分析流程
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="主分析流程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运行命令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运行前检查清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运行过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        结果解析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="结果解析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        输出目录结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        重点输出文件说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="dnbelab-c-series-ht-c6">DNBelab C Series HT C6 分析流程<a class="headerlink" href="#dnbelab-c-series-ht-c6" title="Permanent link">&para;</a></h1>
+<p>多样本单细胞 RNA 测序混合建库与解复用分析说明</p>
+<h2 id="_1">概述 <a id="概述"></a><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>C6 是面向高通量单细胞 RNA 测序的多样本实验解决方案。多个生物学样本在实验建库阶段使用不同的 Sample Barcode 进行标记并基于 Sample Barcode 混合测序；生信分析阶段由 <code>dnbc4tools</code> 自动完成样本解复用、微珠聚合、逐样本独立细胞识别、表达定量与分析交付。</p>
+<p><strong>工作流程</strong>：数据输入 → Barcode 解复用 → 转录本比对 → 微珠聚合 → 逐样本独立 Cell Calling → 组合与样本报告交付</p>
+<div align="center" style="margin: 1.5em 0;">
+<p><img src="../images/c6_pipeline.png" alt="C6 分析流程概览" width="800" style="max-width: 100%; height: auto;"></p>
+</div>
+<blockquote>
+<p><strong>使用说明</strong>：<code>$dnbc4tools</code> 代表可执行程序路径，需替换为实际安装路径。C6 流程通过 <code>multi run</code> 子命令统一编排并自动完成解复用与多样本交付。</p>
+</blockquote>
+<hr />
+<h2 id="_2">核心步骤解析 <a id="核心步骤解析"></a><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>C6 混合建库与解复用分析涵盖从原始双文库输入到各样本结果输出的 5 个关键阶段：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">步骤</th>
+<th style="text-align: left;">阶段名称</th>
+<th style="text-align: left;">核心处理逻辑</th>
+<th style="text-align: left;">关键输入与产出交付物</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>01</strong></td>
+<td style="text-align: left;"><strong>数据准备与输入校验</strong></td>
+<td style="text-align: left;">共享双文库解析；暗反应自动自检；校验 <code>[samples]</code> 分段映射</td>
+<td style="text-align: left;">共享 FASTQ、配置 CSV ➔ 规范化参数</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>02</strong></td>
+<td style="text-align: left;"><strong>条形码识别与样本分配</strong></td>
+<td style="text-align: left;">从 Oligo 提取 Sample Barcode 并基于白名单严格纠错匹配</td>
+<td style="text-align: left;">Oligo Reads ➔ 样本分配表、Unassigned 追踪</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>03</strong></td>
+<td style="text-align: left;"><strong>转录本比对与微珠聚合</strong></td>
+<td style="text-align: left;">STAR 比对注释；基于相似度关联聚合同细胞微珠；全局高占用过滤</td>
+<td style="text-align: left;">cDNA Reads ➔ 比对 BAM、Bead 聚合标签</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>04</strong></td>
+<td style="text-align: left;"><strong>逐样本独立细胞识别</strong></td>
+<td style="text-align: left;">各样本完全隔离独立执行 EmptyDrops；自适应阈值保护</td>
+<td style="text-align: left;">样本液滴集合 ➔ 各样本真实有效细胞集</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>05</strong></td>
+<td style="text-align: left;"><strong>结果归档与输出</strong></td>
+<td style="text-align: left;">各样本矩阵/报告/BAM 拆分；全局联合矩阵与批次报告</td>
+<td style="text-align: left;"><code>per_sample_outs/</code> 交付包 + 全局汇总</td>
+</tr>
+</tbody>
+</table>
+<div class="c6-stepper">
+<div class="c6-step-item">
+<h3 id="_3">第一步：数据准备与输入校验 <a id="step-1"></a><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>测序文库</strong>：实验包含共享的一套 cDNA 文库与 Oligo 文库。</li>
+<li><strong>参数配置</strong>：使用分段式 CSV 文件（如 <code>sample.config.csv</code>），在 <code>[samples]</code> 区块中声明各个样本名称与 Sample Barcode 的分配映射关系。</li>
+<li><strong>暗反应自检</strong>：3.2 版本支持自动识别 cDNA 与 Oligo 的暗反应（Dark Cycles），无需人工干预。</li>
+</ul>
+<div class="c6-step-meta">
+<p><span class="c6-step-meta-label">核心机制</span>
+  <span class="c6-step-pill">共享双端文库</span>
+  <span class="c6-step-pill">暗反应自检</span>
+  <span class="c6-step-pill">分段 CSV 映射</span></p>
+</div>
+</div>
+<div class="c6-step-item">
+<h3 id="sample-barcode-assignment">第二步：条形码识别与样本分配 (Sample Barcode Assignment) <a id="step-2"></a><a class="headerlink" href="#sample-barcode-assignment" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>条形码匹配</strong>：从 Oligo reads 中提取 Sample Barcode 序列，基于内置白名单执行纠错匹配。</li>
+<li><strong>灵活映射</strong>：将每一个液滴分配到对应的生物学样本；支持单一条形码（如 <code>BC01</code>）或同一生物学样本分配多个条形码（如 <code>BC02;BC03</code>）。</li>
+<li><strong>未分配追踪</strong>：未识别 Sample Barcode 的读段计入 Unassigned 统计，用于查看未分配读段数量。</li>
+</ul>
+<div class="c6-step-meta">
+<p><span class="c6-step-meta-label">核心机制</span>
+  <span class="c6-step-pill">白名单纠错</span>
+  <span class="c6-step-pill">多 Barcode 聚合</span>
+  <span class="c6-step-pill">Unassigned 追踪</span></p>
+</div>
+</div>
+<div class="c6-step-item">
+<h3 id="bead-aggregation">第三步：转录本比对与微珠聚合 (Bead Aggregation) <a id="step-3"></a><a class="headerlink" href="#bead-aggregation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>高质量比对</strong>：使用优化配置的 STAR 流程对 cDNA 进行参考基因组比对与基因功能区注释。</li>
+<li><strong>跨微珠聚合</strong>：基于 Bead 序列的相似性评分算法，将同一物理细胞被捕获到的微珠关联聚合，并在合并标签中保留 Sample Barcode 后缀。</li>
+<li><strong>实验级高占用过滤</strong>：默认启用 <code>high_occupancy_filter=true</code>，在整个实验全局尺度剔除高占用异常液滴，保障下游各样本细胞纯度。</li>
+</ul>
+<div class="c6-step-meta">
+<p><span class="c6-step-meta-label">核心机制</span>
+  <span class="c6-step-pill">STAR 基因组比对</span>
+  <span class="c6-step-pill">Bead 相似度聚合</span>
+  <span class="c6-step-pill">全局高占用过滤</span></p>
+</div>
+</div>
+<div class="c6-step-item">
+<h3 id="per-sample-cell-calling">第四步：逐样本独立细胞识别 (Per-Sample Cell Calling) <a id="step-4"></a><a class="headerlink" href="#per-sample-cell-calling" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>独立细胞识别</strong>：分配至各样本的液滴<strong>相互独立执行细胞识别</strong>，按各样本数据分别确定细胞集合。</li>
+<li><strong>智能截断与保护</strong>：自动估计模式使用 EmptyDrops 进行细胞识别；3.2 为自动估计细胞数增加上下限约束。</li>
+<li><strong>同 UMI 冲突纠错</strong>：同一细胞内比对到多个基因的歧义 UMI 依据 read 计数进行冲突裁决；无法唯一归属的 UMI 不计入表达量。</li>
+</ul>
+<div class="c6-step-meta">
+<p><span class="c6-step-meta-label">核心机制</span>
+  <span class="c6-step-pill">样本隔离判定</span>
+  <span class="c6-step-pill">EmptyDrops 自适应保护</span>
+  <span class="c6-step-pill">UMI 冲突纠错</span></p>
+</div>
+</div>
+<div class="c6-step-item">
+<h3 id="_4">第五步：结果归档与输出 <a id="step-5"></a><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>各样本分析</strong>：每个样本在 <code>per_sample_outs/&lt;sample&gt;/</code> 下独立交付完整的表达矩阵（MEX、H5、H5AD 格式）、降维聚类分析（PCA、UMAP、Marker 基因）与单独的交互式 HTML 报告。</li>
+<li><strong>按样本拆分 BAM</strong>：启用 BAM 时，按样本输出比对文件（<code>&lt;sample&gt;_alignments.bam</code>），同时保留未分配比对文件与共享 Oligo BAM。</li>
+<li><strong>全局合并矩阵</strong>：在根目录下提供包含全部样本有效细胞的联合表达矩阵，保留纯净原始计数，方便后续按需导入下游批次校正工具（如 Harmony 等）。</li>
+<li><strong>批次综合报告</strong>：生成全局 <code>&lt;run&gt;_multi_report.html</code>，集中展示各样本有效细胞数、测序饱和度对比及文库级质控指标。</li>
+</ul>
+<div class="c6-step-meta">
+<p><span class="c6-step-meta-label">核心机制</span>
+  <span class="c6-step-pill">各样本 MEX/H5/H5AD</span>
+  <span class="c6-step-pill">按样本拆分 BAM</span>
+  <span class="c6-step-pill">全局联合矩阵</span>
+  <span class="c6-step-pill">交互式双层报告</span></p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="_5">输入配置 <a id="输入配置"></a><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>C6 分析使用分段式 CSV 配置文件（通常命名为 <code>sample.config.csv</code>），包含以下三个核心分段：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">分段名</th>
+<th style="text-align: left;">用途</th>
+<th style="text-align: left;">关键参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>[rna]</code></td>
+<td style="text-align: left;">全局转录组与实验级设置</td>
+<td style="text-align: left;"><code>genomeDir</code>, <code>chemistry,scRNAC6</code>, <code>darkreaction,auto</code>, <code>no_bam</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[libraries]</code></td>
+<td style="text-align: left;">共享测序文库路径声明</td>
+<td style="text-align: left;"><code>fastqs</code> (指向包含 <code>cDNA/</code> 与 <code>oligo/</code> 的目录), <code>feature_types,rna</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>[samples]</code></td>
+<td style="text-align: left;">样本与 Sample Barcode 映射表</td>
+<td style="text-align: left;"><code>sample_id</code>, <code>probe_barcode_ids</code>, <code>expectcells</code> (可选)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">最小可用配置示例<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>[rna]
+genomeDir,/database/scRNA/Homo_sapiens
+chemistry,scRNAC6
+darkreaction,auto
+
+[libraries]
+fastqs,feature_types
+/rawdata/c6_pooled_run,rna
+
+[samples]
+sample_id,probe_barcode_ids
+Sample_1,BC01
+Sample_2,BC02;BC03
+</code></pre></div>
+<blockquote>
+<p><strong>可选 BAM 输出设置</strong>：本示例保留默认的 <code>[rna] no_bam,false</code>，生成逐样本 BAM、未分配 BAM 和 Oligo BAM 及其适用的索引。若需节省存储空间，可在 <code>[rna]</code> 中添加 <code>no_bam,true</code>；此时不生成 BAM 文件及其索引。</p>
+<p><strong>提示</strong>：若同一样本分配了多个条形码，使用分号 <code>;</code> 分隔（如 <code>BC02;BC03</code>）。详细参数规范请参阅 <a href="../parameter/c6.html">C6 参数说明</a>。</p>
+</blockquote>
+<hr />
+<h2 id="_7">主分析流程 <a id="主分析流程"></a><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="_8">运行命令<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nv">$dnbc4tools</span><span class="w"> </span>multi<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>c6_demo<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--csv<span class="w"> </span>sample.config.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--outdir<span class="w"> </span>./results<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--threads<span class="w"> </span><span class="m">16</span>
+</code></pre></div>
+<h3 id="_9">运行前检查清单<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<div class="doc-checklist">
+<div class="doc-checklist-title">
+<p>C6 运行前快速核对清单</p>
+</div>
+<ul>
+<li><strong>分析化学类型声明</strong>：CSV 的 <code>[rna]</code> 区块中已正确配置 <code>chemistry,scRNAC6</code>。</li>
+<li><strong>共享测序数据路径</strong>：<code>[libraries]</code> 中的 <code>fastqs</code> 路径有效，包含配对的 <code>cDNA/</code> 与 <code>oligo/</code> 子目录及 FASTQ 文件。</li>
+<li><strong>样本与 Barcode 映射</strong>：<code>[samples]</code> 中的 <code>sample_id</code> 无重名，且 <code>probe_barcode_ids</code> 对应建库使用的 Sample Barcode（如 <code>BC01</code> 或 <code>BC02;BC03</code>）。</li>
+<li><strong>参考基因组索引完整</strong>：<code>genomeDir</code> 指向完整有效的 STAR 参考数据库目录。</li>
+</ul>
+</div>
+<h3 id="_10">运行过程<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>在对暗反应自动检测与条形码校验后，软件开始多样本解复用与独立分析：</p>
+<div class="highlight"><pre><span></span><code><span class="o">====================================================================================================</span>
+Running<span class="w"> </span><span class="o">[</span>samples<span class="o">]</span><span class="w"> </span>C6<span class="w"> </span>RNA<span class="w"> </span>pipeline<span class="w"> </span>—<span class="w"> </span><span class="m">2026</span>-11-02<span class="w"> </span><span class="m">18</span>:11:02
+<span class="o">====================================================================================================</span>
+
+<span class="o">====================================================================================================</span>
+Parsed<span class="w"> </span>FASTQ<span class="w"> </span>Inputs<span class="w"> </span>-<span class="w"> </span><span class="m">2026</span>-11-02<span class="w"> </span><span class="m">18</span>:11:02
+<span class="o">====================================================================================================</span>
+Type<span class="w">         </span><span class="p">|</span><span class="w"> </span>Path<span class="w">                                                                                 </span>
+-------------+--------------------------------------------------------------------------------------
+cDNA<span class="w"> </span>Read1<span class="w">   </span><span class="p">|</span><span class="w"> </span>/rawdata/c6_pooled_run/cDNA/sample_cDNA_R1.fastq.gz<span class="w">                                  </span>
+cDNA<span class="w"> </span>Read2<span class="w">   </span><span class="p">|</span><span class="w"> </span>/rawdata/c6_pooled_run/cDNA/sample_cDNA_R2.fastq.gz<span class="w">                                  </span>
+oligo<span class="w"> </span>Read1<span class="w">  </span><span class="p">|</span><span class="w"> </span>/rawdata/c6_pooled_run/oligo/sample_oligo_R1.fastq.gz<span class="w">                                 </span>
+oligo<span class="w"> </span>Read2<span class="w">  </span><span class="p">|</span><span class="w"> </span>/rawdata/c6_pooled_run/oligo/sample_oligo_R2.fastq.gz<span class="w">                                 </span>
+<span class="o">====================================================================================================</span>
+
+
+<span class="m">2026</span>-11-02<span class="w"> </span><span class="m">18</span>:12:21<span class="w"> </span>Starting<span class="w"> </span>oligo<span class="w"> </span>library<span class="w"> </span>filtering...
+...done
+
+<span class="m">2026</span>-11-02<span class="w"> </span><span class="m">18</span>:13:26<span class="w"> </span>Starting<span class="w"> </span>cDNA<span class="w"> </span>library<span class="w"> </span>filtering...
+...done
+
+<span class="m">2026</span>-11-02<span class="w"> </span><span class="m">18</span>:25:31<span class="w"> </span>Correcting<span class="w"> </span>RNA<span class="w"> </span>barcodes<span class="w"> </span>and<span class="w"> </span>preparing<span class="w"> </span>alignment<span class="w"> </span>inputs...
+...done
+
+<span class="m">2026</span>-11-02<span class="w"> </span><span class="m">18</span>:27:22<span class="w"> </span>Performing<span class="w"> </span><span class="nb">read</span><span class="w"> </span>alignment<span class="w"> </span>and<span class="w"> </span>UMI<span class="w"> </span>counting...
+...done
+
+<span class="m">2026</span>-11-02<span class="w"> </span><span class="m">18</span>:54:34<span class="w"> </span>Calculating<span class="w"> </span>multi<span class="w"> </span>sample<span class="w"> </span>bead<span class="w"> </span>similarity<span class="w"> </span>and<span class="w"> </span>barcode<span class="w"> </span>translation...
+...done
+
+<span class="m">2026</span>-11-02<span class="w"> </span><span class="m">18</span>:54:56<span class="w"> </span>Generating<span class="w"> </span>raw<span class="w"> </span>gene<span class="w"> </span>expression<span class="w"> </span>matrix...
+...done
+
+<span class="m">2026</span>-11-02<span class="w"> </span><span class="m">18</span>:57:42<span class="w"> </span>Generating<span class="w"> </span>cell-filtered<span class="w"> </span>gene<span class="w"> </span>expression<span class="w"> </span>matrix...
+...done
+
+<span class="m">2026</span>-11-02<span class="w"> </span><span class="m">18</span>:58:02<span class="w"> </span>Calculating<span class="w"> </span>sequencing<span class="w"> </span>saturation<span class="w"> </span>metrics...
+...done
+
+<span class="m">2026</span>-11-02<span class="w"> </span><span class="m">18</span>:58:34<span class="w"> </span>Generating<span class="w"> </span>per-sample<span class="w"> </span>RNA<span class="w"> </span>matrices,<span class="w"> </span>saturation,<span class="w"> </span>and<span class="w"> </span>expression<span class="w"> </span>metrics...
+...done
+
+<span class="m">2026</span>-11-02<span class="w"> </span><span class="m">18</span>:59:23<span class="w"> </span>Generating<span class="w"> </span>per-sample<span class="w"> </span>position-sorted<span class="w"> </span>BAM<span class="w"> </span>files...
+...done
+
+<span class="m">2026</span>-11-02<span class="w"> </span><span class="m">19</span>:04:24<span class="w"> </span>Performing<span class="w"> </span>per-sample<span class="w"> </span>dimensionality<span class="w"> </span>reduction<span class="w"> </span>and<span class="w"> </span>clustering<span class="w"> </span>analysis...
+...done
+
+<span class="m">2026</span>-11-02<span class="w"> </span><span class="m">19</span>:05:12<span class="w"> </span>Performing<span class="w"> </span>mixed-species<span class="w"> </span>classification<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s2">"mouselars2_and_macaca"</span>...
+...done
+
+<span class="m">2026</span>-11-02<span class="w"> </span><span class="m">19</span>:05:13<span class="w"> </span>Generating<span class="w"> </span>multi<span class="w"> </span>sample<span class="w"> </span>assignment<span class="w"> </span>outputs...
+...done
+✔<span class="w"> </span>Prepared<span class="w"> </span>RNA<span class="w"> </span>summary<span class="w"> </span><span class="nv">metrics</span>
+
+<span class="o">====================================================================================================</span>
+Running<span class="w"> </span>combined<span class="w"> </span>report<span class="w"> </span>generation<span class="w"> </span>—<span class="w"> </span><span class="m">2026</span>-11-02<span class="w"> </span><span class="m">19</span>:05:14
+<span class="o">====================================================================================================</span>
+Combined<span class="w"> </span>report<span class="w"> </span>sections:
+✔<span class="w"> </span>rna:<span class="w"> </span>success
+✔<span class="w"> </span>samples:<span class="w"> </span>success
+✔<span class="w"> </span>Outputs<span class="w"> </span>organized<span class="w"> </span><span class="k">in</span><span class="w"> </span>./results/c6_demo/outs
+
+Analysis<span class="w"> </span>finished<span class="w"> </span>successfully!
+</code></pre></div>
+<p>当出现 <code>Analysis finished successfully!</code> 消息时，表示分析已成功完成。</p>
+<hr />
+<h2 id="_11">结果解析 <a id="结果解析"></a><a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<h3 id="_12">输出目录结构<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>分析完成后，结果归档在 <code>&lt;outdir&gt;/&lt;name&gt;/outs/</code> 目录下：</p>
+<div class="highlight"><pre><span></span><code>&lt;outdir&gt;/&lt;name&gt;/outs/
+├── &lt;name&gt;_multi_report.html              # 批次多样本汇总报告
+└── rna/
+    ├── raw_feature_bc_matrix/            # 全局未过滤表达矩阵 (MEX)
+    ├── filtered_feature_bc_matrix/       # 全局有效细胞表达矩阵 (MEX)
+    ├── filtered_feature_bc_matrix.h5ad   # 全局有效细胞表达矩阵 (H5AD，无跨样本聚类)
+    ├── singlecell.csv.gz                 # 全局液滴明细表 (含样本归属与微珠聚合关系)
+    ├── metrics_summary.xls               # 全局实验汇总指标
+    ├── multi_sample/                     # 样本拆分与质控明细
+    │   ├── per_sample_metrics.csv        # 各样本生信指标对照表
+    │   └── barcode_assignment_metrics.json # Sample Barcode 识别与分配统计
+    └── per_sample_outs/&lt;sample&gt;/         # 【各样本结果输出目录】
+        ├── filtered_feature_bc_matrix/   # 该样本有效细胞表达矩阵
+        ├── &lt;sample&gt;_scRNA_report.html    # 该样本交互式 HTML 报告
+        ├── metrics_summary.xls           # 该样本质控指标表
+        └── analysis/                     # 该样本聚类、降维与 Marker 基因
+</code></pre></div>
+<h3 id="_13">重点输出文件说明<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">文件/目录</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>&lt;name&gt;_multi_report.html</code></td>
+<td style="text-align: left;">批次多样本汇总报告，集中展示各样本细胞数、饱和度对比及解复用质量</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>rna/per_sample_outs/&lt;sample&gt;/</code></td>
+<td style="text-align: left;">各样本结果输出目录，包含该样本独立表达矩阵、分析图表与独立 HTML 报告</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>rna/filtered_feature_bc_matrix.*</code></td>
+<td style="text-align: left;">全局合并表达矩阵，汇集全部样本有效细胞计数，方便导入下游批次校正工具</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>rna/singlecell.csv.gz</code></td>
+<td style="text-align: left;">全局液滴明细表，记录 Bead-to-Cell 映射、Cell Calling 状态及 Sample Barcode 归属</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>详细输出说明</strong>：请参阅 <a href="../outs/c6.html">C6 输出说明</a> 了解各项指标与交付文件的完整解读。</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 MGI Tech Bioinformatics.<br>Documentation 3.2 · Updated 2026-10-23
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["search.suggest", "search.highlight", "content.code.copy", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/doc-controls.js"></script>
+      
+    
+  </body>
+</html>

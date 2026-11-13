@@ -1,0 +1,1934 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation site generated from README and doc markdown files">
+      
+      
+      
+      
+        <link rel="prev" href="glossary.html">
+      
+      
+        <link rel="next" href="installation_previous.html">
+      
+      
+        
+          <link rel="alternate" href="library_structure.html" hreflang="zh">
+        
+          <link rel="alternate" href="../en/doc/library_structure.html" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>文库结构 - DNBelab C Series™ HT 单细胞分析软件</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-scrna-seq" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../index.html" title="DNBelab C Series™ HT 单细胞分析软件" class="md-header__button md-logo" aria-label="DNBelab C Series™ HT 单细胞分析软件" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h2v2c0 1.44.68 2.61 1.88 3.78.86.83 2.01 1.63 3.21 2.42l-1.83 1.19C8.27 10.72 7.31 10 6.5 9.21 5.07 7.82 4 6.1 4 4zm14 0h2v2c0 2.1-1.07 3.82-2.5 5.21-1.41 1.38-3.21 2.52-4.96 3.63-1.75 1.12-3.45 2.21-4.66 3.38C6.68 17.39 6 18.56 6 20v2H4v-2c0-2.1 1.07-3.82 2.5-5.21 1.41-1.38 3.21-2.52 4.96-3.63 1.75-1.12 3.45-2.21 4.66-3.38C17.32 6.61 18 5.44 18 4zm-3.26 10.61c.99.67 1.95 1.39 2.76 2.18C18.93 16.18 20 17.9 20 20v2h-2v-2c0-1.44-.68-2.61-1.88-3.78-.86-.83-2.01-1.63-3.21-2.42zM7 3h10v1l-.06.5H7.06L7 4zm.68 3h8.64c-.24.34-.52.69-.9 1.06l-.51.44H9.07l-.49-.44c-.38-.37-.66-.72-.9-1.06m1.41 10.5h5.84l.49.44c.38.37.66.72.9 1.06H7.68c.24-.34.52-.69.9-1.06zm-2.03 3h9.88l.06.5v1H7v-1z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DNBelab C Series™ HT 单细胞分析软件
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              文库结构
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="library_structure.html" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../en/doc/library_structure.html" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="DNBelab C Series™ HT 单细胞分析软件" class="md-nav__button md-logo" aria-label="DNBelab C Series™ HT 单细胞分析软件" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h2v2c0 1.44.68 2.61 1.88 3.78.86.83 2.01 1.63 3.21 2.42l-1.83 1.19C8.27 10.72 7.31 10 6.5 9.21 5.07 7.82 4 6.1 4 4zm14 0h2v2c0 2.1-1.07 3.82-2.5 5.21-1.41 1.38-3.21 2.52-4.96 3.63-1.75 1.12-3.45 2.21-4.66 3.38C6.68 17.39 6 18.56 6 20v2H4v-2c0-2.1 1.07-3.82 2.5-5.21 1.41-1.38 3.21-2.52 4.96-3.63 1.75-1.12 3.45-2.21 4.66-3.38C17.32 6.61 18 5.44 18 4zm-3.26 10.61c.99.67 1.95 1.39 2.76 2.18C18.93 16.18 20 17.9 20 20v2h-2v-2c0-1.44-.68-2.61-1.88-3.78-.86-.83-2.01-1.63-3.21-2.42zM7 3h10v1l-.06.5H7.06L7 4zm.68 3h8.64c-.24.34-.52.69-.9 1.06l-.51.44H9.07l-.49-.44c-.38-.37-.66-.72-.9-1.06m1.41 10.5h5.84l.49.44c.38.37.66.72.9 1.06H7.68c.24-.34.52-.69.9-1.06zm-2.03 3h9.88l.06.5v1H7v-1z"/></svg>
+
+    </a>
+    DNBelab C Series™ HT 单细胞分析软件
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="installation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quickstart.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速开始
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    流程
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    流程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/pipeline.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    多组学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pipeline/c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6 多样本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参数
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    参数
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/parameter.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    多组学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6 多样本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter/tools.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    输出
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    输出
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/outs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    多组学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="outs/c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6 多样本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="io.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    结果分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="troubleshooting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    运行与排错
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    版本说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dataset.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    附加
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    附加
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="migration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    升级指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="glossary.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    术语表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文库结构
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="library_structure.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文库结构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-scrna-seq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. scRNA-seq 文库结构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. scRNA-seq 文库结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cdna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cDNA 文库
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oligo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oligo 文库
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-scatac-seq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. scATAC-seq 文库结构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. scATAC-seq 文库结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-1-50115-bp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read 1 结构 (50–115 bp)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-2-5069-bp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read 2 结构 (50–69 bp)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-scvdj" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. scVDJ 免疫组库文库结构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. scVDJ 免疫组库文库结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-1-100150-bp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read 1 结构 (100–150 bp)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-2-100150-bp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read 2 结构 (100–150 bp)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 全技术文库特征与配置速查
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="installation_previous.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    旧版安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="json.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JSON 规范
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-scrna-seq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. scRNA-seq 文库结构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. scRNA-seq 文库结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cdna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cDNA 文库
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oligo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oligo 文库
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-scatac-seq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. scATAC-seq 文库结构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. scATAC-seq 文库结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-1-50115-bp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read 1 结构 (50–115 bp)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-2-5069-bp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read 2 结构 (50–69 bp)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-scvdj" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. scVDJ 免疫组库文库结构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. scVDJ 免疫组库文库结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-1-100150-bp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read 1 结构 (100–150 bp)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-2-100150-bp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read 2 结构 (100–150 bp)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 全技术文库特征与配置速查
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">文库结构<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>DNBelab C4 系列单细胞测序技术包含 <strong>scRNA-seq（转录组）</strong>、<strong>scATAC-seq（染色质开放度）</strong> 与 <strong>scVDJ（免疫组库）</strong> 三大组学平台。不同文库在物理结构、接头组成、条形码（Cell Barcode）以及分子标识符（UMI）的设计上各有针对性。</p>
+<p>本文档汇总展示各组学的物理文库全貌、碱基坐标区间、固定接头序列及 <code>--customize</code> 提取参数配置。</p>
+<hr />
+<h2 id="1-scrna-seq">1. scRNA-seq 文库结构 <a id="scrna"></a><a class="headerlink" href="#1-scrna-seq" title="Permanent link">&para;</a></h2>
+<p>DNBelab C4 单细胞转录组测序包含两个相互配合的文库：<strong>cDNA 文库</strong> 与 <strong>Oligo 文库</strong>。其中 cDNA 文库捕获转录本表达信息，Oligo 文库记录液滴中微珠的捕获信息用于细胞识别与液滴解析。</p>
+<div style="text-align: center; margin: 24px 0;">
+<p><img src="./images/c4_library_structure.svg" alt="DNBelab C4 scRNA 文库结构" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.06);" /></p>
+</div>
+<h3 id="cdna">cDNA 文库<a class="headerlink" href="#cdna" title="Permanent link">&para;</a></h3>
+<p>cDNA 文库用于测定单细胞转录组的基因表达谱。</p>
+<ul>
+<li><strong>Read 1 (58 bp)</strong>：</li>
+<li><strong>Linker 1 (固定接头 1, 6 bp)</strong>：<code>TCTGCG</code>（1–6 bp，仅在无暗反应模式下测序出现）</li>
+<li><strong>Cell Barcode 1 (CB1, 10 bp)</strong>：第一段细胞条形码（无暗反应：7–16 bp；暗反应：1–10 bp）</li>
+<li><strong>Linker 2 (固定接头 2, 6 bp)</strong>：<code>CCTTCC</code>（17–22 bp，仅在无暗反应模式下测序出现）</li>
+<li><strong>Cell Barcode 2 (CB2, 10 bp)</strong>：第二段细胞条形码（无暗反应：23–32 bp；暗反应：11–20 bp）</li>
+<li><strong>Linker 3 (固定接头 3, 5 bp)</strong>：<code>CGATG</code>（33–37 bp，仅在无暗反应模式下测序出现）</li>
+<li><strong>UMI (10 bp)</strong>：分子唯一标识符（无暗反应：38–47 bp；暗反应：21–30 bp）</li>
+<li><strong>PolyT 捕获区 (11 bp)</strong>：用于结合 mRNA 3' 端的 poly(A) 尾</li>
+<li><strong>Read 2 (100 bp)</strong>：cDNA 插入片段（转录本编码序列，比对至参考基因组）</li>
+</ul>
+<h3 id="oligo">Oligo 文库<a class="headerlink" href="#oligo" title="Permanent link">&para;</a></h3>
+<p>Oligo 文库用于识别同液滴内的微珠条形码，辅助区分单个细胞与多珠空液滴。</p>
+<h4 id="read-1-2032-bp">Read 1 结构 (20–32 bp)<a class="headerlink" href="#read-1-2032-bp" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>无暗反应模式 (32 bp)</strong>：</li>
+<li><strong>Linker 1 (6 bp)</strong>：<code>TCTGCG</code>（1–6 bp，固定接头跳过）</li>
+<li><strong>Cell Barcode 1 (CB1, 10 bp)</strong>：第一段细胞条形码（7–16 bp，提取为 <code>cb,R1:7-16</code>）</li>
+<li><strong>Linker 2 (6 bp)</strong>：<code>CCTTCC</code>（17–22 bp，固定接头跳过）</li>
+<li><strong>Cell Barcode 2 (CB2, 10 bp)</strong>：第二段细胞条形码（23–32 bp，提取为 <code>cb,R1:23-32</code>）</li>
+<li><strong>暗反应模式 (20 bp)</strong>：</li>
+<li>测序仪硬件跳过固定 Linker 1 与 Linker 2：</li>
+<li><strong>Cell Barcode 1 (CB1, 10 bp)</strong>：1–10 bp，提取为 <code>cb,R1:1-10</code></li>
+<li><strong>Cell Barcode 2 (CB2, 10 bp)</strong>：11–20 bp，提取为 <code>cb,R1:11-20</code></li>
+</ul>
+<h4 id="read-2-3042-bp">Read 2 结构 (30–42 bp)<a class="headerlink" href="#read-2-3042-bp" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>无暗反应模式 (42 bp)</strong>：</li>
+<li><strong>UMI (10 bp)</strong>：分子唯一标识符（1–10 bp，提取为 <code>R1,R2:1-10</code>）</li>
+<li><strong>Linker 1 (6 bp)</strong>：<code>TCTGCG</code>（11–16 bp，固定接头跳过）</li>
+<li><strong>Tag 1 (10 bp)</strong>：第一段微珠标签（17–26 bp，提取为 <code>R1,R2:17-26</code>）</li>
+<li><strong>Linker 2 (6 bp)</strong>：<code>CCTTCC</code>（27–32 bp，固定接头跳过）</li>
+<li><strong>Tag 2 (10 bp)</strong>：第二段微珠标签（33–42 bp，提取为 <code>R1,R2:33-42</code>）</li>
+<li><strong>暗反应模式 (30 bp)</strong>：</li>
+<li>测序仪硬件跳过固定 Linker 1 与 Linker 2：</li>
+<li><strong>UMI (10 bp)</strong>：1–10 bp，提取为 <code>R1,R2:1-10</code></li>
+<li><strong>Tag 1 (10 bp)</strong>：11–20 bp，提取为 <code>R1,R2:11-20</code></li>
+<li><strong>Tag 2 (10 bp)</strong>：21–30 bp，提取为 <code>R1,R2:21-30</code></li>
+</ul>
+<blockquote>
+<p>scRNA 参数配置与自定义传参详见 <a href="parameter/scRNA.html#customize">scRNA 参数说明：自定义文库结构</a>。</p>
+</blockquote>
+<hr />
+<h2 id="2-scatac-seq">2. scATAC-seq 文库结构 <a id="scatac"></a><a class="headerlink" href="#2-scatac-seq" title="Permanent link">&para;</a></h2>
+<p>DNBelab C4 单细胞染色质可及性测序用于捕获开放染色质区域序列。<strong>ATAC 文库不包含 UMI</strong>，比对后通过插入片段两端的染色体起止位点（Cut sites）与 Cell Barcode 进行去重与丰度统计。</p>
+<div style="text-align: center; margin: 24px 0;">
+<p><img src="./images/c4_atac_library_structure.svg" alt="DNBelab C4 scATAC 文库结构" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.06);" /></p>
+</div>
+<h3 id="read-1-50115-bp">Read 1 结构 (50–115 bp)<a class="headerlink" href="#read-1-50115-bp" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>无暗反应模式 (115 bp)</strong>：</li>
+<li><strong>Linker 1 (6 bp)</strong>：<code>TCTGCG</code>（1–6 bp，固定接头跳过）</li>
+<li><strong>Cell Barcode 1 (CB1, 10 bp)</strong>：第一段细胞条形码（7–16 bp，提取为 <code>cb,R1:7-16</code>）</li>
+<li><strong>Linker 2 (6 bp)</strong>：<code>CCTTCC</code>（17–22 bp，固定接头跳过）</li>
+<li><strong>Cell Barcode 2 (CB2, 10 bp)</strong>：第二段细胞条形码（23–32 bp，提取为 <code>cb,R1:23-32</code>）</li>
+<li><strong>延伸接头 (33 bp)</strong>：33–65 bp，固定接头延伸序列（跳过）</li>
+<li><strong>染色质 DNA 片段 1 (50 bp)</strong>：66–115 bp，有效基因组插入片段（提取为 <code>R1,R1:66-115</code>）</li>
+<li><strong>暗反应模式 (70 bp)</strong>：</li>
+<li>测序仪硬件跳过固定 Linker 1、Linker 2 及延伸接头：</li>
+<li><strong>Cell Barcode 1 (CB1, 10 bp)</strong>：1–10 bp，提取为 <code>cb,R1:1-10</code></li>
+<li><strong>Cell Barcode 2 (CB2, 10 bp)</strong>：11–20 bp，提取为 <code>cb,R1:11-20</code></li>
+<li><strong>染色质 DNA 片段 1 (50 bp)</strong>：21–70 bp，提取为 <code>R1,R1:21-70</code></li>
+</ul>
+<h3 id="read-2-5069-bp">Read 2 结构 (50–69 bp)<a class="headerlink" href="#read-2-5069-bp" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>无暗反应模式 (69 bp)</strong>：</li>
+<li><strong>固定接头 (19 bp)</strong>：1–19 bp（固定接头跳过）</li>
+<li><strong>染色质 DNA 片段 2 (50 bp)</strong>：20–69 bp，有效基因组插入片段（提取为 <code>R2,R2:20-69</code>）</li>
+<li><strong>暗反应模式 (50 bp)</strong>：</li>
+<li>测序仪硬件跳过 19 bp 的固定接头：</li>
+<li><strong>染色质 DNA 片段 2 (50 bp)</strong>：1–50 bp，全长均为有效插入片段（提取为 <code>R2,R2:1-50</code>）</li>
+</ul>
+<blockquote>
+<p>scATAC 参数配置与暗反应说明详见 <a href="parameter/scATAC.html#darkreaction">scATAC 参数说明：暗反应与文库自定义</a>。</p>
+</blockquote>
+<hr />
+<h2 id="3-scvdj">3. scVDJ 免疫组库文库结构 <a id="scvdj"></a><a class="headerlink" href="#3-scvdj" title="Permanent link">&para;</a></h2>
+<p>DNBelab C4 单细胞免疫组库测序基于 5' 转录组建库与针对 TCR（TRA/TRB/TRG/TRD）或 BCR（IGH/IGK/IGL）的高灵敏度巢式 PCR 靶向富集，用于精确捕获全长 V(D)J 重排序列及识别克隆型。</p>
+<div style="text-align: center; margin: 24px 0;">
+<p><img src="./images/c4_vdj_library_structure.svg" alt="DNBelab C4 scVDJ 文库结构" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.06);" /></p>
+</div>
+<h3 id="read-1-100150-bp">Read 1 结构 (100–150 bp)<a class="headerlink" href="#read-1-100150-bp" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>无暗反应模式 (120–150 bp)</strong>：</li>
+<li><strong>Linker 1 (6 bp)</strong>：<code>TCTGCG</code>（1–6 bp，固定接头跳过）</li>
+<li><strong>Cell Barcode 1 (CB1, 10 bp)</strong>：第一段细胞条形码（7–16 bp，提取为 <code>cb,R1:7-16</code>）</li>
+<li><strong>Linker 2 (6 bp)</strong>：<code>CCTTCC</code>（17–22 bp，固定接头跳过）</li>
+<li><strong>Cell Barcode 2 (CB2, 10 bp)</strong>：第二段细胞条形码（23–32 bp，提取为 <code>cb,R1:23-32</code>）</li>
+<li><strong>Linker 3 (5 bp)</strong>：<code>CGATG</code>（33–37 bp，固定接头跳过）</li>
+<li><strong>UMI (10 bp)</strong>：分子唯一标识符（38–47 bp，提取为 <code>umi,R1:38-47</code>）</li>
+<li><strong>TSO / 延伸接头 (13 bp)</strong>：48–60 bp，模板转换寡核苷酸接头（跳过）</li>
+<li><strong>V(D)J 转录本前段序列 (60+ bp)</strong>：61–120+ bp，提取为 <code>R1,R1:61-120</code></li>
+<li><strong>暗反应模式 (120 bp)</strong>：</li>
+<li>测序仪硬件跳过固定 Linker 与 TSO：</li>
+<li><strong>Cell Barcode 1 (CB1, 10 bp)</strong>：1–10 bp，提取为 <code>cb,R1:1-10</code></li>
+<li><strong>Cell Barcode 2 (CB2, 10 bp)</strong>：11–20 bp，提取为 <code>cb,R1:11-20</code></li>
+<li><strong>UMI (10 bp)</strong>：21–30 bp，提取为 <code>umi,R1:21-30</code></li>
+<li><strong>V(D)J 转录本前段序列 (90+ bp)</strong>：31–120+ bp，提取为 <code>R1,R1:31-120</code></li>
+</ul>
+<h3 id="read-2-100150-bp">Read 2 结构 (100–150 bp)<a class="headerlink" href="#read-2-100150-bp" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>标准反向转录本测序 (1–150 bp)</strong>：</li>
+<li>Read 2 始终从第 1 位开始测序目标转录本（来自恒定区特异性引物延伸，覆盖 CDR3 与 V/D/J 重排关键区域），提取为 <code>R2,R2:1-150</code>。</li>
+<li><em>注意：scVDJ 测序仅支持 R1 单端暗反应或无暗反应，Read 2 不支持且无需暗反应。</em></li>
+</ul>
+<blockquote>
+<p>scVDJ 参数配置与自定义读长结构详见 <a href="parameter/scVDJ.html#darkreaction">scVDJ 参数说明：暗反应与自定义读长结构</a>。</p>
+</blockquote>
+<hr />
+<h2 id="4">4. 全技术文库特征与配置速查<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">组学平台</th>
+<th style="text-align: left;">文库类型</th>
+<th style="text-align: left;">条形码 (CB)</th>
+<th style="text-align: left;">UMI 长度</th>
+<th style="text-align: left;">主要固定接头序列</th>
+<th style="text-align: left;">暗反应支持</th>
+<th style="text-align: left;">典型 <code>--customize</code> 配置示例 (无暗反应)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>scRNA</strong></td>
+<td style="text-align: left;">cDNA</td>
+<td style="text-align: left;">2 段 (共 20 bp)</td>
+<td style="text-align: left;">10 bp</td>
+<td style="text-align: left;"><code>TCTGCG</code>, <code>CCTTCC</code>, <code>CGATG</code></td>
+<td style="text-align: left;"><code>auto</code>, <code>R1</code>, <code>unset</code></td>
+<td style="text-align: left;"><code>--customize "cb,R1:7-16;cb,R1:23-32;umi,R1:38-47;R1,R2:1-100"</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>scRNA</strong></td>
+<td style="text-align: left;">Oligo</td>
+<td style="text-align: left;">2 段 (共 20 bp)</td>
+<td style="text-align: left;">10 bp</td>
+<td style="text-align: left;"><code>TCTGCG</code>, <code>CCTTCC</code></td>
+<td style="text-align: left;"><code>auto</code>, <code>R1R2</code>, <code>R1</code>, <code>unset</code></td>
+<td style="text-align: left;"><code>--customize "cb,R1:7-16;cb,R1:23-32;R1,R2:1-10;R1,R2:17-26;R1,R2:33-42"</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>scATAC</strong></td>
+<td style="text-align: left;">染色质片段</td>
+<td style="text-align: left;">2 段 (共 20 bp)</td>
+<td style="text-align: left;"><strong>无 UMI</strong></td>
+<td style="text-align: left;"><code>TCTGCG</code>, <code>CCTTCC</code>, 延伸接头, 固定接头</td>
+<td style="text-align: left;"><code>auto</code>, <code>R1R2</code>, <code>R1</code>, <code>R2</code>, <code>unset</code></td>
+<td style="text-align: left;"><code>--customize "cb,R1:7-16;cb,R1:23-32;R1,R1:66-115;R2,R2:20-69"</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>scVDJ</strong></td>
+<td style="text-align: left;">TCR / BCR</td>
+<td style="text-align: left;">2 段 (共 20 bp)</td>
+<td style="text-align: left;">10 bp</td>
+<td style="text-align: left;"><code>TCTGCG</code>, <code>CCTTCC</code>, <code>CGATG</code>, TSO</td>
+<td style="text-align: left;"><code>auto</code>, <code>R1</code>, <code>unset</code></td>
+<td style="text-align: left;"><code>--customize "cb,R1:7-16;cb,R1:23-32;umi,R1:38-47;R1,R1:61-120;R2,R2:1-150"</code></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 MGI Tech Bioinformatics.<br>Documentation 3.2 · Updated 2026-10-23
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["search.suggest", "search.highlight", "content.code.copy", "navigation.top"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/doc-controls.js"></script>
+      
+    
+  </body>
+</html>

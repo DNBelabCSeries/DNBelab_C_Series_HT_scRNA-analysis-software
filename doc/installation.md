@@ -1,173 +1,97 @@
-<div align="right">
-  <a href="../README.md">Home</a>
-</div>
+# DNBelab C Series™ 软件安装指南
 
-# DNBelab C Series™ Software Installation
+本指南介绍 DNBelab C Series™ HT 单细胞分析软件（dnbc4tools）的系统环境要求、安装包获取、解压部署与功能验证方法。
 
-<div align="center">
+## 环境要求 <a id="system-requirements"></a>
 
-**Complete installation guide for the DNBelab C Series™ HT Single-Cell Analysis Software package**
+运行 dnbc4tools 需要满足以下基础运行环境：
 
-[◆ Requirements](#system-requirements) • [◆ Download](#software-download) • [◆ Installation](#installation-process) • [◆ Verification](#verification--testing) 
+| 配置项 | 最低要求 | 推荐配置 | 说明 |
+| :--- | :--- | :--- | :--- |
+| **操作系统** | 64 位 Linux | CentOS 7.x+ / Ubuntu 20.04+ | 兼容主流 64 位 Linux 发行版 |
+| **CPU / 架构** | 8 核（x86-64） | 16 核及以上 | 需支持 x86-64 架构处理器 |
+| **内存 (RAM)** | 50 GB | 128 GB 及以上 | 实际资源消耗依据分析样本数与数据量而定 |
+| **磁盘存储** | 保证项目数据空间 | 高速 NVMe / SSD | 用于存放 FASTQ、参考基因组与分析中间结果 |
 
+---
+
+## 软件下载 <a id="software-download"></a>
+
+### dnbc4tools 3.2
+
+!!! note "开发版文档：安装包尚不可下载"
+    3.2 尚未正式发布，目前未提供可下载的安装包；正式发布日期、下载地址、软件包名称和校验值待确认。下文中的安装路径与命令为示例，待取得正式发布包后使用。
+
+<div style="margin-top: 15px;">
+  <strong>需要历史版本？</strong><br>
+  3.1 完整文档可通过顶部版本菜单切换查阅；更早版本下载和安装说明请参考 <a href="./installation_previous.md">历史版本安装指南</a>。
 </div>
 
 ---
 
-## ◆ System Requirements <a id="system-requirements"></a>
+## 安装流程 <a id="installation-process"></a>
 
-<table style="width:100%; border-collapse: collapse; margin: 1.5em 0; box-shadow: 0 2px 3px rgba(0,0,0,0.1);">
-  <thead style="background-color: #f2f2f2; border-bottom: 2px solid #ddd;">
-    <tr>
-      <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">Category</th>
-      <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">Requirement</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;"><b>Processor</b></td>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;">x86-64 compatible processors</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;"><b>Memory</b></td>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;">50GB RAM or higher (128GB+ recommended)</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;"><b>CPU</b></td>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;">Minimum 8 cores (16+ cores recommended)</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;"><b>Storage</b></td>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;">Sufficient disk space for data processing (SSD recommended)</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;"><b>OS</b></td>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;">Linux 64-bit (CentOS 7.x, Ubuntu 20.04+)</td>
-    </tr>
-  </tbody>
-</table>
+### 第一步：解压安装包
 
-<div style="background-color: #e7f3fe; border-left: 6px solid #2196F3; padding: 15px; margin: 1.5em 0; border-radius: 4px;">
-💡 Compatible with higher software and hardware configurations.
-</div>
-
----
-
-## ◆ Software Download <a id="software-download"></a>
-
-### dnbc4tools 3.0 beta (Released: Oct 23, 2025)
-
-<table style="width:100%; border-collapse: collapse; margin: 1.5em 0; box-shadow: 0 2px 3px rgba(0,0,0,0.1);">
-  <thead style="background-color: #f2f2f2; border-bottom: 2px solid #ddd;">
-    <tr>
-      <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">Package Details</th>
-      <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">Information</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;"><b>File Name</b></td>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;">dnbc4tools3.0beta_v5.tar.gz</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;"><b>File Size</b></td>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;">511M</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;"><b>MD5 Checksum</b></td>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;">89892ce3c60218861acc0cfbada81304</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;"><b>Download</b></td>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;"><a href="https://bgipan.genomics.cn/#/link/2rDAe6SsoQYpXJZv2oxB" target="_blank">BGI CloudDrive</a> (Access Code: sdH4)</td>
-    </tr>
-  </tbody>
-</table>
-
----
-
-## ◆ Installation Process <a id="installation-process"></a>
-
-<div style="background-color: #e7f3fe; border-left: 6px solid #2196F3; padding: 15px; margin: 1.5em 0; border-radius: 4px;">
-*dnbc4tools* is distributed as a self-contained `tar.gz` package that includes all precompiled dependencies. This allows it to run on most Linux environments without requiring additional setup.
-</div>
-
-### Step 1: Extract the Package
-
-Extract the dnbc4tools package to your preferred directory (example uses `/opt/software`):
+将安装包解压到您的目标安装目录（示例为 `/opt/software`）：
 
 ```bash
-# Navigate to target directory
+# 进入目标安装目录
 cd /opt/software
 
-# Extract the package
-tar -xzvf dnbc4tools3.0beta.tar.gz
+# 解压安装包
+tar -xzvf dnbc4tools-3.2.tar.gz
 ```
 
-### Step 2: Verify Directory Structure 
+### 第二步：确认目录结构
 
-After extraction, you should see the following directory structure:
+解压完成后，软件包目录结构如下：
 
-<table style="width:100%; border-collapse: collapse; margin: 1.5em 0; box-shadow: 0 2px 3px rgba(0,0,0,0.1);">
-  <thead style="background-color: #f2f2f2; border-bottom: 2px solid #ddd;">
-    <tr>
-      <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">Component</th>
-      <th style="padding: 12px 15px; border: 1px solid #ddd; text-align: left;">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;">`dnbc4tools3.0beta/dnbc4tools`</td>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;">Main executable</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;">`dnbc4tools3.0beta/external`</td>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;">External dependencies</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;">`dnbc4tools3.0beta/lib`</td>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;">Library files</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;">`dnbc4tools3.0beta/misc`</td>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;">Miscellaneous files</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;">`dnbc4tools3.0beta/sourceC4.bash`</td>
-      <td style="padding: 12px 15px; border: 1px solid #ddd;">Environment configuration script</td>
-    </tr>
-  </tbody>
-</table>
+```text
+dnbc4tools3.2/
+├── dnbc4tools          # 主程序可执行入口
+├── external/           # 内置第三方工具依赖
+├── lib/                # 动态链接库文件
+├── misc/               # 配置文件与辅助资源
+└── sourceC4.bash       # 环境变量配置脚本
+```
 
 ---
 
-## ◆ Verification & Testing <a id="verification--testing"></a>
+## 安装验证 <a id="verification--testing"></a>
 
-### Basic Functionality Test
+### 基础功能测试
 
-Confirm that the installation was successful by running these commands:
+进入解压目录，直接执行主程序验证安装状态：
 
 ```bash
-# Navigate to installation directory
-cd /opt/software/dnbc4tools3.0beta
+# 进入程序目录
+cd /opt/software/dnbc4tools3.2
 
-# Test basic functionality
-./dnbc4tools --help
-./dnbc4tools --version
-
-# Test specific modules
-./dnbc4tools rna --help
-./dnbc4tools atac --help
-./dnbc4tools vdj --help
+# 运行主程序查看帮助信息
+./dnbc4tools
 ```
 
----
+命令成功输出如下版本与帮助信息即代表安装就绪：
 
-## ◆ Next Steps <a id="next-steps"></a>
+```text
+dnbc4tools 3.2
 
-Congratulations! You've successfully installed dnbc4tools 3.0 beta! Here's what you can do next:
+Single-cell analysis toolkit for RNA, ATAC, V(D)J, and multi-omics workflows
 
-- 🚀 **[Run the Quick Start Tutorial](./quickstart.md)** to perform your first analysis.
-- 🧪 **[Download Sample Data](./dataset.md)** to test the pipelines.
-- 🔬 **[Explore Analysis Workflows](./pipeline/pipeline.md)** to choose your analysis type.
-- ⚙️ **[Review Command Parameters](./parameter/parameter.md)** to fine-tune your analysis.
+Usage: dnbc4tools <COMMAND>
+
+Commands:
+  
+    rna          Single-cell RNA-seq analysis
+    atac         Single-cell ATAC-seq analysis
+    vdj          Single-cell V(D)J immune profiling
+    tools        Utility commands and file processing
+    multi        Integrated multi-omics analysis
+
+Options:
+  -h, --help     show this help message and exit
+  -v, --version  show program's version number and exit
+```
+
+安装验证完成后，即可参考[快速开始](./quickstart.md)开始您的第一个单细胞分析任务。

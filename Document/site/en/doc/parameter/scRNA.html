@@ -1,0 +1,2624 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation site generated from README and doc markdown files">
+      
+      
+      
+      
+        <link rel="prev" href="parameter.html">
+      
+      
+        <link rel="next" href="scATAC.html">
+      
+      
+        
+          <link rel="alternate" href="../../../doc/parameter/scRNA.html" hreflang="zh">
+        
+          <link rel="alternate" href="scRNA.html" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>scRNA - DNBelab C Series™ HT Single-Cell Analysis Software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="DNBelab C Series™ HT Single-Cell Analysis Software" class="md-header__button md-logo" aria-label="DNBelab C Series™ HT Single-Cell Analysis Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h2v2c0 1.44.68 2.61 1.88 3.78.86.83 2.01 1.63 3.21 2.42l-1.83 1.19C8.27 10.72 7.31 10 6.5 9.21 5.07 7.82 4 6.1 4 4zm14 0h2v2c0 2.1-1.07 3.82-2.5 5.21-1.41 1.38-3.21 2.52-4.96 3.63-1.75 1.12-3.45 2.21-4.66 3.38C6.68 17.39 6 18.56 6 20v2H4v-2c0-2.1 1.07-3.82 2.5-5.21 1.41-1.38 3.21-2.52 4.96-3.63 1.75-1.12 3.45-2.21 4.66-3.38C17.32 6.61 18 5.44 18 4zm-3.26 10.61c.99.67 1.95 1.39 2.76 2.18C18.93 16.18 20 17.9 20 20v2h-2v-2c0-1.44-.68-2.61-1.88-3.78-.86-.83-2.01-1.63-3.21-2.42zM7 3h10v1l-.06.5H7.06L7 4zm.68 3h8.64c-.24.34-.52.69-.9 1.06l-.51.44H9.07l-.49-.44c-.38-.37-.66-.72-.9-1.06m1.41 10.5h5.84l.49.44c.38.37.66.72.9 1.06H7.68c.24-.34.52-.69.9-1.06zm-2.03 3h9.88l.06.5v1H7v-1z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DNBelab C Series™ HT Single-Cell Analysis Software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              scRNA
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../doc/parameter/scRNA.html" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="scRNA.html" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="DNBelab C Series™ HT Single-Cell Analysis Software" class="md-nav__button md-logo" aria-label="DNBelab C Series™ HT Single-Cell Analysis Software" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2h2v2c0 1.44.68 2.61 1.88 3.78.86.83 2.01 1.63 3.21 2.42l-1.83 1.19C8.27 10.72 7.31 10 6.5 9.21 5.07 7.82 4 6.1 4 4zm14 0h2v2c0 2.1-1.07 3.82-2.5 5.21-1.41 1.38-3.21 2.52-4.96 3.63-1.75 1.12-3.45 2.21-4.66 3.38C6.68 17.39 6 18.56 6 20v2H4v-2c0-2.1 1.07-3.82 2.5-5.21 1.41-1.38 3.21-2.52 4.96-3.63 1.75-1.12 3.45-2.21 4.66-3.38C17.32 6.61 18 5.44 18 4zm-3.26 10.61c.99.67 1.95 1.39 2.76 2.18C18.93 16.18 20 17.9 20 20v2h-2v-2c0-1.44-.68-2.61-1.88-3.78-.86-.83-2.01-1.63-3.21-2.42zM7 3h10v1l-.06.5H7.06L7 4zm.68 3h8.64c-.24.34-.52.69-.9 1.06l-.51.44H9.07l-.49-.44c-.38-.37-.66-.72-.9-1.06m1.41 10.5h5.84l.49.44c.38.37.66.72.9 1.06H7.68c.24-.34.52-.69.9-1.06zm-2.03 3h9.88l.06.5v1H7v-1z"/></svg>
+
+    </a>
+    DNBelab C Series™ HT Single-Cell Analysis Software
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MGI-tech-bioinformatics/DNBelab_C_Series_HT_scRNA-analysis-software
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickstart.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pipeline
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/pipeline.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parameters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Parameters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parameter.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="scRNA.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-analysis-workflow-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Main Analysis Workflow (run)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Main Analysis Workflow (run)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-command-line-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Command-Line Help
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter-reference-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameter Reference Tables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-parameter-deep-dives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Parameter Deep Dives
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-database-construction-mkref" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference Database Construction (mkref)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference Database Construction (mkref)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-command-line-help_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Command-Line Help
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter-reference-tables_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameter Reference Tables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-architecture-key-configurations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference Architecture &amp; Key Configurations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-sample-workflow-multi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Sample Workflow (multi)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi-Sample Workflow (multi)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-command-line-help_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Command-Line Help
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter-reference-tables_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameter Reference Tables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-list-rules-execution-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sample List Rules &amp; Execution Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tools.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Outputs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Outputs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outs/outs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outs/scRNA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scRNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outs/scATAC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scATAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outs/scVDJ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scVDJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outs/multi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outs/c6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Downstream Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Running & Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataset.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Additional Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Additional Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Upgrade Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../library_structure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation_previous.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Previous Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../json.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JSON Spec
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-analysis-workflow-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Main Analysis Workflow (run)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Main Analysis Workflow (run)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-command-line-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Command-Line Help
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter-reference-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameter Reference Tables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-parameter-deep-dives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Parameter Deep Dives
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-database-construction-mkref" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference Database Construction (mkref)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference Database Construction (mkref)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-command-line-help_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Command-Line Help
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter-reference-tables_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameter Reference Tables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-architecture-key-configurations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference Architecture &amp; Key Configurations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-sample-workflow-multi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Sample Workflow (multi)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi-Sample Workflow (multi)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-command-line-help_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Command-Line Help
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter-reference-tables_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameter Reference Tables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-list-rules-execution-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sample List Rules &amp; Execution Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="scrna-parameters">scRNA Parameters<a class="headerlink" href="#scrna-parameters" title="Permanent link">&para;</a></h1>
+<p>DNBelab C Series HT scRNA Parameter Configuration Guide</p>
+<h2 id="overview">Overview <a id="概述"></a><a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>This document explains the parameter definitions, default behaviors, and standard usage patterns for <code>dnbc4tools rna</code> subcommands, including single-sample analysis (<code>run</code>), reference database construction (<code>mkref</code>), and multi-sample script generation (<code>multi</code>).</p>
+<blockquote>
+<p><strong>Tip</strong>
+Parameter specifications are based on the latest command-line help messages. Examples can be used directly as operational templates.</p>
+</blockquote>
+<h2 id="main-analysis-workflow-run">Main Analysis Workflow (run) <a id="v32-options"></a> <a id="主分析流程-run"></a><a class="headerlink" href="#main-analysis-workflow-run" title="Permanent link">&para;</a></h2>
+<h3 id="usage">Usage <a id="usage"></a><a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>dnbc4tools<span class="w"> </span>rna<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>sample1<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--fastqs<span class="w"> </span>/data/rna<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--genomeDir<span class="w"> </span>/reference/rna<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--threads<span class="w"> </span><span class="m">20</span>
+</code></pre></div>
+<h3 id="full-command-line-help">Full Command-Line Help<a class="headerlink" href="#full-command-line-help" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>dnbc4tools<span class="w"> </span>rna<span class="w"> </span>run<span class="w"> </span>--help
+dnbc4tools<span class="w"> </span><span class="m">3</span>.2
+
+Process<span class="w"> </span>a<span class="w"> </span>single-cell<span class="w"> </span>RNA-seq<span class="w"> </span>sample.
+
+Usage:<span class="w"> </span>dnbc4tools<span class="w"> </span>rna<span class="w"> </span>run<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+
+options:
+<span class="w">  </span>--help<span class="w">                     </span>show<span class="w"> </span>this<span class="w"> </span><span class="nb">help</span><span class="w"> </span>message<span class="w"> </span>and<span class="w"> </span><span class="nb">exit</span>
+
+Input<span class="w"> </span>Files:
+<span class="w">  </span>Choose<span class="w"> </span>one<span class="w"> </span>input<span class="w"> </span>method:<span class="w"> </span>either<span class="w"> </span><span class="sb">`</span>--fastqs<span class="sb">`</span><span class="w"> </span><span class="o">(</span>directory<span class="w"> </span>input<span class="o">)</span><span class="w"> </span>or<span class="w"> </span>all<span class="w"> </span>four<span class="w"> </span>individual<span class="w"> </span>FASTQ<span class="w"> </span>files.
+
+<span class="w">  </span>--fastqs<span class="w"> </span>&lt;DIR&gt;<span class="w">             </span>Directory<span class="w"> </span>containing<span class="w"> </span>cDNA<span class="w"> </span>and<span class="w"> </span>oligo<span class="w"> </span>FASTQ<span class="w"> </span>subfolders<span class="w"> </span><span class="o">(</span>e.g.,
+<span class="w">                             </span><span class="sb">`</span>cDNA/sample_cdna_R1.fastq.gz<span class="sb">`</span>,<span class="w"> </span><span class="sb">`</span>oligo/sample_oligo_R1.fastq.gz<span class="sb">`</span><span class="o">)</span>.<span class="w"> </span>Paired-end<span class="w"> </span>files<span class="w"> </span>are
+<span class="w">                             </span>detected<span class="w"> </span>from<span class="w"> </span>the<span class="w"> </span>directory<span class="w"> </span>structure.
+<span class="w">  </span>--cDNAfastq1<span class="w"> </span>&lt;FILE&gt;<span class="w">        </span>cDNA<span class="w"> </span>Read1<span class="w"> </span>FASTQ<span class="w"> </span>list.<span class="w"> </span>Supports<span class="w"> </span>wildcard<span class="w"> </span>and<span class="w"> </span>comma-separated<span class="w"> </span>inputs<span class="w"> </span><span class="o">(</span>e.g.,
+<span class="w">                             </span><span class="sb">`</span>sample1_R1.fastq.gz,sample2_R1.fastq.gz<span class="sb">`</span><span class="o">)</span>.
+<span class="w">  </span>--cDNAfastq2<span class="w"> </span>&lt;FILE&gt;<span class="w">        </span>cDNA<span class="w"> </span>Read2<span class="w"> </span>FASTQ<span class="w"> </span>list.<span class="w"> </span>Order<span class="w"> </span>must<span class="w"> </span>match<span class="w"> </span><span class="sb">`</span>--cDNAfastq1<span class="sb">`</span><span class="w"> </span><span class="o">(</span>e.g.,
+<span class="w">                             </span><span class="sb">`</span>sample1_R2.fastq.gz,sample2_R2.fastq.gz<span class="sb">`</span><span class="o">)</span>.
+<span class="w">  </span>--oligofastq1<span class="w"> </span>&lt;FILE&gt;<span class="w">       </span>Oligo<span class="w"> </span>Read1<span class="w"> </span>FASTQ<span class="w"> </span>list<span class="w"> </span><span class="k">for</span><span class="w"> </span>barcode<span class="w"> </span>merging.<span class="w"> </span>Supports<span class="w"> </span>wildcard<span class="w"> </span>and<span class="w"> </span>comma-separated<span class="w"> </span>inputs.
+<span class="w">  </span>--oligofastq2<span class="w"> </span>&lt;FILE&gt;<span class="w">       </span>Oligo<span class="w"> </span>Read2<span class="w"> </span>FASTQ<span class="w"> </span>list.<span class="w"> </span>Order<span class="w"> </span>must<span class="w"> </span>match<span class="w"> </span><span class="sb">`</span>--oligofastq1<span class="sb">`</span><span class="w"> </span><span class="o">(</span>e.g.,
+<span class="w">                             </span><span class="sb">`</span>sample1_oligo_R2.fastq.gz<span class="sb">`</span><span class="o">)</span>.
+
+Basic<span class="w"> </span>Settings:
+<span class="w">  </span>--name<span class="w"> </span>&lt;STR&gt;<span class="w">               </span>Unique<span class="w"> </span>identifier<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>sample.<span class="w"> </span>Used<span class="w"> </span><span class="k">for</span><span class="w"> </span>naming<span class="w"> </span>output<span class="w"> </span>files<span class="w"> </span>and<span class="w"> </span>reports<span class="w"> </span><span class="o">(</span>e.g.,
+<span class="w">                             </span><span class="sb">`</span>sample1<span class="sb">`</span><span class="o">)</span>.
+<span class="w">  </span>--genomeDir<span class="w"> </span>&lt;DIR&gt;<span class="w">          </span>Reference<span class="w"> </span>genome<span class="w"> </span>directory<span class="w"> </span>path<span class="w"> </span>containing<span class="w"> </span>STAR<span class="w"> </span>index<span class="w"> </span>files<span class="w"> </span><span class="o">(</span>e.g.,<span class="w"> </span><span class="sb">`</span>./genome_index<span class="sb">`</span><span class="o">)</span>.
+<span class="w">  </span>--outdir<span class="w"> </span>&lt;DIR&gt;<span class="w">             </span>Output<span class="w"> </span>directory<span class="w"> </span>path<span class="w"> </span><span class="k">for</span><span class="w"> </span>results<span class="w"> </span>and<span class="w"> </span>reports<span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>current<span class="w"> </span>directory<span class="o">]</span><span class="w"> </span><span class="o">(</span>e.g.,
+<span class="w">                             </span><span class="sb">`</span>./output<span class="sb">`</span><span class="o">)</span>.
+<span class="w">  </span>--threads<span class="w"> </span>&lt;INT&gt;<span class="w">            </span>Number<span class="w"> </span>of<span class="w"> </span>CPU<span class="w"> </span>threads<span class="w"> </span><span class="k">for</span><span class="w"> </span>parallel<span class="w"> </span>processing<span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>all<span class="w"> </span>available<span class="w"> </span>cores<span class="o">]</span><span class="w"> </span><span class="o">(</span>e.g.,
+<span class="w">                             </span><span class="sb">`</span><span class="m">16</span><span class="sb">`</span><span class="o">)</span>.
+
+Filtering<span class="w"> </span>Settings:
+<span class="w">  </span>--calling_method<span class="w"> </span>&lt;STR&gt;<span class="w">     </span>Cell<span class="w"> </span>detection<span class="w"> </span>method<span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>emptydrops<span class="o">]</span>.<span class="w"> </span>Supported<span class="w"> </span>values:<span class="w"> </span><span class="sb">`</span>barcoderanks<span class="sb">`</span>,
+<span class="w">                             </span><span class="sb">`</span>emptydrops<span class="sb">`</span>.
+<span class="w">  </span>--expectcells<span class="w"> </span>&lt;INT&gt;<span class="w">        </span>Expected<span class="w"> </span>number<span class="w"> </span>of<span class="w"> </span>cells<span class="w"> </span>to<span class="w"> </span>guide<span class="w"> </span>detection<span class="w"> </span><span class="o">(</span>e.g.,<span class="w"> </span><span class="sb">`</span><span class="m">3000</span><span class="sb">`</span><span class="o">)</span>.
+<span class="w">  </span>--forcecells<span class="w"> </span>&lt;INT&gt;<span class="w">         </span>Force<span class="w"> </span>pipeline<span class="w"> </span>to<span class="w"> </span>use<span class="w"> </span>exactly<span class="w"> </span>this<span class="w"> </span>number<span class="w"> </span>of<span class="w"> </span>cells,<span class="w"> </span>overriding<span class="w"> </span>expected<span class="w"> </span>cell<span class="w"> </span>detection
+<span class="w">                             </span><span class="o">(</span>e.g.,<span class="w"> </span><span class="sb">`</span><span class="m">5000</span><span class="sb">`</span><span class="o">)</span>.
+<span class="w">  </span>--minumi<span class="w"> </span>&lt;INT&gt;<span class="w">             </span>Minimum<span class="w"> </span>UMI<span class="w"> </span>count<span class="w"> </span>per<span class="w"> </span>cell<span class="w"> </span>to<span class="w"> </span>retain<span class="w"> </span><span class="o">[</span>default:<span class="w"> </span><span class="m">1000</span><span class="o">]</span>.
+<span class="w">  </span>--consistent_cells<span class="w"> </span>&lt;FILE&gt;<span class="w">  </span>Headered<span class="w"> </span>CSV<span class="w"> </span>or<span class="w"> </span>CSV.gz<span class="w"> </span><span class="k">for</span><span class="w"> </span>merge/cell-calling<span class="w"> </span>constraints.<span class="w"> </span>Supported<span class="w"> </span>schemas:<span class="w"> </span><span class="sb">`</span>cell<span class="sb">`</span><span class="p">;</span>
+<span class="w">                             </span><span class="sb">`</span>cell,barcode<span class="sb">`</span><span class="p">;</span><span class="w"> </span><span class="sb">`</span>cell,is_cell_barcode<span class="sb">`</span><span class="p">;</span><span class="w"> </span><span class="sb">`</span>cell,barcode,is_cell_barcode<span class="sb">`</span>.<span class="w"> </span>Other<span class="w"> </span>columns<span class="w"> </span>are
+<span class="w">                             </span>ignored.
+
+Library<span class="w"> </span>Settings:
+<span class="w">  </span>--chemistry<span class="w"> </span>&lt;STR&gt;<span class="w">          </span>Library<span class="w"> </span>chemistry<span class="w"> </span>version.<span class="w"> </span>Auto-detected<span class="w"> </span>when<span class="w"> </span>omitted<span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>auto<span class="o">]</span>.<span class="w"> </span>Options:
+<span class="w">                             </span><span class="sb">`</span>scRNAv1HT<span class="sb">`</span>,<span class="w"> </span><span class="sb">`</span>scRNAv2HT<span class="sb">`</span>,<span class="w"> </span><span class="sb">`</span>scRNAv3HT<span class="sb">`</span>,<span class="w"> </span><span class="sb">`</span>scRNA5Pv1<span class="sb">`</span>.
+<span class="w">  </span>--darkreaction<span class="w"> </span>&lt;STR&gt;<span class="w">       </span>Dark<span class="w"> </span>cycle<span class="w"> </span>setting<span class="w"> </span><span class="k">for</span><span class="w"> </span>cDNA<span class="w"> </span>and<span class="w"> </span>oligo<span class="w"> </span>libraries.<span class="w"> </span>Auto-detected<span class="w"> </span>when<span class="w"> </span>omitted<span class="w"> </span><span class="o">[</span>default:
+<span class="w">                             </span>auto<span class="o">]</span>.<span class="w"> </span>Provide<span class="w"> </span>two<span class="w"> </span>comma-separated<span class="w"> </span>values<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>form<span class="w"> </span><span class="sb">`</span>&lt;cDNA&gt;,&lt;oligo&gt;<span class="sb">`</span>.
+<span class="w">                             </span><span class="nv">cDNA</span><span class="o">=</span><span class="sb">`</span>R1<span class="sb">`</span>/<span class="sb">`</span><span class="nb">unset</span><span class="sb">`</span><span class="p">;</span><span class="w"> </span><span class="nv">oligo</span><span class="o">=</span><span class="sb">`</span>R1R2<span class="sb">`</span>/<span class="sb">`</span>R1<span class="sb">`</span>/<span class="sb">`</span><span class="nb">unset</span><span class="sb">`</span>.
+<span class="w">  </span>--customize<span class="w"> </span>&lt;STR&gt;<span class="w">          </span>Custom<span class="w"> </span><span class="nb">read</span><span class="w"> </span>structure<span class="w"> </span>string.<span class="w"> </span>Format:<span class="w"> </span><span class="sb">`</span>&lt;type&gt;,&lt;read&gt;:&lt;start&gt;-&lt;end&gt;<span class="sb">`</span><span class="w"> </span>joined<span class="w"> </span>by<span class="w"> </span><span class="sb">`</span><span class="p">;</span><span class="sb">`</span>.<span class="w"> </span>cDNA
+<span class="w">                             </span><span class="o">(</span>e.g.,<span class="w"> </span><span class="sb">`</span><span class="s2">"cb,R1:7-16;cb,R1:23-32;umi,R1:38-47;R1,R2:1-100"</span><span class="sb">`</span><span class="o">)</span>.<span class="w"> </span>Oligo<span class="w"> </span><span class="o">(</span>e.g.,
+<span class="w">                             </span><span class="sb">`</span><span class="s2">"cb,R1:7-16;cb,R1:23-32;R1,R2:1-10;R1,R2:17-26;R1,R2:33-42"</span><span class="sb">`</span><span class="o">)</span>.<span class="w"> </span>For<span class="w"> </span>RNA,<span class="w"> </span>provide
+<span class="w">                             </span><span class="sb">`</span>--customize<span class="sb">`</span><span class="w"> </span>twice<span class="w"> </span>when<span class="w"> </span>both<span class="w"> </span>cDNA<span class="w"> </span>and<span class="w"> </span>oligo<span class="w"> </span>are<span class="w"> </span>customized:<span class="w"> </span>first<span class="w"> </span>cDNA,<span class="w"> </span><span class="k">then</span><span class="w"> </span>oligo.
+
+Analysis<span class="w"> </span>Settings:
+<span class="w">  </span>--no_introns<span class="w">               </span>Exclude<span class="w"> </span>intronic<span class="w"> </span>reads<span class="w"> </span>from<span class="w"> </span>the<span class="w"> </span>expression<span class="w"> </span>matrix<span class="w"> </span>to<span class="w"> </span>increase<span class="w"> </span>specificity.
+<span class="w">  </span>--end5<span class="w">                     </span>Enable<span class="w"> </span><span class="m">5</span><span class="s1">'-end scRNA-seq analysis for 5'</span><span class="w"> </span>gene-expression<span class="w"> </span>profiling.
+<span class="w">  </span>--no_bam<span class="w">                   </span>Skip<span class="w"> </span>BAM<span class="w"> </span>file<span class="w"> </span>generation<span class="w"> </span>to<span class="w"> </span>save<span class="w"> </span><span class="nb">time</span><span class="w"> </span>and<span class="w"> </span>disk<span class="w"> </span>space.
+<span class="w">  </span>--sample_read_pairs<span class="w"> </span>&lt;INT&gt;<span class="w">  </span>Subsample<span class="w"> </span>this<span class="w"> </span>number<span class="w"> </span>of<span class="w"> </span>cDNA<span class="w"> </span><span class="nb">read</span><span class="w"> </span>pairs<span class="w"> </span><span class="k">for</span><span class="w"> </span>analysis<span class="w"> </span><span class="o">(</span>e.g.,<span class="w"> </span><span class="sb">`</span><span class="m">1000000</span><span class="sb">`</span><span class="o">)</span>.
+<span class="w">  </span>--star_parameters<span class="w"> </span>&lt;STR&gt;<span class="w">    </span>Extra<span class="w"> </span>STAR<span class="w"> </span>filtering,<span class="w"> </span>alignment,<span class="w"> </span>seeding<span class="w"> </span>or<span class="w"> </span>scoring<span class="w"> </span>arguments.<span class="w"> </span>Wrap<span class="w"> </span>them<span class="w"> </span><span class="k">in</span><span class="w"> </span>quotes<span class="w"> </span><span class="o">(</span>e.g.,
+<span class="w">                             </span><span class="sb">`</span><span class="s2">"--outFilterMismatchNmax 10 --outFilterMultimapNmax 1"</span><span class="sb">`</span><span class="o">)</span>.<span class="w"> </span>Unknown<span class="w"> </span>or<span class="w"> </span>ineffective<span class="w"> </span>options
+<span class="w">                             </span>are<span class="w"> </span>rejected.
+</code></pre></div>
+<h3 id="parameter-reference-tables">Parameter Reference Tables<a class="headerlink" href="#parameter-reference-tables" title="Permanent link">&para;</a></h3>
+<h4 id="required-basic-settings">Required &amp; Basic Settings<a class="headerlink" href="#required-basic-settings" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>--name</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><strong>Required</strong></td>
+<td style="text-align: left;">Unique sample identifier; used as output file prefix and report title (e.g., <code>sample_001</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--genomeDir</code></td>
+<td style="text-align: left;">Directory</td>
+<td style="text-align: left;"><strong>Required</strong></td>
+<td style="text-align: left;">Reference directory containing STAR index and annotations built via <code>rna mkref</code>, compatible with v2 references and Cell Ranger RNA reference databases</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--outdir</code></td>
+<td style="text-align: left;">Directory</td>
+<td style="text-align: left;"><code>./</code></td>
+<td style="text-align: left;">Root output directory for analysis results and HTML reports</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--threads</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">All cores</td>
+<td style="text-align: left;">Number of CPU threads allocated for parallel processing</td>
+</tr>
+</tbody>
+</table>
+<h4 id="input-files-options">Input Files Options<a class="headerlink" href="#input-files-options" title="Permanent link">&para;</a></h4>
+<p>Choose one input mode: directory-based (<code>--fastqs</code>) or explicit files (<code>--cDNAfastq1/2</code> and <code>--oligofastq1/2</code>).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>--fastqs</code></td>
+<td style="text-align: left;">Directory</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">FASTQ directory containing <code>cDNA/</code> and <code>oligo/</code> subdirectories (auto-detects paired files)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--cDNAfastq1</code></td>
+<td style="text-align: left;">File path</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">cDNA Read 1 file list (supports comma-separated paths or wildcards <code>*</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--cDNAfastq2</code></td>
+<td style="text-align: left;">File path</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">cDNA Read 2 file list (order must strictly match <code>--cDNAfastq1</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--oligofastq1</code></td>
+<td style="text-align: left;">File path</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Oligo Read 1 file list (supports comma-separated paths or wildcards <code>*</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--oligofastq2</code></td>
+<td style="text-align: left;">File path</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Oligo Read 2 file list (order must strictly match <code>--oligofastq1</code>)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Tip: Sequencing Consistency &amp; Batch Handling</strong>
+All FASTQ inputs in a single run must originate from the same library batch with identical sequencing modes and dark reaction settings; data from different libraries cannot be mixed.
+If different sequencing batches of the same library batch exhibit differing dark reaction cycles or read lengths, use the FASTQ trimming tool <a href="tools.html#fastq-切割-fqsubc4"><code>fqsubC4</code></a> to trim reads to match the standard library structure (see <a href="../library_structure.html#scrna">Library Structure</a>).</p>
+</blockquote>
+<h4 id="cell-calling-qc-settings">Cell Calling &amp; QC Settings<a class="headerlink" href="#cell-calling-qc-settings" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>--calling_method</code></td>
+<td style="text-align: left;"><code>emptydrops</code> | <code>barcoderanks</code></td>
+<td style="text-align: left;"><code>emptydrops</code></td>
+<td style="text-align: left;">Cell detection algorithm (<code>emptydrops</code>: expression test; <code>barcoderanks</code>: UMI inflection)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--expectcells</code></td>
+<td style="text-align: left;">Integer | <code>auto</code></td>
+<td style="text-align: left;"><code>auto</code></td>
+<td style="text-align: left;">Expected number of recovered cells to guide algorithm thresholding</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--forcecells</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Forces the pipeline to retain exactly this number of cells (highest priority, overrides auto-calling). Truncates the top N candidate cells sorted in descending order of total valid UMI counts</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--minumi</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;"><code>1000</code></td>
+<td style="text-align: left;">Minimum UMI cutoff for evaluating candidate cells in EmptyDrops (only applies when <code>--calling_method emptydrops</code>). Droplets below this threshold do not enter the secondary ambient RNA profile likelihood test and cell rescue, and are treated directly as background. For low-coverage libraries or smaller cells with lower RNA content, lower this value (e.g., <code>500</code>) to rescue low-UMI cells</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--consistent_cells</code></td>
+<td style="text-align: left;">CSV file</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">External cell whitelist or barcode merging constraint table (supports <code>.csv</code> / <code>.csv.gz</code>)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="library-chemistry-read-structure">Library Chemistry &amp; Read Structure<a class="headerlink" href="#library-chemistry-read-structure" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>--chemistry</code></td>
+<td style="text-align: left;">Choice</td>
+<td style="text-align: left;"><code>auto</code></td>
+<td style="text-align: left;">scRNA kit chemistry: <code>scRNAv1HT</code>, <code>scRNAv2HT</code>, <code>scRNAv3HT</code>, <code>scRNA5Pv1</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--darkreaction</code></td>
+<td style="text-align: left;">Choice / String</td>
+<td style="text-align: left;"><code>auto</code></td>
+<td style="text-align: left;">Dark cycle settings formatted as <code>&lt;cDNA&gt;,&lt;oligo&gt;</code> (e.g., <code>R1,R1R2</code>, <code>unset,unset</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--customize</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Custom barcode/read structure definition; specify twice (first cDNA, then oligo)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="analysis-settings-tuning">Analysis Settings &amp; Tuning<a class="headerlink" href="#analysis-settings-tuning" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>--no_introns</code></td>
+<td style="text-align: left;">Flag</td>
+<td style="text-align: left;">Disabled</td>
+<td style="text-align: left;">Exclude intronic reads and quantify expression strictly using exonic alignments</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--end5</code></td>
+<td style="text-align: left;">Flag</td>
+<td style="text-align: left;">Disabled</td>
+<td style="text-align: left;">Enable 5'-end scRNA-seq mode (for 5' transcript capture kits)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--no_bam</code></td>
+<td style="text-align: left;">Flag</td>
+<td style="text-align: left;">Disabled</td>
+<td style="text-align: left;">Skip BAM file generation to save disk space and runtime</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--sample_read_pairs</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Subsample a specified number of cDNA read pairs for rapid benchmarking</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--star_parameters</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Additional arguments passed to STAR aligner (must be wrapped in quotes)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="key-parameter-deep-dives">Key Parameter Deep Dives<a class="headerlink" href="#key-parameter-deep-dives" title="Permanent link">&para;</a></h3>
+<h4 id="1-fastq-directory-structure-input-rules">1. FASTQ Directory Structure &amp; Input Rules<a class="headerlink" href="#1-fastq-directory-structure-input-rules" title="Permanent link">&para;</a></h4>
+<p>When using <code>--fastqs</code>, the pipeline resolves paired-end files based on subdirectory naming:</p>
+<div class="highlight"><pre><span></span><code>fastq_directory/
+├── cDNA/
+│   ├── sample_cDNA_L01_R1.fastq.gz
+│   └── sample_cDNA_L01_R2.fastq.gz
+└── oligo/
+    ├── sample_oligo_L01_R1.fastq.gz
+    └── sample_oligo_L01_R2.fastq.gz
+</code></pre></div>
+<ul>
+<li><strong>Naming detection</strong>: Supports standard read patterns <code>_R1_</code>, <code>_R1</code>, <code>_1</code>, <code>_read1</code> paired with <code>_R2_</code>, <code>_R2</code>, <code>_2</code>, <code>_read2</code>; file extensions support <code>.fastq.gz</code>, <code>.fq.gz</code>, <code>.fastq</code>, <code>.fq</code>.</li>
+<li><strong>Individual inputs</strong>: If not using <code>--fastqs</code>, all four options <code>--cDNAfastq1</code>, <code>--cDNAfastq2</code>, <code>--oligofastq1</code>, and <code>--oligofastq2</code> must be supplied. Multiple lanes are comma-separated and R1/R2 pairs must align sequentially.</li>
+</ul>
+<h4 id="2-cell-calling-algorithms-diagnosis-strategies">2. Cell Calling Algorithms &amp; Diagnosis Strategies<a class="headerlink" href="#2-cell-calling-algorithms-diagnosis-strategies" title="Permanent link">&para;</a></h4>
+<p>The pipeline offers two complementary cell identification methods:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Method</th>
+<th style="text-align: left;">Principle</th>
+<th style="text-align: left;">Strengths &amp; Best Use Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>emptydrops</code></strong> (Default)</td>
+<td style="text-align: left;">Dirichlet-multinomial statistical test comparing non-empty droplets against ambient RNA profiles</td>
+<td style="text-align: left;">Accurately identifies low-RNA cells while controlling false positives; recommended for almost all tissue samples</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>barcoderanks</code></strong></td>
+<td style="text-align: left;">Empirical inflection thresholding on total UMI rank curves</td>
+<td style="text-align: left;">Fast and lightweight; suitable for high-contrast samples or rapid preliminary quality screening</td>
+</tr>
+</tbody>
+</table>
+<p><strong>UMI Rank Curve Diagnostics &amp; Decisions:</strong></p>
+<ul>
+<li><strong>Steep drop</strong>: Clear distinction between genuine cells and background droplets; default settings yield optimal results.</li>
+<li><strong>Gradual decline / No clear inflection</strong>: High ambient RNA contamination or damaged cells. Use conservative cell counts by setting <code>--expectcells</code> or increasing <code>--minumi 1500</code>.</li>
+<li><strong><code>--minumi</code> Candidate Evaluation Cutoff</strong>: Only applies to the <code>emptydrops</code> method (default: 1000). It defines the lower UMI boundary for candidate droplets to be evaluated in the non-ambient likelihood test. Candidate droplets meeting this cutoff (and exceeding the ambient pool's maximum UMI) undergo Monte-Carlo simulation against the ambient RNA profile; droplets below this threshold are directly treated as ambient background and excluded from EmptyDrops testing and cell rescue. If shallow sequencing causes valid small cells to be missed, lower this parameter (e.g., <code>--minumi 500</code>).</li>
+<li><strong>Cell count mismatch</strong>:</li>
+<li><em>Too low</em>: Check if <code>--minumi</code> is overly stringent or if sequencing depth is low; try lowering to <code>--minumi 500</code>.</li>
+<li><em>Too high</em>: Background noise droplets included; use <code>--forcecells &lt;N&gt;</code> to lock the target cell count directly (the pipeline sorts candidate barcodes in descending order of total valid UMI counts and retains the top N cells).</li>
+</ul>
+<h4 id="3-external-cell-whitelist-constraints-consistent_cells">3. External Cell Whitelist Constraints (<code>--consistent_cells</code>)<a class="headerlink" href="#3-external-cell-whitelist-constraints-consistent_cells" title="Permanent link">&para;</a></h4>
+<p>Injects prior cell information during barcode merging and cell identification (e.g., cross-omics barcode pairing or historical gold standards). Supports headered <code>.csv</code> or <code>.csv.gz</code>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Header Schema</th>
+<th style="text-align: left;">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>cell</code></td>
+<td style="text-align: left;">Constrains final identified valid cell barcode list</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cell,barcode</code></td>
+<td style="text-align: left;">Enforces explicit bead-to-cell merging mapping; <strong>bypasses Oligo analysis and applies this mapping directly</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cell,is_cell_barcode</code></td>
+<td style="text-align: left;">Supplies candidate barcodes and explicitly flags whether each is a genuine cell</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cell,barcode,is_cell_barcode</code></td>
+<td style="text-align: left;">Simultaneously specifies cell-to-bead barcode mappings and sets explicit cell calling status per barcode via <code>is_cell_barcode</code> (1/0 or true/false; e.g., passing a QC <code>singlecell.csv</code> directly)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="4-chemistry-dark-reaction-configuration-chemistry-darkreaction">4. Chemistry &amp; Dark Reaction Configuration (<code>--chemistry</code> &amp; <code>--darkreaction</code>)<a class="headerlink" href="#4-chemistry-dark-reaction-configuration-chemistry-darkreaction" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Chemistry (<code>--chemistry</code>)</strong>: Supports <code>scRNAv1HT</code>, <code>scRNAv2HT</code>, <code>scRNAv3HT</code>, <code>scRNA5Pv1</code>. Defaults to <code>auto</code>.</li>
+<li><strong>Dark Reaction (<code>--darkreaction</code>)</strong>: Configures dark cycles for MGI sequencing platforms.</li>
+<li>Automatic detection: <code>--darkreaction auto</code></li>
+<li>Manual format: <code>&lt;cDNA&gt;,&lt;oligo&gt;</code>:<ul>
+<li>cDNA options: <code>R1</code> or <code>unset</code></li>
+<li>Oligo options: <code>R1R2</code>, <code>R1</code>, or <code>unset</code></li>
+<li>Common combinations: <code>--darkreaction R1,R1R2</code>, <code>--darkreaction unset,unset</code></li>
+</ul>
+</li>
+<li><strong>Rule</strong>: If <code>--chemistry</code> is specified manually, <code>--darkreaction</code> must also be explicitly set.</li>
+</ul>
+<h4 id="5-custom-read-structure-customize">5. Custom Read Structure (<code>--customize</code>) <a id="customize"></a><a class="headerlink" href="#5-custom-read-structure-customize" title="Permanent link">&para;</a></h4>
+<p>For non-standard, modified, or third-party library protocols, use <code>--customize</code> to define exact 1-based closed-interval intervals for barcodes, UMIs, and reads (cannot exceed sequencing read length).</p>
+<blockquote>
+<p><strong>Library Structure Reference</strong>: For complete library linker sequences, physical segment coordinates, and dark reaction schematics, see <a href="../library_structure.html">Library Structure</a>.</p>
+</blockquote>
+<h5 id="syntax-rules-requirements">Syntax Rules &amp; Requirements<a class="headerlink" href="#syntax-rules-requirements" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Syntax</strong>: <code>"&lt;type&gt;,&lt;read&gt;:&lt;start&gt;-&lt;end&gt;"</code>, delimited by semicolons <code>;</code>.</li>
+<li><code>cb</code>: Cell Barcode (composed of 2 or 3 segments);</li>
+<li><code>umi</code>: Unique Molecular Identifier;</li>
+<li><code>R1</code> / <code>R2</code>: Usable read sequence interval.</li>
+<li><strong>Rule</strong>: Must be passed <strong>twice sequentially</strong> for scRNA: first for cDNA, second for oligo.</li>
+</ul>
+<h5 id="scenario-comparisons-how-to-strip-fixed-linker-sequences">Scenario Comparisons: How to Strip Fixed Linker Sequences<a class="headerlink" href="#scenario-comparisons-how-to-strip-fixed-linker-sequences" title="Permanent link">&para;</a></h5>
+<h6 id="example-a-non-dark-reaction-mode-full-sequencing-stripping-fixed-linkers">Example A: Non-Dark Reaction Mode (Full Sequencing, Stripping Fixed Linkers)<a class="headerlink" href="#example-a-non-dark-reaction-mode-full-sequencing-stripping-fixed-linkers" title="Permanent link">&para;</a></h6>
+<p>In standard sequencing mode or sequencing without dark reactions, reads contain invariant linker sequences. If invariant bases are incorporated into barcodes, demultiplexing will fail. <strong>Directly skipping linker intervals safely removes them</strong>:</p>
+<ul>
+<li><strong>cDNA Extraction Strategy</strong>:</li>
+<li>Skip 1–6 bp (Linker 1), capture <code>cb,R1:7-16</code> (CB1 10bp)</li>
+<li>Skip 17–22 bp (Linker 2), capture <code>cb,R1:23-32</code> (CB2 10bp)</li>
+<li>Skip 33–37 bp (Linker 3), capture <code>umi,R1:38-47</code> (UMI 10bp)</li>
+<li>Read 2 maps to 1–100 bp transcript sequence: <code>R1,R2:1-100</code></li>
+<li>Argument: <code>--customize "cb,R1:7-16;cb,R1:23-32;umi,R1:38-47;R1,R2:1-100"</code></li>
+<li><strong>Oligo Extraction Strategy</strong>:</li>
+<li>Read 1 skips linkers: <code>cb,R1:7-16;cb,R1:23-32</code></li>
+<li>Read 2 extracts first UMI (1–10 bp), then skips fixed linkers to extract Tag 1 (17–26 bp) and Tag 2 (33–42 bp): <code>R1,R2:1-10;R1,R2:17-26;R1,R2:33-42</code></li>
+<li>Argument: <code>--customize "cb,R1:7-16;cb,R1:23-32;R1,R2:1-10;R1,R2:17-26;R1,R2:33-42"</code></li>
+</ul>
+<p>Operational command:
+<div class="highlight"><pre><span></span><code>dnbc4tools<span class="w"> </span>rna<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>non_dark_demo<span class="w"> </span>--genomeDir<span class="w"> </span>/reference/rna<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--cDNAfastq1<span class="w"> </span>cdna_R1.fq.gz<span class="w"> </span>--cDNAfastq2<span class="w"> </span>cdna_R2.fq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--oligofastq1<span class="w"> </span>oligo_R1.fq.gz<span class="w"> </span>--oligofastq2<span class="w"> </span>oligo_R2.fq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--customize<span class="w"> </span><span class="s2">"cb,R1:7-16;cb,R1:23-32;umi,R1:38-47;R1,R2:1-100"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--customize<span class="w"> </span><span class="s2">"cb,R1:7-16;cb,R1:23-32;R1,R2:1-10;R1,R2:17-26;R1,R2:33-42"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--threads<span class="w"> </span><span class="m">20</span>
+</code></pre></div></p>
+<h6 id="example-b-dark-reaction-mode-hardware-skips-fixed-sequences">Example B: Dark Reaction Mode (Hardware Skips Fixed Sequences)<a class="headerlink" href="#example-b-dark-reaction-mode-hardware-skips-fixed-sequences" title="Permanent link">&para;</a></h6>
+<p>The sequencer has already skipped invariant linkers; output reads contain exclusively informative bases starting from base 1:</p>
+<ul>
+<li><strong>cDNA Extraction</strong>: <code>--customize "cb,R1:1-10;cb,R1:11-20;umi,R1:21-30;R1,R2:1-100"</code></li>
+<li><strong>Oligo Extraction</strong>: <code>--customize "cb,R1:1-10;cb,R1:11-20;R1,R2:1-30"</code></li>
+</ul>
+<p>Operational command:
+<div class="highlight"><pre><span></span><code>dnbc4tools<span class="w"> </span>rna<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>dark_demo<span class="w"> </span>--genomeDir<span class="w"> </span>/reference/rna<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--cDNAfastq1<span class="w"> </span>cdna_R1.fq.gz<span class="w"> </span>--cDNAfastq2<span class="w"> </span>cdna_R2.fq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--oligofastq1<span class="w"> </span>oligo_R1.fq.gz<span class="w"> </span>--oligofastq2<span class="w"> </span>oligo_R2.fq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--customize<span class="w"> </span><span class="s2">"cb,R1:1-10;cb,R1:11-20;umi,R1:21-30;R1,R2:1-100"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--customize<span class="w"> </span><span class="s2">"cb,R1:1-10;cb,R1:11-20;R1,R2:1-30"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--threads<span class="w"> </span><span class="m">20</span>
+</code></pre></div></p>
+<h4 id="6-star-alignment-parameters-star_parameters">6. STAR Alignment Parameters (<code>--star_parameters</code>)<a class="headerlink" href="#6-star-alignment-parameters-star_parameters" title="Permanent link">&para;</a></h4>
+<p>Pass validated STAR alignment, filtering, or scoring parameters via <code>--star_parameters</code>:</p>
+<div class="highlight"><pre><span></span><code>--star_parameters<span class="w"> </span><span class="s2">"--outFilterMismatchNmax 10 --outFilterMultimapNmax 1"</span>
+</code></pre></div>
+<blockquote>
+<p><strong>Note:</strong> Only STAR alignment options are accepted; pipeline-managed arguments (input/output paths, thread counts, genome index) and unknown options are rejected during preflight validation. If disk space or speed is a priority and downstream BAM inspection is not required, use <code>--no_bam</code> to skip BAM output entirely.</p>
+</blockquote>
+<hr />
+<h2 id="reference-database-construction-mkref">Reference Database Construction (mkref) <a id="参考数据库构建-mkref"></a><a class="headerlink" href="#reference-database-construction-mkref" title="Permanent link">&para;</a></h2>
+<p><code>dnbc4tools rna mkref</code> builds a STAR index database from reference FASTA and GTF annotation files.</p>
+<h3 id="usage_1">Usage<a class="headerlink" href="#usage_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>dnbc4tools<span class="w"> </span>rna<span class="w"> </span>mkref<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--fasta<span class="w"> </span>genome.fa<span class="w"> </span>--ingtf<span class="w"> </span>genes.gtf<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--species<span class="w"> </span>human<span class="w"> </span>--genomeDir<span class="w"> </span>/reference/rna<span class="w"> </span>--threads<span class="w"> </span><span class="m">20</span>
+</code></pre></div>
+<h3 id="full-command-line-help_1">Full Command-Line Help<a class="headerlink" href="#full-command-line-help_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>dnbc4tools<span class="w"> </span>rna<span class="w"> </span>mkref<span class="w"> </span>--help
+dnbc4tools<span class="w"> </span><span class="m">3</span>.2
+
+Build<span class="w"> </span>an<span class="w"> </span>RNA<span class="w"> </span>reference<span class="w"> </span>database.
+
+Usage:<span class="w"> </span>dnbc4tools<span class="w"> </span>rna<span class="w"> </span>mkref<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+
+options:
+<span class="w">  </span>--help<span class="w">              </span>show<span class="w"> </span>this<span class="w"> </span><span class="nb">help</span><span class="w"> </span>message<span class="w"> </span>and<span class="w"> </span><span class="nb">exit</span>
+
+Input<span class="w"> </span>Files:
+<span class="w">  </span>Input<span class="w"> </span>genome<span class="w"> </span>FASTA<span class="w"> </span>files<span class="w"> </span>and<span class="w"> </span>gene-annotation<span class="w"> </span>GTF<span class="w"> </span>files.<span class="w"> </span>For<span class="w"> </span>mixed-species<span class="w"> </span>analysis,<span class="w"> </span>separate<span class="w"> </span>multiple<span class="w"> </span>files<span class="w"> </span>with
+<span class="w">  </span>commas.
+
+<span class="w">  </span>--fasta<span class="w"> </span>&lt;FILE&gt;<span class="w">      </span>Reference-genome<span class="w"> </span>FASTA<span class="w"> </span>file<span class="w"> </span>path<span class="o">(</span>s<span class="o">)</span>.<span class="w"> </span>Separate<span class="w"> </span>multiple<span class="w"> </span>files<span class="w"> </span>with<span class="w"> </span>commas<span class="w"> </span><span class="o">(</span>e.g.,
+<span class="w">                      </span><span class="sb">`</span>genome1.fa,genome2.fa<span class="sb">`</span><span class="o">)</span>.
+<span class="w">  </span>--ingtf<span class="w"> </span>&lt;FILE&gt;<span class="w">      </span>Gene-annotation<span class="w"> </span>GTF<span class="w"> </span>file<span class="w"> </span>path<span class="o">(</span>s<span class="o">)</span>.<span class="w"> </span>Separate<span class="w"> </span>multiple<span class="w"> </span>files<span class="w"> </span>with<span class="w"> </span>commas<span class="w"> </span><span class="o">(</span>e.g.,
+<span class="w">                      </span><span class="sb">`</span>anno1.gtf,anno2.gtf<span class="sb">`</span><span class="o">)</span>.
+
+Basic<span class="w"> </span>Settings:
+<span class="w">  </span>--genomeDir<span class="w"> </span>&lt;DIR&gt;<span class="w">   </span>Output<span class="w"> </span>directory<span class="w"> </span>path<span class="w"> </span><span class="k">for</span><span class="w"> </span>generated<span class="w"> </span>reference<span class="w"> </span>files<span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>current<span class="w"> </span>directory<span class="o">]</span><span class="w"> </span><span class="o">(</span>e.g.,
+<span class="w">                      </span><span class="sb">`</span>./ref<span class="sb">`</span><span class="o">)</span>.
+<span class="w">  </span>--species<span class="w"> </span>&lt;STR&gt;<span class="w">     </span>Species<span class="w"> </span>identifier<span class="o">(</span>s<span class="o">)</span><span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>undefined<span class="o">]</span>.<span class="w"> </span>For<span class="w"> </span>mixed-species<span class="w"> </span>references,<span class="w"> </span>provide
+<span class="w">                      </span>comma-separated<span class="w"> </span>names<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>same<span class="w"> </span>order<span class="w"> </span>as<span class="w"> </span>--fasta<span class="w"> </span>and<span class="w"> </span>--ingtf<span class="w"> </span><span class="o">(</span>e.g.,<span class="w"> </span><span class="sb">`</span>human,mouse<span class="sb">`</span><span class="o">)</span>.
+<span class="w">  </span>--threads<span class="w"> </span>&lt;INT&gt;<span class="w">     </span>Number<span class="w"> </span>of<span class="w"> </span>CPU<span class="w"> </span>threads<span class="w"> </span><span class="k">for</span><span class="w"> </span>parallel<span class="w"> </span>processing<span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>all<span class="w"> </span>available<span class="w"> </span>cores<span class="o">]</span><span class="w"> </span><span class="o">(</span>e.g.,<span class="w"> </span><span class="sb">`</span><span class="m">16</span><span class="sb">`</span><span class="o">)</span>.
+
+Advanced<span class="w"> </span>Settings:
+<span class="w">  </span>--chrM<span class="w"> </span>&lt;STR&gt;<span class="w">        </span>Mitochondrial<span class="w"> </span>chromosome<span class="w"> </span>name<span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>auto-detect<span class="w"> </span>common<span class="w"> </span>names<span class="o">]</span>.<span class="w"> </span>For<span class="w"> </span>mixed-species<span class="w"> </span>references,
+<span class="w">                      </span>provide<span class="w"> </span>comma-separated<span class="w"> </span>names<span class="w"> </span><span class="k">in</span><span class="w"> </span>--species<span class="w"> </span>order<span class="w"> </span><span class="o">(</span>e.g.,<span class="w"> </span><span class="sb">`</span>MT,chrM<span class="sb">`</span><span class="o">)</span>.
+<span class="w">  </span>--limitram<span class="w"> </span>&lt;INT&gt;<span class="w">    </span>RAM<span class="w"> </span>limit<span class="w"> </span><span class="k">for</span><span class="w"> </span>STAR<span class="w"> </span>index<span class="w"> </span>generation,<span class="w"> </span><span class="k">in</span><span class="w"> </span>GiB<span class="w"> </span><span class="o">(</span>e.g.,<span class="w"> </span><span class="sb">`</span><span class="m">64</span><span class="sb">`</span><span class="o">)</span>.<span class="w"> </span>Omit<span class="w"> </span>to<span class="w"> </span>use<span class="w"> </span>STAR<span class="err">'</span>s<span class="w"> </span>default.<span class="w"> </span>Index
+<span class="w">                      </span>sparsity<span class="w"> </span>can<span class="w"> </span>affect<span class="w"> </span>mapping<span class="w"> </span>memory<span class="w"> </span>use<span class="w"> </span>and<span class="w"> </span>speed.
+<span class="w">  </span>--extra-args<span class="w"> </span>&lt;STR&gt;<span class="w">  </span>Additional<span class="w"> </span>validated<span class="w"> </span>STAR<span class="w"> </span>genomeGenerate<span class="w"> </span>parameters<span class="w"> </span><span class="o">(</span>e.g.,<span class="w"> </span><span class="sb">`</span><span class="s2">"--sjdbOverhang 100</span>
+<span class="s2">                      --genomeSAsparseD 2"</span><span class="sb">`</span><span class="o">)</span>.<span class="w"> </span>Preflight<span class="w"> </span>rejects<span class="w"> </span>alignment-only,<span class="w"> </span>unknown<span class="w"> </span>and<span class="w"> </span>mkref-managed<span class="w"> </span>parameters.
+<span class="w">  </span>--noindex<span class="w">           </span>Skip<span class="w"> </span>the<span class="w"> </span>STAR<span class="w"> </span>index-generation<span class="w"> </span>step.
+</code></pre></div>
+<h3 id="parameter-reference-tables_1">Parameter Reference Tables<a class="headerlink" href="#parameter-reference-tables_1" title="Permanent link">&para;</a></h3>
+<h4 id="required-basic-settings_1">Required &amp; Basic Settings<a class="headerlink" href="#required-basic-settings_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>--fasta</code></td>
+<td style="text-align: left;">File path</td>
+<td style="text-align: left;"><strong>Required</strong></td>
+<td style="text-align: left;">Reference genome FASTA file(s) (comma-separated for mixed species, e.g., <code>human.fa,mouse.fa</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--ingtf</code></td>
+<td style="text-align: left;">File path</td>
+<td style="text-align: left;"><strong>Required</strong></td>
+<td style="text-align: left;">Gene annotation GTF file(s) (comma-separated for mixed species, e.g., <code>human.gtf,mouse.gtf</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--genomeDir</code></td>
+<td style="text-align: left;">Directory</td>
+<td style="text-align: left;"><code>./</code></td>
+<td style="text-align: left;">Output directory path for generated reference database files</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--species</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>undefined</code></td>
+<td style="text-align: left;">Species identifier(s), comma-separated for mixed species (e.g., <code>human,mouse</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--threads</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">All cores</td>
+<td style="text-align: left;">Number of CPU threads for STAR indexing and annotation processing</td>
+</tr>
+</tbody>
+</table>
+<h4 id="advanced-settings">Advanced Settings<a class="headerlink" href="#advanced-settings" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>--chrM</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">Auto-detect</td>
+<td style="text-align: left;">Mitochondrial chromosome name(s) in species order (e.g., <code>MT,chrM</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--limitram</code></td>
+<td style="text-align: left;">Integer (GiB)</td>
+<td style="text-align: left;">STAR default</td>
+<td style="text-align: left;">Maximum RAM limit during STAR genome index generation (in GiB); restricts memory usage during alignment, where lower memory allocation incurs higher processing time</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--extra-args</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">Validated additional parameters passed to STAR <code>genomeGenerate</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--noindex</code></td>
+<td style="text-align: left;">Flag</td>
+<td style="text-align: left;">Disabled</td>
+<td style="text-align: left;">Generates metadata and preprocessed annotations without building STAR index</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="reference-architecture-key-configurations">Reference Architecture &amp; Key Configurations<a class="headerlink" href="#reference-architecture-key-configurations" title="Permanent link">&para;</a></h3>
+<h4 id="1-gtf-annotation-requirements-dual-species-reference">1. GTF Annotation Requirements &amp; Dual-Species Reference<a class="headerlink" href="#1-gtf-annotation-requirements-dual-species-reference" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>GTF Format Rules</strong>:</li>
+<li>Must adhere to standard GTF format (GFF/GFF3 not supported).</li>
+<li>Must include <code>gene</code> or <code>transcript</code> features as well as <code>exon</code> rows.</li>
+<li>Attributes must include <code>gene_id</code> or <code>gene_name</code>, and <code>transcript_id</code> or <code>transcript_name</code>.</li>
+<li>Chromosome identifiers must strictly match FASTA headers.</li>
+<li><strong>Mixed-Species Reference</strong>:</li>
+<li><code>--fasta</code>, <code>--ingtf</code>, and <code>--species</code> accept comma-separated inputs with matching order:
+    <div class="highlight"><pre><span></span><code>dnbc4tools<span class="w"> </span>rna<span class="w"> </span>mkref<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--fasta<span class="w"> </span>human.fa,mouse.fa<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--ingtf<span class="w"> </span>human.gtf,mouse.gtf<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--species<span class="w"> </span>human,mouse
+</code></pre></div></li>
+<li>Gene names and chromosomes are automatically prefixed with the species name (e.g., <code>human_GAPDH</code>, <code>mouse_Actb</code>) for clean cross-species separation.</li>
+</ul>
+<h4 id="2-directory-layout-refjson-metadata">2. Directory Layout &amp; <code>ref.json</code> Metadata<a class="headerlink" href="#2-directory-layout-refjson-metadata" title="Permanent link">&para;</a></h4>
+<p>A successfully built reference directory generates a standardized layout under <code>--genomeDir</code> (subdivided into <code>&lt;species&gt;/</code>, named <code>species1_and_species2</code> for dual-species references):</p>
+<ul>
+<li><strong>Database Compatibility</strong>: In addition to references built via <code>rna mkref</code> in the current version, <code>dnbc4tools rna run</code> is fully compatible with legacy v2 reference databases as well as standard Cell Ranger RNA reference directories (you can directly pass directories containing STAR index and annotations to <code>--genomeDir</code>).</li>
+</ul>
+<div class="highlight"><pre><span></span><code>genomeDir/
+└── &lt;species&gt;/
+    ├── fasta/
+    │   └── genome.fa          # Unified processed FASTA sequence
+    ├── genes/
+    │   └── genes.gtf          # Standardized gene annotation
+    ├── star/
+    │   ├── SA                 # STAR genome index
+    │   ├── SAindex            # STAR index parameters
+    │   ├── chrLength.txt      # Chromosome lengths
+    │   ├── chrName.txt        # Chromosome names
+    │   ├── mtgene.list        # Mitochondrial gene list for QC
+    │   └── genomeParameters.txt
+    └── ref.json               # Reference configuration and provenance
+</code></pre></div>
+<p><strong>Single-Species <code>ref.json</code> Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"chrmt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"chrM"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"genome"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/database/scRNA/Homo_sapiens/fasta/genome.fa"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"genomeDir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/database/scRNA/Homo_sapiens/star"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"gtf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/database/scRNA/Homo_sapiens/genes/genes.gtf"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"input_fasta_files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">"genome.fa"</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"input_gtf_files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">"genes.gtf"</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"mtgenes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/database/scRNA/Homo_sapiens/star/mtgene.list"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"species"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Homo_sapiens"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.2"</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Dual-Species <code>ref.json</code> Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"chrmt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"human_chrM,mouse_chrM"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"genome"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/database/scRNA/human_and_mouse/fasta/genome.fa"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"genomeDir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/database/scRNA/human_and_mouse/star"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"gtf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/database/scRNA/human_and_mouse/genes/genes.gtf"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"input_fasta_files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">"human.fa"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"mouse.fa"</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"input_gtf_files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">"human.gtf"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"mouse.gtf"</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"mtgenes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/database/scRNA/human_and_mouse/star/mtgene.list"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"species"</span><span class="p">:</span><span class="w"> </span><span class="s2">"human_and_mouse"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.2"</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="multi-sample-workflow-multi">Multi-Sample Workflow (multi) <a id="多样本操作-multi"></a><a class="headerlink" href="#multi-sample-workflow-multi" title="Permanent link">&para;</a></h2>
+<p><code>dnbc4tools rna multi</code> generates standalone executable shell scripts for each sample defined in a tab-separated list file. It does not launch analyses automatically.</p>
+<h3 id="usage_2">Usage<a class="headerlink" href="#usage_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>dnbc4tools<span class="w"> </span>rna<span class="w"> </span>multi<span class="w"> </span>--list<span class="w"> </span>samples.tsv<span class="w"> </span>--genomeDir<span class="w"> </span>/reference/rna<span class="w"> </span>--threads<span class="w"> </span><span class="m">20</span>
+</code></pre></div>
+<h3 id="full-command-line-help_2">Full Command-Line Help<a class="headerlink" href="#full-command-line-help_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>dnbc4tools<span class="w"> </span>rna<span class="w"> </span>multi<span class="w"> </span>--help
+dnbc4tools<span class="w"> </span><span class="m">3</span>.2
+
+Process<span class="w"> </span>multiple<span class="w"> </span>RNA-seq<span class="w"> </span>samples.
+
+Usage:<span class="w"> </span>dnbc4tools<span class="w"> </span>rna<span class="w"> </span>multi<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+
+options:
+<span class="w">  </span>--help<span class="w">             </span>show<span class="w"> </span>this<span class="w"> </span><span class="nb">help</span><span class="w"> </span>message<span class="w"> </span>and<span class="w"> </span><span class="nb">exit</span>
+
+Input<span class="w"> </span>Files:
+<span class="w">  </span>--list<span class="w"> </span>&lt;FILE&gt;<span class="w">      </span>Tab-separated<span class="w"> </span>sample<span class="w"> </span>list:<span class="w"> </span>sample<span class="w"> </span>name<span class="w"> </span>&lt;TAB&gt;<span class="w"> </span>cDNA<span class="w"> </span>R1<span class="p">;</span>R2<span class="w"> </span>&lt;TAB&gt;<span class="w"> </span>oligo<span class="w"> </span>R1<span class="p">;</span>R2.<span class="w"> </span>Multiple<span class="w"> </span>FASTQ<span class="w"> </span>files
+<span class="w">                     </span>within<span class="w"> </span>one<span class="w"> </span>end<span class="w"> </span>are<span class="w"> </span>comma-separated.<span class="w"> </span>Generates<span class="w"> </span>one<span class="w"> </span>shell<span class="w"> </span>script<span class="w"> </span>per<span class="w"> </span>sample<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>working
+<span class="w">                     </span>directory<span class="p">;</span><span class="w"> </span>run<span class="w"> </span>the<span class="w"> </span>generated<span class="w"> </span>scripts<span class="w"> </span>to<span class="w"> </span>start<span class="w"> </span>analysis.
+
+Basic<span class="w"> </span>Settings:
+<span class="w">  </span>--genomeDir<span class="w"> </span>&lt;DIR&gt;<span class="w">  </span>Reference<span class="w"> </span>genome<span class="w"> </span>directory<span class="w"> </span>path<span class="w"> </span>containing<span class="w"> </span>required<span class="w"> </span>reference<span class="w"> </span>files.
+<span class="w">  </span>--outdir<span class="w"> </span>&lt;DIR&gt;<span class="w">     </span>Analysis<span class="w"> </span>output<span class="w"> </span>directory<span class="w"> </span>written<span class="w"> </span>into<span class="w"> </span>each<span class="w"> </span>generated<span class="w"> </span>script<span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>current<span class="w"> </span>directory<span class="o">]</span><span class="w"> </span><span class="o">(</span>e.g.,
+<span class="w">                     </span><span class="sb">`</span>./output<span class="sb">`</span><span class="o">)</span>.<span class="w"> </span>Scripts<span class="w"> </span>are<span class="w"> </span>written<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>working<span class="w"> </span>directory.
+<span class="w">  </span>--threads<span class="w"> </span>&lt;INT&gt;<span class="w">    </span>Number<span class="w"> </span>of<span class="w"> </span>CPU<span class="w"> </span>threads<span class="w"> </span>written<span class="w"> </span>into<span class="w"> </span>each<span class="w"> </span>generated<span class="w"> </span>analysis<span class="w"> </span>script.<span class="w"> </span>If<span class="w"> </span>omitted,<span class="w"> </span>each<span class="w"> </span>analysis
+<span class="w">                     </span>detects<span class="w"> </span>available<span class="w"> </span>cores<span class="w"> </span>when<span class="w"> </span>it<span class="w"> </span>runs.
+
+Analysis<span class="w"> </span>Settings:
+<span class="w">  </span>--end5<span class="w">             </span>Enable<span class="w"> </span><span class="m">5</span><span class="err">'</span>-end<span class="w"> </span>single-cell<span class="w"> </span>transcriptome<span class="w"> </span>analysis.
+<span class="w">  </span>--no_bam<span class="w">           </span>Skip<span class="w"> </span>BAM<span class="w"> </span>file<span class="w"> </span>generation<span class="w"> </span><span class="k">for</span><span class="w"> </span>every<span class="w"> </span>sample<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>generated<span class="w"> </span>scripts.
+</code></pre></div>
+<h3 id="parameter-reference-tables_2">Parameter Reference Tables<a class="headerlink" href="#parameter-reference-tables_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>--list</code></td>
+<td style="text-align: left;">File path</td>
+<td style="text-align: left;"><strong>Required</strong></td>
+<td style="text-align: left;">Tab-separated sample list file</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--genomeDir</code></td>
+<td style="text-align: left;">Directory</td>
+<td style="text-align: left;"><strong>Required</strong></td>
+<td style="text-align: left;">Reference genome directory path</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--outdir</code></td>
+<td style="text-align: left;">Directory</td>
+<td style="text-align: left;"><code>./</code></td>
+<td style="text-align: left;">Output root directory written into each sample script (scripts are generated in current working directory)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--threads</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">Auto-detect</td>
+<td style="text-align: left;">Thread count configured inside each generated script</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--end5</code></td>
+<td style="text-align: left;">Flag</td>
+<td style="text-align: left;">Disabled</td>
+<td style="text-align: left;">Enables 5'-end scRNA analysis mode in generated scripts</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--no_bam</code></td>
+<td style="text-align: left;">Flag</td>
+<td style="text-align: left;">Disabled</td>
+<td style="text-align: left;">Skips BAM generation in all generated scripts</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="sample-list-rules-execution-workflow">Sample List Rules &amp; Execution Workflow<a class="headerlink" href="#sample-list-rules-execution-workflow" title="Permanent link">&para;</a></h3>
+<h4 id="1-list-file-specification">1. <code>--list</code> File Specification<a class="headerlink" href="#1-list-file-specification" title="Permanent link">&para;</a></h4>
+<p>The sample list must be a tab-separated (<code>\t</code>) text file with 3 columns:
+1. <strong>Sample Name</strong> (<code>sample_name</code>)
+2. <strong>cDNA FASTQ Paths</strong> (paired R1 and R2 separated by semicolon <code>;</code>, multiple lane files comma-separated <code>,</code>)
+3. <strong>Oligo FASTQ Paths</strong> (paired R1 and R2 separated by semicolon <code>;</code>, multiple lane files comma-separated <code>,</code>)</p>
+<div class="highlight"><pre><span></span><code>SampleA /data/A_cDNA_R1.fq.gz;/data/A_cDNA_R2.fq.gz /data/A_oligo_R1.fq.gz;/data/A_oligo_R2.fq.gz
+SampleB /data/B_cDNA_L1_R1.fq.gz,/data/B_cDNA_L2_R1.fq.gz;/data/B_cDNA_L1_R2.fq.gz,/data/B_cDNA_L2_R2.fq.gz /data/B_oligo_R1.fq.gz;/data/B_oligo_R2.fq.gz
+</code></pre></div>
+<h4 id="2-execution-cluster-dispatch">2. Execution &amp; Cluster Dispatch<a class="headerlink" href="#2-execution-cluster-dispatch" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Running <code>dnbc4tools rna multi</code> creates per-sample shell scripts (e.g., <code>SampleA.sh</code>, <code>SampleB.sh</code>) in the current directory.</li>
+<li>Each script contains the complete parameterized <code>dnbc4tools rna run</code> command.</li>
+<li>Users can execute scripts directly via <code>bash SampleA.sh</code> or submit them to batch workload managers (e.g., Slurm, SGE) for cluster execution.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 MGI Tech Bioinformatics.<br>Documentation 3.2 · Updated 2026-10-23
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["search.suggest", "search.highlight", "content.code.copy", "navigation.top"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/doc-controls.js"></script>
+      
+    
+  </body>
+</html>

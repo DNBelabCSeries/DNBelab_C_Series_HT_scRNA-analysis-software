@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 280" width="940" height="280" style="background:#ffffff; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <filter id="card-shadow-en" x="-3%" y="-4%" width="106%" height="112%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.04" />
+    </filter>
+    <marker id="arrow-indigo-en" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 1 2 L 7 5 L 1 8 z" fill="#6366f1" />
+    </marker>
+    <marker id="arrow-emerald-en" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 1 2 L 7 5 L 1 8 z" fill="#10b981" />
+    </marker>
+  </defs>
+
+  <!-- Title Header -->
+  <g transform="translate(40, 28)">
+    <rect x="0" y="0" width="4" height="20" rx="2" fill="#2563eb" />
+    <text x="12" y="15" font-size="16" font-weight="700" fill="#0f172a" letter-spacing="-0.01em">scVDJ Cross-Omics Barcode Linkage Architecture (--beadstrans)</text>
+    <text x="12" y="32" font-size="11" fill="#64748b">De novo contig assembly across all reads, filtering authentic cells and mapping to Cell IDs via 5' scRNA</text>
+  </g>
+
+  <!-- CARD 1: 5' scRNA Input -->
+  <g transform="translate(40, 75)">
+    <rect x="0" y="0" width="235" height="175" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#card-shadow-en)" />
+    <rect x="0" y="0" width="235" height="34" rx="8" fill="#eff6ff" />
+    <rect x="0" y="24" width="235" height="10" fill="#eff6ff" />
+    <text x="14" y="22" font-size="13" font-weight="700" fill="#1e40af">5' scRNA Deliverables</text>
+
+    <g transform="translate(14, 46)">
+      <text x="0" y="0" font-size="10" font-weight="600" fill="#64748b">Benchmark File:</text>
+      <rect x="0" y="5" width="207" height="22" rx="4" fill="#f8fafc" stroke="#e2e8f0" />
+      <text x="8" y="20" font-size="10.5" font-family="ui-monospace, monospace" font-weight="600" fill="#0f172a">outs/singlecell.csv</text>
+
+      <circle cx="4" cy="48" r="3" fill="#2563eb" />
+      <text x="14" y="52" font-size="11.5" font-weight="600" fill="#1e293b">Authentic Cells (is_cell=True)</text>
+      <text x="14" y="68" font-size="10.5" fill="#64748b">High-confidence authentic cell boundary</text>
+
+      <circle cx="4" cy="92" r="3" fill="#2563eb" />
+      <text x="14" y="96" font-size="11.5" font-weight="600" fill="#1e293b">Bead Aggregation Map</text>
+      <text x="14" y="112" font-size="10.5" fill="#64748b">Multi-beads mapped to unified Cell IDs</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1 to 2 -->
+  <g transform="translate(275, 150)">
+    <rect x="18" y="-24" width="84" height="20" rx="10" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1" />
+    <text x="60" y="-10" font-size="10" font-family="ui-monospace, monospace" font-weight="700" fill="#4338ca" text-anchor="middle">--beadstrans</text>
+    <line x1="6" y1="5" x2="114" y2="5" stroke="#6366f1" stroke-width="2" marker-end="url(#arrow-indigo-en)" />
+    <text x="60" y="24" font-size="10" font-weight="600" fill="#6366f1" text-anchor="middle">Bridge File Feed</text>
+  </g>
+
+  <!-- CARD 2: VDJ Processing -->
+  <g transform="translate(395, 75)">
+    <rect x="0" y="0" width="260" height="175" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#card-shadow-en)" />
+    <rect x="0" y="0" width="260" height="34" rx="8" fill="#f5f3ff" />
+    <rect x="0" y="24" width="260" height="10" fill="#f5f3ff" />
+    <text x="14" y="22" font-size="13" font-weight="700" fill="#6b21a8">dnbc4tools vdj run</text>
+
+    <g transform="translate(14, 46)">
+      <circle cx="4" cy="14" r="3" fill="#7c3aed" />
+      <text x="14" y="18" font-size="11.5" font-weight="600" fill="#1e293b">TCR / BCR De Novo Assembly</text>
+      <text x="14" y="34" font-size="10.5" fill="#64748b">Assembles all candidate VDJ reads into contigs</text>
+
+      <circle cx="4" cy="56" r="3" fill="#7c3aed" />
+      <text x="14" y="60" font-size="11.5" font-weight="600" fill="#1e293b">Cell Filtering via RNA Whitelist</text>
+      <text x="14" y="76" font-size="10.5" fill="#64748b">Retains authentic cell contigs via singlecell.csv</text>
+
+      <circle cx="4" cy="98" r="3" fill="#7c3aed" />
+      <text x="14" y="102" font-size="11.5" font-weight="600" fill="#1e293b">Bead Translation to Cell ID</text>
+      <text x="14" y="118" font-size="10.5" fill="#64748b">Restores multi-beads to match RNA Cell IDs</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2 to 3 -->
+  <g transform="translate(655, 150)">
+    <rect x="15" y="-24" width="70" height="20" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1" />
+    <text x="50" y="-10" font-size="10" font-weight="700" fill="#15803d" text-anchor="middle">Cell Match</text>
+    <line x1="6" y1="5" x2="94" y2="5" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-emerald-en)" />
+    <text x="50" y="24" font-size="10" font-weight="600" fill="#10b981" text-anchor="middle">1-to-1 Link</text>
+  </g>
+
+  <!-- CARD 3: Matched Output -->
+  <g transform="translate(755, 75)">
+    <rect x="0" y="0" width="165" height="175" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.4" filter="url(#card-shadow-en)" />
+    <rect x="0" y="0" width="165" height="34" rx="8" fill="#dcfce7" />
+    <rect x="0" y="24" width="165" height="10" fill="#dcfce7" />
+    <text x="12" y="22" font-size="13" font-weight="700" fill="#166534">Dual-Omics Matched</text>
+
+    <g transform="translate(10, 44)">
+      <rect x="0" y="0" width="145" height="32" rx="4" fill="#ffffff" stroke="#bbf7d0" />
+      <text x="6" y="13" font-size="9" font-weight="700" fill="#15803d">Unified Cell Dimension</text>
+      <text x="6" y="26" font-size="9" font-family="ui-monospace, monospace" fill="#0f172a">Cell_001 ... N</text>
+
+      <rect x="0" y="38" width="145" height="38" rx="4" fill="#ffffff" stroke="#bbf7d0" />
+      <text x="6" y="52" font-size="9.5" font-weight="600" fill="#166534">5' Transcriptome Phenotype</text>
+      <text x="6" y="66" font-size="8.5" fill="#64748b">Immune cell subsets &amp; clustering</text>
+
+      <rect x="0" y="82" width="145" height="40" rx="4" fill="#ffffff" stroke="#bbf7d0" />
+      <text x="6" y="96" font-size="9.5" font-weight="700" fill="#047857">TCR/BCR Clonotypes</text>
+      <text x="6" y="110" font-size="8.5" fill="#64748b">Full-length CDR3 &amp; expansion</text>
+    </g>
+  </g>
+</svg>

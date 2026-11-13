@@ -1,69 +1,72 @@
-<div align="right">
+# scATAC 分析输出
 
-[🏠 主页](../../README.md) | [🌐 English](scATAC_en.md)
+> **输出范围**：目录树描述常规完成运行的结果；可选文件取决于启用模块与阶段完成状态。下文质量参考区间是判读建议，不是软件内置的通过/失败规则，应以本次配置阈值和报告状态为准。
 
-</div>
+单细胞 ATAC 测序分析输出文件说明
 
-# 🧬 DNBelab C Series HT scATAC 分析输出文档
+## 概述 <a id="概述"></a>
 
-<div align="center">
+单细胞 ATAC 测序分析完成后，会在指定的输出目录中生成标准化的文件和子目录结构，用于染色质可及性分析和表观基因组学研究。矩阵与片段文件可按相应格式导入 Signac、ArchR 等工具；读取示例参见[结果分析](../io.md)。
 
-**单细胞ATAC测序分析输出文件完整指南**
+### 核心交付物速览
 
-[📁 目录结构](#输出目录结构) • [📋 文件详情](#详细文件说明) • [🧬 数据矩阵](#峰矩阵文件) • [📊 分析结果](#分析指标汇总) • [📊 报告解读](#网页报告释义)
+下表汇总了 scATAC 分析的主要产物、文件格式、核心用途以及推荐的下游生态对接：
 
-</div>
+| 交付产物与核心文件 | 格式 | 主要用途与下游生态对接 |
+| :--- | :--- | :--- |
+| **真实细胞片段文件**<br>• `filtered.fragments.tsv.gz`<br>• `filtered.fragments.tsv.gz.tbi` | `BED (TSV.GZ)`<br>`TBI 索引` | 经过细胞质控过滤后的高质量片段 BED 格式文件，下游分析的核心首选输入。<br>• **推荐工具**: Signac (`CreateChromatinAssay`) / ArchR (`createArrowFiles`) |
+| **全量比对片段文件**<br>• `fragments.tsv.gz`<br>• `fragments.tsv.gz.tbi` | `BED (TSV.GZ)`<br>`TBI 索引` | 包含所有比对到基因组的唯一片段坐标与细胞归属，用于全量回溯与背景评估。<br>• **生态对接**: 支持 IGV、UCSC 等基因组浏览器直接作为 BED 轨迹加载。 |
+| **染色质峰定量矩阵**<br>• `filtered_peak_bc_matrix/`<br>• `filtered_peak_bc_matrix.h5` | `MEX 稀疏矩阵`<br>`HDF5 (H5)` | 过滤后的细胞染色质开放峰（Peak）定量计数矩阵。<br>• **注意口径**: 矩阵数值默认统计 **Cutsite（两端切割位点）**，灵敏度更高；切勿使用列和（`colSums`）充当 Fragment 测序深度过滤。 |
+| **未过滤原始峰矩阵**<br>• `raw_peak_bc_matrix/`<br>• `raw_peak_bc_matrix.h5` | `MEX 稀疏矩阵`<br>`HDF5 (H5)` | 包含所有候选微珠/液滴与背景噪音的原始峰计数矩阵，用于自定义过滤与质控复核。 |
+| **细胞元数据明细**<br>• `singlecell.csv` | `CSV` | 记录每个细胞条形码的片段数、峰数、TSS/Peak 区域片段数、Cutsite 计数及真实细胞识别。<br>• **质控筛选**: 统一根据 `is_cell_barcode == 1` 筛选真实细胞。 |
+| **实验指标汇总**<br>• `metrics_summary.xls` | `TSV 文本` | 实验整体测序质量、比对率、细胞数、中位片段数、TSS 富集等全局统计指标。<br>• **读取规范**: 制表符文本，R 用 `read.delim()`，Python 用 `pd.read_csv(sep='\t')`。 |
+| **交互式网页报告**<br>• `<sample>_scATAC_report.html` | `HTML` | 一站式可视化质控与分析报告，交互式查看细胞排序曲线、TSS 富集模式、片段长度分布及细胞聚类等。<br>• **打开方式**: 无需网络，双击在任意现代桌面浏览器中直接打开。 |
+| **基因组比对记录**<br>• `alignment.fragments.sorted.tagged.bam`<br>• `alignment.fragments.sorted.tagged.bam.bai` | `BAM`<br>`BAI / CSI` | 携带纠错细胞标签（`CB`, `CR`）的基因组坐标排序比对文件。<br>• **生成条件**: 分析需添加 `--need_bam` 参数；支持 IGV 基因座比对复核。 |
+| **峰注释**<br>• `peak_annotation.tsv` | `TSV` | 过滤后 peaks 的基因关联（可选），详见[注释字段](#peak-annotation)。 |
+| **可选诊断**<br>• `cell_classification.csv`<br>• `whitelist_contamination*.json` | `CSV` / `JSON` | 双物种分类及 C4 白名单诊断，生成时交付。 |
 
----
+## 输出目录结构 <a id="输出目录结构"></a>
 
-## 📖 概述 <a id="概述"></a>
-
-单细胞ATAC测序分析完成后，会在指定的输出目录中生成标准化的文件和子目录结构，专门用于染色质可及性分析和表观基因组学研究。本文档详细说明了每个输出文件的内容、格式和用途，帮助用户充分理解和高效利用单细胞ATAC分析结果。
-
-> 💡 **提示**: 所有输出文件均采用标准格式，兼容主流单细胞表观基因组分析工具（如Signac、ArchR等），遵循国际通用的数据格式规范。
-
----
-
-## 📁 输出目录结构 <a id="输出目录结构"></a>
-
+```text
+outs/
+├── filtered.fragments.tsv.gz                   # 质控过滤后的高质量细胞片段文件 (下游分析首选)
+├── filtered.fragments.tsv.gz.tbi               # 过滤后片段文件的 Tabix 索引
+├── fragments.tsv.gz                            # 全量比对片段文件 (BED 格式)
+├── fragments.tsv.gz.tbi                        # 全量片段文件的 Tabix 索引
+├── filtered_peak_bc_matrix/                    # 过滤后的染色质峰定量矩阵目录 (MEX 格式)
+│   ├── barcodes.tsv.gz                         # 高质量真实细胞 ID 列表
+│   ├── peaks.bed.gz                            # 识别峰的基因组坐标 (BED 格式)
+│   └── matrix.mtx.gz                           # 稀疏峰计数矩阵 (单空格分隔，Cutsite 计数)
+├── filtered_peak_bc_matrix.h5                  # 过滤后的峰定量矩阵 (单文件 HDF5 格式)
+├── raw_peak_bc_matrix/                         # 未过滤的原始峰定量矩阵目录 (MEX 格式)
+│   ├── barcodes.tsv.gz
+│   ├── peaks.bed.gz
+│   └── matrix.mtx.gz
+├── raw_peak_bc_matrix.h5                       # 未过滤的原始峰定量矩阵 (单文件 HDF5 格式)
+├── peak_annotation.tsv                       # 过滤后峰的基因注释（可选）
+├── cell_classification.csv                   # 双物种分类（可选，位于输出根目录）
+├── whitelist_contamination.json              # 白名单诊断（可选）
+├── whitelist_contamination_cells.json        # 细胞级白名单诊断（可选）
+├── singlecell.csv                              # 细胞级别质控与元数据汇总表 (含 is_cell_barcode)
+├── metrics_summary.xls                         # 实验质控与分析质量指标汇总表 (制表符分隔 TSV)
+├── <sample>_scATAC_report.html                 # 交互式综合网页质控与分析报告
+├── alignment.fragments.sorted.tagged.bam       # 坐标排序的比对 BAM 文件 (启用 --need_bam 时输出)
+└── alignment.fragments.sorted.tagged.bam.bai   # 比对索引文件 (超长染色体可为 .csi)
 ```
-.
-├── alignment.fragments.sorted.tagged.bam       # 质控后的比对结果（分析需添加need_bam参数）
-├── alignment.fragments.sorted.tagged.bam.bai   # 比对结果索引文件
-├── filter_peak_matrix/                         # 过滤后的峰矩阵MEX格式目录
-│   ├── barcodes.tsv.gz                         # 过滤后的细胞条形码信息
-│   ├── matrix.mtx.gz                           # 过滤后的稀疏矩阵格式的峰信号数据
-│   └── peaks.bed.gz                            # 过滤后的峰位置信息
-├── fragments.tsv.gz                            # 包含所有比对到基因组的片段信息
-├── fragments.tsv.gz.tbi                        # 片段文件的索引，用于快速随机访问
-├── filtered.fragments.tsv.gz                   # 质量控制后的ATAC片段文件，仅包含通过细胞过滤的片段信息
-├── filtered.fragments.tsv.gz.tbi               # 细胞过滤的片段文件的Tabix索引，支持基因组区间的快速查询
-├── metrics_summary.xls                         # 分析质量指标汇总表
-├── raw_peak_matrix/                            # 原始峰矩阵MEX格式目录
-│   ├── barcodes.tsv.gz                         # 原始细胞条形码信息
-│   ├── matrix.mtx.gz                           # 原始稀疏矩阵格式的峰信号数据
-│   └── peaks.bed.gz                            # 原始峰位置信息
-├── singlecell.csv                              # 细胞信息汇总表
-└── *_scATAC_report.html                        # HTML格式的分析报告
-```
 
----
+<a id="v32-outputs"></a>
 
-## 📋 文件详细说明 <a id="详细文件说明"></a>
+raw/filtered peak 矩阵同时提供 H5。矩阵默认统计 cutsite；cell calling、FRIP 和 TSS 比例仍按唯一 fragment 统计。BAM 需启用 `--need_bam`，索引可为 BAI 或 CSI。
 
-### 🧬 ATAC片段和峰文件 <a id="atac片段和峰文件"></a>
+## 文件详细说明 <a id="详细文件说明"></a>
 
-<div align="center">
+### ATAC片段和峰文件 <a id="atac片段和峰文件"></a>
 
-**🎯 核心内容**: ATAC-seq片段信息和峰识别结果，包含完整的染色质可及性数据和细胞条形码标记
+**核心内容**: ATAC-seq 片段信息和峰识别结果，包含完整的染色质可及性数据和细胞条形码标记。
 
-</div>
+#### fragments.tsv.gz
 
-<div align="left" style="color: #ccc; margin: 2em 0;">-----------</div>
-
-#### 📄 fragments.tsv.gz
-
-`fragments.tsv.gz` 是一个包含 ATAC-seq 片段信息的压缩 TSV 文件，是进行下游分析的核心数据之一。它的主要特点和内容如下：
+`fragments.tsv.gz` 是一个包含 ATAC-seq 片段信息的压缩 TSV 文件，是进行下游分析的核心数据之一。
 
 *   **用途**:
     *   **染色质可及性分析**: 精确定位每个开放染色质区域的基因组坐标。
@@ -72,943 +75,395 @@
 
 *   **内容与格式**:
     *   文件为 **BED-like** 格式，每行代表一个唯一的 ATAC-seq 片段。
-    *   文件具体包含的 **5列信息** 如下表所示：
+    *   包含以下 5 列信息：
 
-        <table style="width:100%; border-collapse: collapse; margin: 15px 0;">
-        <thead>
-        <tr>
-        <th width="20%" align="left"><strong>字段名</strong></th>
-        <th width="80%" align="left"><strong>详细描述</strong></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td align="left"><code>chrom</code></td>
-        <td>参考基因组染色体名称，标识片段所在的染色体位置</td>
-        </tr>
-        <tr>
-        <td align="left"><code>chromStart</code></td>
-        <td>片段在染色体上的调整起始位置（0-based坐标系统），经过转座酶切割位点修正</td>
-        </tr>
-        <tr>
-        <td align="left"><code>chromEnd</code></td>
-        <td>片段在染色体上的调整结束位置（不包含该位置），经过转座酶切割位点修正</td>
-        </tr>
-        <tr>
-        <td align="left"><code>barcode</code></td>
-        <td>细胞ID标识符，对应BAM文件中的<code>CB</code>标签，用于将片段归属到特定细胞</td>
-        </tr>
-        <tr>
-        <td align="left"><code>readSupport</code></td>
-        <td>与该片段相关的总读段对数（包括唯一和重复读段）</td>
-        </tr>
-        </tbody>
-        </table>
+        | 字段名 | 详细描述 |
+        | :--- | :--- |
+        | `chrom` | 参考基因组染色体名称，标识片段所在的染色体位置 |
+        | `chromStart` | 片段在染色体上的调整起始位置（0-based 坐标系统），经过转座酶切割位点修正 |
+        | `chromEnd` | 片段在染色体上的调整结束位置（不包含该位置），经过转座酶切割位点修正 |
+        | `barcode` | 细胞 ID 标识符，对应 BAM 文件中的 `CB` 标签，用于将片段归属到特定细胞 |
+        | `readSupport` | 与该片段相关的总读段对数（包括唯一和重复读段） |
 
 *   **坐标调整**:
-    *   为精确定位转座酶切位点，片段区间经过调整：起始位置从最左端比对位置向前移动4bp，结束位置从最右端比对位置向后移动5bp。
+    *   为精确定位转座酶切位点，片段区间经过调整：起始位置从最左端比对位置向前移动 4 bp，结束位置从最右端比对位置向后移动 5 bp。
 
-<div align="left" style="color: #ccc; margin: 2em 0;">-----------</div>
-
-#### 📄 fragments.tsv.gz.tbi
+#### fragments.tsv.gz.tbi
 
 `fragments.tsv.gz` 文件的 Tabix 索引。
 
 *   **核心用途**:
     *   **快速数据访问**: 允许对大型 `fragments.tsv.gz` 文件进行快速的、基于基因组区间的查询，而无需读取整个文件。
-    *   **工具性能优化**: 被 ArchR、Signac、IGV 等工具用于高效加载和处理特定区域的数据。
-*   **格式**:
-    *   由 `tabix` 工具生成的标准二进制索引文件。
+    *   **工具性能优化**: 被 ArchR、Signac、IGV 等工具用于快速加载和检索特定染色体区域的数据。
+*   **格式**: 由 `tabix` 工具生成的标准二进制索引文件。
 
-<div align="left" style="color: #ccc; margin: 2em 0;">-----------</div>
-
-#### 📄 filtered.fragments.tsv.gz
+#### filtered.fragments.tsv.gz
 
 这是经过细胞质量控制和过滤后的 ATAC-seq 片段文件，是 `fragments.tsv.gz` 的子集，仅包含高质量细胞的片段。
 
 *   **核心用途**:
-    *   **核心下游分析**: 这是进行细胞聚类、差异可及性分析等核心下游步骤的**推荐输入文件**。
-    *   **信噪比提升**: 由于去除了低质量细胞和背景噪音，使用此文件可以提高分析结果的准确性和信噪比。
+    *   **核心下游分析**: 这是进行细胞聚类、差异可及性分析等下游分析的**推荐输入文件**。
+    *   **信噪比提升**: 由于去除了低质量细胞和背景噪音，使用此文件可提高分析结果的准确性和信噪比。
 *   **内容与格式**:
-    *   文件格式与 `fragments.tsv.gz` 完全相同（压缩的 BED-like TSV），包含相同的5列信息。
-    *   仅包含通过细胞过滤算法（例如，基于TSS富集和峰区域覆盖的片段数）被识别为“真实细胞”的片段。
+    *   文件格式与 `fragments.tsv.gz` 完全相同（压缩的 BED-like TSV），包含相同的 5 列信息。
+    *   仅包含通过细胞过滤算法（基于 TSS 富集和峰区域覆盖的片段数）被判定为真实细胞的片段。
 
-<div align="left" style="color: #ccc; margin: 2em 0;">-----------</div>
-
-#### 📄 filtered.fragments.tsv.gz.tbi
+#### filtered.fragments.tsv.gz.tbi
 
 `filtered.fragments.tsv.gz` 文件的 Tabix 索引。
 
-*   **核心用途**:
-    *   **高效下游分析**: 确保在使用过滤后的片段文件时，下游工具（如 ArchR, Signac）能够快速、高效地访问特定基因组区域的数据。
-*   **格式**:
-    *   由 `tabix` 工具生成的标准二进制索引文件。
+*   **核心用途**: 确保在使用过滤后的片段文件时，下游工具（如 ArchR、Signac）能够快速访问特定基因组区域的数据。
+*   **格式**: 标准二进制 Tabix 索引文件。
 
-<div align="left" style="color: #ccc; margin: 2em 0;">-----------</div>
-
-#### 📄 alignment.fragments.sorted.tagged.bam
+#### alignment.fragments.sorted.tagged.bam
 
 这是包含所有具有有效条形码（valid barcode）并且成功比对的片段的 ATAC-seq 比对结果文件。
 
 *   **核心用途**:
-    *   **深度分析与可视化**: 可用于 IGV 等基因组浏览器进行深度可视化，检查特定基因座的比对情况。
+    *   **比对结果查看与可视化**: 可用于 IGV 等基因组浏览器进行结果可视化，检查特定基因座的比对情况。
     *   **自定义分析**: 为需要直接操作比对级别数据的用户提供原始输入。
-
 *   **内容与格式**:
     *   采用国际标准的 **BAM (Binary Alignment Map)** 格式。
     *   文件已按**基因组坐标排序**，并建立了索引（`.bai` 文件），便于快速随机访问。
-    *   每个读段都通过 TAG 字段标记了细胞来源信息。
+    *   关键 TAG 字段说明：
 
-*   **关键TAG字段说明**:
-    *   细胞和分子条形码信息存储在以下TAG字段中：
+        | 标签 (TAG) | 类型 | 描述 |
+        | :--- | :---: | :--- |
+        | `CB` | Z | 经过错误校正和细胞合并处理后的细胞条形码标识符 |
+        | `CC` | Z | 经过错误校正的细胞条形码序列 |
+        | `CR` | Z | 测序仪报告的原始细胞条形码序列 |
 
-        <table style="width:100%; border-collapse: collapse; margin: 15px 0;">
-        <thead>
-        <tr>
-        <th width="15%" align="left"><strong>标签</strong></th>
-        <th width="15%" align="left"><strong>类型</strong></th>
-        <th width="70%" align="left"><strong>描述</strong></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td align="left"><code>CB</code></td>
-        <td align="left">Z</td>
-        <td>经过错误校正和细胞合并处理后的细胞条形码标识符</td>
-        </tr>
-        <tr>
-        <td align="left"><code>CC</code></td>
-        <td align="left">Z</td>
-        <td>经过错误校正细胞条形码序列</td>
-        </tr>
-        <tr>
-        <td align="left"><code>CR</code></td>
-        <td align="left">Z</td>
-        <td>测序仪报告的细胞条形码序列</td>
-        </tr>
-        </tbody>
-        </table>
-
-<div align="left" style="color: #ccc; margin: 2em 0;">-----------</div>
-
-#### 📄 alignment.fragments.sorted.tagged.bam.bai
+#### alignment.fragments.sorted.tagged.bam.bai
 
 `alignment.fragments.sorted.tagged.bam` 文件的索引。
 
-*   **核心用途**:
-    *   **快速数据访问**: 允许 IGV、Samtools 等工具在无需完整加载BAM文件的情况下，快速跳转和读取任意基因组区域的比对数据。
-    *   **性能保障**: 是所有对BAM文件进行随机访问操作的性能保障。
-*   **格式**:
-    *   由 `samtools index` 命令生成的标准 **BAI (BAM Index)** 格式。
+*   **核心用途**: 允许 IGV、Samtools 等工具在无需完整加载 BAM 文件的情况下，快速跳转和读取任意基因组区域的比对数据。
+*   **格式**: 标准 **BAI (BAM Index)** 格式（超长染色体参考基因组时生成 `.csi`）。
 
----
+### 峰矩阵文件 <a id="峰矩阵文件"></a>
 
-### 📈 峰矩阵文件 <a id="峰矩阵文件"></a>
+**核心内容**: 单细胞峰信号计数矩阵，分为原始数据和质控过滤后数据，采用标准稀疏矩阵格式。
 
-<div align="center">
+!!! warning "核心注意：矩阵计数口径（Cutsite）与细胞质控指标（Unique Fragment）"
+    - **Cutsite 计数口径**：峰矩阵（`filtered_peak_bc_matrix`）中的数值为经过 Tn5 转座酶插入 9-bp 偏移修正后的**两端切割位点计数（cutsite）**，能够以最高灵敏度反映局部染色质开放信号。
+    - **Fragment 质控口径**：`singlecell.csv` 中的 `peak_region_fragments`、FRIP（Fraction of Reads in Peaks）、TSS 富集比例以及 Cell Calling 过滤，**严格基于去重后的唯一片段（unique fragments）**。
+    - **避坑警示**：在 R（Signac）或 Python 中，**切勿使用矩阵列求和（如 `colSums(mtx)`）作为细胞的 fragment 测序深度进行质控过滤**！理论上 1 fragment ≈ 2 cutsites，且两者的统计口径和生物学定义截然不同。
+    - **分隔符规范**：3.2 版本起，`matrix.mtx.gz` 采用单空格（Single Space）分隔，自写解析脚本请使用 `line.split()`（匹配任意空白字符）或标准 `Matrix::readMM`。
 
-**🎯 核心内容**: 单细胞峰信号计数矩阵，分为原始数据和质控过滤后数据，采用标准稀疏矩阵格式
-
-</div>
-
-#### 📁 过滤后的峰矩阵 (`filter_peak_matrix/`)
+#### 过滤后的峰矩阵 (`filtered_peak_bc_matrix/`)
 
 包含经过高质量细胞过滤后的峰计数矩阵，是进行下游定量分析的核心数据。
 
 *   **核心用途**:
-    *   **下游定量分析**: 作为细胞聚类、差异可及性分析、轨迹推断等分析的**主要输入**。
+    *   **下游定量分析**: 作为细胞聚类、差异可及性分析、转录因子结合预测等分析的主要输入。
     *   **高质量数据**: 只包含被鉴定为真实细胞的条形码，确保分析结果的准确性。
-
 *   **内容与格式**:
-    *   采用标准的 **Market Matrix Exchange (MEX)** 格式，由以下三个压缩文件组成：
-        <table style="width:100%; border-collapse: collapse; margin: 15px 0;">
-        <thead>
-        <tr>
-        <th width="25%" align="left"><strong>文件名</strong></th>
-        <th width="75%" align="left"><strong>内容描述</strong></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td align="left"><code>barcodes.tsv.gz</code></td>
-        <td>细胞ID列表，标识通过质控筛选的高质量细胞。每行包含一个细胞ID信息，对应矩阵的列索引</td>
-        </tr>
-        <tr>
-        <td align="left"><code>peaks.bed.gz</code></td>
-        <td>峰区域位置信息文件，采用BED格式存储。包含染色体、起始位置和结束位置，对应矩阵的行索引</td>
-        </tr>
-        <tr>
-        <td align="left"><code>matrix.mtx.gz</code></td>
-        <td>峰区域计数矩阵，采用 Market Matrix 格式。包含矩阵维度信息和非零元素的行、列索引及数值</td>
-        </tr>
-        </tbody>
-        </table>
+    *   采用标准的 **Matrix Market Exchange (MEX)** 格式，由以下三个压缩文件组成：
+
+        | 文件名 | 内容描述 |
+        | :--- | :--- |
+        | `barcodes.tsv.gz` | 细胞 ID 列表，标识通过质控筛选的高质量真实细胞，每行对应矩阵的一列 |
+        | `peaks.bed.gz` | 峰区域位置信息文件，BED 格式存储（染色体、起始位置、结束位置），对应矩阵的行 |
+        | `matrix.mtx.gz` | 峰区域计数矩阵，采用 Matrix Market 稀疏格式，记录非零元素的行、列索引及 Cutsite 数值 |
 
 *   **格式优势**:
     *   **空间高效**: 稀疏矩阵格式（`.mtx`）仅存储非零元素，极大节省了存储空间。
-    *   **高度兼容**: MEX 格式是单细胞社区的标准（关于矩阵格式详见[Market Matrix格式说明](#market-matrix-format-mtxgz)），兼容 Seurat, Signac, Scanpy 等几乎所有主流分析工具。
+    *   **高度兼容**: MEX 格式是单细胞社区的标准，兼容 Signac、ArchR、Scanpy 等主流分析工具。
 
-<div align="left" style="color: #ccc; margin: 2em 0;">-----------</div>
-
-#### 📁 原始峰矩阵 (`raw_peak_matrix/`)
+#### 原始峰矩阵 (`raw_peak_bc_matrix/`)
 
 包含所有检测到的细胞条形码（未经过滤）的原始峰计数矩阵。
 
+*   **核心用途**: 用于评估细胞过滤算法的效果，或根据研究人员的自定义标准进行定制化质控与过滤。
+*   **内容与格式**: 采用标准的 MEX 格式，文件组成与 `filtered_peak_bc_matrix/` 目录相同，包含所有检测到的条形码（含真实细胞与背景液滴）。
+
+### 分析指标汇总 <a id="分析指标汇总"></a>
+
+**核心内容**: 实验质量评估和统计指标汇总，提供完整的数据质量控制信息。
+
+#### metrics_summary.xls
+
+采用制表符分隔（TSV）格式的关键分析指标汇总表，提供了对实验整体质量的结构化评估。
+
+*   **核心用途**: 快速评估测序数据质量、比对效率、细胞鉴定结果等核心指标。
+*   **内容分类**:
+    | 指标类别 | 包含内容 |
+    | :--- | :--- |
+    | **基础测序统计** | 原始测序读段对数、有效条形码比例、Q30 碱基质量等基础测序指标 |
+    | **细胞鉴定指标** | 估计细胞数量、每细胞中位片段数、峰区域片段占比、TSS 区域片段占比、识别峰数量等 |
+    | **比对与特征指标** | 基因组比对率、线粒体比例、无核小体区域比例、单核小体区域比例等 |
+
+*   **读取方式**: 文本格式文件，推荐在 R 中使用 `read.delim("metrics_summary.xls")`，在 Python 中使用 `pd.read_csv("metrics_summary.xls", sep="	")`。详细指标释义与推荐质量基准请参见 [网页报告释义](#网页报告释义)。
+
+#### 峰注释 {#peak-annotation}
+
+`peak_annotation.tsv` 为过滤后 peaks 的制表符注释表。仅在过滤矩阵的 `peaks.bed.gz`、参考 GTF 可用且注释成功时发布；注释失败不将其视为必需输出。一个 peak 可关联多个基因，因此行数不保证与矩阵特征数相等。
+
+| 字段 | 含义 |
+| :--- | :--- |
+| `chrom`、`start`、`end` | Peak 坐标，起点从 0 开始，终点不包含在区间内 |
+| `gene`、`gene_id` | 关联基因的名称与参考注释 ID |
+| `distance` | 关联 TSS 到 peak 最近碱基的有符号距离；重叠为 0，转录方向下游为正 |
+| `peak_type` | 启动子/远端关联，或基因间区/未注释结果 |
+| `genomic_region` | 基因组区域分类 |
+| `gene_biotype`、`tss_source` | GTF 基因类型与所选 TSS 的注释来源 |
+
+其他可选文件：双物种分类结果 `cell_classification.csv` 位于 ATAC 输出根目录；C4 白名单/低靶向策略（`audit` 或 `apply`）产生诊断时，交付 `whitelist_contamination.json` 和 `whitelist_contamination_cells.json`。物种分类中的 `Multiplet` 表示跨物种混合候选，`Unassigned` 表示未确定归属，不应视为已证实的生物学双胞标签。
+
+#### singlecell.csv
+
+单细胞级别的多维度质控信息表，采用 CSV 格式存储。
+
+*   **包含字段**:
+    `Cell,totalFrags,fragments,mt_region_fragments,chloroplast_region_fragments,TSS_region_fragments,blacklist_region_fragments,peaks_number,peak_region_fragments,peak_region_cutsites,is_cell_barcode,Cellbarcode`。
 *   **核心用途**:
-    *   **质量控制评估**: 可用于评估细胞过滤的效果，或根据自定义标准进行手动过滤。
-    *   **数据完整性**: 保留了所有原始数据，可用于深度挖掘或在需要时重新分析。
+    *   **精细化质控**: 支持研究人员基于 `is_cell_barcode` 提取真实细胞，或根据自定义片段数、TSS 富集比例等指标进行二次质控。
+    *   **下游元数据对接**: 可直接作为 Signac、ArchR 或 Scanpy 对象的细胞元数据（Cell Metadata / `adata.obs`）。
+*   **说明**: `peak_region_fragments` 与 `peak_region_cutsites` 分别记录片段数与切割端点计数；仅配套工具输出该端点统计时才有值，缺失不应视作 0。
 
-*   **内容与格式**:
-    *   采用标准的 **Market Matrix Exchange (MEX)** 格式，其文件组成与 `filter_peak_matrix/` 目录完全相同。
-    *   包含所有被检测到的条形码，包括高质量细胞、低质量细胞和背景液滴。
+`totalFrags` 为包含重复支持的片段读段对数，`fragments` 为去重后的唯一片段数。报告汇总 FRIP/TSS 比例以核内片段为分母；Targeting 散点图则以全部唯一 `fragments` 为分母，归一化 TSS 富集曲线是另一种信号。空片段 gzip 文件可能没有 `.tbi` 索引。ATAC 聚类对象位于处理中间目录，不作为 `outs/analysis/` 文件包发布。
 
----
-
-### 📝 分析指标汇总 <a id="分析指标汇总"></a>
-
-<div align="center">
-
-**🎯 核心内容**: 实验质量评估和统计指标汇总，提供完整的数据质量控制信息
-
-</div>
-
-#### 📄 metrics_summary.xls
-
-采用 Excel 格式的关键分析指标汇总表，提供了对实验整体质量的全面评估。
-
-*   **核心用途**:
-    *   **质量评估**: 快速评估测序数据质量、比对效率、细胞鉴定结果等核心指标。
-    *   **结果概览**: 无需查看所有文件即可对分析结果有一个全面的了解。
-
-*   **内容与格式**:
-    *   包含三大类别的关键指标：
-        <table style="width:100%; border-collapse: collapse; margin: 15px 0;">
-        <thead>
-        <tr>
-        <th width="20%" align="left"><strong>指标类别</strong></th>
-        <th width="80%" align="left"><strong>包含内容</strong></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td align="left"><strong>基本统计</strong></td>
-        <td>总读段对数、有效条形码比例、Q30碱基质量等基础测序指标</td>
-        </tr>
-        <tr>
-        <td align="left"><strong>细胞识别</strong></td>
-        <td>估计细胞数量、峰区域片段占比、TSS区域片段占比、峰检测数量、TSS富集等细胞调用结果</td>
-        </tr>
-        <tr>
-        <td align="left"><strong>比对指标</strong></td>
-        <td>基因组比对率、线粒体比例等比对统计</td>
-        </tr>
-        </tbody>
-        </table>
-    *   内置推荐的质量控制标准，方便用户判断：
-        <details open>
-        <summary><strong>推荐质量阈值：</strong></summary>
-        <ul>
-        <li>✅ <strong>有效条形码比例</strong>: >70%</li>
-        <li>✅ <strong>Q30碱基质量</strong>: >75%（条形码和UMI区域）</li>
-        <li>✅ <strong>基因组比对率</strong>: >50%</li>
-        <li>✅ <strong>TSS富集分数（人/鼠）</strong>: >4</li>
-        <li>✅ <strong>峰区域片段比例</strong>: >15%</li>
-        <li>✅ <strong>TSS区域片段比例</strong>: >10%</li>
-        <li>✅ <strong>重复序列百分比</strong>: >10%</li>
-        </ul>
-        </details>
-
-<div align="left" style="color: #ccc; margin: 2em 0;">-----------</div>
-
-#### 📄 singlecell.csv
-
-采用 CSV 格式的单细胞级别质量控制信息表，记录了每个细胞条形码的详细统计数据。
-
-*   **核心用途**:
-    *   **精细化质控**: 支持用户根据自定义标准进行更精细的细胞过滤和分析。
-    *   **下游分析输入**: 可作为 Signac、Scanpy 等分析工具的细胞元数据(metadata)输入。
-
-*   **内容与格式**:
-    *   每一行代表一个细胞条形码。
-    *   主要列包括：片段数量、峰数量、TSS/peak区域片段数以及是否被判定为高质量细胞、磁珠合并信息等。
-
-<div align="left" style="color: #ccc; margin: 2em 0;">-----------</div>
-
-#### 📄 *_scATAC_report.html
+#### *_scATAC_report.html
 
 采用 HTML 网页格式的交互式综合分析报告。
 
 *   **核心用途**:
-    *   **结果可视化**: 以交互式图表的形式，直观展示质控结果、细胞聚类、TSS富集等关键分析结果。
-    *   **结果解读**: 提供各项指标的生物学意义和技术解释，帮助用户深度解读数据。
-    *   **便捷分享**: 单个 HTML 文件，易于传阅和分享。
+    *   **结果可视化**: 以交互式图表展示质控结果、细胞聚类、TSS 富集等关键分析结果。
+    *   **便捷分享**: 单个离线 HTML 文件，无需依赖网络，双击即可在任意桌面浏览器中打开。
+*   **报告模块**:
+    | 报告模块 | 内容描述 |
+    | :--- | :--- |
+    | **交互式图表** | 质控指标、细胞条形码排序、TSS 富集曲线、片段长度分布、细胞聚类等交互式可视化图表 |
+    | **统计汇总** | 关键性能指标的数值汇总与状态评估（推荐 / 可接受 / 需优化） |
+    | **详细解读** | 各项质控指标的计算口径、生物学意义及异常排查建议 |
 
-*   **内容与格式**:
-    *   无需网络，可在任何现代浏览器中打开。
-    *   报告的详细解读请参考本文档下方的 [网页报告释义](#网页报告释义) 部分。
-    *   包含的关键内容模块如下：
-        <table style="width:100%; border-collapse: collapse; margin: 15px 0;">
-        <thead>
-        <tr>
-        <th width="25%" align="left"><strong>报告特点</strong></th>
-        <th width="75%" align="left"><strong>内容描述</strong></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td align="left"><strong>交互式图表</strong></td>
-        <td>质控指标、细胞聚类、峰分析等可交互可视化图表</td>
-        </tr>
-        <tr>
-        <td align="left"><strong>统计汇总</strong></td>
-        <td>关键性能指标的数值汇总和趋势分析</td>
-        </tr>
-        <tr>
-        <td align="left"><strong>详细解读</strong></td>
-        <td>各项指标的生物学意义和技术解释</td>
-        </tr>
-        </tbody>
-        </table>
+## 文件格式说明 <a id="文件格式说明"></a>
 
----
+**技术规范**: 输出文件采用的标准格式详细说明。
 
-## 📄 文件格式说明 <a id="文件格式说明"></a>
+#### Matrix Market 格式 (`.mtx.gz`) <a id="market-matrix-format-mtxgz"></a>
 
-> **技术规范**: 输出文件采用的标准格式详细说明
-
-#### 📊 Market Matrix格式 (`.mtx.gz`) <a id="market-matrix-format-mtxgz"></a>
 Market Exchange Format (MEX) 是单细胞分析中用于存储稀疏计数矩阵的标准格式，具有空间高效和高度兼容的优点。
 
 *   **核心优势**:
-    *   **空间高效**: 稀疏矩阵仅存储非零元素，对于通常超过95%为零值的单细胞数据，可极大节省存储空间。
-    *   **高度兼容**: 作为国际标准格式，可被 Seurat, Scanpy, Signac 等几乎所有主流分析工具直接读取。
-
+    *   **空间高效**: 稀疏矩阵仅存储非零元素，对于通常超过 95% 为零值的单细胞 ATAC 数据，可极大节省磁盘与内存开销。
+    *   **高度兼容**: 作为国际标准格式，可被 Signac、ArchR、Scanpy 等主流分析工具直接解析。
 *   **文件组成**:
-    *   一个完整的MEX格式数据由以下 **三个文件** 构成：
-        <table style="width:100%; border-collapse: collapse; margin: 15px 0;">
-        <thead>
-        <tr>
-        <th width="25%" align="left"><strong>文件名</strong></th>
-        <th width="75%" align="left"><strong>描述</strong></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td align="left"><code>matrix.mtx.gz</code></td>
-        <td>压缩的稀疏矩阵文件。文件头包含矩阵维度，后续每行记录一个非零元素的位置（行/列索引）和数值。</td>
-        </tr>
-        <tr>
-        <td align="left"><code>barcodes.tsv.gz</code></td>
-        <td>压缩的细胞条形码文件。每行是一个细胞ID，行号对应矩阵的<strong>列</strong>。</td>
-        </tr>
-        <tr>
-        <td align="left"><code>peaks.bed.gz</code></td>
-        <td>压缩的特征（峰）文件。每行是一个峰的BED格式坐标，行号对应矩阵的<strong>行</strong>。</td>
-        </tr>
-        </tbody>
-        </table>
+
+    | 文件名 | 格式描述 |
+    | :--- | :--- |
+    | `matrix.mtx.gz` | 压缩的稀疏矩阵文件。文件头包含矩阵维度与非零项总数，后续每行记录一个非零元素的位置（行/列索引）和数值 |
+    | `barcodes.tsv.gz` | 压缩的细胞条形码文件。每行对应一个细胞 ID，行号对应矩阵的**列** |
+    | `peaks.bed.gz` | 压缩的特征（峰）文件。每行对应一个峰的 BED 坐标，行号对应矩阵的**行** |
+
+## 网页报告释义 <a id="网页报告释义"></a>
+
+**概述**：HTML 网页报告提供单细胞 ATAC 测序结果的可视化摘要和指标说明，覆盖实验质量与下游分析相关的关键指标。
+
+!!! info "质量评估原则与阅读建议"
+    - **整体评估**：HTML 网页报告提供单细胞 ATAC 测序结果的可视化摘要与质控分析，覆盖细胞识别、测序质量、片段长度分布、TSS 富集、Peak 区域分布及细胞聚类等核心环节。
+    - **基准参考**：下述质量参考标准基于常规组织样本拟定。不同组织类型（如实体肿瘤、原代神经组织、冻存样本）、细胞状态与测序深度存在天然异质性，实际评估时请结合实验背景综合判断。
+    - **阅读路径**：建议按照报告展示顺序依次核对测序质量、比对与线粒体比例、TSS 富集曲线及 Peak 内片段占比，最后结合降维聚类效果评估染色质开放信号的生物学合理性。
+
+### 报告主要内容与结构
+
+<div style="text-align: center; margin: 1.5rem 0;" markdown="block">
+<img src="../images/html_scatac1.png" alt="scATAC 网页报告概览" style="max-width: 540px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);">
+</div>
+
+### 核心分析指标详解
+
+#### 细胞指标 (Cell Metrics) <a id="细胞指标"></a>
+
+**核心功能**: 细胞识别、质量评估和染色质可及性统计，提供实验整体效果的关键指标。
+
+**质量参考标准：**
+
+| 指标名称 (Metric) | 推荐标准 (Optimal) | 可接受区间 (Acceptable) | 需关注/优化 (Suboptimal) |
+| :--- | :---: | :---: | :---: |
+| **Median fragments per cell** | ≥ 10,000 | 2,000 – 10,000 | < 2,000 |
+| **Median fraction of fragments overlapping peaks** | ≥ 30% | 15% – 30% | < 15% |
+| **Median fraction of fragments overlapping TSS** | ≥ 20% | 10% – 20% | < 10% |
+| **Fraction fragments in cells** | ≥ 50% | 20% – 50% | < 20% |
+
+**详细指标解释与算法：**
+
+| 指标名称 (Metric) | 统计口径与算法计算 | 判读指导与排查要点 |
+| :--- | :--- | :--- |
+| **Estimated number of cells**<br>*(估计细胞数量)* | 从测序数据中鉴定出的有效真实细胞条形码总数。通过合并同液滴条形码并基于片段数及 TSS 富集进行细胞识别过滤。 | 综合上样细胞数与细胞产出率判断。若显著低于预期，建议检查上样细胞活率、微流控包裹稳定性或文库转化效率。 |
+| **Species**<br>*(物种信息)* | 分析所采用的物种名称及参考基因组版本信息。 | 用于核验样本物种与参考基因组配置的一致性，是溯源比对异常的第一核对项。 |
+| **Median fragments per cell**<br>*(每细胞中位片段数)* | 真实高质量细胞中包含的唯一有效 ATAC 片段数中位数。 | 衡量单细胞测序深度与捕获灵敏度的核心指标。推荐 ≥ 10,000（最低 ≥ 2,000）；数值过低会直接影响 peak calling、分群及差异可及性分析的灵敏度。 |
+| **Mean raw read pairs per cell**<br>*(每细胞平均原始读段对数)* | 原始测序读段对总数 / 估计细胞数量。 | 评估文库测序深度的宏观指标。建议 ≥ 25,000 read pairs/cell，以保证染色质开放区域具备充分的测序覆盖。 |
+| **Fraction overlapping peaks**<br>*(片段重叠峰区域比例 / FRIP)* | 对识别细胞分别计算 `peak_region_fragments / 核内唯一片段数` 后取中位数。核内片段数为 `fragments − mt_region_fragments − chloroplast_region_fragments`，计算时分母至少取 1。 | 评估 ATAC 信号特异性与信噪比的金标准。推荐 ≥ 30%；< 15% 提示背景游离 DNA 污染严重、细胞核破损或转座反应特异性欠佳。 |
+| **Fraction overlapping TSS**<br>*(TSS 区域片段重叠比例)* | 对识别细胞分别计算 TSS ±1,000 bp 区域的 `TSS_region_fragments / 核内唯一片段数` 后取中位数；分母与峰重叠比例汇总一致。 | 反映启动子可及性信号的富集强度。推荐 ≥ 20%；< 10% 提示文库非特异性背景过高或染色质片段化过度。 |
+| **Fraction of fragments in cells**<br>*(细胞内片段比例)* | 识别细胞的 `totalFrags` 之和 / 全表 `totalFrags` 之和；统计支持片段的读段对（含重复支持），不是去重后的 `fragments`。 | 衡量真实细胞信号与背景空滴/游离 DNA 信号的比率。推荐 ≥ 50%；过低说明反应液中存在大量游离染色质碎片污染。 |
+| **Number of peaks**<br>*(识别峰数量)* | 聚合所有高质量细胞信号后，在全基因组范围内鉴定出的开放染色质峰（Peaks）总数。 | 典型范围在 50,000 – 150,000 之间。峰数量直接受细胞类型异质性、细胞总数及测序深度影响。 |
+
+#### 测序指标 (Sequencing Metrics) <a id="测序指标"></a>
+
+**核心功能**: 测序数据的基础质量评估，包括条形码识别率、比对质量和测序准确性。
+
+**质量参考标准：**
+
+| 指标名称 (Metric) | 推荐标准 (Optimal) | 可接受区间 (Acceptable) | 需关注/优化 (Suboptimal) |
+| :--- | :---: | :---: | :---: |
+| **Valid barcodes** | ≥ 80% | 70% – 80% | < 70% |
+| **Q30 bases in barcode** | > 85% | 75% – 85% | < 75% |
+| **Q30 bases in read** | > 85% | 75% – 85% | < 75% |
+| **Confidently mapped read pairs** | > 80% | 50% – 80% | < 50% |
+
+**详细指标解释与算法：**
+
+| 指标名称 (Metric) | 统计口径与算法计算 | 判读指导与排查要点 |
+| :--- | :--- | :--- |
+| **Total number of reads pairs**<br>*(测序读段对总数)* | 样本测序产生的双端原始读段对（Read Pairs）总量。 | 实验原始数据量的直接体现，是评估测序深度和实验通量的基准。 |
+| **Valid barcodes**<br>*(有效条形码比例)* | 条形码序列可精准匹配至预设白名单（含容错校正）的读段占总测序读段的比例。 | 推荐 ≥ 80%。过低通常提示条形码区域测序质量欠佳、文库构建引物异常或测序周期偏离。 |
+| **Confidently mapped read pairs**<br>*(基因组比对率)* | 成功唯一比对到参考基因组上的读段对占总读段的比例。 | 推荐 ≥ 80%。低于 50% 时需优先排查：样本外源污染、物种参考基因组选择错误，或高重复序列导致的比对异常。 |
+| **Mitochondria reads ratio**<br>*(线粒体 reads 比例)* | 比对至线粒体基因组的读段占总比对读段的百分比。 | 评估细胞核制备纯度与核膜完整性的核心指标。线粒体 DNA 缺乏核小体保护极易被 Tn5 切割；通常推荐 < 10%，> 20% 提示细胞破损裂解严重。 |
+| **Nucleosome-free regions**<br>*(无核小体区域比例)* | 长度 < 147 bp 的转座插入片段占总片段的百分比。 | 直接反映启动子与顺式调控元件等开放染色质区域的有效信号。推荐 > 40%；过低说明转座酶消化不足或染色质凝集。 |
+| **Mono-nucleosome regions**<br>*(单核小体区域比例)* | 长度介于 147 – 294 bp 之间（缠绕单个核小体）的片段占比。 | 与无核小体片段比例互补，共同反映核小体相位结构的完整性。 |
+| **Q30 bases in barcode**<br>*(条形码 Q30 碱基比例)* | 细胞条形码序列中测序质量值 ≥ 30（错误率 < 0.1%）的碱基占比。 | 评估单细胞标签识别的物理测序质量，通常应 > 85%。 |
+| **Q30 bases in read**<br>*(读段 Q30 碱基比例)* | 基因组插入片段测序读段中质量值 ≥ 30 的碱基占比。 | 评估染色质片段测序本身的保真度，直接关系到基因组精准比对和 Peak 定位。 |
+
+### 交互式可视化图表解读
+
+<a id="可视化图表1"></a>
+
+网页报告内置了多维度交互式可视化图表，全面覆盖细胞识别质控、染色质构象特征及聚类分群分析。
+
+#### 1. 细胞条形码排序图 (Barcode Rank Plot)
+
+**图表功能**：展示所有细胞条形码按峰区域片段数降序排列的累计分布曲线，用于直观区分高质量真实细胞与背景噪音。
+
+<div style="text-align: center; margin: 1.2rem 0;" markdown="block">
+<img src="../images/html_scatac3.jpg" alt="细胞条形码排序曲线" style="max-width: 340px; width: 100%; border-radius: 8px; box-shadow: 0 3px 12px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);">
+</div>
+
+**如何解读**：
+
+*   **坐标轴定义**:
+    *   **X 轴 (Barcode Rank)**: 所有细胞条形码按片段数降序排列（对数刻度）。左侧为高片段数条形码，右侧为低片段数背景。
+    *   **Y 轴 (Fragment Counts)**: 各条形码对应的峰区域片段总数（对数刻度）。
+*   **拐点（Knee Point）判定**:
+    *   图中曲线通常会出现陡峭的下折拐点。
+    *   拐点左侧的 **蓝色区域** 代表被算法判定为高质量真实细胞的条形码。
+    *   拐点右侧的 **灰色区域** 代表背景游离片段与空液滴。
+*   **交互特征**: 鼠标悬停可查看条形码位次与具体片段数值；蓝色渐变区域代表真实细胞在不同局部的密度分布。
 
 ---
 
-## 📊 网页报告释义 <a id="网页报告释义"></a>
+#### 2. 液滴微珠分布图 (Droplet Beads Distribution) {#2-droplet-beads-distribution}
 
-<div align="center">
+**图表功能**：展示真实细胞反应液滴中捕获微珠（Beads）的数量分布情况。
 
-**🎯 概述**: HTML 网页报告提供了单细胞ATAC测序分析结果的全面可视化展示和详细解读，包含关键性能指标的评估，帮助用户快速了解实验质量和分析结果
+**如何解读**：
 
-</div>
-
-HTML网页报告是单细胞ATAC测序分析的综合展示平台，整合了从数据质量控制到下游表观基因组学分析的完整结果。该报告采用交互式可视化设计，帮助用户快速评估实验质量、理解分析结果并指导后续研究方向。
-
-> 💡 **使用建议**: 建议按照报告展示顺序依次查看各项指标。
-
-> ⚠️ **质量标准**: 各项指标均提供了推荐阈值和质量等级，请结合具体实验目标进行综合评估。
-
-### 📊 报告主要内容与结构
-
-<div align="center">
-<img src="../images/html_scatac1.png" alt="scATAC网页报告" width="500">
-</div>
-
-### 🧬 核心分析指标详解
-
-#### 🧬 细胞指标 (Cell Metrics) <a id="细胞指标"></a>
-
-<div align="center">
-
-**🎯 核心功能**: 细胞识别、质量评估和染色质可及性统计，提供实验整体效果的关键指标
-
-</div>
-
-**📊 质量控制标准：**
-> **注意**: 以下标准仅供参考，实际质量评估应考虑组织类型、细胞状态和实验目标等多种因素。不同样本间存在显著差异，建议结合具体实验背景进行判断。
-
-<table style="width:100%; border-collapse: collapse; margin: 15px 0;">
-<thead>
-<tr>
-<th width="25%" align="left"><strong>指标名称</strong></th>
-<th width="30%" align="left"><strong>推荐值</strong></th>
-<th width="30%" align="left"><strong>可接受</strong></th>
-<th width="15%" align="left"><strong>需优化</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><strong>Median fragments per cell</strong></td>
-<td align="left">≥ 10,000</td>
-<td align="left">2,000–10,000</td>
-<td align="left">< 2,000</td>
-</tr>
-<tr>
-<td align="left"><strong>TSS enrichment score</strong></td>
-<td align="left">≥ 6</td>
-<td align="left">4–6</td>
-<td align="left">< 4</td>
-</tr>
-<tr>
-<td align="left"><strong>Median fraction of fragments overlapping peaks</strong></td>
-<td align="left">≥ 30%</td>
-<td align="left">15–30%</td>
-<td align="left">< 15%</td>
-</tr>
-<tr>
-<td align="left"><strong>Median fraction of fragments overlapping TSS</strong></td>
-<td align="left">≥ 20%</td>
-<td align="left">10–20%</td>
-<td align="left">< 10%</td>
-</tr>
-<tr>
-<td align="left"><strong>Fraction fragments in cells</strong></td>
-<td align="left">≥ 50%</td>
-<td align="left">20–50%</td>
-<td align="left">< 20%</td>
-</tr>
-
-</tbody>
-</table>
-
-**🔍 详细指标解释：**
-
-<table style="width:100%; border-collapse: collapse; margin: 15px 0;">
-<thead>
-<tr>
-<th width="30%" align="left"><strong>指标名称</strong></th>
-<th width="70%" align="left"><strong>详细解释与技术要求</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">
-<strong>Estimated number of cells</strong><br>
-<em>估计细胞数量</em>
-</td>
-<td>
-<ul>
-<li><strong>定义</strong>: 从测序数据中鉴定出的有效细胞（区别于背景噪音或空液滴）的总数。</li>
-<li><strong>计算过程</strong>: 合并同液滴的细胞条形码后，通过峰区域片段数量、TSS比例等参数进行过滤。</li>
-<li><strong>质量判读</strong>: 
-<ul><li><strong>异常原因</strong>: 细胞计数不准、细胞裂解、样本或文库质量差、测序深度低。</li></ul>
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td align="left">
-<strong>Species</strong><br>
-<em>物种信息</em>
-</td>
-<td>
-<ul>
-<li><strong>定义</strong>: 分析所采用的物种或参考基因组版本。</li>
-<li><strong>说明</strong>: 该信息来源于建库时提供的参考基因组，用于确保比对和注释的准确性。</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td align="left">
-<strong>Median fragments per cell</strong><br>
-<em>每细胞中位片段数</em>
-</td>
-<td>
-<ul>
-<li><strong>定义</strong>: 单个细胞内所包含的有效ATAC-seq片段数量的中位数。</li>
-<li><strong>生物学意义</strong>: 此指标直接反映了单个细胞核内染色质开放区域的捕获效率和测序深度。数值越高，表明单细胞数据质量越好。</li>
-<li><strong>质量判读</strong>:
-<ul>
-<li><strong>高质量标准</strong>: ≥ 10,000</li>
-<li><strong>推荐最低值</strong>: ≥ 2,000</li>
-<li><strong>注意</strong>: 该数值受细胞类型和测序深度影响较大。</li>
-</ul>
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td align="left">
-<strong>Mean raw read pairs per cell</strong><br>
-<em>每细胞平均原始读段对数</em>
-</td>
-<td>
-<ul>
-<li><strong>定义</strong>: 平均分配到每个细胞上的原始测序读段对（Read Pairs）数量。</li>
-<li><strong>计算</strong>: `原始测序读段对总数 / 估计细胞数量`</li>
-<li><strong>质量判读</strong>: 建议此值 ≥ 25,000 以确保充分的染色质覆盖。</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td align="left">
-<strong>Fraction overlapping peaks</strong><br>
-<em>片段重叠峰区域比例</em>
-</td>
-<td>
-<ul>
-<li><strong>定义</strong>: 单个细胞内，其片段（fragments）落入开放染色质区域（Peaks）的比例。</li>
-<li><strong>生物学意义</strong>: 这是一个关键的信噪比指标。高比例意味着转座酶攻击更集中于开放染色质，数据信噪比高。</li>
-<li><strong>质量判读</strong>:
-<ul><li><strong>质量警告</strong>: < 15% 可能提示样本质量问题。</li></ul>
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td align="left">
-<strong>Fraction overlapping TSS</strong><br>
-<em>TSS区域片段重叠比例</em>
-</td>
-<td>
-<ul>
-<li><strong>定义</strong>: 单个细胞内，其片段落在转录起始位点（TSS）±2kb 区域内的比例。</li>
-<li><strong>生物学意义</strong>: 评估染色质在启动子区域的活跃性与测序特异性的关键指标。</li>
-<li><strong>质量判读</strong>:
-<ul><li><strong>质量警告</strong>: < 10% 可能提示样本质量问题。</li></ul>
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td align="left">
-<strong>Fraction of fragments in cells</strong><br>
-<em>细胞内片段比例</em>
-</td>
-<td>
-<ul>
-<li><strong>定义</strong>: 在所有有效片段中，成功归属于高质量细胞ID的片段所占的比例。</li>
-<li><strong>生物学意义</strong>: 反映细胞捕获的效率和信噪比。</li>
-<li><strong>质量判读</strong>:
-<ul><li><strong>质量问题</strong>: 比例偏低可能指示样本质量差或文库构建异常。</li></ul>
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td align="left">
-<strong>Number of peaks</strong><br>
-<em>识别峰数量</em>
-</td>
-<td>
-<ul>
-<li><strong>定义</strong>: 通过聚合所有细胞的信号后，在全基因组范围内识别出的开放染色质区域（峰）的总数量。</li>
-<li><strong>生物学意义</strong>: 反映了样本的整体复杂度和可检测到的调控元件数量。</li>
-<li><strong>影响因素</strong>: 受细胞数量、细胞类型异质性及测序深度影响。</li>
-<li><strong>典型范围</strong>: 50,000 – 150,000 个。</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-
-<div align="left" style="color: #ccc; margin: 2em 0;">-----------</div>
-
-#### 🔬 测序指标 (Sequencing Metrics) <a id="测序指标"></a>
-
-<div align="center">
-
-**🎯 核心功能**: 测序数据的基础质量评估，包括条形码识别率、比对质量和测序准确性
-
-</div>
-
-**📊 质量控制标准：**
-> **注意**: 以下标准仅供参考，实际质量评估应考虑组织类型、细胞状态和实验目标等多种因素。不同样本间存在显著差异，建议结合具体实验背景进行判断。
-
-<table style="width:100%; border-collapse: collapse; margin: 15px 0;">
-<thead>
-<tr>
-<th width="25%" align="left"><strong>指标类别</strong></th>
-<th width="25%" align="left"><strong>推荐值</strong></th>
-<th width="25%" align="left"><strong>可接受</strong></th>
-<th width="25%" align="left"><strong>需优化</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><strong>Valid barcodes</strong></td>
-<td align="left">≥ 80%</td>
-<td align="left">70–80%</td>
-<td align="left">< 70%</td>
-</tr>
-<tr>
-<td align="left"><strong>Q30 bases in barcode</strong></td>
-<td align="left">> 85%</td>
-<td align="left">75–85%</td>
-<td align="left">< 75%</td>
-</tr>
-<tr>
-<td align="left"><strong>Q30 bases in read</strong></td>
-<td align="left">> 85%</td>
-<td align="left">75–85%</td>
-<td align="left">< 75%</td>
-</tr>
-<tr>
-<td align="left"><strong>Reads mapped to genome</strong></td>
-<td align="left">> 80%</td>
-<td align="left">50–80%</td>
-<td align="left">< 50%</td>
-</tr>
-</tbody>
-</table>
-
-**🔍 详细指标解释：**
-
-<table style="width:100%; border-collapse: collapse; margin: 15px 0;">
-<thead>
-<tr>
-<th width="30%" align="left"><strong>指标名称</strong></th>
-<th width="70%" align="left"><strong>详细解释与技术要求</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">
-<strong>Total read pairs</strong><br>
-<em>测序读段对总数</em>
-</td>
-<td>
-<ul>
-<li><strong>定义</strong>: 分配给该样本的原始测序读段对（Read Pairs）的总数量。</li>
-<li><strong>意义</strong>: 代表本次测序的总体数据量。</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td align="left">
-<strong>Valid barcodes</strong><br>
-<em>有效条形码比例</em>
-</td>
-<td>
-<ul>
-<li><strong>定义</strong>: 在所有读段中，其细胞条形码（Cell Barcode）能够匹配到预设白名单（经过容错校正）的读段所占的比例。</li>
-<li><strong>生物学意义</strong>: 反映了细胞标记的有效性。</li>
-<li><strong>质量判读</strong>: 比例过低通常提示文库构建问题（如条形码降解、污染）或测序错误率高。</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td align="left">
-<strong>Reads mapped to genome</strong><br>
-<em>基因组比对率</em>
-</td>
-<td>
-<ul>
-<li><strong>定义</strong>: 在所有读段中，成功比对到参考基因组上任意位置的读段所占的比例。</li>
-<li><strong>质量判读</strong>:
-<ul><li><strong>需要关注</strong>: < 50% 可能提示样本污染或物种不匹配。</li></ul>
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td align="left">
-<strong>Mitochondria reads ratio</strong><br>
-<em>线粒体reads比例</em>
-</td>
-<td>
-<ul>
-<li><strong>定义</strong>: 所有比对上的读段中，比对到线粒体基因组上的读段所占的比例。</li>
-<li><strong>生物学意义</strong>: 这是细胞健康状况的一个重要指标。</li>
-<li><strong>质量判读</strong>: 比例过高（如 > 10%）通常提示细胞死亡或裂解过度，导致胞质中的线粒体DNA被大量捕获。</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td align="left">
-<strong>Nucleosome-free regions</strong><br>
-<em>无核小体区域比例</em>
-</td>
-<td>
-<ul>
-<li><strong>定义</strong>: 来自开放染色质区域（即无核小体区域）的片段比例。</li>
-<li><strong>生物学意义</strong>: 反映了有效的ATAC-seq信号强度。</li>
-<li><strong>质量判读</strong>: 高比例（如 > 40%）表示良好的染色质可及性信号和高效的转座酶活性。</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td align="left">
-<strong>Mono-nucleosome regions</strong><br>
-<em>单核小体区域比例</em>
-</td>
-<td>
-<ul>
-<li><strong>定义</strong>: 包含单个核小体的片段区域所占的比例。</li>
-<li><strong>生物学意义</strong>: 反映了染色质结构的完整性。该指标与“无核小体区域比例”共同评估染色质状态。</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td align="left">
-<strong>Q30 bases in barcode</strong><br>
-<em>条形码Q30碱基比例</em>
-</td>
-<td>
-<ul>
-<li><strong>定义</strong>: 在细胞条形码（Cell Barcode）序列中，测序质量值Q30及以上的碱基所占的比例。</li>
-<li><strong>意义</strong>: Q30代表碱基的测序错误率低于0.1%，该指标直接影响细胞身份识别的准确性。</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td align="left">
-<strong>Q30 bases in read</strong><br>
-<em>读段Q30碱基比例</em>
-</td>
-<td>
-<ul>
-<li><strong>定义</strong>: 在测序读段（Read）序列中，测序质量值Q30及以上的碱基所占的比例。</li>
-<li><strong>意义</strong>: 反映了整体测序数据的质量水平，是后续比对和片段识别准确性的基础。</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-
-<div align="left" style="color: #ccc; margin: 2em 0;">-----------</div>
-
-#### 📈 可视化图表1 <a id="可视化图表1"></a>
-
-<div align="center">
-
-**🎯 核心功能**: 细胞质量控制、片段分析和染色质可及性评估的多维度可视化展示
-
-</div>
-
-##### 📊 细胞排序图 (Barcode Rank Plot)
-
-**图表功能**:
-该图通过将所有细胞条形码按其包含的片段数进行排序，来区分高质量的真实细胞与背景噪音。
-
-**如何解读**:
-*   **坐标轴**:
-    *   **X轴 (Barcode Rank)**: 所有细胞条形码按片段数降序排列。左侧为高片段数细胞，右侧为低片段数细胞。
-    *   **Y轴 (Fragment Counts)**: 每个细胞对应的峰区域片段总数（对数刻度）。
-*   **关键特征 (Knee Point)**:
-    *   图中曲线通常会有一个明显的“拐点”（Knee Point）。
-    *   拐点左侧的 **蓝色区域** 代表被算法识别为高质量的真实细胞。
-    *   拐点右侧的 **灰色区域** 则代表背景噪音。
-*   **交互功能**:
-    *   鼠标悬停可查看细胞的详细排序和片段数。
-    *   蓝色区域的颜色深浅代表该区域内真实细胞的密度。
-
-<div align="left" style="color: #ccc; margin: 2em 0;">-----------</div>
-
-##### 📊 液滴磁珠分布图 (Droplet Beads Distribution)
-
-**图表功能**:
-展示在真实细胞液滴中，捕获到的细胞条形码（Beads）的数量分布情况。
-
-**如何解读**:
-*   **理论分布**: 液滴中磁珠的数量分布理论上符合**泊松分布**，这反映了微反应体系中随机捕获过程的统计特性。
-*   **实际影响**: 最终的分布会受到测序饱和度、液滴大小均一性、细胞浓度等实验因素的影响。
-
-<div align="left" style="color: #ccc; margin: 2em 0;">-----------</div>
-
-##### 📊 细胞数据分布图 (Cell Data Distribution)
-
-**图表功能**:
-通过三个独立的小提琴图（Violin Plots），分别展示高质量细胞在 **片段数 (Fragments)**、**TSS富集比例 (TSS Proportion)** 和 **Peak区域片段比例 (Peak Proportion)** 这三个关键质量指标上的分布情况。
-
-**如何解读**:
-*   **小提琴图简介**:
-    *   图的**宽度**表示在该数值位置的细胞密度。越宽的地方，代表有越多的细胞聚集在该数值附近。
-    *   内部的箱线图（Box Plot）展示了中位数、四分位数等统计信息。
-*   **各图解读**:
-    *   **片段数 (Fragments)**: 展示了细胞包含的片段总数的分布。一个好的文库，其分布的中心（最宽处）应该在一个较高的数值。
-    *   **TSS富集比例 (TSS Proportion)**: 展示了TSS区域片段占比的分布。分布的中心越高，说明细胞整体的转录活性信号越好。
-    *   **Peak区域片段比例 (Peak Proportion)**: 展示了峰区域片段占比的分布。分布的中心越高，说明信噪比越高。
-
-<div align="left" style="color: #ccc; margin: 2em 0;">-----------</div>
-
-##### 📊 片段长度分布图 (Fragment Length Distribution)
-
-**图表功能**:
-展示去重后ATAC-seq片段的插入长度分布，是评估样本质量和染色质结构完整性的关键图表。
-
-**如何解读**:
-*   **周期性峰 (Periodic Peaks)**:
-    *   **~100bp 以下**: 第一个高峰，代表**无核小体区域 (Nucleosome-free regions, NFR)** 的片段，即开放的染色质。
-    *   **~200bp 左右**: 第二个高峰，代表包含**单核小体**的片段。
-    *   **~400bp, ~600bp**: 后续的山峰，代表包含**双核小体**、**三核小体**的片段。
-*   **质量评估**:
-    *   **优质样本**: 具有清晰的、以约200bp为周期的阶梯状山峰，且第一个峰（NFR）显著。这表明细胞核完整性好，染色质结构清晰。
-    *   **质量不佳**: 曲线平坦，没有明显的周期性峰，通常意味着样本过度裂解，染色质结构被破坏。
+*   **理论分布**: 微流控液滴包裹过程中，液滴内微珠数量理论上遵循**泊松分布**，反映微流控反应体系的随机捕获特征。
+*   **实验关联**: 实际分布受测序饱和度、液滴生成均一性及细胞悬液浓度等实验因素影响。
 
 ---
 
-<div align="center">
-<img src="../images/html_scatac2.png" alt="scATAC网页报告" width="500">
-</div>
+#### 3. 细胞数据分布图 (Cell Data Distribution)
 
-#### 📈 其他核心指标 (Additional Key Metrics) <a id="其他核心指标"></a>
+**图表功能**：通过三个独立的小提琴图（Violin Plots），分别展示高质量细胞在 **片段数 (Fragments)**、**TSS 富集比例 (TSS Proportion)** 和 **Peak 区域片段比例 (Peak Proportion)** 上的分布形态。
 
-**Percent duplicates** (重复序列百分比)
-*   **定义**: 被认定为PCR重复的片段所占的比例。
-*   **生物学意义**: 这是衡量文库复杂度和测序饱和度的关键指标。
-*   **质量判读**: 
-    *   高重复率（如 > 20-30%）通常表示测序深度已接近饱和。
-    *   极低的重复率（如 < 10%）可能表示测序深度不足，建议增加测序以发现更多独特的片段。
+**如何解读**：
 
-<div align="left" style="color: #ccc; margin: 2em 0;">-----------</div>
-
-**Jaccard threshold** (Jaccard相似度阈值)
-*   **定义**: 用于判断任意两个磁珠（Beads）是否来自同一个细胞液滴的相似度阈值。
-*   **技术背景**: C4 ATAC技术中，一个液滴可能包含多个磁珠，需要通过计算它们捕获片段的相似度（Jaccard Index）来进行合并。
-*   **算法**: 该阈值通过 Otsu 算法自动确定，以达到最佳区分效果。为保证分析质量，当计算值低于0.02时，系统会自动设为0.02。
+*   **小提琴图形态**: 图表宽度代表该数值区间的细胞密度，腹部越饱满表示细胞聚集度越高；内部箱线图展示中位数与四分位范围。
+*   **指标解读**:
+    *   **片段数 (Fragments)**: 评估细胞文库测序深度与捕获丰度，中心位置越高说明细胞质量越优。
+    *   **TSS 富集比例 (TSS Proportion)**: 反映转录调控区域的信号特异性，中心分布越高说明启动子开放信号越强。
+    *   **Peak 区域片段比例 (Peak Proportion)**: 反映染色质开放峰的整体富集度，中心分布越高说明信噪比越好。
 
 ---
 
-#### 📈 可视化图表2 <a id="可视化图表2"></a>
+#### 4. 片段长度分布图 (Fragment Length Distribution)
 
-<div align="center">
+**图表功能**：展示去重后 ATAC-seq 片段的插入长度（Insert Size）频率分布曲线，是评估细胞核完整性与染色质天然构象的“金标准”。
 
-**🎯 核心功能**: 细胞聚类分析、TSS富集模式、饱和度评估和磁珠相似性的高级可视化展示
+**如何解读**：
 
-</div>
-
-##### 🌀 细胞聚类分析图 (Cluster Analysis)
-
-**图表功能**:
-通过UMAP降维和Louvain聚类算法，将具有相似染色质可及性模式的细胞在二维空间中聚集在一起，从而识别潜在的细胞亚群。
-
-**如何解读**:
-*   **左图 (细胞类型聚类)**:
-    *   每个点代表一个细胞。
-    *   不同颜色代表不同的细胞聚类（Cluster），可能对应不同的细胞类型或状态。
-    *   空间位置相近的细胞，其染色质开放模式也更相似。
-*   **右图 (片段数分布)**:
-    *   在与左图相同的UMAP空间上，用颜色梯度展示每个细胞的总片段数。
-    *   颜色越深，代表该细胞的片段数越多，数据质量越高。可用于辅助判断聚类结果的可靠性。
-
-<div align="left" style="color: #ccc; margin: 2em 0;">-----------</div>
-
-##### 📈 转录起始位点(TSS)富集图 (TSS Enrichment Profile)
-
-**图表功能**:
-展示在所有基因的转录起始位点（TSS）周围，ATAC-seq片段切割位点的富集情况，是衡量ATAC-seq信噪比和数据质量的核心指标。
-
-**如何解读**:
-*   **坐标轴**:
-    *   **X轴**: 相对TSS的位置（0点为TSS）。
-    *   **Y轴**: 归一化后的信号强度（切割频率）。
-*   **关键特征**:
-    *   一个高质量的ATAC-seq实验，会在TSS中心点（0点）显示出非常明显的信号富集尖峰。
-    *   TSS两侧的信号强度会迅速下降。
-*   **质量评估**:
-    *   **TSS富集分数 (TSS Enrichment Score)** 是该图的量化指标。分数越高（如 > 4-6），代表信噪比越好，数据质量越高。
-    *   若曲线平坦，无明显尖峰，则提示样本质量差或实验失败。
-
-<div align="left" style="color: #ccc; margin: 2em 0;">-----------</div>
-
-##### 📊 单细胞靶向图 (Single Cell Targeting Plot)
-
-**图表功能**:
-通过散点图展示每个细胞的两个关键质量指标，用于评估细胞识别（Cell Calling）算法的效果。
-
-**如何解读**:
-*   **坐标轴**:
-    *   **X轴 (Fragment Counts)**: 每个细胞的总片段数（对数刻度）。
-    *   **Y轴 (TSS Enrichment)**: 每个细胞的TSS富集分数。
-*   **质量评估**:
-    *   **右上角**: 高片段数 + 高TSS富集分数。这些点被认为是高质量的真实细胞。
-    *   **左下角**: 低片段数 + 低TSS富集分数。这些点被认为是背景噪音或空液滴，在分析中会被过滤掉。
-    *   理想情况下，真实细胞和背景噪音之间应该有清晰的分界。
-
-<div align="left" style="color: #ccc; margin: 2em 0;">-----------</div>
-
-##### 📈 饱和度曲线图 (Saturation Curve)
-
-**图表功能**:
-评估测序深度的充分性和数据复杂度，即继续增加测序量能否发现更多新的（Unique）片段。
-
-**如何解读**:
-*   **坐标轴**:
-    *   **X轴**: 平均每个细胞的测序读段对数（测序深度）。
-    *   **Y轴**: 平均每个细胞的中位唯一片段数。
-*   **曲线趋势**:
-    *   **线性上升阶段**: 曲线陡峭，表明增加测序深度能有效发现更多新片段，投入产出比高。
-    *   **平台期/饱和阶段**: 曲线逐渐平缓，表明文库的复杂度已基本被完全测序，继续增加测序深度，新发现的片段数量收益递减。
-*   **质量评估**: 饱和度（重复率）是该曲线的量化指标。建议饱和度在20%-50%之间，以在成本和数据完整性之间取得平衡。
-
-<div align="left" style="color: #ccc; margin: 2em 0;">-----------</div>
-
-##### 📊 磁珠相似性排序图 (Bead Similarity Ranking)
-
-**图表功能**:
-该图用于C4 ATAC技术中，通过计算Jaccard相似度来合并来自同一细胞液滴的多个磁珠（Beads）。
-
-**如何解读**:
-*   **坐标轴**:
-    *   **X轴**: 所有磁珠对按Jaccard相似度降序排列。
-    *   **Y轴**: Jaccard相似度指数（对数刻度）。
-*   **关键特征**:
-    *   **蓝色区域**: Jaccard相似度高于Otsu算法自动计算的阈值。这些磁珠对被认为是来自同一个细胞，其片段将在分析中被合并。
-    *   **灰色区域**: Jaccard相似度低于阈值，被认为是来自不同细胞的磁珠。
+*   **周期性峰特征**:
+    *   **< 147 bp（第一高峰）**: 代表**无核小体区域 (Nucleosome-free regions, NFR)** 片段，直接富集启动子与活跃顺式调控元件。
+    *   **~200 bp 左右（第二峰）**: 代表缠绕**单核小体**的片段。
+    *   **~400 bp / ~600 bp（后续周期峰）**: 代表跨越**双核小体**及多核小体的片段。
+*   **质控判读**:
+    *   **优质样本**: 呈现清晰的 ~200 bp 阶梯状周期性波动，且 NFR 尖峰突出。表明细胞核结构完整，染色质构象保存良好。
+    *   **质量异常**: 曲线平滑无周期性起伏，通常提示细胞核破裂严重、过度裂解或发生 DNA 非特异性降解。
 
 ---
 
-## 🎯 更多资源 <a id="更多资源"></a>
+<a id="其他核心指标"></a>
+<a id="可视化图表2"></a>
 
-### 📚 相关文档
+#### 5. 细胞聚类分析图 (Cluster Analysis)
 
-<table style="width:100%; border-collapse: collapse; margin: 15px 0;">
-<thead>
-<tr>
-<th width="30%" align="left"><strong>文档类型</strong></th>
-<th width="70%" align="left"><strong>资源链接和描述</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><strong>🚀 快速入门</strong></td>
-<td><a href="../quickstart.md">快速入门指南</a> - 第一次分析的完整教程</td>
-</tr>
-<tr>
-<td align="left"><strong>⚙️ 参数参考</strong></td>
-<td><a href="../parameter/parameter.md">参数参考手册</a> - 所有可配置参数的详细说明</td>
-</tr>
-<tr>
-<td align="left"><strong>🔬 分析流程</strong></td>
-<td><a href="../pipeline.md">分析流程说明</a> - 整个分析流程的技术细节</td>
-</tr>
-<tr>
-<td align="left"><strong>🔧 安装配置</strong></td>
-<td><a href="../installation.md">安装配置指南</a> - 系统要求、安装步骤和环境配置</td>
-</tr>
-</tbody>
-</table>
+**图表功能**：通过潜变量语义分析（LSI）降维与 UMAP 投影，将染色质可及性模式相似的细胞投射在二维空间中，以揭示潜在表观亚群。
 
+<div style="text-align: center; margin: 1.5rem 0;" markdown="block">
+<img src="../images/html_scatac2.png" alt="scATAC 网页报告图表" style="max-width: 540px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid var(--doc-border);">
+</div>
 
+**如何解读**：
 
-<div align="center">
-
-> 💡 **提示**
-> 
-> 本文档持续更新中，如发现内容错误或需要补充的信息，欢迎反馈。
-> 
-> 📝 **文档版本：** 3.0 beta | **最后更新：** 2025年
+*   **左图（细胞亚群分群）**: 每个散点代表一个细胞，不同颜色对应不同的表观聚类（Cluster），空间距离越近代表染色质开放特征越相似。
+*   **右图（片段深度分布）**: 在相同 UMAP 空间以颜色渐变展示细胞片段数深度，用于复核聚类结果是否受到测序深度偏差的技术干扰。
 
 ---
 
-**🔬 DNBelab C Series HT scATAC Analysis Software**  
-*高性能单细胞ATAC测序数据分析流程*
+#### 6. 转录起始位点富集图 (TSS Enrichment Profile)
 
-</div>
+**图表功能**：聚合所有基因转录起始位点（TSS）附近 ±1,000 bp 的 ATAC 片段切割频率，量化开放染色质信号的信噪比。
+
+**如何解读**：
+
+*   **坐标轴**: X 轴为相对于 TSS 的基因组距离（0 为 TSS 中心）；Y 轴为归一化切割信号强度。
+*   **信号形态**: 高质量样本在 TSS 中心（0 点）呈现对称的高耸尖峰，两侧信号快速降至背景水平。
+*   **量化指标**: **TSS Enrichment Score** 越高（推荐 > 4–6）表明文库信噪比越好；若曲线扁平无峰，高度提示染色质制备失败或文库非特异性背景过高。
+
+---
+
+#### 7. 单细胞靶向图 (Single Cell Targeting Plot)
+
+**图表功能**：以双变量散点图展示各细胞条形码的总片段数（X 轴，对数刻度）与 TSS 富集分数（Y 轴），用于评估细胞识别过滤的区分度。
+
+**如何解读**：
+
+*   **右上角区域**: 高片段数 + 高 TSS 富集分数，代表高质量真实细胞群体。
+*   **左下角区域**: 低片段数 + 低 TSS 富集分数，代表背景游离噪音与空液滴。
+*   **判读建议**: 理想样本中两组条形码群体应具有清晰的双峰分界。
+
+---
+
+#### 8. 测序饱和度曲线图 (Saturation Curve)
+
+**图表功能**：评估当前测序深度是否充分及文库复杂度释放情况。
+
+**如何解读**：
+
+*   **坐标轴**: X 轴为每细胞平均测序读段对数，Y 轴为每细胞中位唯一片段数。
+*   **趋势判读**:
+    *   **线性上升期**: 曲线坡度陡峭，增加测序量能显著获取更多新的唯一片段。
+    *   **饱和平台期**: 曲线逐渐走平，表示文库复杂度基本完全释放，继续加深测序的边际增益递减。通常 20%–50% 的重复率是测序深度与经济成本的良好平衡点。
+
+---
+
+#### 9. 微珠相似性排序图 (Bead Similarity Ranking) {#9-bead-similarity-ranking}
+
+**图表功能**：在多微珠反应体系中，通过微珠间共享片段的 Jaccard 相似度来合并归属于同一液滴的微珠条形码。
+
+**如何解读**：
+
+*   **坐标轴**: X 轴为所有微珠对按相似度降序排列的位次，Y 轴为 Jaccard 相似度（对数刻度）。
+*   **判定区域**:
+    *   **蓝色区域**: 相似度高于 Otsu 算法计算阈值的微珠对，判定为来源于同一细胞反应液滴，分析中自动合并。
+    *   **灰色区域**: 相似度低于阈值，判定为不同细胞来源，保持独立。
+
+---
+
+#### 10. 衍生算法指标释义 (Additional Algorithmic Metrics)
+
+| 指标名称 (Metric) | 算法定义与生信统计 | 判读指导与质控建议 |
+| :--- | :--- | :--- |
+| **Percent duplicates**<br>*(重复序列百分比)* | 被判定为 PCR 重复的片段占总比对片段的比例。 | 反映文库复杂度与测序深度饱和度。通常推荐在 20%–50% 之间；> 50% 表示测序已接近饱和，继续加深测序增益较低；< 15% 表示测序不足，可考虑增加测序量以捕获更多唯一片段。 |
+| **Jaccard threshold**<br>*(Jaccard 相似度阈值)* | 用于判断两个微珠（Beads）是否来自同一细胞反应液滴的片段重叠度判定阈值。 | 在多微珠反应液滴体系中，由 Otsu 算法自适应计算确定；若计算值低于 0.02 则自动设为 0.02，用于精准合并同一液滴内的条形码，有效避免假双胞。 |

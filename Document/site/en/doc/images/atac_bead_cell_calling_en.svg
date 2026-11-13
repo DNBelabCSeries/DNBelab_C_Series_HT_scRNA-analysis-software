@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 550" width="760" height="550" style="background:#ffffff; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <filter id="card-shadow-en" x="-3%" y="-4%" width="106%" height="112%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.04" />
+    </filter>
+    <marker id="arrow-en" viewBox="0 0 10 10" refX="5" refY="6" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 2 1 L 8 5 L 2 9 z" fill="#94a3b8" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <g transform="translate(40, 28)">
+    <text x="0" y="16" font-size="16" font-weight="700" fill="#0f172a">scATAC Bead Merging and Cell Calling Architecture</text>
+    <text x="0" y="34" font-size="12" fill="#64748b">Bead merging only groups co-droplet barcodes; all candidate cells (including unmerged singletons) enter cell calling</text>
+  </g>
+
+  <!-- Step 1: Raw Beads -->
+  <g transform="translate(40, 78)">
+    <rect x="0" y="0" width="680" height="64" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2" filter="url(#card-shadow-en)" />
+    <rect x="0" y="0" width="4" height="64" rx="2" fill="#64748b" />
+    <text x="24" y="27" font-size="14" font-weight="700" fill="#0f172a">1. Raw Sequenced Barcodes (Raw Beads)</text>
+    <text x="24" y="47" font-size="12" fill="#64748b">All demultiplexed barcodes (single beads, co-encapsulated beads, and ambient fragments)</text>
+    <rect x="520" y="18" width="140" height="28" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+    <text x="590" y="36" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">Initial Barcode Pool</text>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <line x1="380" y1="142" x2="380" y2="168" stroke="#cbd5e1" stroke-width="1.5" marker-end="url(#arrow-en)" />
+
+  <!-- Step 2: Bead Merging -->
+  <g transform="translate(40, 172)">
+    <rect x="0" y="0" width="680" height="114" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#card-shadow-en)" />
+    <rect x="0" y="0" width="4" height="114" rx="2" fill="#2563eb" />
+    <text x="24" y="27" font-size="14" font-weight="700" fill="#0f172a">2. Bead Merging (Bead Aggregation)</text>
+    <text x="24" y="47" font-size="12" fill="#475569">Aggregates beads sharing physical droplets into single-cell IDs without discarding unmerged or low-frequency beads</text>
+    
+    <!-- Sub cards -->
+    <g transform="translate(24, 58)">
+      <!-- Branch A -->
+      <rect x="0" y="0" width="310" height="44" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1" />
+      <text x="12" y="19" font-size="11.5" font-weight="600" fill="#1e40af">High-Coverage Beads (≥ merge_cutoff 500)</text>
+      <text x="12" y="35" font-size="11" fill="#3b82f6">Jaccard ≥ threshold ➔ Merged into multi-bead cells (_N &gt; 1)</text>
+
+      <!-- Branch B -->
+      <rect x="322" y="0" width="310" height="44" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <text x="334" y="19" font-size="11.5" font-weight="600" fill="#334155">Unmerged Beads (&lt; 500 or below threshold)</text>
+      <text x="334" y="35" font-size="11" fill="#64748b">Retained intact as singleton cells (_N = 1)</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <line x1="380" y1="286" x2="380" y2="312" stroke="#cbd5e1" stroke-width="1.5" marker-end="url(#arrow-en)" />
+  <g transform="translate(380, 299)">
+    <rect x="-120" y="-9" width="240" height="18" rx="9" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
+    <text x="0" y="4" font-size="10" font-weight="600" fill="#475569" text-anchor="middle">Feed Complete Candidate Pool (Zero Discarded)</text>
+  </g>
+
+  <!-- Step 3: Cell Calling -->
+  <g transform="translate(40, 316)">
+    <rect x="0" y="0" width="680" height="84" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#card-shadow-en)" />
+    <rect x="0" y="0" width="4" height="84" rx="2" fill="#0284c7" />
+    <text x="24" y="27" font-size="14" font-weight="700" fill="#0f172a">3. Cell Calling (Authentic Cell Identification)</text>
+    <text x="24" y="47" font-size="12" fill="#475569">Evaluates the complete candidate pool (merged cells + all singletons) to distinguish authentic cells from ambient noise</text>
+    <g transform="translate(24, 57)">
+      <text x="0" y="15" font-size="11" font-family="ui-monospace, monospace" fill="#0369a1">--forcecells N: Forces retention of top N cells ranked by unique fragments (highest priority)</text>
+    </g>
+  </g>
+
+  <!-- Arrow 3 -> 4 -->
+  <line x1="380" y1="400" x2="380" y2="426" stroke="#cbd5e1" stroke-width="1.5" marker-end="url(#arrow-en)" />
+  <g transform="translate(380, 413)">
+    <rect x="-140" y="-9" width="280" height="18" rx="9" fill="#fffbeb" stroke="#fde68a" stroke-width="1" />
+    <text x="0" y="4" font-size="10" font-family="ui-monospace, monospace" font-weight="600" fill="#92400e" text-anchor="middle">--frags_cutoff &amp; --tss_cutoff (Optional QC Gate)</text>
+  </g>
+
+  <!-- Step 4: Final Cells -->
+  <g transform="translate(40, 430)">
+    <rect x="0" y="0" width="680" height="68" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2" filter="url(#card-shadow-en)" />
+    <rect x="0" y="0" width="4" height="68" rx="2" fill="#16a34a" />
+    <text x="24" y="27" font-size="14" font-weight="700" fill="#14532d">4. Final High-Quality Authentic Cells</text>
+    <text x="24" y="48" font-size="12" fill="#15803d">Outputs filtered peak-cell matrix, fragments BED, and HTML report for downstream clustering and motif discovery</text>
+  </g>
+</svg>
